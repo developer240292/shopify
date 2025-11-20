@@ -147,6 +147,11 @@
         "type": "shopify://apps/smartviewer-quick-view/blocks/quick-view-main/3d2a3202-3cd5-4abd-ab59-ee6fc7c65a87",
         "disabled": false,
         "settings": {}
+      },
+      "6096544053266484610": {
+        "type": "shopify://apps/comparexpert/blocks/app-embed/c855b225-94ed-4209-962c-0fcdc53b09bf",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
