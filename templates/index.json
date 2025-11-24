@@ -1,1 +1,1259 @@
-{"sections":{"b8f0ea88-dbd6-4b1b-8a13-5bb94c547628":{"type":"slideshow","blocks":{"template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-1":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/01Slider.jpg","heading":"New collection","heading_size":"large","subheading":"Best Fashion Thrend","subheadingtext":"<p>Karen tincidunt tempus varius. Integer ante dolor, suscipit non faucibus a, scelerisque vitae sapien.<\/p>","button_label":"Shop Now","link":"shopify:\/\/collections","box_align":"middle-right","show_text_box":false,"text_alignment":"right","image_overlay_opacity":20,"color_scheme":"accent-2","text_alignment_mobile":"right"}},"template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-0":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/Slider.jpg","heading":"Wommen chair","heading_size":"large","subheading":"Wommen chair","subheadingtext":"<p>Karen tincidunt tempus varius. Integer ante dolor non faucibus a, scelerisque vitae sapien.<\/p>","button_label":"Shop Now","link":"shopify:\/\/collections","box_align":"middle-right","show_text_box":false,"text_alignment":"right","image_overlay_opacity":0,"color_scheme":"accent-1","text_alignment_mobile":"right"}}},"block_order":["template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-1","template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-0"],"settings":{"layout":"grid","slide_height":"adapt_image","slider_visual":"dots","pagicolor":"#2bbef9","auto_rotate":true,"change_slides_speed":5,"vtoverlaycolor":"#ffffff","vtoverlaybg":"#2bbef9","vtoverlayoutline":"#2bbef9","vtoverlayhcolor":"#000000","vtoverlayhbg":"#edfaff","vtoverlayhoutline":"#edfaff","padding_top":20,"padding_bottom":0}},"08f5afdf-f979-4359-87f0-425de57a4708":{"type":"collection-banner","settings":{"collbg1":"rgba(0,0,0,0)","collbgborder":"#ffffff","collbgtxt":"#ffffff","collbg1hv":"#ffffff","collbgborderhv":"#ffffff","collbgtxthv":"#000000","showimage1":true,"image1":"shopify:\/\/shop_images\/Banner_1_6dc27e1c-3316-43b0-86d1-4afa1f61ed80.jpg","storylable1":"Women Fashoin","storydesc1":"Accessories","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/baby-boy","showimage2":true,"image2":"shopify:\/\/shop_images\/Banner_2_73a74127-b688-4fc9-9947-0c469506107f.jpg","storylable2":"Electronic brand","storydesc2":"SmartPhone","button_label_2":"Shop Now","button_link_2":"shopify:\/\/collections\/baby-girl","showimage3":true,"image3":"shopify:\/\/shop_images\/Banner_3_a19203f1-74cb-449e-baf7-7194638fd664.jpg","storylable3":"Wooden furnitur","storydesc3":"Home Decor","button_label_3":"Shop Now","button_link_3":"shopify:\/\/collections\/all","padding_top":60,"padding_bottom":0}},"ffc51145-e497-455d-bb5e-b7c4421db66c":{"type":"top-product","blocks":{"7634aab8-7c1e-4d5f-9c2f-ceeeb8726403":{"type":"collection","settings":{"cat_name":"featured","collection":"featured-product","products_to_show":6,"show_view_all":false,"view_all_style":"solid","show_servise":true,"s_title":true,"icon1":"gift","header_gift":"special gift cards","header_gift1":"","sa_title":true,"icon2":"moneyback","header_pay":"secure payment","header_pay1":"","sb_title":true,"icon3":"service","header_support":"24\/7 support","header_support1":"","sc_title":true,"icon4":"shipping","header_shipping":"free shipping","header_shipping1":"","sr_space_top":32}},"c42367a0-f139-4e7b-bb8d-cd0b7b215535":{"type":"collection","settings":{"cat_name":"latest","collection":"new-product","products_to_show":6,"show_view_all":false,"view_all_style":"solid","show_servise":true,"s_title":true,"icon1":"gift","header_gift":"special gift cards","header_gift1":"","sa_title":true,"icon2":"moneyback","header_pay":"secure payment","header_pay1":"","sb_title":true,"icon3":"service","header_support":"24\/7 support","header_support1":"","sc_title":true,"icon4":"shipping","header_shipping":"free shipping","header_shipping1":"","sr_space_top":16}},"8b2f99d6-0134-48d3-916e-1c86cce21db9":{"type":"collection","settings":{"cat_name":"bestseller","collection":"bestseller","products_to_show":6,"show_view_all":false,"view_all_style":"solid","show_servise":true,"s_title":true,"icon1":"colorgift","header_gift":"special gift cards","header_gift1":"","sa_title":true,"icon2":"colorpayment","header_pay":"secure payment","header_pay1":"","sb_title":true,"icon3":"coloruser","header_support":"24\/7 support","header_support1":"","sc_title":true,"icon4":"colorship","header_shipping":"free shipping","header_shipping1":"","sr_space_top":16}}},"block_order":["7634aab8-7c1e-4d5f-9c2f-ceeeb8726403","c42367a0-f139-4e7b-bb8d-cd0b7b215535","8b2f99d6-0134-48d3-916e-1c86cce21db9"],"settings":{"title_first":"Special","heading_size_1":"h2","collection_1":"special-product","products_to_show_1":6,"columns_desktop_1":1,"enable_desktop_slider_1":true,"image_ratio_1":"adapt","display_product_type_1":false,"show_secondary_image_1":true,"show_vendor_1":false,"show_rating_1":true,"enable_quick_add_1":false,"show_variants_1":true,"picker_type_1":"button","show_colorswatch_1":true,"swipe_on_mobile_1":true,"m_title":"Tab product","heading_size":"h2","color_scheme_1":"background-1","rows":1,"columns_desktop":4,"full_width":false,"image_ratio":"adapt","display_product_type":false,"show_rating":true,"show_secondary_image":false,"show_vendor":false,"enable_quick_add":false,"show_variants":true,"picker_type":"button","show_colorswatch":true,"spacing_top":40,"padding_top":60,"padding_bottom":60}},"a4573dca-f67d-4257-8c7e-6ffee4e98ac0":{"type":"left-side-tab-product","blocks":{"template--15186873319468__a4573dca-f67d-4257-8c7e-6ffee4e98ac0-16706664250cf49c1b-0":{"type":"collection","settings":{"cat_name":"Baby boy","collection":"baby-boy","products_to_show":12,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Headphone-Color-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/baby-boy","space_top":20}},"1af7d7f3-0e84-4647-8c27-cb81cc69f8b1":{"type":"collection","settings":{"cat_name":"Baby girl","collection":"baby-girl","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner2-W.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/baby-girl","space_top":0}},"2f58e755-b9b6-48fe-92ec-db7f72b1b0f7":{"type":"collection","settings":{"cat_name":"Books","collection":"books","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner3-O.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/books","space_top":0}},"d4c35af0-b86e-4c62-9c6d-12d5900ecc35":{"type":"collection","settings":{"cat_name":"Cluches","collection":"cluches","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner_cecc0b28-38ed-4c4b-895c-01508be80782.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/cluches","space_top":0}},"cb59e564-71a2-4096-8fbf-4bbd70e7b59a":{"type":"collection","settings":{"cat_name":"Ethanic wear","collection":"ethanic-wear","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner-Grey-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/ethanic-wear","space_top":0}},"66001e46-2401-4be3-8bd7-74ddf63ad952":{"type":"collection","settings":{"cat_name":"Western wear","collection":"western-wear","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner-Grey-2.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/western-wear","space_top":0}},"c36d2b44-2738-4a0f-bee3-155c08e0645a":{"type":"collection","settings":{"cat_name":"Hand bag","collection":"hand-bag","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/furniture-_Banner_bd4964ef-a135-49c2-b2a5-bd2a7a853916.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/hand-bag","space_top":16}},"e37b129e-44f4-48bf-8775-eda2c4638a23":{"type":"collection","settings":{"cat_name":"Home lighting","collection":"home-lighting","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/furniture-_Banner-Brown.jpg","storylable1":"BaBig summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/home-lighting","space_top":16}},"c92d8068-69df-4d04-af8a-b5f92fdfec14":{"type":"collection","settings":{"cat_name":"Footwear","collection":"footwear","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/1105x200-Recovered_38f56eb1-1643-4d10-8cb0-427cd4de24b6.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/footwear","space_top":16}},"2d0b414e-474f-4d9d-b737-c60158273aec":{"type":"collection","settings":{"cat_name":"Speakers","collection":"speakers","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Speaker-Color-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/speakers","space_top":16}},"9383ab32-f888-4186-a534-40b68a7ca9e5":{"type":"collection","settings":{"cat_name":"Furnishing","collection":"furnishing","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Watch-Green-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/furnishing","space_top":16}},"1027ccb9-1f19-4f70-86bc-231494f80b24":{"type":"collection","settings":{"cat_name":"Chair","collection":"chair","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner2-W_a4ec112b-876c-46d8-bff5-b2594d0aeee5.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/chair","space_top":16}},"309e3994-1242-4835-80b0-a6ffc3677ec6":{"type":"collection","settings":{"cat_name":"Health & Nutrition","collection":"health-nutrition","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/furniture-_Banner-Brown_9744dad6-a4aa-4604-84cb-f5a08b87d463.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/health-nutrition","space_top":16}},"2bd68260-244b-45df-a8f7-f8f3188f00cb":{"type":"collection","settings":{"cat_name":"Hand bag","collection":"hand-bag","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Watch-Green-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/hand-bag","space_top":16}},"be97dc7a-210d-4ee1-9e60-576a3c65694b":{"type":"collection","settings":{"cat_name":"Home lighting","collection":"home-lighting","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner-Grey-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/home-lighting","space_top":16}},"99aba5ad-56a0-4aa9-951b-c779161ebfd8":{"type":"collection","settings":{"cat_name":"Men's grooming","collection":"mens-grooming","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner2-W.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/mens-grooming","space_top":16}},"eded167c-98ed-428c-a892-df36ffa479dc":{"type":"collection","settings":{"cat_name":"Kitchen storage","collection":"kitchen-storage","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner-Grey-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/kitchen-storage","space_top":16}},"65499dc1-08ab-4528-b106-f7c0a2c49b56":{"type":"collection","settings":{"cat_name":"Shoulder bag","collection":"shoulder-bag","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Headphone-Color-1_fcca53b9-a5ae-4fb8-ae96-001481d59b83.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/shoulder-bag","space_top":16}},"137c0345-2c10-46d6-81e3-56c0538bf050":{"type":"collection","settings":{"cat_name":"Watches","collection":"watches","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner-Grey-2.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/watches-1","space_top":16}}},"block_order":["template--15186873319468__a4573dca-f67d-4257-8c7e-6ffee4e98ac0-16706664250cf49c1b-0","1af7d7f3-0e84-4647-8c27-cb81cc69f8b1","2f58e755-b9b6-48fe-92ec-db7f72b1b0f7","d4c35af0-b86e-4c62-9c6d-12d5900ecc35","cb59e564-71a2-4096-8fbf-4bbd70e7b59a","66001e46-2401-4be3-8bd7-74ddf63ad952","c36d2b44-2738-4a0f-bee3-155c08e0645a","e37b129e-44f4-48bf-8775-eda2c4638a23","c92d8068-69df-4d04-af8a-b5f92fdfec14","2d0b414e-474f-4d9d-b737-c60158273aec","9383ab32-f888-4186-a534-40b68a7ca9e5","1027ccb9-1f19-4f70-86bc-231494f80b24","309e3994-1242-4835-80b0-a6ffc3677ec6","2bd68260-244b-45df-a8f7-f8f3188f00cb","be97dc7a-210d-4ee1-9e60-576a3c65694b","99aba5ad-56a0-4aa9-951b-c779161ebfd8","eded167c-98ed-428c-a892-df36ffa479dc","65499dc1-08ab-4528-b106-f7c0a2c49b56","137c0345-2c10-46d6-81e3-56c0538bf050"],"settings":{"background_color":"#f5f5f5","grid_background_color":"#ffffff","m_title":"Our product","heading_size":"h2","rows":1,"columns_desktop":4,"full_width":true,"image_ratio":"adapt","display_product_type":false,"show_rating":true,"show_secondary_image":true,"show_vendor":false,"enable_quick_add":false,"show_variants":true,"picker_type":"button","show_colorswatch":true,"spacing_top":40,"padding_top":60,"padding_bottom":0}},"47c703a4-e94d-48b1-9906-de589f481517":{"type":"left-side-tab-product-second","blocks":{"template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-0":{"type":"collection","settings":{"cat_name":"Smart headphones","collection":"smart-headphones","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Speaker-Color-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/smart-headphones","space_top":16}},"template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-1":{"type":"collection","settings":{"cat_name":"Watches","collection":"watches","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Watch-Green-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/watches-1","space_top":16}},"template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-2":{"type":"collection","settings":{"cat_name":"Product tab","collection":"gaming-accessories","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/furniture-_Banner-Brown.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/gaming-accessories","space_top":16}},"724b2c61-b4b9-4563-96ee-10c8f706af9e":{"type":"collection","settings":{"cat_name":"Mobile Accessories","collection":"mobile-accessories","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/furniture-_Banner_bd4964ef-a135-49c2-b2a5-bd2a7a853916.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/mobile-accessories","space_top":16}},"e8e812f5-695c-40cd-8604-f9e2d8084b3e":{"type":"collection","settings":{"cat_name":"Speakers","collection":"speakers","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner_cecc0b28-38ed-4c4b-895c-01508be80782.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/speakers","space_top":16}},"311885c8-bb6b-4645-a081-0be4598b6e2a":{"type":"collection","settings":{"cat_name":"Stationary","collection":"stationary","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner2-W.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/stationary","space_top":16}},"e0908290-d83b-46ce-8447-dbaec11aa479":{"type":"collection","settings":{"cat_name":"Footwear","collection":"footwear","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner_cecc0b28-38ed-4c4b-895c-01508be80782.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/footwear","space_top":16}},"a977cd00-7f0d-42bf-bd9a-3523abefc90f":{"type":"collection","settings":{"cat_name":"Sport wear","collection":"sport-wear","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner3-O.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/sport-wear","space_top":16}},"e6173cf0-6c2d-43b5-bda0-c9e44f017760":{"type":"collection","settings":{"cat_name":"Books","collection":"books","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner2-W_a4ec112b-876c-46d8-bff5-b2594d0aeee5.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/books","space_top":16}},"2bc0ea4e-38b7-4391-bad9-928df02b4580":{"type":"collection","settings":{"cat_name":"Men's Grooming","collection":"mens-grooming","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/furniture-_Banner-Brown_9744dad6-a4aa-4604-84cb-f5a08b87d463.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/mens-grooming","space_top":16}},"add85576-dc81-42fe-a83a-e2dd1cef6e16":{"type":"collection","settings":{"cat_name":"Shoulder bag","collection":"shoulder-bag","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner-Grey-2.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/shoulder-bag","space_top":16}},"60d92c36-4988-4d0f-92bc-477faa45db1f":{"type":"collection","settings":{"cat_name":"Chair","collection":"chair","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner2-W.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/chair","space_top":16}},"ee954a90-f401-4011-b24c-4a762582b652":{"type":"collection","settings":{"cat_name":"Hand bag","collection":"hand-bag","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Watch-Green-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/hand-bag","space_top":16}},"a3d129a9-ed4b-456e-af03-691bbae0462f":{"type":"collection","settings":{"cat_name":"Furnishing","collection":"furnishing","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner-Grey-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/furnishing","space_top":16}}},"block_order":["template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-0","template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-1","template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-2","724b2c61-b4b9-4563-96ee-10c8f706af9e","e8e812f5-695c-40cd-8604-f9e2d8084b3e","311885c8-bb6b-4645-a081-0be4598b6e2a","e0908290-d83b-46ce-8447-dbaec11aa479","a977cd00-7f0d-42bf-bd9a-3523abefc90f","e6173cf0-6c2d-43b5-bda0-c9e44f017760","2bc0ea4e-38b7-4391-bad9-928df02b4580","add85576-dc81-42fe-a83a-e2dd1cef6e16","60d92c36-4988-4d0f-92bc-477faa45db1f","ee954a90-f401-4011-b24c-4a762582b652","a3d129a9-ed4b-456e-af03-691bbae0462f"],"settings":{"background_color":"#f5f5f5","grid_background_color":"#ffffff","m_title":"Our product","heading_size":"h2","rows":1,"columns_desktop":4,"full_width":false,"image_ratio":"adapt","display_product_type":false,"show_rating":true,"show_secondary_image":true,"show_vendor":false,"enable_quick_add":false,"show_variants":true,"picker_type":"button","show_colorswatch":true,"spacing_top":40,"padding_top":60,"padding_bottom":0}},"05373967-85af-4d92-b24d-44430aaba926":{"type":"left-side-tab-product-third","blocks":{"template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-0":{"type":"collection","settings":{"cat_name":"Chair","collection":"chair","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/furniture-_Banner-Brown_9744dad6-a4aa-4604-84cb-f5a08b87d463.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/chair","space_top":16}},"template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-1":{"type":"collection","settings":{"cat_name":"Furnishing","collection":"furnishing","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner2-W_a4ec112b-876c-46d8-bff5-b2594d0aeee5.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/furnishing","space_top":16}},"template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-2":{"type":"collection","settings":{"cat_name":"Tools & Hardware","collection":"tools-hardware","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Watch-Green-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/tools-hardware","space_top":16}},"176955fe-288b-4ec3-a80b-f07220c21e52":{"type":"collection","settings":{"cat_name":"Kitchen Storage","collection":"kitchen-storage","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Speaker-Color-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/kitchen-storage","space_top":16}},"438002bf-58f0-4843-9682-8b702aaf2b0a":{"type":"collection","settings":{"cat_name":"Home decor","collection":"home-decor","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Speaker-Color-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/home-decor","space_top":16}},"122f927d-d6d7-4949-9c56-52572b13b874":{"type":"collection","settings":{"cat_name":"Home lighting","collection":"home-lighting","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Headphone-Color-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/home-lighting","space_top":16}},"83948012-5a0d-4aef-a7bc-5a270c004edb":{"type":"collection","settings":{"cat_name":"Sport wear","collection":"sport-wear","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/furniture-_Banner_bd4964ef-a135-49c2-b2a5-bd2a7a853916.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/sport-wear","space_top":16}},"f59d9a1f-ed06-4afe-8db5-080fbec97e95":{"type":"collection","settings":{"cat_name":"Cluches","collection":"cluches","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner-Grey-2.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/cluches","space_top":16}},"d4bbe314-f68b-445b-b60a-e67fa49a80d0":{"type":"collection","settings":{"cat_name":"Health & Nutrition","collection":"health-nutrition","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner_cecc0b28-38ed-4c4b-895c-01508be80782.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/health-nutrition","space_top":16}},"8867c3d4-af6b-45f4-800b-0064c50d02d4":{"type":"collection","settings":{"cat_name":"Speakers","collection":"speakers","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Fashion_Banner-Grey-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/speakers","space_top":16}},"fef60d3d-d551-472c-8c1e-c2f3870de217":{"type":"collection","settings":{"cat_name":"Men's Grooming","collection":"mens-grooming","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner3-O.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/mens-grooming","space_top":16}},"c54cefed-d781-4de5-ac25-12435ca287e0":{"type":"collection","settings":{"cat_name":"Western Wear","collection":"western-wear","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Watch-Green-1.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/western-wear","space_top":16}},"9f3f51d6-6592-479b-b760-c7356048b324":{"type":"collection","settings":{"cat_name":"Books","collection":"books","products_to_show":6,"show_view_all":false,"view_all_style":"solid","showimage":true,"image1":"shopify:\/\/shop_images\/Electronic-Banner2-W_a4ec112b-876c-46d8-bff5-b2594d0aeee5.jpg","storylable1":"Big summer sale","storydesc1":"For Black Fashion Collection","button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/books","space_top":16}}},"block_order":["template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-0","template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-1","template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-2","176955fe-288b-4ec3-a80b-f07220c21e52","438002bf-58f0-4843-9682-8b702aaf2b0a","122f927d-d6d7-4949-9c56-52572b13b874","83948012-5a0d-4aef-a7bc-5a270c004edb","f59d9a1f-ed06-4afe-8db5-080fbec97e95","d4bbe314-f68b-445b-b60a-e67fa49a80d0","8867c3d4-af6b-45f4-800b-0064c50d02d4","fef60d3d-d551-472c-8c1e-c2f3870de217","c54cefed-d781-4de5-ac25-12435ca287e0","9f3f51d6-6592-479b-b760-c7356048b324"],"settings":{"background_color":"#f5f5f5","grid_background_color":"#ffffff","m_title":"Our product","heading_size":"h2","rows":1,"columns_desktop":4,"full_width":false,"image_ratio":"adapt","display_product_type":false,"show_rating":true,"show_secondary_image":true,"show_vendor":false,"enable_quick_add":false,"show_variants":true,"picker_type":"button","show_colorswatch":true,"spacing_top":40,"padding_top":60,"padding_bottom":60}},"389d3b2b-6578-494a-8251-c570c4bb90eb":{"type":"featured-blog","settings":{"m_title":"latest blog","heading_size":"h2","blog":"news","show_image":true,"image_height":"adapt","show_date":true,"show_author":false,"show_desc":false,"show_cmment":false,"show_view_all":false,"padding_top":60,"padding_bottom":0}},"42f1a624-a92a-4d3b-8bbd-540ccef9e51d":{"type":"logo-bar","blocks":{"template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-0":{"type":"logo_image","settings":{"image":"shopify:\/\/shop_images\/1.png","link":""}},"template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-1":{"type":"logo_image","settings":{"image":"shopify:\/\/shop_images\/2.png","link":""}},"template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-2":{"type":"logo_image","settings":{"image":"shopify:\/\/shop_images\/3.png","link":""}},"template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-3":{"type":"logo_image","settings":{"image":"shopify:\/\/shop_images\/4.png","link":""}},"template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-4":{"type":"logo_image","settings":{"image":"shopify:\/\/shop_images\/5.png","link":""}},"template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-5":{"type":"logo_image","settings":{"image":"shopify:\/\/shop_images\/6.png","link":""}},"template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-6":{"type":"logo_image","settings":{"image":"shopify:\/\/shop_images\/7.png","link":""}},"template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-7":{"type":"logo_image","settings":{"image":"shopify:\/\/shop_images\/8.png","link":""}},"1821875b-316f-4fb5-8696-63c75df44f99":{"type":"logo_image","settings":{"image":"shopify:\/\/shop_images\/5_f56e8dbd-929f-4bae-9afe-12fae2de8dc9.png","link":""}}},"block_order":["template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-0","template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-1","template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-2","template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-3","template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-4","template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-5","template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-6","template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-7","1821875b-316f-4fb5-8696-63c75df44f99"],"settings":{"title":"Draly's Partners","heading_size":"h2","padding_top":60,"padding_bottom":0}}},"order":["b8f0ea88-dbd6-4b1b-8a13-5bb94c547628","08f5afdf-f979-4359-87f0-425de57a4708","ffc51145-e497-455d-bb5e-b7c4421db66c","a4573dca-f67d-4257-8c7e-6ffee4e98ac0","47c703a4-e94d-48b1-9906-de589f481517","05373967-85af-4d92-b24d-44430aaba926","389d3b2b-6578-494a-8251-c570c4bb90eb","42f1a624-a92a-4d3b-8bbd-540ccef9e51d"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b8f0ea88-dbd6-4b1b-8a13-5bb94c547628": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/01Slider.jpg",
+            "heading": "New collection",
+            "heading_size": "large",
+            "subheading": "Best Fashion Thrend",
+            "subheadingtext": "<p>Karen tincidunt tempus varius. Integer ante dolor, suscipit non faucibus a, scelerisque vitae sapien.</p>",
+            "button_label": "Shop Now",
+            "link": "shopify://collections",
+            "box_align": "middle-right",
+            "show_text_box": false,
+            "text_alignment": "right",
+            "image_overlay_opacity": 20,
+            "color_scheme": "accent-2",
+            "text_alignment_mobile": "right"
+          }
+        },
+        "template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Slider.jpg",
+            "heading": "Wommen chair",
+            "heading_size": "large",
+            "subheading": "Wommen chair",
+            "subheadingtext": "<p>Karen tincidunt tempus varius. Integer ante dolor non faucibus a, scelerisque vitae sapien.</p>",
+            "button_label": "Shop Now",
+            "link": "shopify://collections",
+            "box_align": "middle-right",
+            "show_text_box": false,
+            "text_alignment": "right",
+            "image_overlay_opacity": 0,
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "right"
+          }
+        }
+      },
+      "block_order": [
+        "template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-1",
+        "template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-0"
+      ],
+      "settings": {
+        "layout": "grid",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "pagicolor": "#2bbef9",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "vtoverlaycolor": "#ffffff",
+        "vtoverlaybg": "#2bbef9",
+        "vtoverlayoutline": "#2bbef9",
+        "vtoverlayhcolor": "#000000",
+        "vtoverlayhbg": "#edfaff",
+        "vtoverlayhoutline": "#edfaff",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "08f5afdf-f979-4359-87f0-425de57a4708": {
+      "type": "collection-banner",
+      "settings": {
+        "collbg1": "rgba(0,0,0,0)",
+        "collbgborder": "#ffffff",
+        "collbgtxt": "#ffffff",
+        "collbg1hv": "#ffffff",
+        "collbgborderhv": "#ffffff",
+        "collbgtxthv": "#000000",
+        "showimage1": true,
+        "image1": "shopify://shop_images/Banner_1_6dc27e1c-3316-43b0-86d1-4afa1f61ed80.jpg",
+        "storylable1": "Women Fashoin",
+        "storydesc1": "Accessories",
+        "button_label_1": "Shop Now",
+        "button_link_1": "shopify://collections/baby-boy",
+        "showimage2": true,
+        "image2": "shopify://shop_images/Banner_2_73a74127-b688-4fc9-9947-0c469506107f.jpg",
+        "storylable2": "Electronic brand",
+        "storydesc2": "SmartPhone",
+        "button_label_2": "Shop Now",
+        "button_link_2": "shopify://collections/baby-girl",
+        "showimage3": true,
+        "image3": "shopify://shop_images/Banner_3_a19203f1-74cb-449e-baf7-7194638fd664.jpg",
+        "storylable3": "Wooden furnitur",
+        "storydesc3": "Home Decor",
+        "button_label_3": "Shop Now",
+        "button_link_3": "shopify://collections/all",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "ffc51145-e497-455d-bb5e-b7c4421db66c": {
+      "type": "top-product",
+      "blocks": {
+        "7634aab8-7c1e-4d5f-9c2f-ceeeb8726403": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "featured",
+            "collection": "featured-product",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "show_servise": true,
+            "s_title": true,
+            "icon1": "gift",
+            "header_gift": "special gift cards",
+            "header_gift1": "",
+            "sa_title": true,
+            "icon2": "moneyback",
+            "header_pay": "secure payment",
+            "header_pay1": "",
+            "sb_title": true,
+            "icon3": "service",
+            "header_support": "24/7 support",
+            "header_support1": "",
+            "sc_title": true,
+            "icon4": "shipping",
+            "header_shipping": "free shipping",
+            "header_shipping1": "",
+            "sr_space_top": 32
+          }
+        },
+        "c42367a0-f139-4e7b-bb8d-cd0b7b215535": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "latest",
+            "collection": "new-product",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "show_servise": true,
+            "s_title": true,
+            "icon1": "gift",
+            "header_gift": "special gift cards",
+            "header_gift1": "",
+            "sa_title": true,
+            "icon2": "moneyback",
+            "header_pay": "secure payment",
+            "header_pay1": "",
+            "sb_title": true,
+            "icon3": "service",
+            "header_support": "24/7 support",
+            "header_support1": "",
+            "sc_title": true,
+            "icon4": "shipping",
+            "header_shipping": "free shipping",
+            "header_shipping1": "",
+            "sr_space_top": 16
+          }
+        },
+        "8b2f99d6-0134-48d3-916e-1c86cce21db9": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "bestseller",
+            "collection": "bestseller",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "show_servise": true,
+            "s_title": true,
+            "icon1": "colorgift",
+            "header_gift": "special gift cards",
+            "header_gift1": "",
+            "sa_title": true,
+            "icon2": "colorpayment",
+            "header_pay": "secure payment",
+            "header_pay1": "",
+            "sb_title": true,
+            "icon3": "coloruser",
+            "header_support": "24/7 support",
+            "header_support1": "",
+            "sc_title": true,
+            "icon4": "colorship",
+            "header_shipping": "free shipping",
+            "header_shipping1": "",
+            "sr_space_top": 16
+          }
+        }
+      },
+      "block_order": [
+        "7634aab8-7c1e-4d5f-9c2f-ceeeb8726403",
+        "c42367a0-f139-4e7b-bb8d-cd0b7b215535",
+        "8b2f99d6-0134-48d3-916e-1c86cce21db9"
+      ],
+      "settings": {
+        "title_first": "Special",
+        "heading_size_1": "h2",
+        "collection_1": "special-product",
+        "products_to_show_1": 6,
+        "columns_desktop_1": 1,
+        "enable_desktop_slider_1": true,
+        "image_ratio_1": "adapt",
+        "display_product_type_1": false,
+        "show_secondary_image_1": true,
+        "show_vendor_1": false,
+        "show_rating_1": true,
+        "enable_quick_add_1": false,
+        "show_variants_1": true,
+        "picker_type_1": "button",
+        "show_colorswatch_1": true,
+        "swipe_on_mobile_1": true,
+        "m_title": "Tab product",
+        "heading_size": "h2",
+        "color_scheme_1": "background-1",
+        "rows": 1,
+        "columns_desktop": 4,
+        "full_width": false,
+        "image_ratio": "adapt",
+        "display_product_type": false,
+        "show_rating": true,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "enable_quick_add": false,
+        "show_variants": true,
+        "picker_type": "button",
+        "show_colorswatch": true,
+        "spacing_top": 40,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "a4573dca-f67d-4257-8c7e-6ffee4e98ac0": {
+      "type": "left-side-tab-product",
+      "blocks": {
+        "template--15186873319468__a4573dca-f67d-4257-8c7e-6ffee4e98ac0-16706664250cf49c1b-0": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Baby boy",
+            "collection": "baby-boy",
+            "products_to_show": 12,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Headphone-Color-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/baby-boy",
+            "space_top": 20
+          }
+        },
+        "1af7d7f3-0e84-4647-8c27-cb81cc69f8b1": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Baby girl",
+            "collection": "baby-girl",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner2-W.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/baby-girl",
+            "space_top": 0
+          }
+        },
+        "2f58e755-b9b6-48fe-92ec-db7f72b1b0f7": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Books",
+            "collection": "books",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner3-O.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/books",
+            "space_top": 0
+          }
+        },
+        "d4c35af0-b86e-4c62-9c6d-12d5900ecc35": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Cluches",
+            "collection": "cluches",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner_cecc0b28-38ed-4c4b-895c-01508be80782.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/cluches",
+            "space_top": 0
+          }
+        },
+        "cb59e564-71a2-4096-8fbf-4bbd70e7b59a": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Ethanic wear",
+            "collection": "ethanic-wear",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner-Grey-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/ethanic-wear",
+            "space_top": 0
+          }
+        },
+        "66001e46-2401-4be3-8bd7-74ddf63ad952": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Western wear",
+            "collection": "western-wear",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner-Grey-2.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/western-wear",
+            "space_top": 0
+          }
+        },
+        "c36d2b44-2738-4a0f-bee3-155c08e0645a": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Hand bag",
+            "collection": "hand-bag",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/furniture-_Banner_bd4964ef-a135-49c2-b2a5-bd2a7a853916.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/hand-bag",
+            "space_top": 16
+          }
+        },
+        "e37b129e-44f4-48bf-8775-eda2c4638a23": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Home lighting",
+            "collection": "home-lighting",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/furniture-_Banner-Brown.jpg",
+            "storylable1": "BaBig summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/home-lighting",
+            "space_top": 16
+          }
+        },
+        "c92d8068-69df-4d04-af8a-b5f92fdfec14": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Footwear",
+            "collection": "footwear",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/1105x200-Recovered_38f56eb1-1643-4d10-8cb0-427cd4de24b6.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/footwear",
+            "space_top": 16
+          }
+        },
+        "2d0b414e-474f-4d9d-b737-c60158273aec": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Speakers",
+            "collection": "speakers",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Speaker-Color-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/speakers",
+            "space_top": 16
+          }
+        },
+        "9383ab32-f888-4186-a534-40b68a7ca9e5": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Furnishing",
+            "collection": "furnishing",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Watch-Green-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/furnishing",
+            "space_top": 16
+          }
+        },
+        "1027ccb9-1f19-4f70-86bc-231494f80b24": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Chair",
+            "collection": "chair",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner2-W_a4ec112b-876c-46d8-bff5-b2594d0aeee5.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/chair",
+            "space_top": 16
+          }
+        },
+        "309e3994-1242-4835-80b0-a6ffc3677ec6": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Health & Nutrition",
+            "collection": "health-nutrition",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/furniture-_Banner-Brown_9744dad6-a4aa-4604-84cb-f5a08b87d463.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/health-nutrition",
+            "space_top": 16
+          }
+        },
+        "2bd68260-244b-45df-a8f7-f8f3188f00cb": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Hand bag",
+            "collection": "hand-bag",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Watch-Green-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/hand-bag",
+            "space_top": 16
+          }
+        },
+        "be97dc7a-210d-4ee1-9e60-576a3c65694b": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Home lighting",
+            "collection": "home-lighting",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner-Grey-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/home-lighting",
+            "space_top": 16
+          }
+        },
+        "99aba5ad-56a0-4aa9-951b-c779161ebfd8": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Men's grooming",
+            "collection": "mens-grooming",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner2-W.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/mens-grooming",
+            "space_top": 16
+          }
+        },
+        "eded167c-98ed-428c-a892-df36ffa479dc": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Kitchen storage",
+            "collection": "kitchen-storage",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner-Grey-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/kitchen-storage",
+            "space_top": 16
+          }
+        },
+        "65499dc1-08ab-4528-b106-f7c0a2c49b56": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Shoulder bag",
+            "collection": "shoulder-bag",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Headphone-Color-1_fcca53b9-a5ae-4fb8-ae96-001481d59b83.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/shoulder-bag",
+            "space_top": 16
+          }
+        },
+        "137c0345-2c10-46d6-81e3-56c0538bf050": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Watches",
+            "collection": "watches",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner-Grey-2.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/watches-1",
+            "space_top": 16
+          }
+        }
+      },
+      "block_order": [
+        "template--15186873319468__a4573dca-f67d-4257-8c7e-6ffee4e98ac0-16706664250cf49c1b-0",
+        "1af7d7f3-0e84-4647-8c27-cb81cc69f8b1",
+        "2f58e755-b9b6-48fe-92ec-db7f72b1b0f7",
+        "d4c35af0-b86e-4c62-9c6d-12d5900ecc35",
+        "cb59e564-71a2-4096-8fbf-4bbd70e7b59a",
+        "66001e46-2401-4be3-8bd7-74ddf63ad952",
+        "c36d2b44-2738-4a0f-bee3-155c08e0645a",
+        "e37b129e-44f4-48bf-8775-eda2c4638a23",
+        "c92d8068-69df-4d04-af8a-b5f92fdfec14",
+        "2d0b414e-474f-4d9d-b737-c60158273aec",
+        "9383ab32-f888-4186-a534-40b68a7ca9e5",
+        "1027ccb9-1f19-4f70-86bc-231494f80b24",
+        "309e3994-1242-4835-80b0-a6ffc3677ec6",
+        "2bd68260-244b-45df-a8f7-f8f3188f00cb",
+        "be97dc7a-210d-4ee1-9e60-576a3c65694b",
+        "99aba5ad-56a0-4aa9-951b-c779161ebfd8",
+        "eded167c-98ed-428c-a892-df36ffa479dc",
+        "65499dc1-08ab-4528-b106-f7c0a2c49b56",
+        "137c0345-2c10-46d6-81e3-56c0538bf050"
+      ],
+      "settings": {
+        "background_color": "#f5f5f5",
+        "grid_background_color": "#ffffff",
+        "m_title": "Our product",
+        "heading_size": "h2",
+        "rows": 1,
+        "columns_desktop": 4,
+        "full_width": true,
+        "image_ratio": "adapt",
+        "display_product_type": false,
+        "show_rating": true,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "enable_quick_add": false,
+        "show_variants": true,
+        "picker_type": "button",
+        "show_colorswatch": true,
+        "spacing_top": 40,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "47c703a4-e94d-48b1-9906-de589f481517": {
+      "type": "left-side-tab-product-second",
+      "blocks": {
+        "template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-0": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Smart headphones",
+            "collection": "smart-headphones",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Speaker-Color-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/smart-headphones",
+            "space_top": 16
+          }
+        },
+        "template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-1": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Watches",
+            "collection": "watches",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Watch-Green-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/watches-1",
+            "space_top": 16
+          }
+        },
+        "template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-2": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Product tab",
+            "collection": "gaming-accessories",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/furniture-_Banner-Brown.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/gaming-accessories",
+            "space_top": 16
+          }
+        },
+        "724b2c61-b4b9-4563-96ee-10c8f706af9e": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Mobile Accessories",
+            "collection": "mobile-accessories",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/furniture-_Banner_bd4964ef-a135-49c2-b2a5-bd2a7a853916.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/mobile-accessories",
+            "space_top": 16
+          }
+        },
+        "e8e812f5-695c-40cd-8604-f9e2d8084b3e": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Speakers",
+            "collection": "speakers",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner_cecc0b28-38ed-4c4b-895c-01508be80782.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/speakers",
+            "space_top": 16
+          }
+        },
+        "311885c8-bb6b-4645-a081-0be4598b6e2a": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Stationary",
+            "collection": "stationary",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner2-W.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/stationary",
+            "space_top": 16
+          }
+        },
+        "e0908290-d83b-46ce-8447-dbaec11aa479": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Footwear",
+            "collection": "footwear",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner_cecc0b28-38ed-4c4b-895c-01508be80782.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/footwear",
+            "space_top": 16
+          }
+        },
+        "a977cd00-7f0d-42bf-bd9a-3523abefc90f": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Sport wear",
+            "collection": "sport-wear",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner3-O.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/sport-wear",
+            "space_top": 16
+          }
+        },
+        "e6173cf0-6c2d-43b5-bda0-c9e44f017760": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Books",
+            "collection": "books",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner2-W_a4ec112b-876c-46d8-bff5-b2594d0aeee5.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/books",
+            "space_top": 16
+          }
+        },
+        "2bc0ea4e-38b7-4391-bad9-928df02b4580": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Men's Grooming",
+            "collection": "mens-grooming",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/furniture-_Banner-Brown_9744dad6-a4aa-4604-84cb-f5a08b87d463.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/mens-grooming",
+            "space_top": 16
+          }
+        },
+        "add85576-dc81-42fe-a83a-e2dd1cef6e16": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Shoulder bag",
+            "collection": "shoulder-bag",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner-Grey-2.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/shoulder-bag",
+            "space_top": 16
+          }
+        },
+        "60d92c36-4988-4d0f-92bc-477faa45db1f": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Chair",
+            "collection": "chair",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner2-W.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/chair",
+            "space_top": 16
+          }
+        },
+        "ee954a90-f401-4011-b24c-4a762582b652": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Hand bag",
+            "collection": "hand-bag",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Watch-Green-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/hand-bag",
+            "space_top": 16
+          }
+        },
+        "a3d129a9-ed4b-456e-af03-691bbae0462f": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Furnishing",
+            "collection": "furnishing",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner-Grey-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/furnishing",
+            "space_top": 16
+          }
+        }
+      },
+      "block_order": [
+        "template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-0",
+        "template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-1",
+        "template--15186873319468__47c703a4-e94d-48b1-9906-de589f481517-1672660035338f8f4c-2",
+        "724b2c61-b4b9-4563-96ee-10c8f706af9e",
+        "e8e812f5-695c-40cd-8604-f9e2d8084b3e",
+        "311885c8-bb6b-4645-a081-0be4598b6e2a",
+        "e0908290-d83b-46ce-8447-dbaec11aa479",
+        "a977cd00-7f0d-42bf-bd9a-3523abefc90f",
+        "e6173cf0-6c2d-43b5-bda0-c9e44f017760",
+        "2bc0ea4e-38b7-4391-bad9-928df02b4580",
+        "add85576-dc81-42fe-a83a-e2dd1cef6e16",
+        "60d92c36-4988-4d0f-92bc-477faa45db1f",
+        "ee954a90-f401-4011-b24c-4a762582b652",
+        "a3d129a9-ed4b-456e-af03-691bbae0462f"
+      ],
+      "settings": {
+        "background_color": "#f5f5f5",
+        "grid_background_color": "#ffffff",
+        "m_title": "Our product",
+        "heading_size": "h2",
+        "rows": 1,
+        "columns_desktop": 4,
+        "full_width": false,
+        "image_ratio": "adapt",
+        "display_product_type": false,
+        "show_rating": true,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "enable_quick_add": false,
+        "show_variants": true,
+        "picker_type": "button",
+        "show_colorswatch": true,
+        "spacing_top": 40,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "05373967-85af-4d92-b24d-44430aaba926": {
+      "type": "left-side-tab-product-third",
+      "blocks": {
+        "template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-0": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Chair",
+            "collection": "chair",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/furniture-_Banner-Brown_9744dad6-a4aa-4604-84cb-f5a08b87d463.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/chair",
+            "space_top": 16
+          }
+        },
+        "template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-1": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Furnishing",
+            "collection": "furnishing",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner2-W_a4ec112b-876c-46d8-bff5-b2594d0aeee5.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/furnishing",
+            "space_top": 16
+          }
+        },
+        "template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-2": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Tools & Hardware",
+            "collection": "tools-hardware",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Watch-Green-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/tools-hardware",
+            "space_top": 16
+          }
+        },
+        "176955fe-288b-4ec3-a80b-f07220c21e52": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Kitchen Storage",
+            "collection": "kitchen-storage",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Speaker-Color-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/kitchen-storage",
+            "space_top": 16
+          }
+        },
+        "438002bf-58f0-4843-9682-8b702aaf2b0a": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Home decor",
+            "collection": "home-decor",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Speaker-Color-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/home-decor",
+            "space_top": 16
+          }
+        },
+        "122f927d-d6d7-4949-9c56-52572b13b874": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Home lighting",
+            "collection": "home-lighting",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Headphone-Color-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/home-lighting",
+            "space_top": 16
+          }
+        },
+        "83948012-5a0d-4aef-a7bc-5a270c004edb": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Sport wear",
+            "collection": "sport-wear",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/furniture-_Banner_bd4964ef-a135-49c2-b2a5-bd2a7a853916.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/sport-wear",
+            "space_top": 16
+          }
+        },
+        "f59d9a1f-ed06-4afe-8db5-080fbec97e95": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Cluches",
+            "collection": "cluches",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner-Grey-2.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/cluches",
+            "space_top": 16
+          }
+        },
+        "d4bbe314-f68b-445b-b60a-e67fa49a80d0": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Health & Nutrition",
+            "collection": "health-nutrition",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner_cecc0b28-38ed-4c4b-895c-01508be80782.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/health-nutrition",
+            "space_top": 16
+          }
+        },
+        "8867c3d4-af6b-45f4-800b-0064c50d02d4": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Speakers",
+            "collection": "speakers",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Fashion_Banner-Grey-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/speakers",
+            "space_top": 16
+          }
+        },
+        "fef60d3d-d551-472c-8c1e-c2f3870de217": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Men's Grooming",
+            "collection": "mens-grooming",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner3-O.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/mens-grooming",
+            "space_top": 16
+          }
+        },
+        "c54cefed-d781-4de5-ac25-12435ca287e0": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Western Wear",
+            "collection": "western-wear",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Watch-Green-1.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/western-wear",
+            "space_top": 16
+          }
+        },
+        "9f3f51d6-6592-479b-b760-c7356048b324": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Books",
+            "collection": "books",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "showimage": true,
+            "image1": "shopify://shop_images/Electronic-Banner2-W_a4ec112b-876c-46d8-bff5-b2594d0aeee5.jpg",
+            "storylable1": "Big summer sale",
+            "storydesc1": "For Black Fashion Collection",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/books",
+            "space_top": 16
+          }
+        }
+      },
+      "block_order": [
+        "template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-0",
+        "template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-1",
+        "template--15186873319468__05373967-85af-4d92-b24d-44430aaba926-167266139567fa87b4-2",
+        "176955fe-288b-4ec3-a80b-f07220c21e52",
+        "438002bf-58f0-4843-9682-8b702aaf2b0a",
+        "122f927d-d6d7-4949-9c56-52572b13b874",
+        "83948012-5a0d-4aef-a7bc-5a270c004edb",
+        "f59d9a1f-ed06-4afe-8db5-080fbec97e95",
+        "d4bbe314-f68b-445b-b60a-e67fa49a80d0",
+        "8867c3d4-af6b-45f4-800b-0064c50d02d4",
+        "fef60d3d-d551-472c-8c1e-c2f3870de217",
+        "c54cefed-d781-4de5-ac25-12435ca287e0",
+        "9f3f51d6-6592-479b-b760-c7356048b324"
+      ],
+      "settings": {
+        "background_color": "#f5f5f5",
+        "grid_background_color": "#ffffff",
+        "m_title": "Our product",
+        "heading_size": "h2",
+        "rows": 1,
+        "columns_desktop": 4,
+        "full_width": false,
+        "image_ratio": "adapt",
+        "display_product_type": false,
+        "show_rating": true,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "enable_quick_add": false,
+        "show_variants": true,
+        "picker_type": "button",
+        "show_colorswatch": true,
+        "spacing_top": 40,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "389d3b2b-6578-494a-8251-c570c4bb90eb": {
+      "type": "featured-blog",
+      "settings": {
+        "m_title": "latest blog",
+        "heading_size": "h2",
+        "blog": "news",
+        "show_image": true,
+        "image_height": "adapt",
+        "show_date": true,
+        "show_author": false,
+        "show_desc": false,
+        "show_cmment": false,
+        "show_view_all": false,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "42f1a624-a92a-4d3b-8bbd-540ccef9e51d": {
+      "type": "logo-bar",
+      "blocks": {
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/1.png",
+            "link": ""
+          }
+        },
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/2.png",
+            "link": ""
+          }
+        },
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/3.png",
+            "link": ""
+          }
+        },
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/4.png",
+            "link": ""
+          }
+        },
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-4": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/5.png",
+            "link": ""
+          }
+        },
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-5": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/6.png",
+            "link": ""
+          }
+        },
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-6": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/7.png",
+            "link": ""
+          }
+        },
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-7": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/8.png",
+            "link": ""
+          }
+        },
+        "1821875b-316f-4fb5-8696-63c75df44f99": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/5_f56e8dbd-929f-4bae-9afe-12fae2de8dc9.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-0",
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-1",
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-2",
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-3",
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-4",
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-5",
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-6",
+        "template--15186873319468__42f1a624-a92a-4d3b-8bbd-540ccef9e51d-1672739816d2b8e7c3-7",
+        "1821875b-316f-4fb5-8696-63c75df44f99"
+      ],
+      "settings": {
+        "title": "Draly's Partners",
+        "heading_size": "h2",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "b8f0ea88-dbd6-4b1b-8a13-5bb94c547628",
+    "08f5afdf-f979-4359-87f0-425de57a4708",
+    "ffc51145-e497-455d-bb5e-b7c4421db66c",
+    "a4573dca-f67d-4257-8c7e-6ffee4e98ac0",
+    "47c703a4-e94d-48b1-9906-de589f481517",
+    "05373967-85af-4d92-b24d-44430aaba926",
+    "389d3b2b-6578-494a-8251-c570c4bb90eb",
+    "42f1a624-a92a-4d3b-8bbd-540ccef9e51d"
+  ]
+}

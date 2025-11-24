@@ -18,7 +18,9 @@
     elsif card_collection.featured_image and media_aspect_ratio == 'adapt'
         assign ratio = card_collection.featured_image.aspect_ratio
     endif
-
+    if ratio == 0 or ratio == nil
+        assign ratio = 1
+    endif
 -%}
 
 <div class="card-wrapper animate-arrow">
