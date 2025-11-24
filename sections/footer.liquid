@@ -21,15 +21,6 @@
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-    @media screen and (max-width: 991px) {
-    .footer {
-    margin-top: {{ section.settings.margin_top | times: 0.5 | round: 0 }}px;
-    }
-    .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
-    }
-    }
 {%- endstyle -%}
 <footer class="footer">
     <div class="footer-top">
@@ -90,7 +81,7 @@
             {% endif %}
         </div>
     </div>
-    <div class="footer-midle container">
+    <div class="footer-midle container section-{{ section.id }}-padding">
         <div class="row">
             <div class="footer-midle-left col-md-3">
                 <a href="{{ routes.root_url }}" class="footer-logo">
