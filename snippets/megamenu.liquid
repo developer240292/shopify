@@ -1,0 +1,127 @@
+<div class="container">
+	{% for block in blocks %}
+		{% assign case_title = block.settings.menuname | downcase %}
+		{% assign lower_title = title | downcase %}
+		{% if lower_title == case_title %}
+			{% case block.type %}
+				{% when 'megamenu-product' %}
+					{%- assign collection = collections[block.settings.collection] -%}
+					{%- assign product = collections[block.settings.collection.products] -%}
+					<div class="wbmgproduct">
+						<div class="grid">
+							{% for product in collection.products limit: block.settings.products_to_show %}
+								<div class="card--standard grid__item">
+									<div class="wbmegaimg">
+										<a href="{{ product.url | default: '#' }}" title="{{ product.title | escape }}" class="focus-inset">
+											<img class="img-fluid mx-auto lazyload" 
+											srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+											{%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+											{% if product.featured_media.width >= 493 %}{{ product.featured_media | image_url: width: 493 }} 493w,{% endif %}
+											{% if product.featured_media.width >= 600 %}{{ product.featured_media | image_url: width: 600 }} 600w,{% endif %}
+											{% if product.featured_media.width >= 713 %}{{ product.featured_media | image_url: width: 713 }} 713w,{% endif %}
+											{% if product.featured_media.width >= 823 %}{{ product.featured_media | image_url: width: 823 }} 823w,{% endif %}
+											{% if product.featured_media.width >= 992 %}{{ product.featured_media | image_url: width: 992 }} 992w,{% endif %}
+											{% if product.featured_media.width >= 1100 %}{{ product.featured_media | image_url: width: 1100 }} 1100w,{% endif %}
+											{% if product.featured_media.width >= 1206 %}{{ product.featured_media | image_url: width: 1206 }} 1206w,{% endif %}
+											{% if product.featured_media.width >= 1346 %}{{ product.featured_media | image_url: width: 1346 }} 1346w,{% endif %}
+											{% if product.featured_media.width >= 1426 %}{{ product.featured_media | image_url: width: 1426 }} 1426w,{% endif %}
+											{% if product.featured_media.width >= 1646 %}{{ product.featured_media | image_url: width: 1646 }} 1646w,{% endif %}
+											{% if product.featured_media.width >= 1946 %}{{ product.featured_media | image_url: width: 1946 }} 1946w,{% endif %}
+											{{ product.featured_media | image_url }} {{ product.featured_media.width }}w"
+											src="{{ product.featured_media | image_url: width: 370 }} 370w"
+											sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 992px) calc((100vw - 130px) / 4), (min-width: 768px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+											loading="lazy"
+											width="{{ product.featured_media.width }}"
+											height="{{ product.featured_media.height }}"
+											alt="{{ product.featured_media.alt | escape }}">
+										</a>
+									</div>
+								<div class="wbproductdes card__content">
+									<p class="product-title"><a href="{{ product.url | default: '#' }}" >{{ product.title | escape }}</a></p>
+									<div class="no-js-hidden wbhprice" role="status" {{ block.shopify_attributes }}>
+										{%- render 'price', product: product, use_variant: false, show_badges: false -%}
+									</div>
+								</div>
+								</div>
+							{% else %}
+								{%- for i in (1..6) -%}
+									<div class="card--standard {{ wbgridclass }}">
+										{% render 'product-card-placeholder' %}
+									</div>
+								{%- endfor -%}
+							{% endfor %}  
+						</div>
+					</div>
+
+				{% when 'megamenu-gallery' %} 
+					<div class="row wbmenugallery rless">
+						{% for i in (1..4) %}
+							{% capture galleryimg %}wb{{ i }}_img{% endcapture %}
+							{% capture gallerylink %}wb{{ i }}_link{% endcapture %}
+							{% capture gallerytext %}wb{{ i }}_text{% endcapture %}
+							{% if galleryimg or block.settings[gallerylink].size > 0 %}
+								<div class="col-12 col-md-3 cless text-center">
+									{% if block.settings[gallerylink] %}<a href="{{ block.settings[gallerylink] }}" class="focus-inset" title="{{ block.settings[gallerytext] }}">{% endif %}
+									<div class="wbmenugllazy">
+										{% if block.settings[galleryimg] %}
+											<img src="{{ block.settings[galleryimg] | image_url: width: 350 }}" alt="{{ block.settings[galleryimg].alt }}" class="img-fluid mx-auto lazyload">
+										{% else %}
+											<div class="dummysvg">{{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+										{% endif %}
+									</div>
+										{% if block.settings[gallerytext].size > 0 %}<p>{{ block.settings[gallerytext] }}</p>{% endif %}
+									{% if block.settings[gallerylink] %}</a>{% endif %}
+								</div>
+							{% endif %}
+						{%- endfor -%}
+					</div>
+
+				{% when 'megamenu-blog' %}
+					<div class="wbmgblgtop grid">
+						{%- if block.settings.blog != blank -%}
+							{% for article in blogs[block.settings.blog].articles limit: block.settings.blog_to_show %} 
+								<div class="wbhblog">
+									<div class="blog_img">
+										<a href="{{ article.url }}" title="{{ article.title }}" class="focus-inset">
+											<img loading="lazy" class="lazyload img-fluid mx-auto" 
+											srcset="{%- if article.image.src.width >= 375 -%}{{ article.image.src | image_url: width: 375 }} 375w,{%- endif -%}
+											{%- if article.image.src.width >= 550 -%}{{ article.image.src | image_url: width: 550 }} 550w,{%- endif -%}
+											{%- if article.image.src.width >= 750 -%}{{ article.image.src | image_url: width: 750 }} 750w,{%- endif -%}
+											{%- if article.image.src.width >= 1100 -%}{{ article.image.src | image_url: width: 1100 }} 1100w,{%- endif -%}
+											{%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+											{%- if article.image.src.width >= 1780 -%}{{ article.image.src | image_url: width: 1780 }} 1780w,{%- endif -%}
+											{%- if article.image.src.width >= 2000 -%}{{ article.image.src | image_url: width: 2000 }} 2000w,{%- endif -%}
+											{%- if article.image.src.width >= 3000 -%}{{ article.image.src | image_url: width: 3000 }} 3000w,{%- endif -%}
+											{%- if article.image.src.width >= 3840 -%}{{ article.image.src | image_url: width: 3840 }} 3840w,{%- endif -%}
+											{{ article.image.src | image_url }} {{ article.image.src.width }}w"
+											src="{{ article.image.src | image_url: width: 1000, crop: 'center' }}"
+											alt="{{ article.image.alt }}"
+											width="{{ article.image.src.width }}" height="{{ article.image.src.height }}">
+										</a>
+									</div>
+									<div class="blog_info">
+										<div class="blog_title"><a href="{{ article.url }}" class="focus-inset">{{ article.title | truncate: 60 }}</a></div>
+										<p class="blog_date">
+											<span class="article_day">{% render 'icon-calendar' %} {{ article.published_at | date: '%d %b %y' }}</span>
+										</p> 
+									</div>
+								</div>
+							{% endfor %}
+						{%- else -%}
+							{% for i in (1..5) %}
+								<div class="wbhblog">
+									<div class="blog_img">
+										<div class="dummysvg">{{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+									</div>
+									<div class="blog_info">
+										<div class="blog_title"><a href="#">Example blog post {{ i }}</a></div>
+										<p class="blog_date"><span class="article_day">Oct 22, 2022</span></p>
+									</div>
+								</div>
+							{% endfor %}
+						{%- endif -%}
+					</div>
+			{% endcase %}
+		{% endif %}
+	{% endfor %}
+</div>

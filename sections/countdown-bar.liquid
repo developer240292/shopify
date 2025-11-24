@@ -1,0 +1,252 @@
+<div class="section-{{ section.id }}-padding countdbar">
+  <div class="wbcountimg">
+    <div class="{% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %} media--{{ section.settings.image_height }} media--hover-effect" {% if section.settings.image_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}>
+      {% if section.settings.image != blank %}
+          <img loading="lazy" 
+          srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+            {%- if section.settings.image.width >= 550 -%}{{ section.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+            {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+            {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+            {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+            {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+            {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
+            {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+          src="{{ section.settings.image | image_url: width: 1500 }}" alt="{{ section.settings.image.alt }}" class="img-fluid mx-auto lazyload" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}"/>
+      {% else %}
+          <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="cdownright">
+    <div class="cdownright_inner">
+      {% if section.settings.heading != blank %}
+          <h2 class="heading {{ section.settings.heading_size }}"><span>{{ section.settings.heading }}</span></h2>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+          <p>{{ section.settings.subheading }}</p>
+      {% endif %}
+      <div data-date="{{ section.settings.wb_enddate }}" class="wb_product_countdown">
+        <div class="time main_cdays">
+          <span class="count wb_cdays">00</span>
+          <span class="label">{{ 'wbcustomlabel.wballtext.time_days' | t }}</span>
+        </div>
+        <div class="time main_chours">
+          <span class="count wb_chours">00</span>
+          <span class="label">{{ 'wbcustomlabel.wballtext.time_hour' | t }}</span>
+        </div>
+        <div class="time main_cminutes">
+          <span class="count wb_cminutes">00</span>
+          <span class="label">{{ 'wbcustomlabel.wballtext.time_min' | t }}</span>
+        </div>
+        <div class="time main_cseconds">
+          <span class="count wb_cseconds">00</span>
+          <span class="label">{{ 'wbcustomlabel.wballtext.time_sec' | t }}</span>
+        </div>
+      </div>
+      {% if section.settings.link != blank %}
+          <a href="{{ section.settings.link }}" class="button button--secondary"><span>{{ section.settings.btntxt }}</span></a>
+      {% endif %}
+    </div>
+  </div>  
+</div>
+{% javascript %} 
+const WebiTimer = setInterval(countDown, 1000);
+function countDown() {
+  var countDownDate = new Date(document.querySelector('.wb_product_countdown').getAttribute('data-date')).getTime();
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  if (distance < 0 || isNaN(countDownDate)) {
+    document.querySelector('.main_cdays .wb_cdays').textContent = "00";
+    document.querySelector('.main_chours .wb_chours').textContent = "00";
+    document.querySelector('.main_cminutes .wb_cminutes').textContent = "00";
+    document.querySelector('.main_cseconds .wb_cseconds').textContent = "00";
+  }
+  else {  
+    document.querySelector('.main_cdays .wb_cdays').textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.querySelector('.main_chours .wb_chours').textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.querySelector('.main_cminutes .wb_cminutes').textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.querySelector('.main_cseconds .wb_cseconds').textContent = Math.floor((distance % (1000 * 60)) / 1000);
+  }
+}
+{% endjavascript %}
+{%- style -%}
+.cdownright{
+    text-align: {{ section.settings.Horizontal_alignment }};
+}
+@media (max-width: 575px){
+    .cdownright{
+        text-align: {{ section.settings.mobile_alignment }};
+    }   
+}
+.section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+@media screen and (max-width: 991px) {
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    } 
+}
+{%- endstyle -%}
+{% schema %}
+  {
+  "name": "Countdown",
+    "settings": [
+      {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "image_height",
+        "options": [
+          {
+            "value": "adapt",
+            "label": "Adapt to image"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ],
+        "default": "adapt",
+        "label": "t:sections.featured-collection.settings.image_ratio.label"
+      },
+
+      {
+        "type": "select",
+        "id": "Horizontal_alignment",
+        "label": "Desktop alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "select",
+        "id": "mobile_alignment",
+        "label": "Mobile alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      },
+
+      {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Heading"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__1.label"
+          },
+          {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__2.label"
+          },
+          {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__3.label"
+          }
+        ],
+        "default": "h0",
+        "label": "t:sections.all.heading_size.label"
+      },
+      {
+          "type": "textarea",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "Add subheading here"
+      },
+      {
+          "type": "text",
+          "id": "wb_enddate",
+          "label": "End date",
+          "info": "The end date must be set to a future date and include the following format: YYYY/MM/DD Example: 2022/10/05."
+      },
+      {
+        "type": "text",
+        "id": "btntxt",
+        "default": "Shop the collection",
+        "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+        "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+      },
+
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 60
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+      }
+    ],
+    "presets": [
+      {
+        "name": "Countdown"
+      }
+    ]
+  }
+{% endschema %}

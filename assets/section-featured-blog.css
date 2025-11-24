@@ -1,60 +1,73 @@
-.blog-placeholder-svg {
-  height: 100%;
+.wbblogimg a{
+    border-radius: 10px;
 }
-
-@media screen and (min-width: 990px) {
-  .grid--1-col-desktop .article-card .card__content {
-    text-align: center;
-  }
+.wbblogimgdesc a svg{
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
 }
-
-.blog__title {
-  margin: 0;
+.wbblogimgdesc h3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
-
-.blog__posts.articles-wrapper {
-  margin-bottom: 1rem;
+.wbblogimgdesc h2,.wbblogimgdesc h3{
+    font-size: calc(var(--font-body-scale) * 18px);
+    text-transform: capitalize;
+    padding: 0 0 15px 0;
+    font-weight: var(--font-body-weight-medium);
+    margin: 0;
 }
-
-@media screen and (min-width: 990px) {
-  .blog__posts.articles-wrapper {
-    margin-bottom: 0;
-  }
+.allslideprt .article-card .wbblogimgdesc .wbblogdate{
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    color: rgb(var(--color-foreground),.6);
 }
-
-.blog__posts.articles-wrapper .article {
-  scroll-snap-align: start;
+.blog__view-all{
+    margin-top: 20px;
 }
-
-@media screen and (max-width: 749px) {
-  .blog__post.article {
-    width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
-  }
+.wbuserdate .wbblogauth,.wbuserdate .article-card__footer,.wbuserdate .article-card__footer span{
+    display: inline-block;
+    vertical-align: middle;
 }
-
-.background-secondary .blog-placeholder__content {
-  background-color: rgb(var(--color-background));
+.wbuserdate .article-card__footer span::before{
+    content: '';
+    margin: 0 15px;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 1px solid rgba(var(--color-foreground),0.08);
+    height: 15px;
 }
-
-.blog__posts .card-wrapper {
-  width: 100%;
+.wbblogtxt{
+    font-size: calc(var(--font-body-scale) * 14px);
+    color: rgba(var(--color-foreground),0.8);;
+    letter-spacing: 0;
+    margin-bottom: 15px;
 }
-
-.blog__button {
-  margin-top: 3rem;
+.wbblogimgdesc{
+    margin-top: 15px;
 }
-
-@media screen and (min-width: 750px) {
-  .blog__button {
-    margin-top: 5rem;
-  }
-}
-
-/* check for flexbox gap in older Safari versions */
-@supports not (inset: 10px) {
-  @media screen and (min-width: 750px) {
-    .blog__posts .article + .article {
-      margin-left: var(--grid-desktop-horizontal-spacing);
+@media (min-width: 1200px) and (max-width: 1399px){
+    .blog .allslideprt .slider__slide{
+        width: 33.33%;
     }
-  }
+}
+@media (min-width: 576px) and (max-width: 1199px){
+    .blog .allslideprt .slider__slide{
+        width: 50%;
+    }
+}
+@media (max-width: 575px){
+    .blog .allslideprt .slider__slide{
+        width: 100%;
+    }
+}
+@media (max-width: 991px){
+    .wbblogimgdesc h2,.wbblogimgdesc h3{
+        font-size: calc(var(--font-body-scale) * 16px);
+    }
+    .wbblogtxt{
+        font-size: calc(var(--font-body-scale) * 14px);
+    }
 }

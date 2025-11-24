@@ -1,0 +1,175 @@
+<div class="page-width section-{{ section.id }}-padding wbthmepart">
+    {%- if section.settings.title != blank -%}
+      <h1 class="heading text-left"><span>{{ section.settings.title | escape }}</span></h1>
+    {%- endif -%}
+
+    <div class="row">
+        {%- for block in section.blocks -%}
+            {% case block.type %}
+                {% when 'rich-text'%}
+                <div class="col-12 text-{{ block.settings.align_text }}">
+                    <div class="thefhigh">
+                        {%- if block.settings.title != blank -%}
+                            <h2>{{ block.settings.title | escape }}</h2>
+                        {%- endif -%}
+                        {%- if block.settings.text != blank -%}
+                            <div class="rte">{{ block.settings.text }}</div>
+                        {%- endif -%}
+                    </div>
+                </div>
+
+                {% when 'feature'%}
+                <div class="col-md-4 col-sm-6 col-12 text-center themefepart">
+                    <img srcset="{{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                    src="{{ block.settings.image | image_url: width: 200 }}"
+                    loading="lazy"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}">
+                    <h2>{{ block.settings.stitle }}</h2>
+                    {{ block.settings.stext }}
+                </div>
+            {% endcase %}
+        {%- endfor -%}
+    </div>
+
+  {%- if section.blocks.size == 0 -%}
+    <div class="text-center">{{ 'wbcustomlabel.wballtext.nocontent' | t }}</div>
+  {%- endif -%}
+</div>
+{%- style -%}
+.section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+@media screen and (max-width: 991px) {
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+}
+{%- endstyle -%}
+{% schema %}
+  {
+    "name": "Theme feature",
+    "class": "index-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Theme features"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 28
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 0
+        }
+    ],
+    "blocks": [
+      {
+        "type": "rich-text",
+        "name": "Rich text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Rich text"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Use this section for any text you need to fill out your pages or to add any headings between other blocks.</p>"
+          },
+          {
+            "type": "select",
+            "id": "align_text",
+            "label": "Text alignment",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Centered"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "feature",
+        "name": "Feature",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "stitle",
+            "label": "heading",
+            "default": "Theme features title"
+          },
+          {
+            "type": "richtext",
+            "id": "stext",
+            "label": "Text",
+            "default": "<p>Theme feature description</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+      "name": "Theme feature",
+      "blocks": [
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        }
+      ]
+    }]
+  }
+{% endschema %}
