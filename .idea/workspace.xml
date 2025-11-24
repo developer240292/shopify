@@ -21,8 +21,23 @@
   <component name="ChangeListManager">
     <list default="true" id="44102a6a-4e56-46e4-804e-3d4049815b62" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sections/footer.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/footer.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/404.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gift_card.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gift_card.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/list-collections.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/list-collections.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page.aboutus.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.aboutus.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page.contact.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.contact.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page.faq.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.faq.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page.theme-feature.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.theme-feature.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page.wishlist.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.wishlist.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/password.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/password.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product.wbquickview.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product.wbquickview.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,7 +69,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763946661981</updated>
-      <workItem from="1763946663412" duration="23222000" />
+      <workItem from="1763946663412" duration="23844000" />
+      <workItem from="1763974626296" duration="488000" />
+      <workItem from="1763975671616" duration="52000" />
     </task>
     <servers />
   </component>
@@ -68,15 +85,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="461" y="165" key="SettingsEditor" timestamp="1763973386799">
+    <state x="839" y="416" key="#Custom_Plugin_Repositories" timestamp="1763974551217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763973386799" />
-    <state x="1113" y="410" width="585" height="592" key="find.popup" timestamp="1763973814332">
+    <state x="839" y="416" key="#Custom_Plugin_Repositories/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763974551217" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1763974670429">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1113" y="410" width="585" height="592" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763973814332" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763974670429" />
+    <state x="1113" y="410" width="585" height="592" key="find.popup" timestamp="1763975716247">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1113" y="410" width="585" height="592" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763975716247" />
   </component>
 </project>
