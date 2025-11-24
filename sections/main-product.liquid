@@ -39,7 +39,7 @@
 <div class="">
   <div class="row wp_clns section-{{ section.id }}-padding product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
 
-    <div class="grid__item product__media-wrapper wbproleftimg {% if section.settings.mobile_thumbnails == 'show' %} mobileshowthumb{% endif %}">
+    <div class="grid__item product__media-wrapper vtproleftimg {% if section.settings.mobile_thumbnails == 'show' %} mobileshowthumb{% endif %}">
       <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
@@ -97,7 +97,7 @@
         </slider-component>
         {%- if first_3d_model -%}
           <button
-            class="button button--full-width product__xr-button wbxs3dmain"
+            class="button button--full-width product__xr-button vtxs3dmain"
             type="button"
             aria-label="{{ 'products.product.xr_button_label' | t }}"
             data-shopify-xr
@@ -265,29 +265,29 @@
             {%- when 'sku' -%}
             {% assign current_variant = product.selected_or_first_available_variant %}
             {% if current_variant.sku != '' %}
-              <div class="wbvsku"><span>{{ 'wbcustomlabel.wballtext.sku' | t }}</span><span class="variant-sku">{{ current_variant.sku }}</span></div>
+              <div class="vtvsku"><span>{{ 'vtcustomlabel.vtalltext.sku' | t }}</span><span class="variant-sku">{{ current_variant.sku }}</span></div>
             {% endif %}
 
             {%- when 'title' -%}
             <h1 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ product.title | escape }}</h1>
 
             {%- when 'product_meta' -%}
-            <ul class="wbmeta_main">
+            <ul class="vtmeta_main">
                <li>
                   {% if block.settings.show_vendor %}
-                      <span>{{ 'wbcustomlabel.wballtext.vendor_show' | t }}</span>
+                      <span>{{ 'vtcustomlabel.vtalltext.vendor_show' | t }}</span>
                       <p class="vendor-capitalize">{{ product.vendor }}</p>
                   {% endif %}
                </li>
                <li>
                   {% if block.settings.display_product_type and product.type.size > 0 %}
-                      <span>{{ 'wbcustomlabel.wballtext.product_type_show' | t }}</span>
+                      <span>{{ 'vtcustomlabel.vtalltext.product_type_show' | t }}</span>
                       <p>{{ product.type }}</p>
                   {% endif %}
                </li>
                <li>
                 {% if block.settings.display_tags and product.tags.size > 0 %}
-                    <span>{{ 'wbcustomlabel.wballtext.tags_show' | t }}</span>
+                    <span>{{ 'vtcustomlabel.vtalltext.tags_show' | t }}</span>
                     {% for tag in product.tags %}
                     {% assign tag_coll = '/collections/all/' | append: tag %}
                       {{ tag | capitalize | link_to: tag_coll }}{% unless forloop.last %},&nbsp;{% endunless %}
@@ -296,9 +296,9 @@
                </li>
             </ul>
 
-            {%- when 'wbimage_section' -%}
+            {%- when 'vtimage_section' -%}
             <div class="{{ block.settings.alignment }}">
-              <a href="{{ block.settings.link_1 }}" title="{{ 'wbcustomlabel.wballtext.banner' | t }}">
+              <a href="{{ block.settings.link_1 }}" title="{{ 'vtcustomlabel.vtalltext.banner' | t }}">
               {% if block.settings.image_1 != blank %} 
                   <img loading="lazy"
                   srcset="{%- if block.settings.image_1.width >= 375 -%}{{ block.settings.image_1 | image_url: width: 375 }} 375w,{%- endif -%}
@@ -331,10 +331,10 @@
                 endif
               -%}
               {%- assign bar_progress = current_variant.inventory_quantity | times: 100 | divided_by: block.settings.max_stock | append: '%' -%}
-              <div class="wbstockcount {% unless current_variant.available and current_variant.inventory_quantity > 0 %} hidden {% endunless %}">
-                <div class="wbstockinfo wbstockinfo_{{ inventory_status }}">{{ inventory_message }}</div>
-                <div class="wbstockinfo-bar">
-                  <span class="wbstockinfo-probar" style="width: {{ bar_progress }}"></span>
+              <div class="vtstockcount {% unless current_variant.available and current_variant.inventory_quantity > 0 %} hidden {% endunless %}">
+                <div class="vtstockinfo vtstockinfo_{{ inventory_status }}">{{ inventory_message }}</div>
+                <div class="vtstockinfo-bar">
+                  <span class="vtstockinfo-probar" style="width: {{ bar_progress }}"></span>
                 </div>
               </div>
               {%- style -%}
@@ -361,7 +361,7 @@
               </script>
 
             {%- when 'price' -%}
-            <div class="wbpricetax">
+            <div class="vtpricetax">
               <div class="no-js-hidden mainp-price" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price', product: product, use_variant: true, show_badges: true -%}
               </div>
@@ -376,7 +376,7 @@
                   </div>
               {%- endif -%}
             </div>
-            <div class="wbspayinstall" {{ block.shopify_attributes }}>
+            <div class="vtspayinstall" {{ block.shopify_attributes }}>
                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                 {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
@@ -415,7 +415,7 @@
             </div>
 
             {%- when 'content' -%}
-            <div class="wbcuscontent" {{ block.shopify_attributes }}>
+            <div class="vtcuscontent" {{ block.shopify_attributes }}>
                 <h2>{{ block.settings.heading | default: block.settings.page.title }}</h2>
                 <div class="rte">
                     {{ block.settings.content }}
@@ -523,7 +523,7 @@
                     <li>
                         <a target="_blank" rel="noopener" rel="noreferrer" href="//www.facebook.com/sharer.php?u={{ request.origin }}" class="share-facebook">
                             {% render 'icon-facebook' %}
-                            <span>{{ 'wbcustomlabel.wballtext.share_on_facebook' | t }}</span>
+                            <span>{{ 'vtcustomlabel.vtalltext.share_on_facebook' | t }}</span>
                         </a>
                     </li>
                 {% endif %}
@@ -531,7 +531,7 @@
                     <li>
                         <a target="_blank" rel="noopener" rel="noreferrer" href="//twitter.com/share?url={{ request.origin }}" class="share-twitter">
                         {% render 'icon-twitter' %}
-                            <span>{{ 'wbcustomlabel.wballtext.share_on_twitter' | t }}</span>
+                            <span>{{ 'vtcustomlabel.vtalltext.share_on_twitter' | t }}</span>
                         </a>
                     </li>
                 {% endif %}
@@ -539,7 +539,7 @@
                     <li>
                         <a target="_blank" rel="noopener" rel="noreferrer" href="//pinterest.com/pin/create/button/?url={{ request.origin }}" class="share-pinterest">
                             {% render 'icon-pinterest' %}
-                            <span>{{ 'wbcustomlabel.wballtext.share_on_pinterest' | t }}</span>
+                            <span>{{ 'vtcustomlabel.vtalltext.share_on_pinterest' | t }}</span>
                         </a>
                     </li>
                 {% endif %}
@@ -552,7 +552,7 @@
                         {%- for option in product.options_with_values -%}
                             <fieldset {% if option.name == 'Color' and block.settings.show_colorswatch %} class="swatchComponent" {% else %} class="js product-form__input" {% endif %}>
                                 <legend class="form__label">{{ option.name }}</legend>
-                                <div {% if option.name == 'Color' and block.settings.show_colorswatch %} class="wbswatchclr" {% endif %}>
+                                <div {% if option.name == 'Color' and block.settings.show_colorswatch %} class="vtswatchclr" {% endif %}>
                                     {%- for value in option.values -%}
                                         <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                         name="{{ option.name }}"
@@ -720,7 +720,7 @@
 
 
 {%- if section.settings.enable_desctab -%}
-    <div class="wbproducttab spaced-section quick-add-hidden row">
+    <div class="vtproducttab spaced-section quick-add-hidden row">
         <div class="rating-review col-12">
             <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
         </div>
@@ -929,7 +929,7 @@
       },
 
       {
-        "type": "wbimage_section",
+        "type": "vtimage_section",
         "name": "Image",
         "settings":[
               {

@@ -2,7 +2,7 @@
 
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="container">
-    <div class="wbsingleblog">
+    <div class="vtsingleblog">
         {%- for block in section.blocks -%}
             {%- case block.type -%}
                 {%- when '@app' -%}
@@ -12,7 +12,7 @@
 
                 {%- when 'title'-%}
                 <h1 class="article-template__title text-center" itemprop="headline">{{ article.title | escape }}</h1>
-                <div class="text-center wbblogdate">
+                <div class="text-center vtblogdate">
                     {%- if block.settings.blog_show_date -%}
                         <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'date' }}</span>
                     {%- endif -%}
@@ -53,7 +53,7 @@
                 {%- when 'blogtag'-%}
                 <div class="tag-section">
                     {% if article.tags.size > 0 %}
-                        <label>{{ 'wbcustomlabel.wballtext.tag' | t }}</label>
+                        <label>{{ 'vtcustomlabel.vtalltext.tag' | t }}</label>
                         {% for tag in article.tags %}
                             <a class="blog-tags" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>{% unless forloop.last %} <span class="meta-sep">,</span> {% endunless %}
                         {% endfor %}
@@ -100,7 +100,7 @@
             {%- endcase -%}
         {%- endfor -%}
 
-        <div class="wbbackblog center">
+        <div class="vtbackblog center">
             <a href="{{ blog.url }}" class="article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
                 <span class="icon-wrap">{% render 'icon-arrow' %}</span>
                 {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
@@ -146,7 +146,7 @@
                     -%}
                     <h2>{{ 'blogs.article.comment_form_title' | t }}</h2>
                     {%- if form.errors -%}
-                        <h3 class="form-status wbformerror" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h3>
+                        <h3 class="form-status vtformerror" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h3>
                         <ul>
                         {%- for field in form.errors -%}
                             <li>
@@ -164,7 +164,7 @@
                         {%- endfor -%}
                         </ul>
                     {%- elsif form.posted_successfully? -%}
-                        <h3 class="form-status wbformsuccess" tabindex="-1" autofocus>{% render 'icon-success' %} {{ post_message | t }}</h3>
+                        <h3 class="form-status vtformsuccess" tabindex="-1" autofocus>{% render 'icon-success' %} {{ post_message | t }}</h3>
                     {%- endif -%}
 
                         <div {% if blog.moderated? == false %} class="article-template__comments-fields"{% endif %}>

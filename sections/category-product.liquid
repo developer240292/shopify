@@ -21,8 +21,8 @@
 }
 {%- endstyle -%}
 
-<div class="wbhomecat section-{{ section.id }}-padding">
-    <div class="wbhomecinr">
+<div class="vthomecat section-{{ section.id }}-padding">
+    <div class="vthomecinr">
         {% if section.settings.m_title != blank %}<h2 class="heading text-left {{ section.settings.heading_size }}"><span>{{ section.settings.m_title }}</span></h2>{% endif %}
 
         <div class="row rless">
@@ -30,7 +30,7 @@
             <ul class="list-inline catnav-tabs" role="tablist">
                 {%- for block in section.blocks -%}
                     <li class="catnav-item {% if forloop.first %}active{% endif %}" role="tab">
-                        <a class="nav-link" data-toggle="tab" href="#wbprodtab1-{{ block.id }}" id="tab-{{ block.id }}">
+                        <a class="nav-link" data-toggle="tab" href="#vtprodtab1-{{ block.id }}" id="tab-{{ block.id }}">
                             <span>{{ block.settings.cat_name }}</span>
                         </a>
                     </li>
@@ -45,9 +45,9 @@
               endif
               -%}
               {%- assign collection = collections[block.settings.collection] -%}
-                  <div class="rless cattab-pane fade {% if forloop.first %}show active{% endif %}" id="wbprodtab1-{{ block.id }}" role="tabpanel" aria-labelledby="tab-{{ block.id }}" tabindex="0"
+                  <div class="rless cattab-pane fade {% if forloop.first %}show active{% endif %}" id="vtprodtab1-{{ block.id }}" role="tabpanel" aria-labelledby="tab-{{ block.id }}" tabindex="0"
                   {% if forloop.first %} aria-hidden="false" {% else %} aria-hidden="true" {% endif %}>
-                          <div class="wbslickcattab">
+                          <div class="vtslickcattab">
                               {% assign num_row = section.settings.rows | times: 1 %}
                               {% assign temp = 0 %}
                               {% for product in collection.products limit: block.settings.products_to_show %}

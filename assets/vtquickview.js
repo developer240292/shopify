@@ -1,6 +1,6 @@
 'use strict';
 (function($){
-    $('body').on('click', '.js-wbquickview-link', e => {
+    $('body').on('click', '.js-vtquickview-link', e => {
         e.preventDefault();
         const $currentTarget = $(e.currentTarget);
         var product_url = $currentTarget.data('url');
@@ -8,16 +8,16 @@
             var product_url = product_url.substring(0, product_url.indexOf("?"));
         }
         $.ajax({
-            url: product_url + '?view=wbquickview',
+            url: product_url + '?view=vtquickview',
             success: function(data) {
                 if (!data) { return; }
                 const html = $(data).find('[data-html="content"]').html();
-                $('.js-wbquickview').html(html);
+                $('.js-vtquickview').html(html);
                 $.magnificPopup.open({
                     preloader: true,
                     tLoading: '',
                     items: {
-                        src: '<div id="wbquickview" class="js-wbquickview white-popup">'+ html +'</div>',
+                        src: '<div id="vtquickview" class="js-vtquickview white-popup">'+ html +'</div>',
                         type: 'inline'
                     },
                     closeBtnInside: true

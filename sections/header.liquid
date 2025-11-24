@@ -22,10 +22,10 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 <style>
   
-  .wbheadtop{
+  .vtheadtop{
     background: {{ section.settings.topbg_clr }};
   }
-  .wbheadtop ul li,.wbheadtop .localization-selector.link{
+  .vtheadtop ul li,.vtheadtop .localization-selector.link{
     color: {{ section.settings.topc_clr }};
   }
   .header__heading-logo {
@@ -97,7 +97,7 @@
   <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-  <symbol id="icon-search" viewbox="0 0 18 19" >
+  <symbol id="icon-search" vievtox="0 0 18 19" >
     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" />
   </symbol>
   <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
@@ -106,14 +106,14 @@
 </svg>
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient">
    {% if section.settings.show_topheader %}
-    <div class="wbheadtop">
+    <div class="vtheadtop">
       <div class="page-width">
         <div class="text-left">
           <ul>
             <li>{{ section.settings.topoffer }}</li>
           </ul>
         </div>
-        <div class="wbftlangcur">
+        <div class="vtftlangcur">
           {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
               <noscript>
               {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form' -%}
@@ -204,7 +204,7 @@
     </div>
    {% endif %}
 
-  <header class="header header--{{ section.settings.logo_position }} color-{{ section.settings.color_scheme }} gradient page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if section.settings.menu == blank %} wbdisableboth{% endif %}  {% if settings.wb_cartnumber == 'wb_shoptotal' or settings.wb_cartnumber == 'wb_shopqtytotal' %} wbcartbth{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} color-{{ section.settings.color_scheme }} gradient page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if section.settings.menu == blank %} vtdisableboth{% endif %}  {% if settings.vt_cartnumber == 'vt_shoptotal' or settings.vt_cartnumber == 'vt_shopqtytotal' %} vtcartbth{% endif %}">
 
     {%- if section.settings.menu != blank -%} 
       <header-drawer data-breakpoint="tablet">
@@ -325,7 +325,7 @@
                 <div class="menu-drawer__utility-links">
 
                   {%- if section.settings.secmenu != blank -%}
-                    <nav class="wbsecmenu">
+                    <nav class="vtsecmenu">
                       <ul class="list-menu list-menu--inline" role="list">
                       {%- for link in section.settings.secmenu.links -%}
                           <li>
@@ -562,10 +562,10 @@
     </div>
 
     {%- unless section.settings.logo_position == 'top-left' or section.settings.logo_position == 'top-center' -%}
-    <div class="wbtmenu wbmenuup header__inline-menu">
+    <div class="vttmenu vtmenuup header__inline-menu">
         {% comment %}Simple Menu{% endcomment %}
         {%- if section.settings.menu != blank -%}
-          <nav class="text-center wbsimplemenuxs">
+          <nav class="text-center vtsimplemenuxs">
             <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.menu.links -%}
 
@@ -593,13 +593,13 @@
                               <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                               {% render 'icon-caret' %}
                             </summary>
-                            <div id="HeaderMenu-MenuList-{{ forloop.index }}" class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}wbmenufull{% endif %}" tabindex="-1">
+                            <div id="HeaderMenu-MenuList-{{ forloop.index }}" class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}" tabindex="-1">
                                 {% if assignsubmenu %}
                                     <div class="container wp_submenus_dep">
                                         <div class="row">
                                             {%- for childlink in link.links -%}
                                             <div class="{% if link.links.size == 1 %}col-12 {% elsif link.links.size == 2 %}col-12 {% else %}col-3 {% endif %}">
-                                                <div class="wbmenuinner">
+                                                <div class="vtmenuinner">
                                                 <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large wp_atitls {% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                                   {{ childlink.title | escape }}
                                                 </a>
@@ -619,7 +619,7 @@
                                     </div>
                                 {% endif %}
                                 {% render 'megamenu', blocks: section.blocks, title: link.title %}
-                                <div class="text-right wbhseeall container"><a href="{{ link.url }}">{{ 'wbcustomlabel.wballtext.see_all' | t }}</a></div>
+                                <div class="text-right vthseeall container"><a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a></div>
                             </div>
                           </details>
                         </details-disclosure>
@@ -631,9 +631,9 @@
                                       <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                                       {% render 'icon-caret' %}
                                     </summary>
-                                    <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}wbmenufull{% endif %}" tabindex="-1">
+                                    <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}" tabindex="-1">
                                     {% render 'megamenu', blocks: section.blocks, title: link.title %}
-                                    <div class="text-right wbhseeall container"><a href="{{ link.url }}">{{ 'wbcustomlabel.wballtext.see_all' | t }}</a></div>
+                                    <div class="text-right vthseeall container"><a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a></div>
                                     </ul>
                                 </details>
                             </details-disclosure>
@@ -785,24 +785,24 @@
         </details-modal>
         {%- endif -%}
 
-            {% comment %} Webibazaar Wishlist {% endcomment %}
-            <div class="wbheadwish">
+            {% comment %} Villatheme Wishlist {% endcomment %}
+            <div class="vtheadwish">
               <div class="wishlist">
                 {% if customer %}
-                  <a href="/pages/wishlist" class="svgbg"><strong>{% render 'icon-wishlist' %}<span class="wbwishcount">0</span></strong><span>{{ 'wbcustomlabel.wballtext.wishlist' | t }}</span></a>
+                  <a href="/pages/wishlist" class="svgbg"><strong>{% render 'icon-wishlist' %}<span class="vtwishcount">0</span></strong><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a>
                 {% else %} 
-                  <a href="/account/login" class="svgbg"><strong>{% render 'icon-wishlist' %}<span class="wbwishcount">0</span></strong><span>{{ 'wbcustomlabel.wballtext.wishlist' | t }}</span></a>
+                  <a href="/account/login" class="svgbg"><strong>{% render 'icon-wishlist' %}<span class="vtwishcount">0</span></strong><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a>
                 {% endif %}
               </div>
             </div>
-            {% comment %} Webibazaar Wishlist Over {% endcomment %}
+            {% comment %} Villatheme Wishlist Over {% endcomment %}
 
             {%- if shop.customer_accounts_enabled -%}
             {% if section.settings.show_acicon %}
                 <div class="slidedown_section dropdown">
                     <div class="hmuser" data-toggle="dropdown"> 
                         <div class="userdrop">
-                          <button type="button" aria-label="{% if customer %}{{ 'wbcustomlabel.wballtext.account' | t }}{% else %}{{ 'wbcustomlabel.wballtext.log_in' | t }}{% endif %}">
+                          <button type="button" aria-label="{% if customer %}{{ 'vtcustomlabel.vtalltext.account' | t }}{% else %}{{ 'vtcustomlabel.vtalltext.log_in' | t }}{% endif %}">
                             <span class="svgbg">{% render 'icon-account' %}</span>
                           </button>
                         </div>
@@ -815,31 +815,31 @@
                                     <li>
                                         <a href="/account">
                                         {% render 'icon-login' %}
-                                        {{ 'wbcustomlabel.wballtext.account' | t }}
+                                        {{ 'vtcustomlabel.vtalltext.account' | t }}
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/account/logout">
                                         {% render 'icon-signout' %}
-                                        {{ 'wbcustomlabel.wballtext.log_out' | t }}
+                                        {{ 'vtcustomlabel.vtalltext.log_out' | t }}
                                         </a>
                                     </li>
                                     {% else %}
                                     <li>
                                         <a href="/account/login">
                                         {% render 'icon-lock' %}
-                                        {{ 'wbcustomlabel.wballtext.log_in' | t }}
+                                        {{ 'vtcustomlabel.vtalltext.log_in' | t }}
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/account/register" title="{{ 'wbcustomlabel.wballtext.create_accounthome' | t }}">
+                                        <a href="/account/register" title="{{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}">
                                         {% render 'icon-login' %}
-                                        {{ 'wbcustomlabel.wballtext.create_accounthome' | t }}
+                                        {{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}
                                         </a>
                                     </li>
                                     {% endif %}
                                 </ul>
-                              <div class="wbftlangcur wp_mpcls">
+                              <div class="vtftlangcur wp_mpcls">
                                     {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
                                         <noscript>
                                         {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form' -%}
@@ -933,24 +933,24 @@
             {% endif %}
             {%- endif -%}
 
-            {% comment %} Webibazaar Cart Dropdown {% endcomment %}
+            {% comment %} Villatheme Cart Dropdown {% endcomment %}
             {% if settings.show_shopicon %}
               {%- if settings.cart_type == 'drawer' or settings.cart_type == 'page' -%}
-                  <div class="wbhcart">
+                  <div class="vthcart">
                       <a href="{{ routes.cart_url }}" class="focus-inset" id="cart-icon-bubble">
                           <span class="svgbg">
-                            {%- if settings.wb_carticon == 'wb_shopcart' -%}
+                            {%- if settings.vt_carticon == 'vt_shopcart' -%}
                               {% render 'icon-hcart' %}
                             {%- else -%}
                               {% render 'icon-hcartbag' %}
                             {%- endif -%}
                           </span>
 
-                          {%- if settings.wb_cartnumber == 'wb_shopqty' -%}
-                            <span class="wbhcartitem">{{ cart.item_count }}</span>
-                          {%- elsif settings.wb_cartnumber == 'wb_shoptotal' -%}
-                            <span class="wbcarthtotal text-left">
-                              <strong>{{ 'wbcustomlabel.wballtext.mycart' | t }}</strong>
+                          {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
+                            <span class="vthcartitem">{{ cart.item_count }}</span>
+                          {%- elsif settings.vt_cartnumber == 'vt_shoptotal' -%}
+                            <span class="vtcarthtotal text-left">
+                              <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
                               {%- if settings.currency_code_enabled -%}
                                 <span>{{ cart.total_price | money_with_currency }}</span>
                               {%- else -%}
@@ -958,9 +958,9 @@
                               {%- endif -%}
                             </span>
                           {%- else -%}
-                              <span class="wbhcartitem wbqtyboth">{{ cart.item_count }}</span>
-                              <span class="wbcarthtotal text-left">
-                                <strong>{{ 'wbcustomlabel.wballtext.mycart' | t }}</strong>
+                              <span class="vthcartitem vtqtyboth">{{ cart.item_count }}</span>
+                              <span class="vtcarthtotal text-left">
+                                <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
                               {%- if settings.currency_code_enabled -%}
                                 <span>{{ cart.total_price | money_with_currency }}</span>
                               {%- else -%}
@@ -973,21 +973,21 @@
                   </div>
               {%- else -%}
                   <div class="dropdown" id="cart-icon-bubble">
-                      <div class="wbcollscart" data-toggle="dropdown"> 
-                          <div class="wbhcart">
+                      <div class="vtcollscart" data-toggle="dropdown">
+                          <div class="vthcart">
                               <a href="#" title="{{ 'templates.cart.cart' | t }}">
                                 <span class="svgbg">
-                                  {%- if settings.wb_carticon == 'wb_shopcart' -%}
+                                  {%- if settings.vt_carticon == 'vt_shopcart' -%}
                                     {% render 'icon-hcart' %}
                                   {%- else -%}
                                     {% render 'icon-hcartbag' %}
                                   {%- endif -%}
                                 </span>
-                                {%- if settings.wb_cartnumber == 'wb_shopqty' -%}
-                                  <span class="wbhcartitem">{{ cart.item_count }}</span>
-                                {%- elsif settings.wb_cartnumber == 'wb_shoptotal' -%}
-                                  <span class="wbcarthtotal text-left">
-                                    <strong>{{ 'wbcustomlabel.wballtext.mycart' | t }}</strong>
+                                {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
+                                  <span class="vthcartitem">{{ cart.item_count }}</span>
+                                {%- elsif settings.vt_cartnumber == 'vt_shoptotal' -%}
+                                  <span class="vtcarthtotal text-left">
+                                    <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
                                     {%- if settings.currency_code_enabled -%}
                                       <span>{{ cart.total_price | money_with_currency }}</span>
                                     {%- else -%}
@@ -995,9 +995,9 @@
                                     {%- endif -%}
                                   </span>
                                 {%- else -%}
-                                    <span class="wbhcartitem wbqtyboth">{{ cart.item_count }}</span>
-                                    <span class="wbcarthtotal text-left">
-                                      <strong>{{ 'wbcustomlabel.wballtext.mycart' | t }}</strong>
+                                    <span class="vthcartitem vtqtyboth">{{ cart.item_count }}</span>
+                                    <span class="vtcarthtotal text-left">
+                                      <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
                                     {%- if settings.currency_code_enabled -%}
                                       <span>{{ cart.total_price | money_with_currency }}</span>
                                     {%- else -%}
@@ -1018,8 +1018,8 @@
                                       <div class="js-contents">
                                           {%- if cart != empty -%}
                                               {%- for item in cart.items -%}
-                                                  <div class="wbheadcartdrop" id="WbCartItem-{{ item.index | plus: 1 }}">
-                                                      <div class="wbcartdimg">
+                                                  <div class="vtheadcartdrop" id="VtCartItem-{{ item.index | plus: 1 }}">
+                                                      <div class="vtcartdimg">
                                                           {% if item.image %}
                                                           {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                                                               <a href="{{ item.url }}">
@@ -1032,11 +1032,11 @@
                                                               </a>
                                                           {% endif %}
                                                       </div>
-                                                      <div class="wbcartddesc">
+                                                      <div class="vtcartddesc">
                                                           {%- if settings.show_vendor -%}
                                                               <p class="light"><small>{{ item.product.vendor }}</small></p>
                                                           {%- endif -%}
-                                                          <a href="{{ item.url }}" class="wbcrtname">{{ item.product.title | escape }}</a>
+                                                          <a href="{{ item.url }}" class="vtcrtname">{{ item.product.title | escape }}</a>
                                                           {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
                                                               <dl>
                                                               {%- if item.product.has_only_default_variant == false -%}
@@ -1074,8 +1074,8 @@
                                                               {%- endfor -%}
                                                           </ul>
 
-                                                          <div class="wbcartqtybr">
-                                                              <label class="visually-hidden" for="WbQuantity-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
+                                                          <div class="vtcartqtybr">
+                                                              <label class="visually-hidden" for="VtQuantity-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                                               <webi-quantity-input class="quantity">
                                                                   <button class="quantity__button no-js-hidden" name="minus" type="button">
                                                                       <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
@@ -1087,7 +1087,7 @@
                                                                   value="{{ item.quantity }}"
                                                                   min="0"
                                                                   aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
-                                                                  id="WbQuantity-{{ item.index | plus: 1 }}"
+                                                                  id="VtQuantity-{{ item.index | plus: 1 }}"
                                                                   data-index="{{ item.index | plus: 1 }}" >
                                                                   <button class="quantity__button no-js-hidden" name="plus" type="button">
                                                                       <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
@@ -1169,7 +1169,7 @@
                                       <noscript>
                                           <button type="submit" class="cart__update-button button button--secondary focus-inset" form="cart">{{ 'sections.cart.update' | t }}</button>
                                       </noscript>
-                                      <a href="{{ routes.cart_url }}" class="button button--primary">{{ 'wbcustomlabel.wballtext.viewcart' | t }}</a>
+                                      <a href="{{ routes.cart_url }}" class="button button--primary">{{ 'vtcustomlabel.vtalltext.viewcart' | t }}</a>
                                       <a href="checkout" class="button button--primary">{{ 'sections.cart.checkout' | t }}</a>
                                   </div>
                               </div>
@@ -1178,7 +1178,7 @@
                   </div>
               {%- endif -%}
             {% endif %}
-            {% comment %} Webibazaar Cart Dropdown Over {% endcomment %}
+            {% comment %} Villatheme Cart Dropdown Over {% endcomment %}
         </div>
     </div>
   </header>
@@ -1188,11 +1188,11 @@
     {%- endif -%}
 {% comment %} Megamenu bottom menu {% endcomment %}
 {%- if section.settings.logo_position == 'top-left' or section.settings.logo_position == 'top-center' -%}
-<div class="color-{{ section.settings.color_schememenu }} gradient wbmenuup header__inline-menu">
-    <div class="page-width wbmenubtm">
+<div class="color-{{ section.settings.color_schememenu }} gradient vtmenuup header__inline-menu">
+    <div class="page-width vtmenubtm">
         {% comment %}Simple Menu{% endcomment %}
         {%- if section.settings.menu != blank -%}
-          <nav class="wbsimplemenuxs">
+          <nav class="vtsimplemenuxs">
 
             <h3 class="wr-menu toggle collapsed" data-toggle="collapse" data-target="#under-menu" aria-expanded="false">
                 <button class="navbar-toggler" type="button">
@@ -1202,7 +1202,7 @@
                       <div class="bar"></div>
                     </div>
                 </button>
-                <span class="cate">{{ 'wbcustomlabel.wballtext.allcategories' | t }}</span>
+                <span class="cate">{{ 'vtcustomlabel.vtalltext.allcategories' | t }}</span>
             </h3>
 
             <div id="under-menu" class="collapse">  
@@ -1233,13 +1233,13 @@
                                 <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                                 {% render 'icon-caret' %}
                               </summary>
-                              <div id="HeaderMenu-MenuList-{{ forloop.index }}" class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}wbmenufull{% endif %}" tabindex="-1">
+                              <div id="HeaderMenu-MenuList-{{ forloop.index }}" class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}" tabindex="-1">
                                   {% if assignsubmenu %}
                                       <div class="container">
                                           <div class="row wp_submenus_dep">
                                               {%- for childlink in link.links -%}
                                               <div class="{% if link.links.size == 1 %}col-12 {% elsif link.links.size == 2 %}col-12 {% else %}col-3 {% endif %}">
-                                                  <div class="wbmenuinner">
+                                                  <div class="vtmenuinner">
                                                   <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large wp_atitls{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                                     {{ childlink.title | escape }}
                                                   </a>
@@ -1259,7 +1259,7 @@
                                       </div>
                                   {% endif %}
                                   {% render 'megamenu', blocks: section.blocks, title: link.title %}
-                                  <div class="text-right wbhseeall container"><a href="{{ link.url }}">{{ 'wbcustomlabel.wballtext.see_all' | t }}</a></div>
+                                  <div class="text-right vthseeall container"><a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a></div>
                               </div>
                             </details>
                           </details-disclosure>
@@ -1271,9 +1271,9 @@
                                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                                         {% render 'icon-caret' %}
                                       </summary>
-                                      <div id="HeaderMenu-MenuList-{{ forloop.index }}" class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}wbmenufull{% endif %}" tabindex="-1">
+                                      <div id="HeaderMenu-MenuList-{{ forloop.index }}" class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}" tabindex="-1">
                                       {% render 'megamenu', blocks: section.blocks, title: link.title %}
-                                      <div class="text-right wbhseeall container"><a href="{{ link.url }}">{{ 'wbcustomlabel.wballtext.see_all' | t }}</a></div>
+                                      <div class="text-right vthseeall container"><a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a></div>
                                       </div>
                                   </details>
                               </details-disclosure>
@@ -1292,7 +1292,7 @@
           </nav>
         {%- endif -%}
         {%- if section.settings.secmenu != blank -%}
-          <nav class="wbsecmenu">
+          <nav class="vtsecmenu">
             <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.secmenu.links -%}
                 <li>
@@ -1305,7 +1305,7 @@
           </nav>
         {%- endif -%}
 
-        <div class="wb_contact_head">
+        <div class="vt_contact_head">
           {% if section.settings.show_contact %}
             <div class="myconts ">
               {% render 'icon-head-call' %}
@@ -1882,17 +1882,17 @@
                 },
                 {
                     "type": "image_picker",
-                    "id": "wb1_img",
+                    "id": "vt1_img",
                     "label": "Image"
                 },
                 {
                     "type": "url",
-                    "id": "wb1_link",
+                    "id": "vt1_link",
                     "label": "Link"
                 },
                 {
                     "type": "text",
-                    "id": "wb1_text",
+                    "id": "vt1_text",
                     "label": "Label"
                 },
                 {
@@ -1901,17 +1901,17 @@
                 },
                 {
                     "type": "image_picker",
-                    "id": "wb2_img",
+                    "id": "vt2_img",
                     "label": "Image"
                 },
                 {
                     "type": "url",
-                    "id": "wb2_link",
+                    "id": "vt2_link",
                     "label": "Link"
                 },
                 {
                     "type": "text",
-                    "id": "wb2_text",
+                    "id": "vt2_text",
                     "label": "Label"
                 },
                 {
@@ -1920,17 +1920,17 @@
                 },
                 {
                     "type": "image_picker",
-                    "id": "wb3_img",
+                    "id": "vt3_img",
                     "label": "Image"
                 },
                 {
                     "type": "url",
-                    "id": "wb3_link",
+                    "id": "vt3_link",
                     "label": "Link"
                 },
                 {
                     "type": "text",
-                    "id": "wb3_text",
+                    "id": "vt3_text",
                     "label": "Label"
                 },
                 {
@@ -1939,17 +1939,17 @@
                 },
                 {
                     "type": "image_picker",
-                    "id": "wb4_img",
+                    "id": "vt4_img",
                     "label": "Image"
                 },
                 {
                     "type": "url",
-                    "id": "wb4_link",
+                    "id": "vt4_link",
                     "label": "Link"
                 },
                 {
                     "type": "text",
-                    "id": "wb4_text",
+                    "id": "vt4_text",
                     "label": "Label"
                 }
 

@@ -1,4 +1,4 @@
-.wbordbill{
+.vtordbill{
     background: rgba(var(--color-foreground),0.03);
     padding: 15px;
     margin-bottom: 30px;
@@ -9,7 +9,7 @@
 .customer h2{
   font-size: 20px
 }
-.customer button,.wblogcancel {
+.customer button,.vtlogcancel {
   margin: 20px auto auto auto;
 }
 .customer #customer_login button{
@@ -169,8 +169,8 @@
 .activate button[name='decline']:hover,
 .addresses li > button:hover,
 .addresses form button[type]:hover {
-  background-color: var(--color-wbmaincolors-text);
-  border-color: var(--color-wbmaincolors-text);
+  background-color: var(--color-vtmaincolors-text);
+  border-color: var(--color-vtmaincolors-text);
   color: rgb(var(--color-button-text));
 }
 
@@ -193,7 +193,7 @@
   margin-bottom: -0.03rem;
   margin-right: 1rem;
 }
-.wbordheading{
+.vtordheading{
     margin-bottom: 15px;
 }
 .order > div:nth-of-type(2) > div:first-of-type h2 ~ p {
@@ -322,7 +322,7 @@
 .addresses form > div {
   width: 100%;
 }
-.wbaddpg div[data-address] {
+.vtaddpg div[data-address] {
     border: 1px solid rgba(var(--color-foreground),0.08);
     border-radius: var(--card-corner-radius);
     display: block;
@@ -341,7 +341,7 @@
     margin-bottom: 15px;
     font-size: 20px;
 }
-.addresses h2.wbaddpghead{
+.addresses h2.vtaddpghead{
     margin-top: 0;
     margin-bottom: 15px;
     font-size: calc(var(--font-body-scale) * 18px);
@@ -383,7 +383,7 @@ li[data-address] > h2 {
   margin-top: 1.5rem;
 }
 
-.wbpagereg{
+.vtpagereg{
     border: 1px solid rgba(var(--color-foreground),0.08);
     padding: 15px;
     border-radius: var(--card-corner-radius);
@@ -393,27 +393,27 @@ li[data-address] > h2 {
     font-size: calc(var(--font-body-scale) * 20px);
     margin-bottom: 15px;
 }
-.wbrtaddress{
+.vtrtaddress{
     text-transform: uppercase;
-    color: var(--color-wbmaincolors-text);
+    color: var(--color-vtmaincolors-text);
     font-weight: var(--font-body-weight-semibold);
 }
-.wbrtaddress svg{
-    fill: var(--color-wbmaincolors-text);
+.vtrtaddress svg{
+    fill: var(--color-vtmaincolors-text);
 }
-.wbrtaddress:hover{
+.vtrtaddress:hover{
     color: rgb(var(--color-foreground));
 }
-.wbrtaddress:hover svg{
+.vtrtaddress:hover svg{
     fill: rgb(var(--color-foreground));
 }
-.wbordhis{
+.vtordhis{
     margin-bottom: 30px;
 }
-.wbaddpg .cless{
+.vtaddpg .cless{
     margin-top: 30px;
 }
-.customer button.wbaddrbtn{
+.customer button.vtaddrbtn{
     background-color: transparent;
     padding: 0;
     color: rgb(var(--color-foreground));
@@ -421,25 +421,25 @@ li[data-address] > h2 {
     margin-top: 10px;
     margin-right: 10px;
 }
-.customer button.wbaddrbtn:hover{
-    color: var(--color-wbmaincolors-text);
+.customer button.vtaddrbtn:hover{
+    color: var(--color-vtmaincolors-text);
 }
-.customer button.wbaddrbtnsvg svg{
+.customer button.vtaddrbtnsvg svg{
     fill: rgb(var(--color-foreground));
 }
-.customer button.wbaddrbtnsvg:hover svg{
-    fill: var(--color-wbmaincolors-text);
+.customer button.vtaddrbtnsvg:hover svg{
+    fill: var(--color-vtmaincolors-text);
 }
-.customer button.wbaddrbtn::after{
+.customer button.vtaddrbtn::after{
     box-shadow: none;
 }
 @media (max-width: 991px){
-    .wbaddpg .cless{
+    .vtaddpg .cless{
         margin-top: 10px;
     }
 }
 @media (max-width: 767px){
-    .wbordhis .order-history.table-bordered, .wbordhis .order-history.table-bordered td, .wbordhis .order-history.table-bordered th,
+    .vtordhis .order-history.table-bordered, .vtordhis .order-history.table-bordered td, .vtordhis .order-history.table-bordered th,
     .order .order-details.table-bordered, .order .order-details.table-bordered td, .order .order-details.table-bordered th {
         border: none;
         padding: 7px 0;
@@ -447,18 +447,18 @@ li[data-address] > h2 {
     .customer.order .order-details tr{
         margin-bottom: 0;
     }
-    .customer .wbordhis .order-history tbody tr,.customer.order .order-details tbody tr {
+    .customer .vtordhis .order-history tbody tr,.customer.order .order-details tbody tr {
         border-bottom: 1px solid rgba(var(--color-foreground),.08);
         margin-bottom: 15px;
         padding-bottom: 15px;
     }
-    .customer .wbordhis .order-history td::before,.customer.order .order-details td::before{
+    .customer .vtordhis .order-history td::before,.customer.order .order-details td::before{
         text-align: left;
     }
-    .customer .wbordhis .order-history td, .customer.order .order-details td {
+    .customer .vtordhis .order-history td, .customer.order .order-details td {
         text-align: right;
     }
-    .wbpagereg{
+    .vtpagereg{
         margin-bottom: 15px;
         height: unset;
     }
@@ -478,7 +478,7 @@ li[data-address] > h2 {
         display: block;
         margin-bottom: 20px;
     }
-    .wbordhis{
+    .vtordhis{
         margin-bottom: 0;
     }
 }

@@ -14,7 +14,7 @@
 {% endcomment %}
 <article class="article-card {% if layout == 'collage' %}row{% endif %}">
     {%- if show_image == true and article.image -%}
-        <div class="wbblogimg {% if layout == 'collage' %}col-lg-6 col-12{% endif %}">
+        <div class="vtblogimg {% if layout == 'collage' %}col-lg-6 col-12{% endif %}">
             <a href="{{ article.url }}" class="article-content motion-reduce media media media--{{ image_height }} media--hover-effect" {% if image_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
                 <img 
                 srcset="{{ article.image.src | image_url }} {{ article.image.src.width }}w"
@@ -28,7 +28,7 @@
         </div>
     {%- endif -%}
 
-    <div class="wbblogimgdesc {% if layout == 'collage' %}col-lg-6 col-12{% endif %}">
+    <div class="vtblogimgdesc {% if layout == 'collage' %}col-lg-6 col-12{% endif %}">
         {%- if show_tags -%}
             <div class="tag-section">
                 {% if article.tags.size > 0 %}
@@ -42,7 +42,7 @@
 
         {%- if show_desc -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-                <p class="wbblogtxt">
+                <p class="vtblogtxt">
                     {%- if article.excerpt.size > 0 -%}
                         {{ article.excerpt | strip_html | truncatewords: 40 }}
                     {%- else -%}
@@ -54,10 +54,10 @@
 
         <div class="allblgdate">
             {%- if show_author -%}
-                <div class="wbblogauth">{% render 'icon-login' %}&nbsp;{{ article.author -}}</div>
+                <div class="vtblogauth">{% render 'icon-login' %}&nbsp;{{ article.author -}}</div>
             {%- endif -%}
             {%- if show_date -%}
-                <div class="wbblogdate">{% render 'icon-calendar' %}&nbsp;{{- article.published_at | time_tag: format: 'date' -}}</div>
+                <div class="vtblogdate">{% render 'icon-calendar' %}&nbsp;{{- article.published_at | time_tag: format: 'date' -}}</div>
             {%- endif -%}
             {%- if show_cmment -%}
             <div class="article-card__footer">

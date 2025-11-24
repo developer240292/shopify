@@ -33,19 +33,19 @@
                     {% for i in (1..4) %}
                         <div class="cless slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}" tabindex="-1">
                             <article class="article-card">
-                                <div class="wbblogimg">
+                                <div class="vtblogimg">
                                     <div class="dummysvg">{{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}</div>
                                 </div>
-                                <div class="wbblogimgdesc">
+                                <div class="vtblogimgdesc">
                                     <h3><a href="#">Example blog post {{ i }}</a></h3>
-                                    <div class="wbblogdate">Oct 22, 2022</div>
+                                    <div class="vtblogdate">Oct 22, 2022</div>
                                 </div>
                             </article>
                         </div>
                     {% endfor %}
                 {%- endunless -%}
             </div>
-            <div class="wbhomesbtn{% if article.media.size < 5 %} hidden{% endif %}">
+            <div class="vthomesbtn{% if article.media.size < 5 %} hidden{% endif %}">
                 <button type="button" class="slider-button slider-button--prev focus-inset" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" data-step="1">{% render 'icon-caret' %}</button>
                 <button type="button" class="slider-button slider-button--next focus-inset" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" data-step="1">{% render 'icon-caret' %}</button>
             </div>

@@ -33,13 +33,13 @@
 }
 {%- endstyle -%}
 <div class="section-{{ section.id }}-padding">
-    <div class="page-width {% if section.settings.filter_type == 'vertical' %} wbverticalcoll {% endif %}">
-        <div class="wbblank"><div class="wbblankinner"></div></div>
-        <div class="wbsortbar">
-            <div class="wbglbtn">
-                <button class="gridv wblistgridbtn active focus-inset" aria-label="grid">{% render 'icon-gridview' %}</button>
-                <button class="listv wblistgridbtn focus-inset" aria-label="list">{% render 'icon-listview' %}</button>
-                <button class="galleryv wblistgridbtn focus-inset" aria-label="galleryv">{% render 'icon-galleryview' %}</button>
+    <div class="page-width {% if section.settings.filter_type == 'vertical' %} vtverticalcoll {% endif %}">
+        <div class="vtblank"><div class="vtblankinner"></div></div>
+        <div class="vtsortbar">
+            <div class="vtglbtn">
+                <button class="gridv vtlistgridbtn active focus-inset" aria-label="grid">{% render 'icon-gridview' %}</button>
+                <button class="listv vtlistgridbtn focus-inset" aria-label="list">{% render 'icon-listview' %}</button>
+                <button class="galleryv vtlistgridbtn focus-inset" aria-label="galleryv">{% render 'icon-galleryview' %}</button>
             </div>
             {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
             {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}

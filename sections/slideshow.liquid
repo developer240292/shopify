@@ -67,7 +67,7 @@
 
                {% comment %}Mobile view image{% endcomment %}
                 {%- if block.settings.mobile_image -%}
-                  <div class="slideshow__media banner__media wbslidemobile hidden_desktop media{% if block.settings.mobile_image == blank %} placeholder{% endif %}">
+                  <div class="slideshow__media banner__media vtslidemobile hidden_desktop media{% if block.settings.mobile_image == blank %} placeholder{% endif %}">
                     {%- if block.settings.mobile_image -%}
                       <img class="lazyload"
                         srcset="{%- if block.settings.mobile_image.width >= 375 -%}{{ block.settings.mobile_image | image_url: width: 375 }} 375w,{%- endif -%}
@@ -105,7 +105,7 @@
                     </h3>
                   {%- endif -%}
                   {%- if block.settings.subheadingtext != blank -%}
-                    <div class="wbsaddtext" {{ block.shopify_attributes }}>{{ block.settings.subheadingtext }}</div>
+                    <div class="vtsaddtext" {{ block.shopify_attributes }}>{{ block.settings.subheadingtext }}</div>
                   {%- endif -%}
                   {%- if block.settings.button_label != blank -%}
                     <div class="banner__buttons">
@@ -174,36 +174,36 @@
   </div>
 </div>
 {%- style -%}
-  .wbslideshow .section-{{ section.id }}-padding .banner--desktop-transparent .slideshow__text a.button--primary {
-    color: {{ section.settings.wboverlaycolor }};
-    background-color: {{ section.settings.wboverlaybg }};
+  .vtslideshow .section-{{ section.id }}-padding .banner--desktop-transparent .slideshow__text a.button--primary {
+    color: {{ section.settings.vtoverlaycolor }};
+    background-color: {{ section.settings.vtoverlaybg }};
 }
-.wbslideshow .section-{{ section.id }}-padding .banner--desktop-transparent .slideshow__text a.button--primary:hover{
-    color: {{ section.settings.wboverlayhcolor }};
-    background-color: {{ section.settings.wboverlayhbg }};
+.vtslideshow .section-{{ section.id }}-padding .banner--desktop-transparent .slideshow__text a.button--primary:hover{
+    color: {{ section.settings.vtoverlayhcolor }};
+    background-color: {{ section.settings.vtoverlayhbg }};
 }
-.wbslideshow .section-{{ section.id }}-padding .banner--desktop-transparent .slideshow__text a.button--primary::after{
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba({{ section.settings.wboverlayoutline.red }}, {{ section.settings.wboverlayoutline.green }}, {{ section.settings.wboverlayoutline.blue }},var(--border-opacity)),0 0 0 var(--buttons-border-width) rgba({{ section.settings.wboverlayoutline.red }}, {{ section.settings.wboverlayoutline.green }}, {{ section.settings.wboverlayoutline.blue }},var(--alpha-button-background));
+.vtslideshow .section-{{ section.id }}-padding .banner--desktop-transparent .slideshow__text a.button--primary::after{
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba({{ section.settings.vtoverlayoutline.red }}, {{ section.settings.vtoverlayoutline.green }}, {{ section.settings.vtoverlayoutline.blue }},var(--border-opacity)),0 0 0 var(--buttons-border-width) rgba({{ section.settings.vtoverlayoutline.red }}, {{ section.settings.vtoverlayoutline.green }}, {{ section.settings.vtoverlayoutline.blue }},var(--alpha-button-background));
 }
-.wbslideshow .section-{{ section.id }}-padding .banner--desktop-transparent .slideshow__text a.button--primary:not([disabled]):hover::after{
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba({{ section.settings.wboverlayhoutline.red }}, {{ section.settings.wboverlayhoutline.green }}, {{ section.settings.wboverlayhoutline.blue }},var(--border-opacity)),0 0 0 var(--buttons-border-width) rgba({{ section.settings.wboverlayhoutline.red }}, {{ section.settings.wboverlayhoutline.green }}, {{ section.settings.wboverlayhoutline.blue }},var(--alpha-button-background))
+.vtslideshow .section-{{ section.id }}-padding .banner--desktop-transparent .slideshow__text a.button--primary:not([disabled]):hover::after{
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba({{ section.settings.vtoverlayhoutline.red }}, {{ section.settings.vtoverlayhoutline.green }}, {{ section.settings.vtoverlayhoutline.blue }},var(--border-opacity)),0 0 0 var(--buttons-border-width) rgba({{ section.settings.vtoverlayhoutline.red }}, {{ section.settings.vtoverlayhoutline.green }}, {{ section.settings.vtoverlayhoutline.blue }},var(--alpha-button-background))
 }
 
 
-.wbslideshow .section-{{ section.id }}-padding .slider-counter__link--active.slider-counter__link--dots .dot{
+.vtslideshow .section-{{ section.id }}-padding .slider-counter__link--active.slider-counter__link--dots .dot{
     background-color: {{ section.settings.pagicolor }};
 }
-.wbslideshow .section-{{ section.id }}-padding .slider-counter__link--dots .dot,
-.wbslideshow .section-{{ section.id }}-padding .slider-counter__link--dots:not(.slider-counter__link--active):hover .dot{
+.vtslideshow .section-{{ section.id }}-padding .slider-counter__link--dots .dot,
+.vtslideshow .section-{{ section.id }}-padding .slider-counter__link--dots:not(.slider-counter__link--active):hover .dot{
     border: 1px solid {{ section.settings.pagicolor }};
 }
-.wbslideshow .section-{{ section.id }}-padding .slider-button,
-.wbslideshow .section-{{ section.id }}-padding .slider-counter,
-.wbslideshow .section-{{ section.id }}-padding .slider-counter__link--numbers,.wbslideshow .slider-counter__link--active.slider-counter__link--numbers,
-.wbslideshow .section-{{ section.id }}-padding .slider-counter__link--numbers:hover{
+.vtslideshow .section-{{ section.id }}-padding .slider-button,
+.vtslideshow .section-{{ section.id }}-padding .slider-counter,
+.vtslideshow .section-{{ section.id }}-padding .slider-counter__link--numbers,.vtslideshow .slider-counter__link--active.slider-counter__link--numbers,
+.vtslideshow .section-{{ section.id }}-padding .slider-counter__link--numbers:hover{
     color: {{ section.settings.pagicolor }};
 }
-.wbslideshow .section-{{ section.id }}-padding .slideshow__autoplay path{
+.vtslideshow .section-{{ section.id }}-padding .slideshow__autoplay path{
     fill: {{ section.settings.pagicolor }};
 }
   @media(min-width: 768px) {
@@ -229,7 +229,7 @@
   {
     "name": "t:sections.slideshow.name",
     "tag": "section",
-    "class": "wbslideshow",
+    "class": "vtslideshow",
     "settings": [
       {
         "type": "select",
@@ -319,39 +319,39 @@
       }, 
       {
         "type": "color",
-        "id": "wboverlaycolor",
+        "id": "vtoverlaycolor",
         "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.wboverlaycolor.label"
+        "label": "t:settings_schema.colors.settings.vtoverlaycolor.label"
       }, 
       {
         "type": "color",
-        "id": "wboverlaybg",
+        "id": "vtoverlaybg",
         "default": "#2B3D51",
-        "label": "t:settings_schema.colors.settings.wboverlaybg.label"
+        "label": "t:settings_schema.colors.settings.vtoverlaybg.label"
       }, 
       {
         "type": "color",
-        "id": "wboverlayoutline",
+        "id": "vtoverlayoutline",
         "default": "#2B3D51",
-        "label": "t:settings_schema.colors.settings.wboverlayoutline.label"
+        "label": "t:settings_schema.colors.settings.vtoverlayoutline.label"
       }, 
       {
         "type": "color",
-        "id": "wboverlayhcolor",
+        "id": "vtoverlayhcolor",
         "default": "#000000",
-        "label": "t:settings_schema.colors.settings.wboverlayhcolor.label"
+        "label": "t:settings_schema.colors.settings.vtoverlayhcolor.label"
       }, 
       {
         "type": "color",
-        "id": "wboverlayhbg",
+        "id": "vtoverlayhbg",
         "default": "#F2C557",
-        "label": "t:settings_schema.colors.settings.wboverlayhbg.label"
+        "label": "t:settings_schema.colors.settings.vtoverlayhbg.label"
       }, 
       {
         "type": "color",
-        "id": "wboverlayhoutline",
+        "id": "vtoverlayhoutline",
         "default": "#F2C557",
-        "label": "t:settings_schema.colors.settings.wboverlayhoutline.label"
+        "label": "t:settings_schema.colors.settings.vtoverlayhoutline.label"
       }, 
       {
         "type": "header",

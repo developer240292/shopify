@@ -280,7 +280,7 @@ details[open].menu-opening > .menu-drawer__submenu {
     header-drawer{
         display: inline-block;
     }
-    .header__inline-menu .wbsimplemenuxs, .header__inline-menu .wbsecmenu{
+    .header__inline-menu .vtsimplemenuxs, .header__inline-menu .vtsecmenu{
         display: none;
     }
     .menu-drawer__menu-item,.menu-drawer__close-button {
@@ -289,7 +289,7 @@ details[open].menu-opening > .menu-drawer__submenu {
     .header--top-left #menu-drawer, .header--top-center #menu-drawer {
         left: -15px;
     }
-    .wbsecmenu ul{
+    .vtsecmenu ul{
       display: inline-grid;
       margin-bottom: 30px;
     }

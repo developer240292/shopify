@@ -786,24 +786,24 @@ class VariantSelects extends HTMLElement {
   updateStockCountdown() {
     if (!this.currentVariant) return;
     let productMain = this.closest('.product');
-    if (productMain && productMain.querySelector('.wbstockcount') != null) {
+    if (productMain && productMain.querySelector('.vtstockcount') != null) {
       let variantsData = JSON.parse(productMain.querySelector('#product-variants').innerHTML);
       let stockCountdownConfig = JSON.parse(productMain.querySelector('#product-stock-countdown-config').innerHTML);
       let variant = this.currentVariant;
       if (variantsData[variant.id] > 0 && variant.inventory_management == 'shopify') {
-        productMain.querySelector('.wbstockcount').classList.remove('hidden');
-        let countdownWrapper = productMain.querySelector('.wbstockcount');
+        productMain.querySelector('.vtstockcount').classList.remove('hidden');
+        let countdownWrapper = productMain.querySelector('.vtstockcount');
         if (variantsData[variant.id] > stockCountdownConfig.limited_stock_cut_off) { // High Stock
-          countdownWrapper.querySelector('.wbstockinfo').classList.replace('wbstockinfo_low', 'wbstockinfo_high');
-          countdownWrapper.querySelector('.wbstockinfo').innerHTML = stockCountdownConfig.instock_message.replace('{stock_number}', variantsData[variant.id]);
-          countdownWrapper.querySelector('.wbstockinfo-probar').style.width = ((variantsData[variant.id] * 100) / stockCountdownConfig.max_stock) + '%';
+          countdownWrapper.querySelector('.vtstockinfo').classList.replace('vtstockinfo_low', 'vtstockinfo_high');
+          countdownWrapper.querySelector('.vtstockinfo').innerHTML = stockCountdownConfig.instock_message.replace('{stock_number}', variantsData[variant.id]);
+          countdownWrapper.querySelector('.vtstockinfo-probar').style.width = ((variantsData[variant.id] * 100) / stockCountdownConfig.max_stock) + '%';
         } else { // Low Stock
-          countdownWrapper.querySelector('.wbstockinfo').classList.replace('wbstockinfo_high', 'wbstockinfo_low');
-          countdownWrapper.querySelector('.wbstockinfo').innerHTML = stockCountdownConfig.limited_stock_message.replace('{stock_number}', variantsData[variant.id]);
-          countdownWrapper.querySelector('.wbstockinfo-probar').style.width = ((variantsData[variant.id] * 100) / stockCountdownConfig.max_stock) + '%';
+          countdownWrapper.querySelector('.vtstockinfo').classList.replace('vtstockinfo_high', 'vtstockinfo_low');
+          countdownWrapper.querySelector('.vtstockinfo').innerHTML = stockCountdownConfig.limited_stock_message.replace('{stock_number}', variantsData[variant.id]);
+          countdownWrapper.querySelector('.vtstockinfo-probar').style.width = ((variantsData[variant.id] * 100) / stockCountdownConfig.max_stock) + '%';
         }
       } else {
-        productMain.querySelector('.wbstockcount').classList.add('hidden');
+        productMain.querySelector('.vtstockcount').classList.add('hidden');
       }
     }
   }
@@ -812,7 +812,7 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
 
-    // Webibazaar Variant in Product Card
+    // Villatheme Variant in Product Card
     if (this.dataset.layout == 'card') { 
       const card = this.closest('.card');
       const newMedia = card.querySelector(
@@ -846,7 +846,7 @@ class VariantSelects extends HTMLElement {
         const productAnchor = modalContent.querySelector('a');
         const productTitle = card.querySelector('.product-title');
         const productTitleAnchor = productTitle.querySelector('a');
-        const productQuickview = card.querySelector('.js-wbquickview-link');
+        const productQuickview = card.querySelector('.js-vtquickview-link');
         let productURL = this.updateURLParameter(this.dataset.url, 'variant', this.currentVariant.id);
         productAnchor.setAttribute('href', productURL);
         productTitleAnchor.setAttribute('href', productURL);
@@ -887,7 +887,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateVariantInput() {
-    // Webibazaar Variant in Product Card
+    // Villatheme Variant in Product Card
     if (this.dataset.layout == 'card') {
       const card = this.closest('.card');
       const productForms = card.querySelectorAll(`#ProductInfo-${this.dataset.section}-${this.dataset.product}, #product-form-installment`);
@@ -922,8 +922,8 @@ class VariantSelects extends HTMLElement {
         const saleRegularPrice = this.closest('.grid__item').querySelector('.price .price__container .price__sale .price-item--sale');
         const salePrice = this.closest('.grid__item').querySelector('.price .price__container .price__sale .price-item--regular');
 
-        const wbunitPrice = this.closest('.grid__item').querySelector('.price .price__container .unit-price .cardunitp');
-        const wbunitValue = this.closest('.grid__item').querySelector('.price .price__container .unit-price .cardunitv');
+        const vtunitPrice = this.closest('.grid__item').querySelector('.price .price__container .unit-price .cardunitp');
+        const vtunitValue = this.closest('.grid__item').querySelector('.price .price__container .unit-price .cardunitv');
         optionData.forEach((data) => {
             if(data.value == this.currentVariant.id) {
                 if(data.dataset.cprice != '') {
@@ -936,11 +936,11 @@ class VariantSelects extends HTMLElement {
                     this.closest('.grid__item').querySelector('.price').classList.remove("price--on-sale");
                 }
                 if(data.dataset.unitprice) {
-                    wbunitPrice.innerHTML = data.dataset.unitprice;
+                    vtunitPrice.innerHTML = data.dataset.unitprice;
                     this.closest('.grid__item').querySelector('.price').classList.add("price--on-sale");
                 }
                 if(data.dataset.unitvalue) {
-                    wbunitValue.innerHTML = data.dataset.unitvalue;
+                    vtunitValue.innerHTML = data.dataset.unitvalue;
                     this.closest('.grid__item').querySelector('.price').classList.add("price--on-sale");
                 }
             }
@@ -979,7 +979,7 @@ class VariantSelects extends HTMLElement {
   }
 
   renderProductInfo() {
-    // Webibazaar Variant in Product Card
+    // Villatheme Variant in Product Card
     if (this.dataset.layout == 'card') {
       this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut); 
       return;
@@ -1001,7 +1001,7 @@ class VariantSelects extends HTMLElement {
   }
 
   toggleAddButton(disable = true, text, modifyClass = true) {
-    // Webibazaar Variant in Product Card
+    // Villatheme Variant in Product Card
     var selector = `product-form-${this.dataset.section}`;
     if (this.dataset.layout == 'card') {
       selector = `product-form-${this.dataset.section}-${this.dataset.product}`;
@@ -1025,7 +1025,7 @@ class VariantSelects extends HTMLElement {
   }
 
   setUnavailable() {
-    // Webibazaar Variant in Product Card
+    // Villatheme Variant in Product Card
     var selector = `product-form-${this.dataset.section}`;
     var priceSelector = `price-${this.dataset.section}`;
     if (this.dataset.layout == 'card') {

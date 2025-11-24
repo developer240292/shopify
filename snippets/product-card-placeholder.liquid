@@ -5,14 +5,14 @@
     {% render 'product-card-placeholder' %}
 {% endcomment %}
 
-<div class="card-wrapper wbproduct-container collagebg">
+<div class="card-wrapper vtproduct-container collagebg">
     <div class="card card--{{ settings.card_style }}">
-        <div class="wbimgblock">
+        <div class="vtimgblock">
             {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
             <div class="dummysvg">{{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
         </div>
-        <div class="wbproductdes text-center">
-            <p class="wbprotype">{{ 'products.product.vendor' | t }}</p>
+        <div class="vtproductdes text-center">
+            <p class="vtprotype">{{ 'products.product.vendor' | t }}</p>
             <h3 class="product-title">{{ 'onboarding.product_title' | t }}</h3>
             {% render 'price' %}
         </div>

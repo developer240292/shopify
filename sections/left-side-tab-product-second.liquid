@@ -71,7 +71,7 @@
                      <a
                     class="nav-link" 
                     data-toggle="tab"
-                    href="#wbprodtab1-{{ block.id }}" 
+                    href="#vtprodtab1-{{ block.id }}"
                     id="tab-{{i}}-{{ block.id }}">
                     <span>{{ block.settings.cat_name }}</span>
                     </a> 
@@ -90,7 +90,7 @@
                 {%- assign collection = collections[block.settings.collection] -%}
                 <div
                   class="tab-pane_next fade {% if forloop.first %}show active{% endif %}" 
-                  id="wbprodtab1-{{ block.id }}" 
+                  id="vtprodtab1-{{ block.id }}"
                   role="tabpanel"
                   aria-labelledby="tab-{{ block.id }}"
                   tabindex="0"
@@ -137,7 +137,7 @@
                         {%- endfor -%}
                       {% endfor %} 
                     </div>
-                    <div class="wbhomesbtn{% if collection.products.size < 5 %} hidden{% endif %}">
+                    <div class="vthomesbtn{% if collection.products.size < 5 %} hidden{% endif %}">
                       <button 
                         type="button"
                         class="slider-button slider-button--prev focus-inset"
@@ -169,7 +169,7 @@
                           <div class=" {% unless block.settings.showimage %}{% else %}wp_product_banner{% endunless %}">
                               <div class="beffect">
                                   {% if block.settings.link1 != blank %}<a href="{{ block.settings.link1 }}"
-                                      title="{{ 'wbcustomlabel.wballtext.banner' | t }}">{% endif%}
+                                      title="{{ 'vtcustomlabel.vtalltext.banner' | t }}">{% endif%}
                                       {% if block.settings.image1 != blank %}
                                       <img src="{{ block.settings.image1 | img_url: 'master' }}"
                                           alt="{{ block.settings.image1.alt }}" class="img-fluid mx-auto"

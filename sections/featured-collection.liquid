@@ -45,7 +45,7 @@
     assign show_desktop_slider = true
   endif
 -%}
-<div class="color-{{ section.settings.color_scheme }} isolate gradient wbcollfea">
+<div class="color-{{ section.settings.color_scheme }} isolate gradient vtcollfea">
   <div class="collection section-{{ section.id }}-padding">
     <div class="collection__title page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
@@ -81,7 +81,7 @@
         {%- endfor -%}
       </ul>
       {%- if show_mobile_slider or show_desktop_slider -%}
-        <div class="wbhomesbtn no-js-hidden">
+        <div class="vthomesbtn no-js-hidden">
           <button type="button" class="slider-button slider-button--prev focus-inset" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" data-step="1">{% render 'icon-caret' %}</button>
           <button type="button" class="slider-button slider-button--next focus-inset" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" data-step="1">{% render 'icon-caret' %}</button>
         </div>

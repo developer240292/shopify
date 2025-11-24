@@ -173,14 +173,14 @@ slideshow-component:not(.page-width) .slider-buttons {
     fill: CanvasText;
   }
 }
-.wbslideshow .slider-buttons{
+.vtslideshow .slider-buttons{
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 2;
 }
-.wbslideshow .slideshow__controls{
+.vtslideshow .slideshow__controls{
     border: none;
 }
 .slideshow__autoplay:hover svg {
@@ -193,51 +193,51 @@ slideshow-component:not(.page-width) .slider-buttons {
   opacity: 0;
   transform: scale(.8)
 }
-.wbslideshow .banner__text{
+.vtslideshow .banner__text{
     font-size: calc(var(--font-body-scale) * 30px);
     letter-spacing: 4px;
     text-transform: capitalize;
     color: rgb(var(--color-foreground),.6);
 }
-.wbslideshow .banner__heading{
+.vtslideshow .banner__heading{
     text-transform: capitalize;
     font-weight: var(--font-body-weight-medium);
     margin-bottom: 15px;
     text-transform: uppercase;
 }
-.wbslideshow .slideshow__text .banner__heading.slidehsmall{
+.vtslideshow .slideshow__text .banner__heading.slidehsmall{
     font-size: calc(var(--font-body-scale) * 30px);
 }
-.wbslideshow .slideshow__text .banner__heading.slidehmedium{
+.vtslideshow .slideshow__text .banner__heading.slidehmedium{
     font-size: calc(var(--font-body-scale) * 35px);
 }
-.wbslideshow .slideshow__text .banner__heading.slidehlarge{
+.vtslideshow .slideshow__text .banner__heading.slidehlarge{
     font-size: calc(var(--font-heading-scale) * 40px);
 }
-.wbslideshow .slideshow__text p.banner__text{
+.vtslideshow .slideshow__text p.banner__text{
     font-size: calc(var(--font-body-scale) * 18px);
     margin: 0;
     text-transform: capitalize;
     line-height: 24px;
     margin-bottom: 10px;
 }
-.wbslideshow .slideshow__text .banner__buttons a.button {
+.vtslideshow .slideshow__text .banner__buttons a.button {
     margin-top: 20px; 
     padding: 10px 25px;
     text-transform: capitalize;
     font-size: calc(var(--font-body-scale) * 16px);
 }
-.banner__content--middle-right .slideshow__text .wbsaddtext,
-.banner__content--top-right .slideshow__text .wbsaddtext,
-.banner__content--bottom-right .slideshow__text .wbsaddtext{
+.banner__content--middle-right .slideshow__text .vtsaddtext,
+.banner__content--top-right .slideshow__text .vtsaddtext,
+.banner__content--bottom-right .slideshow__text .vtsaddtext{
     margin-right: 0;
 }
-.banner__content--middle-left .slideshow__text .wbsaddtext,
-.banner__content--top-left .slideshow__text .wbsaddtext,
-.banner__content--bottom-left .slideshow__text .wbsaddtext{
+.banner__content--middle-left .slideshow__text .vtsaddtext,
+.banner__content--top-left .slideshow__text .vtsaddtext,
+.banner__content--bottom-left .slideshow__text .vtsaddtext{
     margin-left:0;
 }
-.slideshow__text .wbsaddtext{
+.slideshow__text .vtsaddtext{
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -272,19 +272,19 @@ slideshow-component:not(.page-width) .slider-buttons {
   margin: 15px auto auto;
 }
 @media (min-width: 768px) and (max-width: 1199px){
-    .wbslideshow .slideshow__text .banner__heading.slidehsmall{
+    .vtslideshow .slideshow__text .banner__heading.slidehsmall{
         font-size: calc(var(--font-body-scale) * 20px)
     }
-    .wbslideshow .slideshow__text .banner__heading.slidehmedium{
+    .vtslideshow .slideshow__text .banner__heading.slidehmedium{
         font-size: calc(var(--font-body-scale) * 25px)
     }
-    .wbslideshow .slideshow__text .banner__heading.slidehlarge{
+    .vtslideshow .slideshow__text .banner__heading.slidehlarge{
         font-size: calc(var(--font-body-scale) * 30px);
     }
-    .wbslideshow .banner__heading{
+    .vtslideshow .banner__heading{
       margin-bottom: 10px;
     }
-    .wbslideshow .banner__text {
+    .vtslideshow .banner__text {
         font-size: calc(var(--font-body-scale) * 22px);
         letter-spacing: 3px;
     }
@@ -310,22 +310,22 @@ slideshow-component:not(.page-width) .slider-buttons {
     }
 }
 @media (max-width: 767px){
-    .wbslideshow .banner__content{
+    .vtslideshow .banner__content{
         padding: 30px 10px 60px 10px;
     }
-    .wbslideshow .banner__heading{
+    .vtslideshow .banner__heading{
         margin-bottom: 10px;
     }
-    .wbslideshow .slideshow__text .banner__heading.slidehsmall{
+    .vtslideshow .slideshow__text .banner__heading.slidehsmall{
         font-size: calc(var(--font-body-scale) * 18px)
     }
-    .wbslideshow .slideshow__text .banner__heading.slidehmedium{
+    .vtslideshow .slideshow__text .banner__heading.slidehmedium{
         font-size: calc(var(--font-body-scale) * 20px)
     }
-    .wbslideshow .slideshow__text .banner__heading.slidehlarge{
+    .vtslideshow .slideshow__text .banner__heading.slidehlarge{
         font-size: calc(var(--font-body-scale) * 24px)
     }
-    .wbslideshow .slideshow__text .banner__buttons a.button {
+    .vtslideshow .slideshow__text .banner__buttons a.button {
         margin-top: 10px;
         font-size: calc(var(--font-body-scale) * 14px);
         padding: 5px;
@@ -333,7 +333,7 @@ slideshow-component:not(.page-width) .slider-buttons {
         min-height: 39px;
         font-weight: var(--font-body-weight-medium);
     }
-    .slideshow__text .wbsaddtext{
+    .slideshow__text .vtsaddtext{
         margin-top: 15px;
     }
     .slideshow__text.slideshow__text-mobile--center .banner__text span:after{
@@ -345,7 +345,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     .slideshow__text.slideshow__text-mobile--right .banner__text span:after{
        margin: 10px 0 auto auto;
     }
-    .wbslideshow .banner__text {
+    .vtslideshow .banner__text {
         font-size: calc(var(--font-body-scale) * 17px);
         letter-spacing: 3px;
     }
@@ -367,11 +367,11 @@ slideshow-component:not(.page-width) .slider-buttons {
   .slideshow__text-mobile--right, .slideshow__text-mobile--left, .slideshow__text-mobile--center {
       max-width: 290px;
   }
-  .wbslideshow .banner__text {
+  .vtslideshow .banner__text {
       font-size: calc(var(--font-body-scale) * 14px);
       letter-spacing: 2px;
   }
-  .wbslideshow .slideshow__text .banner__buttons a.button {
+  .vtslideshow .slideshow__text .banner__buttons a.button {
       margin-top: 5px;
       font-size: calc(var(--font-body-scale) * 12px);
       min-width: 110px;

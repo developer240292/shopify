@@ -24,11 +24,11 @@
       assign ratio = 1
     endif
 -%}
-<div class="card-wrapper wbproduct-container">
+<div class="card-wrapper vtproduct-container">
     <div class="card">
-    <div class="card__inner wbimgblock">
+    <div class="card__inner vtimgblock">
         {%- if card_product.featured_media -%}
-            {% comment %} Webibazaar Variants Wise Product Change {% endcomment %}
+            {% comment %} Villatheme Variants Wise Product Change {% endcomment %}
             <div id="webipro-{{ section.id }}-{{ card_product.id }}">
                 {%- if card_product.selected_or_first_available_variant.featured_media != null -%}
                 {%- assign media = card_product.selected_or_first_available_variant.featured_media -%}
@@ -130,7 +130,7 @@
 
                 
             </div>
-            {% comment %} Webibazaar Variants Wise Product Change Over {% endcomment %}
+            {% comment %} Villatheme Variants Wise Product Change Over {% endcomment %}
         {%- else -%}
             <div class="card__content">
                 <h2 class="card__text h3">
@@ -139,7 +139,7 @@
             </div> 
         {%- endif -%}
     </div>
-    <div class="wbproductdes card__content">
+    <div class="vtproductdes card__content">
 
         {%- if card_product.featured_media -%}
             <p class="product-title"><a href="{{ card_product.url | default: '#' }}" >{{ card_product.title | escape }}</a></p>
@@ -148,7 +148,7 @@
         <div id="ProductInfo-{{ section.id }}-{{ card_product.id }}" >
             {%- assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: card_product.id -%}
 
-            <div class="no-js-hidden wbhprice" id="price-{{ section.id }}-{{ card_product.id }}" role="status" {{ block.shopify_attributes }}>
+            <div class="no-js-hidden vthprice" id="price-{{ section.id }}-{{ card_product.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: card_product, use_variant: true, show_badges: true -%}
             </div> 
 
@@ -163,7 +163,7 @@
                     <span class="product-form__error-message"></span>
                 </div>
 
-                <div class="wbbtngrp">
+                <div class="vtbtngrp">
                     {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                         <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
                         <button type="submit" name="add" class="focus-inset cartb product-form__submit" aria-label="{{ 'products.product.add_to_cart' | t }}" {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}>

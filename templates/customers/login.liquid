@@ -2,19 +2,19 @@
 
 <div class="customer login">
     <div class="container">
-        <h1 class="heading text-left"><span>{{ 'wbcustomlabel.wballtext.alregister' | t }}</span></h1>
+        <h1 class="heading text-left"><span>{{ 'vtcustomlabel.vtalltext.alregister' | t }}</span></h1>
         <div class="row">
             <div class="col-md-6 col-12">
-                <div class="wbpagereg">
-                    <h2 class="custheading">{{ 'wbcustomlabel.wballtext.newcust' | t }}</h2>
-                    <p>{{ 'wbcustomlabel.wballtext.newcustdet' | t }}</p>
+                <div class="vtpagereg">
+                    <h2 class="custheading">{{ 'vtcustomlabel.vtalltext.newcust' | t }}</h2>
+                    <p>{{ 'vtcustomlabel.vtalltext.newcustdet' | t }}</p>
                     <a href="{{ routes.account_register_url }}" class="button button--primary">
                         {{ 'customer.login_page.create_account' | t }}
                     </a>
                 </div>
             </div>
             <div class="col-md-6 col-12">
-                <div class="wbpagereg">
+                <div class="vtpagereg">
                     <h2 class="custheading" id="recover" tabindex="-1">{{ 'customer.recover_password.title' | t }}</h2>
                     <div>
                         <p>{{ 'customer.recover_password.subtext' | t }}</p>
@@ -52,13 +52,13 @@
 
                             <button class="button button--primary">{{ 'customer.login_page.submit' | t }}</button>
 
-                            <a href="#login" class="button button--primary wblogcancel">{{ 'customer.login_page.cancel' | t }}</a>
+                            <a href="#login" class="button button--primary vtlogcancel">{{ 'customer.login_page.cancel' | t }}</a>
                         {%- endform -%}
                     </div>
 
                     <h2 class="custheading" id="login" tabindex="-1">{{ 'customer.login_page.title' | t }}</h2>
                     <div>
-                        <p>{{ 'wbcustomlabel.wballtext.wblogagain' | t }}</p>
+                        <p>{{ 'vtcustomlabel.vtalltext.vtlogagain' | t }}</p>
                         {%- if recover_success == true -%}
                             <h3 class="form__message" tabindex="-1" autofocus>
                                 <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">

@@ -1,5 +1,5 @@
 /* List/Grid View */
-.wbverticalcoll{
+.vtverticalcoll{
     display: flex;
 }
 .facets-vertical-sort{
@@ -7,7 +7,7 @@
     max-width: unset;
     padding: 0;
 }
-.wbverticalcoll .wbsortbar {
+.vtverticalcoll .vtsortbar {
     display: flex;
     width: 100%;
     margin-bottom: 30px;
@@ -17,7 +17,7 @@
     padding: 8px 15px;
     justify-content: space-between;
 }
-.wbglbtn button{
+.vtglbtn button{
     background-color: transparent;
     border: none;
     padding: 0;
@@ -25,15 +25,15 @@
     min-width: 44px;
     min-height: 44px;
 }
-.wbglbtn button svg{
+.vtglbtn button svg{
     width: 23px;
     height: 23px;
     fill: rgba(var(--color-foreground),0.5);
 }
-.wblistgridbtn.active svg,.wblistgridbtn svg:hover {
+.vtlistgridbtn.active svg,.vtlistgridbtn svg:hover {
     fill: rgb(var(--color-foreground));
 }
-/*.listv.wblistgridbtn{
+/*.listv.vtlistgridbtn{
     margin: 0 15px;
 }*/
 .facets-container .disclosure-has-popup[open] > summary::before {
@@ -328,7 +328,7 @@
   z-index: 0;
 }
 .facet-checkbox:hover{
-    color: var(--color-wbmaincolors-text);
+    color: var(--color-vtmaincolors-text);
 }
 .facet-checkbox input[type="checkbox"] {
     position: absolute;
@@ -364,7 +364,7 @@
 }
 .facet-checkbox > input[type='checkbox']:checked ~ .icon-checkmark {
     visibility: visible;
-    background: var(--color-wbmaincolors-text);
+    background: var(--color-vtmaincolors-text);
     color: rgb(var(--color-background));
     padding: 2px;
     border-radius: 5px;
@@ -478,7 +478,7 @@ span.active-facets__button-inner:after {
         padding-bottom: 0.3rem;
         padding-top: 0.3rem;
     }
-    /*.listv.wblistgridbtn {
+    /*.listv.vtlistgridbtn {
         margin: 0 10px;
     }*/
 }
@@ -862,7 +862,7 @@ input.mobile-facets__checkbox {
 .mobile-facets__label .icon-checkmark {
     position: absolute;
     visibility: hidden;
-    background-color: var(--color-wbmaincolors-text);
+    background-color: var(--color-vtmaincolors-text);
     color: rgb(var(--color-background));
     border-radius: 0px;
 }
@@ -994,7 +994,7 @@ input.mobile-facets__checkbox {
     border-color: rgb(var(--color-foreground));
 }
 @media screen and (min-width: 768px) {
-  .facets__form.wbdrawerfacet{
+  .facets__form.vtdrawerfacet{
     display: flex;
   }
   .facets-container.facets-containerverticl{
@@ -1010,7 +1010,7 @@ input.mobile-facets__checkbox {
     border: none;
     padding-left: 0;
   }
-  .facets__form-vertical,.wbverticalcoll .wbblank .wbblankinner {
+  .facets__form-vertical,.vtverticalcoll .vtblank .vtblankinner {
     display: flex;
     flex-direction: column;
     width: 19rem;
@@ -1041,7 +1041,7 @@ input.mobile-facets__checkbox {
     padding-bottom: 1.5rem;
   }
  
-  .facets-vertical .facets-wrapper,.wbverticalcoll .wbblank {
+  .facets-vertical .facets-wrapper,.vtverticalcoll .vtblank {
     padding-right: 30px;
   }
 
@@ -1150,7 +1150,7 @@ input.mobile-facets__checkbox {
     .facets-vertical .active-facets__button-remove {
         padding: 0 1rem 1rem;
     }
-    .facets__form-vertical, .wbverticalcoll .wbblank .wbblankinner {
+    .facets__form-vertical, .vtverticalcoll .vtblank .vtblankinner {
         width: 16rem;
     }
     .tag-filters {
@@ -1158,7 +1158,7 @@ input.mobile-facets__checkbox {
     }
 }
 @media (max-width: 767px){
-    .wbmobilefil {
+    .vtmobilefil {
         display: flex;
         width: 100%;
         margin-bottom: 30px;
@@ -1182,7 +1182,7 @@ input.mobile-facets__checkbox {
         margin-top: 0;
         margin-bottom: 0;
     }
-    .wbglbtn button{
+    .vtglbtn button{
         min-width: 36px;
         min-height: 36px;
     }
@@ -1192,7 +1192,7 @@ input.mobile-facets__checkbox {
         margin-top: -67px;
         width: 43%;
     }
-    .wbverticalcoll .wbsortbar{
+    .vtverticalcoll .vtsortbar{
         padding: 8px 10px;
     }
     .template-search .mobile-facets__wrapper{

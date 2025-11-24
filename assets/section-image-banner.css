@@ -379,7 +379,7 @@
   .banner__box{
     padding: 8px;
   }
-  .slideshow__text .wbsaddtext{
+  .slideshow__text .vtsaddtext{
     font-size: calc(var(--font-body-scale) * 12px);
     letter-spacing: 0;
   }

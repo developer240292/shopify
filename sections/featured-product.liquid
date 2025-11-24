@@ -29,7 +29,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-<section class="wbfeatp color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">
+<section class="vtfeatp color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">
   <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
     <div class="featured-product product grid grid--1-col gradient color-{{ section.settings.color_scheme }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
@@ -108,10 +108,10 @@
                 endif
               -%}
               {%- assign bar_progress = current_variant.inventory_quantity | times: 100 | divided_by: block.settings.max_stock | append: '%' -%}
-              <div class="wbstockcount {% unless current_variant.available and current_variant.inventory_quantity > 0 %} hidden {% endunless %}">
-                <div class="wbstockinfo wbstockinfo_{{ inventory_status }}">{{ inventory_message }}</div>
-                <div class="wbstockinfo-bar">
-                  <span class="wbstockinfo-probar" style="width: {{ bar_progress }}"></span>
+              <div class="vtstockcount {% unless current_variant.available and current_variant.inventory_quantity > 0 %} hidden {% endunless %}">
+                <div class="vtstockinfo vtstockinfo_{{ inventory_status }}">{{ inventory_message }}</div>
+                <div class="vtstockinfo-bar">
+                  <span class="vtstockinfo-probar" style="width: {{ bar_progress }}"></span>
                 </div>
               </div>
               {%- style -%}
@@ -138,7 +138,7 @@
               </script>
 
             {%- when 'price' -%}
-            <div class="wbpricetax">
+            <div class="vtpricetax">
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
               </div>
@@ -229,7 +229,7 @@
                         {%- for option in product.options_with_values -%}
                             <fieldset {% if option.name == 'Color' and block.settings.show_colorswatch %} class="swatchComponent" {% else %} class="js product-form__input" {% endif %}>
                                 <legend class="form__label">{{ option.name }}</legend>
-                                <div {% if option.name == 'Color' and block.settings.show_colorswatch %} class="wbswatchclr" {% endif %}>
+                                <div {% if option.name == 'Color' and block.settings.show_colorswatch %} class="vtswatchclr" {% endif %}>
                                     {%- for value in option.values -%}
                                         <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                         name="{{ option.name }}"

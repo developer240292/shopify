@@ -56,10 +56,10 @@
   clear: both;
   display: table;
 }
-.wbfeatp .product__info-container .price{
+.vtfeatp .product__info-container .price{
   margin-bottom: 15px;
 }
-.wbfeatp .product .price .badge{
+.vtfeatp .product .price .badge{
   vertical-align: middle;
 }
 @media screen and (min-width: 768px) {

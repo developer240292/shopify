@@ -1,12 +1,12 @@
 <div class="homecolbnr section-{{ section.id }}-padding">
   <div class="">
     <div class="page-width">
-                <div class="row rless wbprinal">
+                <div class="row rless vtprinal">
                     {% if section.settings.showimage1 %}
                     <div class="cless {% unless section.settings.showimage1 %}{% else %} homecolbnrin1{% endunless %}">
                         <div class="beffect">
                             {% if section.settings.link1 != blank %}<a href="{{ section.settings.link1 }}"
-                                title="{{ 'wbcustomlabel.wballtext.banner' | t }}">{% endif%}
+                                title="{{ 'vtcustomlabel.vtalltext.banner' | t }}">{% endif%}
                                 {% if section.settings.image1 != blank %}
                                 <img src="{{ section.settings.image1 | img_url: 'master' }}"
                                     alt="{{ section.settings.image1.alt }}" class="img-fluid mx-auto"
@@ -15,8 +15,8 @@
                                 {% else %}
                                <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
                                 {% endif %}
-                                <div class="wbsetbntxt">
-                                    <div class="wbdip">
+                                <div class="vtsetbntxt">
+                                    <div class="vtdip">
                                         {% if section.settings.storylable1 != blank %}
                                         <h2>{{ section.settings.storylable1 }}</h2>
                                         {% endif %}
@@ -37,7 +37,7 @@
                     <div class="cless {% unless section.settings.showimage2 %} {% else %} homecolbnrin2{% endunless %}">
                         <div class="beffect">
                             {% if section.settings.link2 != blank %}<a href="{{ section.settings.link2 }}"
-                                title="{{ 'wbcustomlabel.wballtext.banner' | t }}">{% endif%}
+                                title="{{ 'vtcustomlabel.vtalltext.banner' | t }}">{% endif%}
                                 {% if section.settings.image2 != blank %}
                                 <img src="{{ section.settings.image2 | img_url: 'master' }}"
                                     alt="{{ section.settings.image2.alt }}" class="img-fluid mx-auto"
@@ -46,8 +46,8 @@
                                 {% else %}
                                   <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
                                 {% endif %}
-                                <div class="wbsetbntxt">
-                                    <div class="wbdip">
+                                <div class="vtsetbntxt">
+                                    <div class="vtdip">
                                         {% if section.settings.storylable2 != blank %}
                                         <h2>{{ section.settings.storylable2 }}</h2>
                                         {% endif %}
@@ -68,7 +68,7 @@
                     <div class="cless {% unless section.settings.showimage3 %} {% else %} homecolbnrin3{% endunless %}">
                         <div class="beffect">
                             {% if section.settings.link3 != blank %}<a href="{{ section.settings.link3 }}"
-                                title="{{ 'wbcustomlabel.wballtext.banner' | t }}">{% endif%}
+                                title="{{ 'vtcustomlabel.vtalltext.banner' | t }}">{% endif%}
                                 {% if section.settings.image3 != blank %}
                                 <img src="{{ section.settings.image3 | img_url: 'master' }}"
                                     alt="{{ section.settings.image3.alt }}" class="img-fluid mx-auto"
@@ -77,8 +77,8 @@
                                 {% else %}
                                    <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
                                 {% endif %}
-                                <div class="wbsetbntxt">
-                                    <div class="wbdip">
+                                <div class="vtsetbntxt">
+                                    <div class="vtdip">
                                         {% if section.settings.storylable3 != blank %}
                                            <h2>{{ section.settings.storylable3 }}</h2>
                                         {% endif %}

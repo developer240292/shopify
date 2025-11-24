@@ -10,13 +10,13 @@
     }
 }
 {%- endstyle -%}
-<div class="page-width wblogos section-{{ section.id }}-padding">
+<div class="page-width vtlogos section-{{ section.id }}-padding">
     <h2 class="heading text-left {{ section.settings.heading_size }}"><span>{{ section.settings.title }}</span></h2>
     <slider-component>
         <div class="allslideprt slider row rless" id="Slider-{{ section.id }}-{{ block.id }}">
             {% for block in section.blocks %}
                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-6 cless slider__slide" id="Slide-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" tabindex="-1">
-                    {% if block.settings.link != blank %}<a href="{{ block.settings.link }}" title="{{ 'wbcustomlabel.wballtext.banner' | t }}">{% endif %}
+                    {% if block.settings.link != blank %}<a href="{{ block.settings.link }}" title="{{ 'vtcustomlabel.vtalltext.banner' | t }}">{% endif %}
                     {% if block.settings.image != blank %}
                         <img loading="lazy" src="{{ block.settings.image | image_url: width: 225, height: 150 }}" class="logo-bar__image img-fluid mx-auto lazyload" alt="{{ block.settings.image.alt }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"/>
                     {% else %}
@@ -26,7 +26,7 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="wbhomesbtn no-js-hidden">
+        <div class="vthomesbtn no-js-hidden">
             <button type="button" class="slider-button slider-button--prev focus-inset" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" data-step="1">{% render 'icon-caret' %}</button>
             <button type="button" class="slider-button slider-button--next focus-inset" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" data-step="1">{% render 'icon-caret' %}</button>
         </div>

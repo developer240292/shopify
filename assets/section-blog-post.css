@@ -4,7 +4,7 @@
     text-align: center;
     margin-bottom: 20px;
 }
-.wbsingleblog .article-template__hero-container .media{
+.vtsingleblog .article-template__hero-container .media{
   border-radius: var(--media-radius);
 }
 .article-template__link {
@@ -96,47 +96,47 @@
 .article-template__comment-warning {
     margin: 2rem 0 2.5rem;
 }
-.wbsingleblog{
+.vtsingleblog{
     max-width: 1000px;
     margin: 0 auto;
 }
-.wbsingleblog .article-template__title {
+.vtsingleblog .article-template__title {
     font-size: calc(var(--font-body-scale) * 22px);
     text-transform: capitalize;
     margin-bottom: 12px;
 }
-.wbsingleblog .wbblogdate{
+.vtsingleblog .vtblogdate{
     margin-bottom: 10px;
     color: rgba(var(--color-foreground),.4);
 }
-.wbsingleblog .article-template__hero-container img{
+.vtsingleblog .article-template__hero-container img{
     border-radius: 5px;
     margin-bottom: 15px;
 }
-.wbsingleblog .article-template__content{
+.vtsingleblog .article-template__content{
     color: rgba(var(--color-foreground),.5);
     margin-bottom: 20px;
 }
-.wbsingleblog .tag-section,.wbsingleblog .article-template__social-sharing{
+.vtsingleblog .tag-section,.vtsingleblog .article-template__social-sharing{
     margin-bottom: 20px;
 }
-.wbsingleblog .tag-section a,.wbsingleblog .tag-section .meta-sep{
-    color: var(--color-wbmaincolors-text);
+.vtsingleblog .tag-section a,.vtsingleblog .tag-section .meta-sep{
+    color: var(--color-vtmaincolors-text);
     text-transform: uppercase;
     font-size: 12px;
 }
-.wbsingleblog .tag-section label{
+.vtsingleblog .tag-section label{
     color: rgba(var(--color-foreground),.5);
     margin: 0;
 }
-.wbformsuccess {
+.vtformsuccess {
     font-size: calc(var(--font-body-scale) * 14px);
     background: #cce1c2;
     border-radius: 4px;
     padding: 8px 15px;
     margin-bottom: 15px;
 }
-.wbformerror {
+.vtformerror {
     font-size: calc(var(--font-body-scale) * 14px);
     background: #f4dddd;
     border-radius: 4px;
@@ -144,7 +144,7 @@
     margin-bottom: 15px;
 }
 @media (max-width: 767px){
-    .wbsingleblog .article-template__title{
+    .vtsingleblog .article-template__title{
         font-size: 16px;
     }
 }

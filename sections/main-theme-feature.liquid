@@ -1,4 +1,4 @@
-<div class="page-width section-{{ section.id }}-padding wbthmepart">
+<div class="page-width section-{{ section.id }}-padding vtthmepart">
     {%- if section.settings.title != blank -%}
       <h1 class="heading text-left"><span>{{ section.settings.title | escape }}</span></h1>
     {%- endif -%}
@@ -34,7 +34,7 @@
     </div>
 
   {%- if section.blocks.size == 0 -%}
-    <div class="text-center">{{ 'wbcustomlabel.wballtext.nocontent' | t }}</div>
+    <div class="text-center">{{ 'vtcustomlabel.vtalltext.nocontent' | t }}</div>
   {%- endif -%}
 </div>
 {%- style -%}

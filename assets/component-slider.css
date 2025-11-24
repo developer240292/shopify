@@ -24,10 +24,10 @@ slider-component.slider-component-full-width {
 }
 
 @media screen and (max-width: 767px) {
-  .wbslidemobile::before{
+  .vtslidemobile::before{
     display: none !important;
   }
-  .wbslidemobile.media > :not(.zoom):not(.deferred-media__poster-button){
+  .vtslidemobile.media > :not(.zoom):not(.deferred-media__poster-button){
     position: unset;
   }
     .slider.slider--mobile {
@@ -304,21 +304,21 @@ slider-component.slider-component-full-width {
 
 @media screen and (min-width: 992px) {
   .slider:not(.slider--everywhere):not(.slider--desktop) + .slider-buttons,
-  .wbcollfea .slider:not(.slider--everywhere):not(.slider--desktop) + .wbhomesbtn {
+  .vtcollfea .slider:not(.slider--everywhere):not(.slider--desktop) + .vthomesbtn {
     display: none;
   }
 }
 
 @media screen and (max-width: 991px) {
   .slider--desktop:not(.slider--tablet) + .slider-buttons,
-  .wbcollfea .slider--desktop:not(.slider--tablet) + .wbhomesbtn {
+  .vtcollfea .slider--desktop:not(.slider--tablet) + .vthomesbtn {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
   .slider--mobile + .slider-buttons,
-  .wbcollfea .slider--mobile + .wbhomesbtn {
+  .vtcollfea .slider--mobile + .vthomesbtn {
     display: none;
   }
 }
@@ -370,7 +370,7 @@ slider-component.slider-component-full-width {
     text-align: center;
 }
 .progallerybtn .slider-button:not([disabled]):hover {
-    background:var(--color-wbmaincolors-text);
+    background:var(--color-vtmaincolors-text);
     color: rgb(var(--color-base-background-1))
 }
 .progallerybtn .slider-button .icon {

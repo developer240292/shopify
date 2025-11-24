@@ -1,6 +1,6 @@
 {% if customer %} 
-    <div class="wbmainwish container">
-        <h1 class="heading text-left"><span>{{ section.settings.wish_title }}</span> <span class="wbwish_box">(</span><span class="wbwishcount">{{ wishlist.count }}</span><span class="wbwish_box">)</span></h1>
+    <div class="vtmainwish container">
+        <h1 class="heading text-left"><span>{{ section.settings.wish_title }}</span> <span class="vtwish_box">(</span><span class="vtwishcount">{{ wishlist.count }}</span><span class="vtwish_box">)</span></h1>
         <div class="row rless">
         {% paginate collections.all.products by 9999 %}
             {% for product in collections.all.products %}
@@ -13,16 +13,16 @@
                     {%- endif -%}         
                     <input name="id" id="id" value="{{ func }}" type="hidden">
                     <input value="1" type="hidden" name="quantity" min="1">
-                    <div class="wbinnerwish" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}">
-                        <div class="wbinnerwimg">
+                    <div class="vtinnerwish" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}">
+                        <div class="vtinnerwimg">
                             <a href="{{ product.url }}">
                                 <img class="lazyload img-fluid mx-auto" src="{{  product.featured_image | product_img_url: 'large' }}" data-src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape }}" />
                             </a>
-                            <a class="wbwishremove" onclick="reloadPage();" title="{{ 'wbcustomlabel.wballtext.removewishlist' | t }}" href="javascript:void(0)" data-product-handle="{{ product.handle }}">
-                                <span class="wbwishirmv"><i class="fa fa-remove"></i></span>
+                            <a class="vtwishremove" onclick="reloadPage();" title="{{ 'vtcustomlabel.vtalltext.removewishlist' | t }}" href="javascript:void(0)" data-product-handle="{{ product.handle }}">
+                                <span class="vtwishirmv"><i class="fa fa-remove"></i></span>
                             </a>
                         </div>
-                        <div class="wbwishdesc">
+                        <div class="vtwishdesc">
                             <h5><a href="{{ product.url }}" title="{{ product.title }}">{{ product.title | truncate: 80 }}</a></h5>
                             <div class="product-price">
                                 {% if product.compare_at_price > product.price %}
@@ -40,25 +40,25 @@
         </div>
         <div class="text-center">
             <a href="/collections/all" class="button button--primary">{{ section.settings.wish_cart_conti }}</a>
-            <a href="javascript:void(0)" id="wbwishcall" class="button button--primary">{{ section.settings.wish_cart_clear }}</a>
+            <a href="javascript:void(0)" id="vtwishcall" class="button button--primary">{{ section.settings.wish_cart_clear }}</a>
         </div>
     </div>
-    <div class="wbwishempty text-center">
-        <p>{{ 'wbcustomlabel.wballtext.wishempty' | t }}</p>
+    <div class="vtwishempty text-center">
+        <p>{{ 'vtcustomlabel.vtalltext.wishempty' | t }}</p>
     </div>
-    <div class="wbwishloader" style="display: none;">
+    <div class="vtwishloader" style="display: none;">
         <p>Loading...</p>
     </div>
 {% else %}
-    <div class="wbloginwish text-center">
+    <div class="vtloginwish text-center">
         <ul class="list-unstyled">
             <li>
-                <p>{{ 'wbcustomlabel.wballtext.logwish' | t }}</p> 
-                {{ 'wbcustomlabel.wballtext.log_in' | t | customer_login_link }}
+                <p>{{ 'vtcustomlabel.vtalltext.logwish' | t }}</p>
+                {{ 'vtcustomlabel.vtalltext.log_in' | t | customer_login_link }}
             </li>
             <li>
-                <p>{{ 'wbcustomlabel.wballtext.accwish' | t }}</p> 
-                {{ 'wbcustomlabel.wballtext.create_accounthome' | t | customer_register_link }}
+                <p>{{ 'vtcustomlabel.vtalltext.accwish' | t }}</p>
+                {{ 'vtcustomlabel.vtalltext.create_accounthome' | t | customer_register_link }}
             </li>
         </ul>
     </div>

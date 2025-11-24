@@ -1,5 +1,5 @@
 <div class="section-{{ section.id }}-padding countdbar">
-  <div class="wbcountimg">
+  <div class="vtcountimg">
     <div class="{% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %} media--{{ section.settings.image_height }} media--hover-effect" {% if section.settings.image_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}>
       {% if section.settings.image != blank %}
           <img loading="lazy" 
@@ -28,22 +28,22 @@
       {% if section.settings.subheading != blank %}
           <p>{{ section.settings.subheading }}</p>
       {% endif %}
-      <div data-date="{{ section.settings.wb_enddate }}" class="wb_product_countdown">
+      <div data-date="{{ section.settings.vt_enddate }}" class="vt_product_countdown">
         <div class="time main_cdays">
-          <span class="count wb_cdays">00</span>
-          <span class="label">{{ 'wbcustomlabel.wballtext.time_days' | t }}</span>
+          <span class="count vt_cdays">00</span>
+          <span class="label">{{ 'vtcustomlabel.vtalltext.time_days' | t }}</span>
         </div>
         <div class="time main_chours">
-          <span class="count wb_chours">00</span>
-          <span class="label">{{ 'wbcustomlabel.wballtext.time_hour' | t }}</span>
+          <span class="count vt_chours">00</span>
+          <span class="label">{{ 'vtcustomlabel.vtalltext.time_hour' | t }}</span>
         </div>
         <div class="time main_cminutes">
-          <span class="count wb_cminutes">00</span>
-          <span class="label">{{ 'wbcustomlabel.wballtext.time_min' | t }}</span>
+          <span class="count vt_cminutes">00</span>
+          <span class="label">{{ 'vtcustomlabel.vtalltext.time_min' | t }}</span>
         </div>
         <div class="time main_cseconds">
-          <span class="count wb_cseconds">00</span>
-          <span class="label">{{ 'wbcustomlabel.wballtext.time_sec' | t }}</span>
+          <span class="count vt_cseconds">00</span>
+          <span class="label">{{ 'vtcustomlabel.vtalltext.time_sec' | t }}</span>
         </div>
       </div>
       {% if section.settings.link != blank %}
@@ -55,20 +55,20 @@
 {% javascript %} 
 const WebiTimer = setInterval(countDown, 1000);
 function countDown() {
-  var countDownDate = new Date(document.querySelector('.wb_product_countdown').getAttribute('data-date')).getTime();
+  var countDownDate = new Date(document.querySelector('.vt_product_countdown').getAttribute('data-date')).getTime();
   var now = new Date().getTime();
   var distance = countDownDate - now;
   if (distance < 0 || isNaN(countDownDate)) {
-    document.querySelector('.main_cdays .wb_cdays').textContent = "00";
-    document.querySelector('.main_chours .wb_chours').textContent = "00";
-    document.querySelector('.main_cminutes .wb_cminutes').textContent = "00";
-    document.querySelector('.main_cseconds .wb_cseconds').textContent = "00";
+    document.querySelector('.main_cdays .vt_cdays').textContent = "00";
+    document.querySelector('.main_chours .vt_chours').textContent = "00";
+    document.querySelector('.main_cminutes .vt_cminutes').textContent = "00";
+    document.querySelector('.main_cseconds .vt_cseconds').textContent = "00";
   }
   else {  
-    document.querySelector('.main_cdays .wb_cdays').textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
-    document.querySelector('.main_chours .wb_chours').textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    document.querySelector('.main_cminutes .wb_cminutes').textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    document.querySelector('.main_cseconds .wb_cseconds').textContent = Math.floor((distance % (1000 * 60)) / 1000);
+    document.querySelector('.main_cdays .vt_cdays').textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.querySelector('.main_chours .vt_chours').textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.querySelector('.main_cminutes .vt_cminutes').textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.querySelector('.main_cseconds .vt_cseconds').textContent = Math.floor((distance % (1000 * 60)) / 1000);
   }
 }
 {% endjavascript %}
@@ -201,7 +201,7 @@ function countDown() {
       },
       {
           "type": "text",
-          "id": "wb_enddate",
+          "id": "vt_enddate",
           "label": "End date",
           "info": "The end date must be set to a future date and include the following format: YYYY/MM/DD Example: 2022/10/05."
       },

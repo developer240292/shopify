@@ -1,10 +1,10 @@
-<div class="container section-{{ section.id }}-padding wbfaqpart">
+<div class="container section-{{ section.id }}-padding vtfaqpart">
     {%- if section.settings.title != blank -%}
       <h2 class="faqheading"><span>{{ section.settings.title | escape }}</span></h2>
     {%- endif -%}
 
     {%- for block in section.blocks -%}
-      <div class="wbmainfaq">
+      <div class="vtmainfaq">
         {% case block.type %}
           {% when 'rich-text'%}
           <div class="text-{{ block.settings.align_text }}">
@@ -31,7 +31,7 @@
       </div>
     {%- endfor -%}
   {%- if section.blocks.size == 0 -%}
-    <div class="text-center">{{ 'wbcustomlabel.wballtext.nocontent' | t }}</div>
+    <div class="text-center">{{ 'vtcustomlabel.vtalltext.nocontent' | t }}</div>
   {%- endif -%}
 </div>
 {%- style -%}

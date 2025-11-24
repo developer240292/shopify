@@ -1,4 +1,4 @@
-// Webibazaar Cart Dropdown Code Start
+// Villatheme Cart Dropdown Code Start
 function debounce(fn, wait) {
   let t;
   return (...args) => {
@@ -98,7 +98,7 @@ class WebiCartItems extends HTMLElement {
             this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
         }));
         this.updateLiveRegions(line, parsedState.item_count);
-        const lineItem =  document.getElementById(`WbCartItem-${line}`);
+        const lineItem =  document.getElementById(`VtCartItem-${line}`);
         if (lineItem && lineItem.querySelector(`[name="${name}"]`)) lineItem.querySelector(`[name="${name}"]`).focus();
         this.disableLoading();
       }).catch(() => {
@@ -108,11 +108,11 @@ class WebiCartItems extends HTMLElement {
   }
   updateLiveRegions(line, itemCount) {
     if (this.currentItemCount === itemCount) {
-      document.getElementById(`Wb-Line-item-error-${line}`)
-        .querySelector('.wb-cart-item__error-text')
+      document.getElementById(`Vt-Line-item-error-${line}`)
+        .querySelector('.vt-cart-item__error-text')
         .innerHTML = window.cartStrings.quantityError.replace(
           '[quantity]',
-          document.getElementById(`WbQuantity-${line}`).value
+          document.getElementById(`VtQuantity-${line}`).value
         );
     }
     this.currentItemCount = itemCount;
@@ -130,7 +130,7 @@ class WebiCartItems extends HTMLElement {
   }
   enableLoading(line) {
     document.getElementById('webi-main-cart-items').classList.add('cart__items--disabled');
-    this.querySelectorAll(`#WbCartItem-${line} .loading-overlay`).forEach((overlay) => overlay.classList.remove('hidden'));
+    this.querySelectorAll(`#VtCartItem-${line} .loading-overlay`).forEach((overlay) => overlay.classList.remove('hidden'));
     document.activeElement.blur();
     this.lineItemStatusElement.setAttribute('aria-hidden', false);
   }
@@ -139,4 +139,4 @@ class WebiCartItems extends HTMLElement {
   }
 }
 customElements.define('webi-cart-items', WebiCartItems);
-// Webibazaar Cart Dropdown Code End
+// Villatheme Cart Dropdown Code End

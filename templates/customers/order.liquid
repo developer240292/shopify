@@ -6,7 +6,7 @@
       <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0h3a2 2 0 012 2v3a1 1 0 01-.3.7l-6 6a1 1 0 01-1.4 0l-4-4a1 1 0 010-1.4l6-6A1 1 0 017 0zm2 2a1 1 0 102 0 1 1 0 00-2 0z" fill="currentColor">
     </symbol>
   </svg>
-  <div class="wbordheading">
+  <div class="vtordheading">
     <h1><span>{{ 'customer.account.title' | t }}</span></h1>
     <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
   </div>
@@ -15,7 +15,7 @@
 
     <div class="row">
       <div class="col-md-6 col-12">
-        <div class="wbordbill">
+        <div class="vtordbill">
           <h2>{{ 'customer.order.billing_address' | t }}</h2>
           <p>
             <strong>{{ 'customer.order.payment_status' | t }}:</strong>
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="col-md-6 col-12">
-        <div class="wbordbill">
+        <div class="vtordbill">
           <h2>{{ 'customer.order.shipping_address' | t }}</h2>
           <p>
             <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
@@ -233,7 +233,7 @@
             <td id="RowSubtotal" role="rowheader" scope="row" colspan="4">
               {{ 'customer.order.subtotal' | t }}
             </td>
-            <td headers="RowSubtotal" role="cell" class="wbordtotal" data-label="{{ 'customer.order.subtotal' | t }}">{{ order.line_items_subtotal_price | money }}</td>
+            <td headers="RowSubtotal" role="cell" class="vtordtotal" data-label="{{ 'customer.order.subtotal' | t }}">{{ order.line_items_subtotal_price | money }}</td>
           </tr>
           {%- if order.cart_level_discount_applications != blank -%}
             <tr role="row">

@@ -102,7 +102,7 @@ predictive-search .price .price-item{
 predictive-search .price--on-sale .price-item--regular{
     font-size: calc(var(--font-body-scale) * 14px);
 }
-#predictive-search-results .price .wbvariantbadges{
+#predictive-search-results .price .vtvariantbadges{
     display: none;
 }
 @media (max-width: 767px) {

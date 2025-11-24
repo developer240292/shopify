@@ -9,7 +9,7 @@
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when 'banner' %}
-                    <div class="wbaboutimgblock">
+                    <div class="vtaboutimgblock">
                         <div>
                             {% if block.settings.banner != blank %}
                                 <img loading="lazy"
@@ -32,7 +32,7 @@
                     </div>
 
                 {% when 'text-block' %}
-                    <div class="wbabttxt container">
+                    <div class="vtabttxt container">
                         {% if block.settings.textsub != blank %}
                             <div>{{ block.settings.textsub }}</div>
                         {% endif %}
@@ -46,7 +46,7 @@
                     </div>
 
                 {% when 'image-with-text' %}
-                    <div class="wbabtimgtxt">
+                    <div class="vtabtimgtxt">
                         <div class="row align-items-center">
                             <div class="col-sm-6">
                                 {% if block.settings.title2 != blank %}
@@ -57,7 +57,7 @@
                                 {% endif %}
                             </div>
                             <div class="col-sm-6">
-                                <div class="wbabtimglazy">
+                                <div class="vtabtimglazy">
                                     {% if block.settings.image != blank %}
                                         <img loading="lazy" src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" class="img-fluid mx-auto lazyload" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"/>
                                     {% else %}

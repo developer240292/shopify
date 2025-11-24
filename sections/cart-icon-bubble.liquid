@@ -1,19 +1,19 @@
-{% comment %} Webibazaar Cart Dropdown {% endcomment %}
+{% comment %} Villatheme Cart Dropdown {% endcomment %}
 {%- if settings.cart_type == 'drawer' or settings.cart_type == 'page' -%}
-    <div class="wbhcart"> 
+    <div class="vthcart">
         <a href="{{ routes.cart_url }}" class="focus-inset" id="cart-icon-bubble">
             <span class="svgbg"> 
-                {%- if settings.wb_carticon == 'wb_shopcart' -%}
+                {%- if settings.vt_carticon == 'vt_shopcart' -%}
                 {% render 'icon-hcart' %}
               {%- else -%}
                 {% render 'icon-hcartbag' %}
               {%- endif -%}
             </span>
-            {%- if settings.wb_cartnumber == 'wb_shopqty' -%}
-                <span class="wbhcartitem">{{ cart.item_count }}</span>
-              {%- elsif settings.wb_cartnumber == 'wb_shoptotal' -%}
-                <span class="wbcarthtotal text-left">
-                    <strong>{{ 'wbcustomlabel.wballtext.mycart' | t }}</strong>
+            {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
+                <span class="vthcartitem">{{ cart.item_count }}</span>
+              {%- elsif settings.vt_cartnumber == 'vt_shoptotal' -%}
+                <span class="vtcarthtotal text-left">
+                    <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
                   {%- if settings.currency_code_enabled -%}
                     <span>{{ cart.total_price | money_with_currency }}</span>
                   {%- else -%}
@@ -21,9 +21,9 @@
                   {%- endif -%}
                 </span>
               {%- else -%}
-                  <span class="wbhcartitem wbqtyboth">{{ cart.item_count }}</span>
-                  <span class="wbcarthtotal text-left">
-                    <strong>{{ 'wbcustomlabel.wballtext.mycart' | t }}</strong>
+                  <span class="vthcartitem vtqtyboth">{{ cart.item_count }}</span>
+                  <span class="vtcarthtotal text-left">
+                    <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
                   {%- if settings.currency_code_enabled -%}
                     <span>{{ cart.total_price | money_with_currency }}</span>
                   {%- else -%}
@@ -34,21 +34,21 @@
         </a>
     </div>
 {%- else -%}
-    <div data-toggle="dropdown" class="wbcollscart"> 
-        <div class="wbhcart">
+    <div data-toggle="dropdown" class="vtcollscart">
+        <div class="vthcart">
             <a href="#" title="{{ 'templates.cart.cart' | t }}">
                 <span class="svgbg">
-                    {% if settings.wb_carticon == 'wb_shopcart' %}
+                    {% if settings.vt_carticon == 'vt_shopcart' %}
                         {% render 'icon-hcart' %}
                       {% else %}
                         {% render 'icon-hcartbag' %}
                       {% endif %}
                 </span>
-                {% if settings.wb_cartnumber == 'wb_shopqty' %}
-                    <span class="wbhcartitem">{{ cart.item_count }}</span>
-                  {% elsif settings.wb_cartnumber == 'wb_shoptotal' %}
-                    <span class="wbcarthtotal text-left">
-                        <strong>{{ 'wbcustomlabel.wballtext.mycart' | t }}</strong>
+                {% if settings.vt_cartnumber == 'vt_shopqty' %}
+                    <span class="vthcartitem">{{ cart.item_count }}</span>
+                  {% elsif settings.vt_cartnumber == 'vt_shoptotal' %}
+                    <span class="vtcarthtotal text-left">
+                        <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
                       {% if settings.currency_code_enabled %}
                         {{ cart.total_price | money_with_currency }}
                       {% else %}
@@ -56,9 +56,9 @@
                       {% endif %}
                     </span>
                   {% else %}
-                      <span class="wbhcartitem wbqtyboth">{{ cart.item_count }}</span>
-                      <span class="wbcarthtotal text-left">
-                        <strong>{{ 'wbcustomlabel.wballtext.mycart' | t }}</strong>
+                      <span class="vthcartitem vtqtyboth">{{ cart.item_count }}</span>
+                      <span class="vtcarthtotal text-left">
+                        <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
                       {% if settings.currency_code_enabled %}
                         {{ cart.total_price | money_with_currency }}
                       {% else %}
@@ -79,8 +79,8 @@
                     <div class="js-contents">
                         {%- if cart != empty -%}
                             {%- for item in cart.items -%}
-                                <div class="wbheadcartdrop" id="WbCartItem-{{ item.index | plus: 1 }}">
-                                    <div class="wbcartdimg">
+                                <div class="vtheadcartdrop" id="VtCartItem-{{ item.index | plus: 1 }}">
+                                    <div class="vtcartdimg">
                                         {% if item.image %}
                                         {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                                             <a href="{{ item.url }}">
@@ -93,11 +93,11 @@
                                             </a>
                                         {% endif %}
                                     </div>
-                                    <div class="wbcartddesc">
+                                    <div class="vtcartddesc">
                                         {%- if settings.show_vendor -%}
                                             <p class="light"><small>{{ item.product.vendor }}</small></p>
                                         {%- endif -%}
-                                        <a href="{{ item.url }}" class="wbcrtname">{{ item.product.title | escape }}</a>
+                                        <a href="{{ item.url }}" class="vtcrtname">{{ item.product.title | escape }}</a>
                                         {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
                                             <dl>
                                             {%- if item.product.has_only_default_variant == false -%}
@@ -135,8 +135,8 @@
                                             {%- endfor -%}
                                         </ul>
 
-                                        <div class="wbcartqtybr">
-                                            <label class="visually-hidden" for="WbQuantity-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
+                                        <div class="vtcartqtybr">
+                                            <label class="visually-hidden" for="VtQuantity-{{ item.index | plus: 1 }}">{{ 'products.product.quantity.label' | t }}</label>
                                             <webi-quantity-input class="quantity">
                                                 <button class="quantity__button no-js-hidden" name="minus" type="button">
                                                     <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
@@ -148,7 +148,7 @@
                                                 value="{{ item.quantity }}"
                                                 min="0"
                                                 aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
-                                                id="WbQuantity-{{ item.index | plus: 1 }}"
+                                                id="VtQuantity-{{ item.index | plus: 1 }}"
                                                 data-index="{{ item.index | plus: 1 }}" >
                                                 <button class="quantity__button no-js-hidden" name="plus" type="button">
                                                     <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
@@ -230,7 +230,7 @@
                     <noscript>
                         <button type="submit" class="cart__update-button button button--secondary" form="cart">{{ 'sections.cart.update' | t }}</button>
                     </noscript>
-                    <a href="{{ routes.cart_url }}" class="button button--primary">{{ 'wbcustomlabel.wballtext.viewcart' | t }}</a>
+                    <a href="{{ routes.cart_url }}" class="button button--primary">{{ 'vtcustomlabel.vtalltext.viewcart' | t }}</a>
                     <a href="checkout" class="button button--primary">{{ 'sections.cart.checkout' | t }}</a>
                     {% comment %} <button type="submit" id="checkout" class="cart__checkout-button button button--primary" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
                         {{ 'sections.cart.checkout' | t }}
@@ -240,4 +240,4 @@
         </div>
     </div>
 {%- endif -%}
-{% comment %} Webibazaar Cart Dropdown Over {% endcomment %}
+{% comment %} Villatheme Cart Dropdown Over {% endcomment %}

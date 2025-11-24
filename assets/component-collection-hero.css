@@ -5,11 +5,11 @@
 .collection-hero__description{
     color: rgba(var(--color-foreground),.5);
 }
-.wbmain_bnr{
+.vtmain_bnr{
     margin-bottom: 30px;
 }
 @media (max-width: 991px){
-    .wbmain_bnr{
+    .vtmain_bnr{
         margin-bottom: 15px;
     }   
 }

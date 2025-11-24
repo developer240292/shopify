@@ -132,9 +132,9 @@
   </div>
   {%- if search.performed -%}
 
-    <div class="page-width small-hide {% if section.settings.filter_type == 'vertical' %} wbverticalcoll {% endif %}">
-        <div class="wbblank"><div class="wbblankinner"></div></div>
-        <div class="wbsortbar">
+    <div class="page-width small-hide {% if section.settings.filter_type == 'vertical' %} vtverticalcoll {% endif %}">
+        <div class="vtblank"><div class="vtblankinner"></div></div>
+        <div class="vtsortbar">
             {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
             {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' and search.filters != empty -%}
               <facet-filters-form class="facets facets-vertical-sort page-width no-js-hidden">

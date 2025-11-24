@@ -1,19 +1,19 @@
 /* Footer */
 .footer {
-    background: rgb(var(--color-wbfootbgcolor));
-    color: rgb(var(--color-wbfootcolor));
+    background: rgb(var(--color-vtfootbgcolor));
+    color: rgb(var(--color-vtfootcolor));
 }
 .footer a{
-  color: rgb(var(--color-wbfootcolor));
+  color: rgb(var(--color-vtfootcolor));
   word-break: break-all;
 }
-.wbfootcont svg{
-  fill: rgb(var(--color-wbfootcolor));
+.vtfootcont svg{
+  fill: rgb(var(--color-vtfootcolor));
 }
 .footer a:hover{
   color: var(--gradient-base-accent-2);
 }
-.wbfootcont.footer-block-image svg{
+.vtfootcont.footer-block-image svg{
     width: 100%;
     height: 100%;
 }
@@ -86,7 +86,7 @@ button#scroll {
 .wp_nws_rws{
     justify-content: space-between;
 }
-.wbftpaym{
+.vtftpaym{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -139,23 +139,23 @@ button#scroll {
     align-items: center;
     column-gap: 15px;
 }
-.wbftleft h3{
+.vtftleft h3{
     margin-top: 30px;
 }
-.wbftleft img{
+.vtftleft img{
     margin-bottom: 20px;
 }
-.wbfootcont svg{
+.vtfootcont svg{
     width: 20px;
     height: 20px;
 }
-.wbfootcont ul{
+.vtfootcont ul{
     padding: 0;
     margin: 0;
     list-style: none;
     line-height: 36px;
 }
-.footer__blocks-wrapper .h6,.wbftleft h3{
+.footer__blocks-wrapper .h6,.vtftleft h3{
     font-weight: var(--font-body-weight-medium);
     font-size: calc(var(--font-body-scale) * 18px);
     text-transform: uppercase;
@@ -172,7 +172,7 @@ button#scroll {
 .footer__content-bottom{
     padding: 15px 0;
     font-size: calc(var(--font-body-scale) * 14px);
-    border-top: 1px solid rgba(var(--color-wbfootcolor),0.1);
+    border-top: 1px solid rgba(var(--color-vtfootcolor),0.1);
 }
 .footer__content-bottom .row{
     justify-content: space-between;
@@ -193,7 +193,7 @@ button#scroll {
     width: 38px;
     height: 22px;
 }
-.wbfootcont p{
+.vtfootcont p{
     line-height: 25px;
     margin-bottom: 0;
 }
@@ -247,7 +247,7 @@ ul.footer__list-social {
     .footer__blocks-wrapper .h6{
         cursor: text;
     }
-    .wbftleft,.footer__blocks-wrapper .footer-block--menu{
+    .vtftleft,.footer__blocks-wrapper .footer-block--menu{
         border-right: 1px solid rgba(var(--color-foreground),.08);
     }
 }
@@ -287,7 +287,7 @@ ul.footer__list-social {
     .footer__content-bottom {
         padding: 10px 0;
     }
-    .wbftpaym {
+    .vtftpaym {
         flex-direction: column;
         row-gap: 8px;
     }
@@ -300,7 +300,7 @@ ul.footer__list-social {
         text-align: left;
         margin-bottom: 0;
     }
-    .wbfootcont ul.footer__list-social {
+    .vtfootcont ul.footer__list-social {
         margin-bottom: 10px;
         margin-top: 10px;
     }

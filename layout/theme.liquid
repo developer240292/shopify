@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js wbboxlt" lang="{{ request.locale.iso_code }}" {% if settings.wbboxed %} id="wbboxlayout"{% endif %}>
+<html class="no-js vtboxlt" lang="{{ request.locale.iso_code }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,8 +78,8 @@
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
 
-        --color-wbmaincolors-text: {{ settings.wbmainclr }};
-        --color-wbprogscolor: {{ settings.wbprogscolor }};
+        --color-vtmaincolors-text: {{ settings.vtmainclr }};
+        --color-vtprogscolor: {{ settings.vtprogscolor }};
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
@@ -268,7 +268,7 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
     {{ 'magnific-popup.css' | asset_url | stylesheet_tag }}
-    {{ 'wbquickview.css' | asset_url | stylesheet_tag }}
+    {{ 'vtquickview.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -362,35 +362,35 @@
     {%- endif -%}
 
     {% comment %}
-      Webibazaar Code
+      Villatheme Code
     {% endcomment %}
     <script src="{{ 'jquery.js' | asset_url }}"></script>
     <script src="{{ 'jquery.magnific-popup.js' | asset_url }}"></script>
-    <script src="{{ 'wbcustom.js' | asset_url }}"></script>
-    <script src="{{ 'wbcountdown.js' | asset_url }}"></script>
+    <script src="{{ 'vtcustom.js' | asset_url }}"></script>
+    <script src="{{ 'vtcountdown.js' | asset_url }}"></script>
     {%- if settings.cart_type == 'notification' -%}
-      <script src="{{ 'wbcartdropdown.js' | asset_url }}"></script>
+      <script src="{{ 'vtcartdropdown.js' | asset_url }}"></script>
     {%- endif -%}
     {% if template == 'index' or template contains 'page' %}
       <script src="{{ 'product-form.js' | asset_url }}"></script>
     {%- endif -%}
-    <script src="{{ 'wbquickview.js' | asset_url }}" async></script>
+    <script src="{{ 'vtquickview.js' | asset_url }}" async></script>
     <script>
       window.lazySizesConfig = window.lazySizesConfig || {};
       window.lazySizesConfig.expand = 10;
     </script>
     <script src="{{ 'lazysizes.js' | asset_url }}"></script>
 
-    {% if settings.wb_enablewish %}
+    {% if settings.vt_enablewish %}
       {{ 'wishlist.js' | asset_url | script_tag }}
       <script>
-        $(".wbwishremove").on('click', function() {
-          $(this).addClass("wbloadtowish wbwishadding");
+        $(".vtwishremove").on('click', function() {
+          $(this).addClass("vtloadtowish vtwishadding");
           setTimeout(function() {
-            $(".wbwishremove").removeClass("wbloadtowish");
+            $(".vtwishremove").removeClass("vtloadtowish");
           }, 1000);
           setTimeout(function() {
-            $(".wbwishadding").removeClass("wbwishadding");
+            $(".vtwishadding").removeClass("vtwishadding");
           }, 2000);
         });
         (function() {
@@ -399,60 +399,60 @@
       </script>
     {% endif %}
 
-    {% comment %}Webibazaar Color Customizer{% endcomment %}
+    {% comment %}Villatheme Color Customizer{% endcomment %}
     {% if settings.displaycustomizer %}
-      <div class="wballcor">
-        <div class="wbopen-closeclr wbclrdisable">
-          <a href="javascript:void(0)" title="{{ 'wbcustomlabel.wballtext.colors' | t }}"></a>
+      <div class="vtallcor">
+        <div class="vtopen-closeclr vtclrdisable">
+          <a href="javascript:void(0)" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
         </div>
-        <div class="wbcolor_box">
+        <div class="vtcolor_box">
           <h3>Live Settings</h3>
           <h5>Theme Color</h5>
-          <ul class="wbinnerclr">
+          <ul class="vtinnerclr">
             <li>
-              <a href="{{ 'wbcolor1.css' | asset_url }}" class="wbclr1" title="{{ 'wbcustomlabel.wballtext.colors' | t }}"></a>
+              <a href="{{ 'vtcolor1.css' | asset_url }}" class="vtclr1" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
             </li>
             <li>
-              <a href="{{ 'wbcolor2.css' | asset_url }}" class="wbclr2" title="{{ 'wbcustomlabel.wballtext.colors' | t }}"></a>
+              <a href="{{ 'vtcolor2.css' | asset_url }}" class="vtclr2" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
             </li>
             <li>
-              <a href="{{ 'wbcolor3.css' | asset_url }}" class="wbclr3" title="{{ 'wbcustomlabel.wballtext.colors' | t }}"></a>
+              <a href="{{ 'vtcolor3.css' | asset_url }}" class="vtclr3" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
             </li>
             <li>
-              <a href="{{ 'wbcolor4.css' | asset_url }}" class="wbclr4" title="{{ 'wbcustomlabel.wballtext.colors' | t }}"></a>
+              <a href="{{ 'vtcolor4.css' | asset_url }}" class="vtclr4" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
             </li>
             <li>
-              <a href="{{ 'wbcolor5.css' | asset_url }}" class="wbclr5" title="{{ 'wbcustomlabel.wballtext.colors' | t }}"></a>
+              <a href="{{ 'vtcolor5.css' | asset_url }}" class="vtclr5" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
             </li>
             <li>
-              <a href="{{ 'wbcolor6.css' | asset_url }}" class="wbclr6" title="{{ 'wbcustomlabel.wballtext.colors' | t }}"></a>
+              <a href="{{ 'vtcolor6.css' | asset_url }}" class="vtclr6" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
             </li>
           </ul>
           <div class="clearfix"></div>
           <hr>
           <h5>Box Layout</h5>
-          <ul class="wbsitebox">
-            <li class="wbboxdemo">box</li>
-            <li class="wbwidedemo">Full</li>
+          <ul class="vtsitebox">
+            <li class="vtboxdemo">box</li>
+            <li class="vtwidedemo">Full</li>
           </ul>
           <hr>
           <h5>Mode</h5>
-          <ul class="wbrtlmode">
+          <ul class="rtlmode">
             <li>
-              <a href="{{ 'wbrtl.css' | asset_url }}" class="wbrtlinner">RTL</a>
+              <a href="{{ 'rtl.css' | asset_url }}" class="rtlinner">RTL</a>
             </li>
             <li>
-              <a href="#" class="wbltrinner">LTR</a>
+              <a href="#" class="vtltrinner">LTR</a>
             </li>
           </ul>
         </div>
       </div>
     {% endif %}
-    {% comment %}Webibazaar Color Customizer Over{% endcomment %}
+    {% comment %}Villatheme Color Customizer Over{% endcomment %}
 
-    {% comment %}Webibazaar RTL{% endcomment %}
-    {% if settings.wbenblertl or request.locale.iso_code == 'ar' %}
-      <link rel="stylesheet" href="{{ 'wbrtl.css' | asset_url }}" type="text/css">
+    {% comment %}Villatheme RTL{% endcomment %}
+    {% if settings.villathemertl or request.locale.iso_code == 'ar' %}
+      <link rel="stylesheet" href="{{ 'rtl.css' | asset_url }}" type="text/css">
     {% endif %}
 
   </body>

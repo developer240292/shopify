@@ -1,9 +1,9 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Tradmart",
-    "theme_version": "3.5.0",
-    "theme_author": "EP Theme",
+    "theme_name": "Draly",
+    "theme_version": "1.0.0",
+    "theme_author": "VillaTheme",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
   },
@@ -90,9 +90,9 @@
       },
       {
         "type": "color",
-        "id": "wbmainclr",
+        "id": "vtmainclr",
         "default": "#333333",
-        "label": "t:settings_schema.colors.settings.wbmainclr.label"
+        "label": "t:settings_schema.colors.settings.vtmainclr.label"
       }
     ]
   },
@@ -1181,38 +1181,38 @@
       },
       {
         "type": "select",
-        "id": "wb_carticon",
+        "id": "vt_carticon",
         "options": [
           {
-            "value": "wb_shopcart",
+            "value": "vt_shopcart",
             "label": "Shopping cart"
           },
           {
-            "value": "wb_shopbag",
+            "value": "vt_shopbag",
             "label": "Shopping basket"
           }
         ],
-        "default": "wb_shopcart",
+        "default": "vt_shopcart",
         "label": "Cart icon"
       },
       {
         "type": "select",
-        "id": "wb_cartnumber",
+        "id": "vt_cartnumber",
         "options": [
           {
-            "value": "wb_shoptotal",
+            "value": "vt_shoptotal",
             "label": "Cart total"
           },
           {
-            "value": "wb_shopqty",
+            "value": "vt_shopqty",
             "label": "Quantity"
           },
           {
-            "value": "wb_shopqtytotal",
+            "value": "vt_shopqtytotal",
             "label": "Quantity and cart total"
           }
         ],
-        "default": "wb_shoptotal",
+        "default": "vt_shoptotal",
         "label": "Cart number"
       },
       {
@@ -1223,20 +1223,20 @@
       },
       {
         "type": "checkbox",
-        "id": "wbenable_ship",
+        "id": "vtenable_ship",
         "label": "Show free shipping minimum amount",
         "default": false,
         "info": "Make sure that you have properly configured your [shipping rates](/admin/settings/shipping). This feature does not work well when multi-currency is enabled."
       },
       {
         "type": "number",
-        "id": "wbmin_order",
+        "id": "vtmin_order",
         "label": "Minimum order amount to free shipping",
         "default": 5000
       },
       {
         "type": "color",
-        "id": "wbprogscolor",
+        "id": "vtprogscolor",
         "label": "Progress bar color",
         "default": "#428e6c"
       },
@@ -1252,7 +1252,7 @@
       },
       {
         "type": "text",
-        "id": "wbuphead",
+        "id": "vtuphead",
         "label": "heading",
         "default": "You might like"
       },
@@ -1327,13 +1327,7 @@
       },
       {
         "type": "checkbox",
-        "id": "wbboxed",
-        "label": "Show Box Layout Theme",
-        "default": false
-      },
-      {
-        "type": "checkbox",
-        "id": "wbenblertl",
+        "id": "villathemertl",
         "label": "Show RTL Theme",
         "default": false
       }
@@ -1344,7 +1338,7 @@
     "settings": [
       {
         "type": "checkbox",
-        "id": "wb_enablewish",
+        "id": "vt_enablewish",
         "label": "Enable wishlist",
         "default": true
       }

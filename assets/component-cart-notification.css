@@ -94,7 +94,7 @@
     margin-top: 10px;
 }
 .cart-notification__links .link.button-label:hover{
-    color: var(--color-wbmaincolors-text);
+    color: var(--color-vtmaincolors-text);
 }
 .cart-notification-product {
     align-items: flex-start;

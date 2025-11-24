@@ -11,7 +11,7 @@
       </symbol>
     </svg>
     <h1 class="heading text-left"><span>{{ 'customer.addresses.title' | t }}</span></h1>
-    <a href="{{ routes.account_url }}" class="wbrtaddress">{% render 'icon-arrow-left' %} {{ 'customer.account.return' | t }}</a>
+    <a href="{{ routes.account_url }}" class="vtrtaddress">{% render 'icon-arrow-left' %} {{ 'customer.account.return' | t }}</a>
 
     <div data-address>
       <button class="focus-inset" 
@@ -98,15 +98,15 @@
       </div>
     </div>
 
-    <div class="row wbaddpg rless">
+    <div class="row vtaddpg rless">
       {%- for address in customer.addresses -%}
       <div class="col-md-6 col-12 cless">
         <div data-address>
           {%- if address == customer.default_address -%}
-            <h2 class="wbaddpghead">{{ 'customer.addresses.default' | t }}</h2>
+            <h2 class="vtaddpghead">{{ 'customer.addresses.default' | t }}</h2>
           {%- endif -%}
           {{ address | format_address }}
-          <button class="wbaddrbtn focus-inset"
+          <button class="vtaddrbtn focus-inset"
             type="button"
             id="EditFormButton_{{ address.id }}"
             aria-label="{{ 'customer.addresses.edit_address' | t }} {{ forloop.index }}"
@@ -114,7 +114,7 @@
             aria-expanded="false"
             data-address-id="{{ address.id }}"
           >{% render 'icon-edit' %}&nbsp;{{ 'customer.addresses.edit' | t }}</button>
-          <button class="wbaddrbtn focus-inset wbaddrbtnsvg"
+          <button class="vtaddrbtn focus-inset vtaddrbtnsvg"
             type="button"
             aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
             data-target="{{ address.url }}"

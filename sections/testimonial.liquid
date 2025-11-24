@@ -19,9 +19,9 @@
       <h2 class="text-left leftheading {{ section.settings.heading_size }}"><span>{{ section.settings.title | escape }}</span></h2>
     {%- endif -%}
   {% if section.blocks.size > 0 %}
-        <div class="wbslicktesti">
+        <div class="vtslicktesti">
         {% for block in section.blocks %}
-          <div class="wbtestisub text-center">
+          <div class="vttestisub text-center">
             <div class="{{ section.settings.image_corners }}">
               {% if block.settings.image != blank %}
               <img class="img-fluid mx-auto lazyload" src="{{ block.settings.image | image_url: width: 100 }}" alt="{{ block.settings.image.alt | escape }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"/>
@@ -40,13 +40,13 @@
             {% endif %}
             <div class="testrating">
               {%- liquid
-                assign wbtrating = block.settings.star_rating | floor
-                assign wbratinghalf = block.settings.star_rating | floor | minus: block.settings.star_rating
+                assign vttrating = block.settings.star_rating | floor
+                assign vtratinghalf = block.settings.star_rating | floor | minus: block.settings.star_rating
               -%}
-              {%- for i in (1..wbtrating) -%}
+              {%- for i in (1..vttrating) -%}
                 {% render 'icon-star' %}
               {%- endfor -%}
-              {% if wbratinghalf != 0 %}
+              {% if vtratinghalf != 0 %}
                 {% render 'icon-halfstar' %}
               {% endif %}
             </div>

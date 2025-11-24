@@ -54,9 +54,9 @@
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
 
-            {% if settings.wbenable_ship %}
-              {% assign shipminprice = settings.wbmin_order | times: 100 %}
-              <div class="wbship">
+            {% if settings.vtenable_ship %}
+              {% assign shipminprice = settings.vtmin_order | times: 100 %}
+              <div class="vtship">
                 <div class="progress" max="100">
                     <div class="determinate" style="width: {{ cart.total_price | times: 100 | divided_by: shipminprice | round | at_most: 100 }}%" value="{{ cart.total_price | times: 100 | divided_by: shipminprice | round: 2 | at_most: 100 }}">
                       {%- render 'icon-delivery' -%}
@@ -64,9 +64,9 @@
                 </div>
                 <p>
                   {% if cart.total_price >= shipminprice %}
-                    {{ 'wbcustomlabel.wballtext.free_ship' | t }}
+                    {{ 'vtcustomlabel.vtalltext.free_ship' | t }}
                   {% elsif cart.total_price < shipminprice %}
-                    {{ 'wbcustomlabel.wballtext.free_shiponly' | t }} <b>{{ shipminprice | minus: cart.total_price | money }}</b> {{ 'wbcustomlabel.wballtext.free_shipaway' | t }}
+                    {{ 'vtcustomlabel.vtalltext.free_shiponly' | t }} <b>{{ shipminprice | minus: cart.total_price | money }}</b> {{ 'vtcustomlabel.vtalltext.free_shipaway' | t }}
                   {% endif %}
                 </p>
               </div>
@@ -210,7 +210,7 @@
 
                             <cart-remove-button id="CartDrawer-Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
                               <button class="focus-inset button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
-                                {% render 'icon-removecart' %}<span>{{ 'wbcustomlabel.wballtext.remove' | t }}</span>
+                                {% render 'icon-removecart' %}<span>{{ 'vtcustomlabel.vtalltext.remove' | t }}</span>
                               </button>
                             </cart-remove-button>
                           </div>
@@ -239,8 +239,8 @@
       </cart-drawer-items>
       {% comment %}Cart upsell product{% endcomment %}
       {%- if settings.upsellp -%}
-        <slider-component class="wbcartupsell {% if cart == empty %} is-empty{% endif %} {% if settings.upsellpempty %} is-emptyrmv{% endif %}">
-          {%- if settings.wbuphead -%}<p class="upshead">{{ settings.wbuphead }}</p>{%- endif -%}
+        <slider-component class="vtcartupsell {% if cart == empty %} is-empty{% endif %} {% if settings.upsellpempty %} is-emptyrmv{% endif %}">
+          {%- if settings.vtuphead -%}<p class="upshead">{{ settings.vtuphead }}</p>{%- endif -%}
             <ul class="grid slider" id="Slider-{{ section.id }}" >
               {%- for product in settings.upsellcollection.products limit: settings.upsell_to_show -%}
                 <li class="cartupciner slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
@@ -254,7 +254,7 @@
                 {%- endfor -%}
               {%- endfor -%}
             </ul>
-            <div class="wbhomesbtn no-js-hidden">
+            <div class="vthomesbtn no-js-hidden">
               <button type="button" class="slider-button slider-button--prev focus-inset" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" data-step="1">{% render 'icon-caret' %}</button>
               <button type="button" class="slider-button slider-button--next focus-inset" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" data-step="1">{% render 'icon-caret' %}</button>
             </div>
@@ -266,13 +266,13 @@
           <details id="Details-CartDrawer">
             <summary>
               <span class="summary__title">
-                {{ 'wbcustomlabel.wballtext.order_note' | t }}
+                {{ 'vtcustomlabel.vtalltext.order_note' | t }}
                 {% render 'icon-caret' %}
               </span>
             </summary>
             <cart-note class="cart__note field">
-              <label class="visually-hidden" for="CartDrawer-Note">{{ 'wbcustomlabel.wballtext.order_note' | t }}</label>
-              <textarea id="CartDrawer-Note" class="text-area text-area--resize-vertical field__input" name="note" placeholder="{{ 'wbcustomlabel.wballtext.order_note' | t }}">{{ cart.note }}</textarea>
+              <label class="visually-hidden" for="CartDrawer-Note">{{ 'vtcustomlabel.vtalltext.order_note' | t }}</label>
+              <textarea id="CartDrawer-Note" class="text-area text-area--resize-vertical field__input" name="note" placeholder="{{ 'vtcustomlabel.vtalltext.order_note' | t }}">{{ cart.note }}</textarea>
             </cart-note>
           </details>
         {%- endif -%}
@@ -315,13 +315,13 @@
 
         {% comment %} CTAs {% endcomment %}
 
-        <div class="cart__ctas cartdrawbtn" {{ block.shopify_attributes }}>
+        <div class="cart__ctas cartdravttn" {{ block.shopify_attributes }}>
           <noscript>
             <button type="submit" class="cart__update-button button button--secondary" form="CartDrawer-Form">
               {{ 'sections.cart.update' | t }}
             </button>
           </noscript>
-          <a href="{{ routes.cart_url }}" class="button button--primary btn-block">{{ 'wbcustomlabel.wballtext.viewcart' | t }}</a>
+          <a href="{{ routes.cart_url }}" class="button button--primary btn-block">{{ 'vtcustomlabel.vtalltext.viewcart' | t }}</a>
           <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button button--primary" name="checkout" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
             {{ 'sections.cart.checkout' | t }}
           </button>

@@ -19,7 +19,7 @@
 input::-webkit-search-decoration {
     -webkit-appearance: none;
 }
-.template-search .wbverticalcoll .wbsortbar{
+.template-search .vtverticalcoll .vtsortbar{
     border: none;
     padding: 0;
     justify-content: end;

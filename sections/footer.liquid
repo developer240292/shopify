@@ -10,9 +10,9 @@
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
 :root {
-  --color-wbfootbgcolor: {{ section.settings.wbfoot_bgcolor.red }}, {{ section.settings.wbfoot_bgcolor.green }}, {{ section.settings.wbfoot_bgcolor.blue }};
-  --color-wbfootcolor: {{ section.settings.wbfoot_color.red }}, {{ section.settings.wbfoot_color.green }}, {{ section.settings.wbfoot_color.blue }};
-  --color-wbfoothcolor: {{ section.settings.wbfoot_hcolor.red }}, {{ section.settings.wbfoot_hcolor.green }}, {{ section.settings.wbfoot_hcolor.blue }};
+  --color-vtfootbgcolor: {{ section.settings.vtfoot_bgcolor.red }}, {{ section.settings.vtfoot_bgcolor.green }}, {{ section.settings.vtfoot_bgcolor.blue }};
+  --color-vtfootcolor: {{ section.settings.vtfoot_color.red }}, {{ section.settings.vtfoot_color.green }}, {{ section.settings.vtfoot_color.blue }};
+  --color-vtfoothcolor: {{ section.settings.vtfoot_hcolor.red }}, {{ section.settings.vtfoot_hcolor.green }}, {{ section.settings.vtfoot_hcolor.blue }};
 }
 .footer {
     margin-top: {{ section.settings.margin_top }}px;
@@ -86,8 +86,8 @@
     <div class="page-width section-{{ section.id }}-padding">
          
         <div class="row">
-            <div class="col-md-3 wbftleft">
-                <div class="wbfootcont">
+            <div class="col-md-3 vtftleft">
+                <div class="vtfootcont">
                     <a href="{{ routes.root_url }}" class="focus-inset">
                         <span class="visually-hidden">{{ shop.name }}</span>
                         {%- if section.settings.logo != blank -%}
@@ -209,17 +209,17 @@
                         {%- for block in section.blocks -%}
                             <div class="footer-block grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
                                 {%- if block.settings.heading != blank -%}
-                                    <button  data-toggle="collapse" data-target="#wb-{{ block.settings.heading | camelcase }}" class="toggle collapsed h6" aria-expanded="false" aria-controls="wb-{{ block.settings.heading | camelcase }}">{{- block.settings.heading | escape -}}</button>
+                                    <button  data-toggle="collapse" data-target="#vt-{{ block.settings.heading | camelcase }}" class="toggle collapsed h6" aria-expanded="false" aria-controls="vt-{{ block.settings.heading | camelcase }}">{{- block.settings.heading | escape -}}</button>
                                 {%- endif -%}
 
                                 {%- case block.type -%}
                                     {%- when 'text' -%}
-                                    <div class="wbfootcont collapse footer-collapse" id="wb-{{ block.settings.heading | camelcase }}">
+                                    <div class="vtfootcont collapse footer-collapse" id="vt-{{ block.settings.heading | camelcase }}">
                                         {{ block.settings.subtext }} 
                                     </div>
                                     {%- when 'link_list' -%}
                                     {%- if block.settings.menu != blank and block.settings.heading != blank -%}
-                                    <ul class="wbfootcont collapse footer-collapse list-unstyled" id="wb-{{ block.settings.heading | camelcase }}">
+                                    <ul class="vtfootcont collapse footer-collapse list-unstyled" id="vt-{{ block.settings.heading | camelcase }}">
                                         {%- for link in block.settings.menu.links -%}
                                         <li><a href="{{ link.url }}" class="{% if link.active %} list-menu__item--active{% endif %}">{{ link.title }}</a></li>
                                         {%- endfor -%}
@@ -228,7 +228,7 @@
 
 
                                     {%- when 'textarea' -%}
-                                    <div class="wbfootcont collapse footer-collapse" id="wb-{{ block.settings.heading | camelcase }}">
+                                    <div class="vtfootcont collapse footer-collapse" id="vt-{{ block.settings.heading | camelcase }}">
                                         {%- if block.settings.contsubtext != blank -%}
                                             {{ block.settings.contsubtext }}
                                         {%- endif -%}
@@ -246,7 +246,7 @@
                                     </div>
 
                                     {%- when 'image' -%}
-                                    <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}" id="wb-{{ block.settings.heading | camelcase }}">
+                                    <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}" id="vt-{{ block.settings.heading | camelcase }}">
                                          {%- if block.settings.image != blank -%}
                                             {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
                                             <img class="img-fluid"
@@ -278,7 +278,7 @@
 
     <div class="footer__content-bottom text-center">
         <div class="container">
-            <div class="wbftpaym">
+            <div class="vtftpaym">
                 <div class="footer__copyright">
                     {% if section.settings.show_copyright %}
                         <span class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</span>
@@ -300,7 +300,7 @@
             </div>
         </div>
     </div>
-    <button class="button button--primary" id="scroll" style="display: block;" title="{{ 'wbcustomlabel.wballtext.scrolltop' | t }}">{% render 'icon-double-arrow-up' %}</button>
+    <button class="button button--primary" id="scroll" style="display: block;" title="{{ 'vtcustomlabel.vtalltext.scrolltop' | t }}">{% render 'icon-double-arrow-up' %}</button>
 </footer>
 
 
@@ -434,19 +434,19 @@
       },
       {
         "type": "color",
-        "id": "wbfoot_bgcolor",
+        "id": "vtfoot_bgcolor",
         "default": "#f5f5f5",
         "label": "Background"
       },
       {
         "type": "color",
-        "id": "wbfoot_color",
+        "id": "vtfoot_color",
         "default": "#121212",
         "label": "Link"
       },
       {
         "type": "color",
-        "id": "wbfoot_hcolor",
+        "id": "vtfoot_hcolor",
         "default": "#555555",
         "label": "Link hover"
       },

@@ -1,4 +1,4 @@
-<script type="application/json" data-section-type="wbquickview" data-section-id="{{ section.id }}"></script>
+<script type="application/json" data-section-type="vtquickview" data-section-id="{{ section.id }}"></script>
 <section>
     <div class="container">
         <section class="product-container" data-html="content">
@@ -30,7 +30,7 @@
               <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
             {%- endif -%}
             <div class="section-{{ section.id }}-padding product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-                <div class="grid__item product__media-wrapper wbproleftimg">
+                <div class="grid__item product__media-wrapper vtproleftimg">
                     <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
                       <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
                       <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
@@ -173,7 +173,7 @@
                                 {%- when 'sku' -%}
                                 {% assign current_variant = product.selected_or_first_available_variant %}
                                 {% if current_variant.sku != '' %}
-                                  <div class="wbvsku"><span>{{ 'wbcustomlabel.wballtext.sku' | t }}</span><span class="variant-sku">{{ current_variant.sku }}</span></div>
+                                  <div class="vtvsku"><span>{{ 'vtcustomlabel.vtalltext.sku' | t }}</span><span class="variant-sku">{{ current_variant.sku }}</span></div>
                                 {% endif %}
 
                                 {%- when 'title' -%}
@@ -192,10 +192,10 @@
                                     endif
                                 -%}
                                 {%- assign bar_progress = current_variant.inventory_quantity | times: 100 | divided_by: block.settings.max_stock | append: '%' -%}
-                                <div class="wbstockcount {% unless current_variant.available and current_variant.inventory_quantity > 0 %} hidden {% endunless %}">
-                                  <div class="wbstockinfo wbstockinfo_{{ inventory_status }}">{{ inventory_message }}</div>
-                                  <div class="wbstockinfo-bar">
-                                    <span class="wbstockinfo-probar" style="width: {{ bar_progress }}"></span>
+                                <div class="vtstockcount {% unless current_variant.available and current_variant.inventory_quantity > 0 %} hidden {% endunless %}">
+                                  <div class="vtstockinfo vtstockinfo_{{ inventory_status }}">{{ inventory_message }}</div>
+                                  <div class="vtstockinfo-bar">
+                                    <span class="vtstockinfo-probar" style="width: {{ bar_progress }}"></span>
                                   </div>
                                 </div>
                                 {%- style -%}
@@ -222,7 +222,7 @@
                                 </script>
 
                                 {%- when 'price' -%}
-                                <div class="wbpricetax">
+                                <div class="vtpricetax">
                                   <div class="no-js-hidden mainp-price" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                                       {%- render 'price', product: product, use_variant: true, show_badges: true -%}
                                   </div>
@@ -237,7 +237,7 @@
                                       </div>
                                   {%- endif -%}
                                 </div>
-                                <div class="wbspayinstall" {{ block.shopify_attributes }}>
+                                <div class="vtspayinstall" {{ block.shopify_attributes }}>
                                     {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                                     {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
                                       <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
@@ -325,7 +325,7 @@
                                             {%- for option in product.options_with_values -%}
                                                 <fieldset {% if option.name == 'Color' and block.settings.show_colorswatch %} class="swatchComponent" {% else %} class="js product-form__input" {% endif %}>
                                                     <legend class="form__label">{{ option.name }}</legend>
-                                                    <div {% if option.name == 'Color' and block.settings.show_colorswatch %} class="wbswatchclr" {% endif %}>
+                                                    <div {% if option.name == 'Color' and block.settings.show_colorswatch %} class="vtswatchclr" {% endif %}>
                                                         {%- for value in option.values -%}
                                                             <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                                             name="{{ option.name }}"

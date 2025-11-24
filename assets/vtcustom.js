@@ -8,7 +8,7 @@ $(document).on("click", function(event){
 $(document).ready(function() {
 
     // User and Cart Toggle
-    $(document).on('click', '.hmuser,.wbcollscart', function(e) {
+    $(document).on('click', '.hmuser,.vtcollscart', function(e) {
         $(this).toggleClass('active');
         $(this).next().slideToggle('fast');
         $(".dropdown-menu").not($(this).next()).slideUp('fast');
@@ -75,12 +75,12 @@ $(document).ready(function() {
     });
 
     // Scroll to top sticky cart
-    $(".wbstickyadd_cart").addClass("scrollsky");
+    $(".vtstickyadd_cart").addClass("scrollsky");
         $(window).scroll(function () {
         if ($(this).scrollTop() === 0) {
-            $(".wbstickyadd_cart").addClass("scrollsky")
+            $(".vtstickyadd_cart").addClass("scrollsky")
         } else {
-            $(".wbstickyadd_cart").removeClass("scrollsky")
+            $(".vtstickyadd_cart").removeClass("scrollsky")
         }
     });
 
@@ -99,7 +99,7 @@ $(document).ready(function() {
     });
 
     // Collection Grid/List View
-    $(document).on('click', '.wblistgridbtn', function(e) {
+    $(document).on('click', '.vtlistgridbtn', function(e) {
         $(this).addClass('active').siblings().removeClass('active');
         if ($(this).hasClass('listv')) {
             $('#product-grid').addClass('product-list').removeClass('product-grid').removeClass('product-galleryv');
@@ -131,42 +131,42 @@ $(document).ready(function() {
     });
 
     // Box Layout
-    $(".wbboxdemo").click(function(){
-        $(".wbboxlt").attr("id","wbboxlayout");
+    $(".vtboxdemo").click(function(){
+        $(".vtboxlt").attr("id","vtboxlayout");
     });
-    $(".wbwidedemo").click(function(){
-        $(".wbboxlt").removeAttr("id");
+    $(".vtwidedemo").click(function(){
+        $(".vtboxlt").removeAttr("id");
     }); 
     // Color Customizer
-    $("body").on("click", ".wbinnerclr a", function(e){
+    $("body").on("click", ".vtinnerclr a", function(e){
     e.preventDefault();
-    $('.wbinnerclr').find(".active").removeClass("active");
+    $('.vtinnerclr').find(".active").removeClass("active");
     $(this).parent().addClass("active");
-    $('[wbcolorname=""]').remove();
-    if(!$(this).hasClass($('html').attr(''))) $("body").append('<link rel="stylesheet" type="text/css" wbcolorname href="' + $(this).attr('href') + '">');
+    $('[vtcolorname=""]').remove();
+    if(!$(this).hasClass($('html').attr(''))) $("body").append('<link rel="stylesheet" type="text/css" vtcolorname href="' + $(this).attr('href') + '">');
     });
     // Rtl Mode
-    $("body").on("click", ".wbrtlmode a", function(e){ 
+    $("body").on("click", ".rtlmode a", function(e){
     e.preventDefault();
-    $('.wbrtlmode').find(".active").removeClass("active");
+    $('.rtlmode').find(".active").removeClass("active");
     $(this).parent().addClass("active");
-    $('[wbrtl=""]').remove();
-    if(!$(this).hasClass($('html').attr(''))) $("body").append('<link rel="stylesheet" type="text/css" wbrtl href="' + $(this).attr('href') + '">');
+    $('[rtl=""]').remove();
+    if(!$(this).hasClass($('html').attr(''))) $("body").append('<link rel="stylesheet" type="text/css" rtl href="' + $(this).attr('href') + '">');
     });
     // Color Open/Close 
-    $('.wbopen-closeclr').click(function() {
-        if ($(this).hasClass('wbclrdisable')) {
-            $(this).removeClass('wbclrdisable');
-            $(this).addClass('wbclrenable');
-            $('.wbcolor_box').animate({right: '30px'}, 450);
-            $('.wbcolor_box').css({'box-shadow': '0 10px 35px 10px rgba(0,0,0,.06)', 'background': '#fff', 'border-radius': '4px 0 4px 4px'});
-            $('.wbcolor_option,.wbcolor_title').animate({'opacity': '1'}, 450);
+    $('.vtopen-closeclr').click(function() {
+        if ($(this).hasClass('vtclrdisable')) {
+            $(this).removeClass('vtclrdisable');
+            $(this).addClass('vtclrenable');
+            $('.vtcolor_box').animate({right: '30px'}, 450);
+            $('.vtcolor_box').css({'box-shadow': '0 10px 35px 10px rgba(0,0,0,.06)', 'background': '#fff', 'border-radius': '4px 0 4px 4px'});
+            $('.vtcolor_option,.vtcolor_title').animate({'opacity': '1'}, 450);
         } else {
-            $(this).removeClass('wbclrenable');
-            $(this).addClass('wbclrdisable');
-            $('.wbcolor_box').animate({right: '-250px'}, 450);
-            $('.wbcolor_box').css({'box-shadow': 'none', 'background': 'transparent'});
-            $('.wbcolor_option,.wbcolor_title').animate({'opacity': '0'}, 450);
+            $(this).removeClass('vtclrenable');
+            $(this).addClass('vtclrdisable');
+            $('.vtcolor_box').animate({right: '-250px'}, 450);
+            $('.vtcolor_box').css({'box-shadow': 'none', 'background': 'transparent'});
+            $('.vtcolor_option,.vtcolor_title').animate({'opacity': '0'}, 450);
         }
     });
     

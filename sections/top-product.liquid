@@ -34,7 +34,7 @@
 
 <div class="page-width section-{{ section.id }}-padding">
   <div class="row rless">
-    <div class="wb_colprads cless">
+    <div class="vt_colprads cless">
       {%- liquid
         assign products_to_display = section.settings.collection_1.all_products_count
         if section.settings.collection_1.all_products_count > section.settings.products_to_show_1
@@ -51,7 +51,7 @@
           assign show_desktop_slider_1 = true
         endif
       -%}
-      <div class="color-{{ section.settings.color_scheme_1 }} isolate gradient wbcollfea">
+      <div class="color-{{ section.settings.color_scheme_1 }} isolate gradient vtcollfea">
         <div class="collection ">
            {% if section.settings.title_first != blank %}
                 <h2 class="heading text-left {{ section.settings.heading_size_1 }}">
@@ -87,7 +87,7 @@
                 {%- endfor -%}
               </ul>
               {%- if show_mobile_slider or show_desktop_slider_1 -%}
-                <div class="wbhomesbtn no-js-hidden">
+                <div class="vthomesbtn no-js-hidden">
                     <button type="button" class="slider-button slider-button--prev focus-inset" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" data-step="1">{% render 'icon-caret' %}</button>
                     <button type="button" class="slider-button slider-button--next focus-inset" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" data-step="1">{% render 'icon-caret' %}</button>
                 </div>
@@ -96,10 +96,10 @@
           </div>
         </div>
     </div>
-    <div class="wb_colprads_second cless">
+    <div class="vt_colprads_second cless">
             <div class="product-tab-item ">
               <div class="{% if section.settings.full_width %} collection--full-width{% endif %}">
-                <div class="wb_thander">
+                <div class="vt_thander">
                   <div class="pro-tab tabs">
                     {% if section.settings.m_title != blank %}
                       <h2 class="heading text-center {{ section.settings.heading_size }}">
@@ -109,7 +109,7 @@
                     <ul class="list-inline nav nav-tabs text-center" role="tablist">
                       {%- for block in section.blocks -%}
                         <li class=" nav-item {% if forloop.first %}active{% endif %}" role="tab">
-                          <a class="nav-link" data-toggle="tab" href="#wbprodtab1-{{ block.id }}" id="tab-{{ block.id }}">
+                          <a class="nav-link" data-toggle="tab" href="#vtprodtab1-{{ block.id }}" id="tab-{{ block.id }}">
                                 <span>{{ block.settings.cat_name }}</span>
                           </a>
                         </li>
@@ -125,7 +125,7 @@
                           endif
                           -%}
                     {%- assign collection = collections[block.settings.collection] -%}
-                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}"  id="wbprodtab1-{{ block.id }}" role="tabpanel" aria-labelledby="tab-{{ block.id }}" tabindex="0" {% if forloop.first %} aria-hidden="false"{% else %} aria-hidden="true"{% endif %}> 
+                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}"  id="vtprodtab1-{{ block.id }}" role="tabpanel" aria-labelledby="tab-{{ block.id }}" tabindex="0" {% if forloop.first %} aria-hidden="false"{% else %} aria-hidden="true"{% endif %}>
                       <slider-component class="{% if section.settings.full_width %} slider-component-full-width{% endif %}">
                         <div class="allslideprt slider grid grid--{{ section.settings.columns_desktop }}-col-desktop" id="Slider-{{ section.id }}-{{ block.id }}" data-autoplay="true" data-speed="2" aria-live="polite">
                           {% assign num_row = section.settings.rows | times: 1 %}
@@ -161,7 +161,7 @@
                             {%- endfor -%}
                           {% endfor %}
                         </div>
-                        <div class="wbhomesbtn{% if collection.products.size < 5 %} hidden{% endif %}">
+                        <div class="vthomesbtn{% if collection.products.size < 5 %} hidden{% endif %}">
                           <button type="button" class="slider-button slider-button--prev focus-inset" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" data-step="1">{% render 'icon-caret' %}</button>
                           <button type="button" class="slider-button slider-button--next focus-inset" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" data-step="1">{% render 'icon-caret' %}</button>
                         </div>

@@ -17,41 +17,41 @@
 #map iframe {
     max-width: 100%;
 }
-.wbcontform li svg{
+.vtcontform li svg{
     width: 40px;
     height: 40px;
-    fill: var(--color-wbmaincolors-text);
+    fill: var(--color-vtmaincolors-text);
     margin-bottom: 15px;
 }
-.wbcontform li h4{
+.vtcontform li h4{
     font-size: calc(var(--font-body-scale) * 18px);
     margin-bottom: 10px;
 }
-.wbcontform li p{
+.vtcontform li p{
     font-size: rgb(var(--color-foreground));
     margin-bottom: 0;
 }
-.wbcontforminner{
+.vtcontforminner{
     margin-bottom: 30px;
 }
 @media (max-width: 991px){
     #ContactForm{
         margin-bottom: 15px;
     }
-    .wbcontform li svg {
+    .vtcontform li svg {
         width: 26px;
         height: 26px;
         margin-bottom: 6px;
     }
-    .wbcontform li h4{
+    .vtcontform li h4{
         margin-bottom: 4px
     }
 }
 @media (max-width: 575px){
-    .wbcontforminner [class*='col-']{
+    .vtcontforminner [class*='col-']{
         margin-bottom: 15px;
     }
-    .wbcontforminner{
+    .vtcontforminner{
         margin-bottom: 0;
     }
 }

@@ -15,14 +15,14 @@
     }
   }
 {%- endstyle -%}
-<div class="wbcolllist section-{{ section.id }}-padding">
+<div class="vtcolllist section-{{ section.id }}-padding">
   <div class="page-width">
     <div class="clist_right">
       {%- if section.settings.title != blank -%}
           <h2 class="heading text-left {{ section.settings.heading_size }}"><span>{{ section.settings.title | escape }}</span></h2>
       {%- endif -%}
         <div class="rless">
-          <div class="wbslickcoll">
+          <div class="vtslickcoll">
           {%- for block in section.blocks -%}
             <div class="cless {% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}" {{ block.shopify_attributes }}>
               {% render 'card-collectionhome', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio %}

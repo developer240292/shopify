@@ -14,10 +14,10 @@
 
       <div class="cart__blocks">
 
-        {% if settings.wbenable_ship %}
+        {% if settings.vtenable_ship %}
         <div class="js-contents">
-          {% assign shipminprice = settings.wbmin_order | times: 100 %}
-          <div class="wbship">
+          {% assign shipminprice = settings.vtmin_order | times: 100 %}
+          <div class="vtship">
             <div class="progress" max="100">
                 <div class="determinate" style="width: {{ cart.total_price | times: 100 | divided_by: shipminprice | round | at_most: 100 }}%" value="{{ cart.total_price | times: 100 | divided_by: shipminprice | round: 2 | at_most: 100 }}">
                   {%- render 'icon-delivery' -%}
@@ -25,9 +25,9 @@
             </div>
             <p>
               {% if cart.total_price >= shipminprice %}
-                {{ 'wbcustomlabel.wballtext.free_ship' | t }}
+                {{ 'vtcustomlabel.vtalltext.free_ship' | t }}
               {% elsif cart.total_price < shipminprice %}
-                {{ 'wbcustomlabel.wballtext.free_shiponly' | t }} <b>{{ shipminprice | minus: cart.total_price | money }}</b> {{ 'wbcustomlabel.wballtext.free_shipaway' | t }}
+                {{ 'vtcustomlabel.vtalltext.free_shiponly' | t }} <b>{{ shipminprice | minus: cart.total_price | money }}</b> {{ 'vtcustomlabel.vtalltext.free_shipaway' | t }}
               {% endif %}
             </p>
           </div>

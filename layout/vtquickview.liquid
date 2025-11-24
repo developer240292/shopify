@@ -69,7 +69,7 @@
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
-        --color-wbmaincolors-text: {{ settings.wbmainclr }};
+        --color-vtmaincolors-text: {{ settings.vtmainclr }};
         
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
@@ -198,7 +198,7 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'magnific-popup.css' | asset_url | stylesheet_tag }}
-    {{ 'wbquickview.css' | asset_url | stylesheet_tag }}
+    {{ 'vtquickview.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -256,17 +256,17 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {% comment %} Webibazaar Code {% endcomment %}
+    {% comment %} Villatheme Code {% endcomment %}
     <script src="{{ 'jquery.js' | asset_url }}"></script>
-    <script src="{{ 'wbcustom.js' | asset_url }}" defer></script>
+    <script src="{{ 'vtcustom.js' | asset_url }}" defer></script>
     {%- if settings.cart_type == 'notification' -%}
-      <script src="{{ 'wbcartdropdown.js' | asset_url }}"></script>
+      <script src="{{ 'vtcartdropdown.js' | asset_url }}"></script>
     {%- endif -%}
     {% if template == 'index' %}
         <script src="{{ 'product-form.js' | asset_url }}" defer></script>
     {%- endif -%}
     <script src="{{ 'jquery.magnific-popup.js' | asset_url }}"></script>
-    <script src="{{ 'wbquickview.js' | asset_url }}" defer></script>
+    <script src="{{ 'vtquickview.js' | asset_url }}" defer></script>
 
   </body>
 </html>
