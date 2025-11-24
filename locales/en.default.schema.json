@@ -61,6 +61,62 @@
         }
       }
     },
+    "colors": {
+      "name": "Colors",
+      "settings": {
+        "colors_text": {
+          "label": "Text"
+        },
+        "colors_heading": {
+          "label": "Headings"
+        },
+        "colors_accent_1": {
+          "label": "Main"
+        },
+        "colors_accent_2": {
+          "label": "Blockquote"
+        }
+      }
+    },
+    "typography": {
+      "name": "Typography",
+      "settings": {
+        "type_header_font": {
+          "label": "Font",
+          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
+        "heading_scale": {
+          "label": "Font size scale"
+        },
+        "header__1": {
+          "content": "Headings"
+        },
+        "header__2": {
+          "content": "Body"
+        },
+        "type_body_font": {
+          "label": "Font",
+          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
+        "body_scale": {
+          "label": "Font size scale"
+        }
+      }
+    },
+    "layout": {
+      "name": "Layout",
+      "settings": {
+        "page_width": {
+          "label": "Page width"
+        }
+      }
+    },
+    "inputs": {
+      "name": "Inputs"
+    },
+    "buttons": {
+      "name": "Buttons"
+    },
     "cards": {
       "name": "Cards",
       "settings": {
@@ -104,56 +160,8 @@
         }
       }
     },
-    "colors": {
-      "name": "Colors",
-      "settings": {
-        "colors_text": {
-          "label": "Text"
-        },
-        "colors_heading": {
-          "label": "Heading"
-        },
-        "colors_accent_1": {
-          "label": "Main"
-        },
-        "colors_accent_2": {
-          "label": "Blockquote"
-        }
-      }
-    },
-    "typography": {
-      "name": "Typography",
-      "settings": {
-        "type_header_font": {
-          "label": "Font",
-          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
-        },
-        "heading_scale": {
-          "label": "Font size scale"
-        },
-        "header__1": {
-          "content": "Headings"
-        },
-        "header__2": {
-          "content": "Body"
-        },
-        "type_body_font": {
-          "label": "Font",
-          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
-        },
-        "body_scale": {
-          "label": "Font size scale"
-        }
-      }
-    },
-    "buttons": {
-      "name": "Buttons"
-    },
     "variant_pills": {
       "name": "Variant pills"
-    },
-    "inputs": {
-      "name": "Inputs"
     },
     "content_containers": {
       "name": "Content containers"
@@ -294,14 +302,6 @@
             "label": "Collection",
             "info": "Visible when cart drawer is empty"
           }
-        }
-      }
-    },
-    "layout": {
-      "name": "Layout",
-      "settings": {
-        "page_width": {
-          "label": "Page width"
         }
       }
     }

@@ -23,12 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/password.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/password.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/theme.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/theme.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/vtquickview.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/vtquickview.liquid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locales/en.default.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.default.schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gift_card.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gift_card.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763946661981</updated>
-      <workItem from="1763946663412" duration="3500000" />
+      <workItem from="1763946663412" duration="4930000" />
     </task>
     <servers />
   </component>
@@ -75,9 +70,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="718" y="448" width="585" height="592" key="find.popup" timestamp="1763949992734">
+    <state x="718" y="448" width="585" height="592" key="find.popup" timestamp="1763951346972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="718" y="448" width="585" height="592" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763949992734" />
+    <state x="718" y="448" width="585" height="592" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763951346972" />
   </component>
 </project>
