@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js vtboxlt" lang="{{ request.locale.iso_code }}">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,25 +10,25 @@
     <meta name="theme-color" content="{{ settings.colors_text }}">
 
     {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+        <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
     <title>
-      {{ page_title }}
-      {%- if current_tags %}
-        &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %}
-        &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %}
-        &ndash; {{ shop.name }}{% endunless -%}
+        {{ page_title }}
+        {%- if current_tags %}
+            &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+        {%- if current_page != 1 %}
+            &ndash; Page {{ current_page }}{% endif -%}
+        {%- unless page_title contains shop.name %}
+            &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+        <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
     {% render 'meta-tags' %}
@@ -37,226 +37,64 @@
     {{ content_for_header }}
 
     {%- liquid
-      assign body_font_medium = settings.type_body_font | font_modify: 'weight', '500'
-      assign body_font_semibold = settings.type_body_font | font_modify: 'weight', '600'
-      assign body_font_bold = settings.type_body_font | font_modify: 'weight', '700'
+        assign body_font_medium = settings.type_body_font | font_modify: 'weight', '500'
+        assign body_font_semibold = settings.type_body_font | font_modify: 'weight', '600'
+        assign body_font_bold = settings.type_body_font | font_modify: 'weight', '700'
 
-      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+        assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+        assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
 
     {% style %}
-      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+        {{ settings.type_body_font | font_face: font_display: 'swap' }}
 
-      {{ body_font_medium | font_face: font_display: 'swap' }}
-      {{ body_font_semibold | font_face: font_display: 'swap' }}
-      {{ body_font_bold | font_face: font_display: 'swap' }}
+        {{ body_font_medium | font_face: font_display: 'swap' }}
+        {{ body_font_semibold | font_face: font_display: 'swap' }}
+        {{ body_font_bold | font_face: font_display: 'swap' }}
 
-      {{ body_font_italic | font_face: font_display: 'swap' }}
-      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
-      {{ settings.type_header_font | font_face: font_display: 'swap' }}
+        {{ body_font_italic | font_face: font_display: 'swap' }}
+        {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+        {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
-      :root {
-
-        --font-body-family: 
-        {{ settings.type_body_font.family }},
-        {{ settings.type_body_font.fallback_families }};
-        --font-header-family: 
-        {{ settings.type_header_font.family }},
-        {{ settings.type_header_font.fallback_families }};
+        :root {
+        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
-
-        --font-body-weight: {{ settings.type_body_font.weight }};
-        --font-body-weight-medium: {{ settings.type_body_font.weight | plus: 100 | at_most: 1000 }};
-        --font-body-weight-semibold: {{ settings.type_body_font.weight | plus: 200 | at_most: 1000 }};
-        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
-
-        --font-heading-family: 
-        {{ settings.type_header_font.family }},
-        {{ settings.type_header_font.fallback_families }};
-        --font-heading-style: {{ settings.type_header_font.style }};
-        --font-heading-weight: {{ settings.type_header_font.weight }};
-
-
-        --color-vtmaincolors-text: {{ settings.vtmainclr }};
-        --color-vtprogscolor: {{ settings.vtprogscolor }};
-
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
-        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+        --font-body-weight: {{ settings.type_body_font.weight }};
 
-        --color-base-text: 
-        {{ settings.colors_text.red }},
-        {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
-        --color-shadow: 
-        {{ settings.colors_text.red }},
-        {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
-        --color-base-background-1: 
-        {{ settings.colors_background_1.red }},
-        {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
-        --color-base-background-2: 
-        {{ settings.colors_background_2.red }},
-        {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};
-        --color-base-solid-button-labels: 
-        {{ settings.colors_solid_button_labels.red }},
-        {{ settings.colors_solid_button_labels.green }}, {{ settings.colors_solid_button_labels.blue }};
-        --color-base-outline-button-labels: 
-        {{ settings.colors_outline_button_labels.red }},
-        {{ settings.colors_outline_button_labels.green }}, {{ settings.colors_outline_button_labels.blue }};
-        --color-base-accent-1: 
-        {{ settings.colors_accent_1.red }},
-        {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }};
-        --color-base-accent-2: 
-        {{ settings.colors_accent_2.red }},
-        {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }};
-        --payment-terms-background-color: {{ settings.colors_background_1 }};
+        --font-heading-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+        --font-heading-style: {{ settings.type_heading_font.style }};
+        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.heading_scale }};
+        --font-heading-weight: {{ settings.type_heading_font.weight }};
 
-        --gradient-base-background-1: {% if settings.gradient_background_1 != blank %}
-          {{ settings.gradient_background_1 }}
-        {% else %}
-          {{ settings.colors_background_1 }}
-        {% endif %};
-        --gradient-base-background-2: {% if settings.gradient_background_2 != blank %}
-          {{ settings.gradient_background_2 }}
-        {% else %}
-          {{ settings.colors_background_2 }}
-        {% endif %};
-        --gradient-base-accent-2: {% if settings.gradient_accent_2 != blank %}
-          {{ settings.gradient_accent_2 }}
-        {% else %}
-          {{ settings.colors_accent_2 }}
-        {% endif %};
-
-        --media-padding: {{ settings.media_padding }}px;
-        --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
-        --media-border-width: {{ settings.media_border_thickness }}px;
-        --media-radius: {{ settings.media_radius }}px;
-        --media-shadow-opacity: {{ settings.media_shadow_opacity | divided_by: 100.0 }};
-        --media-shadow-horizontal-offset: {{ settings.media_shadow_horizontal_offset }}px;
-        --media-shadow-vertical-offset: {{ settings.media_shadow_vertical_offset }}px;
-        --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
+        --color-base-text: rgb({{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }});
+        --color-base-heading: rgb({{ settings.colors_heading.red }}, {{ settings.colors_heading.green }}, {{ settings.colors_heading.blue }});
+        --color-base-accent-1: rgb({{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }});
+        --color-base-accent-2: rgb({{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }});
 
         --page-width: {{ settings.page_width }}px;
-        --page-width-margin: {% if settings.page_width == '1600' %}
-          2{% else %}
-          0{% endif %}rem;
 
-        --card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
-        --card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
-        --card-text-alignment: {{ settings.card_text_alignment }};
-        --card-border-width: {{ settings.card_border_thickness | divided_by: 10.0 }}rem;
-        --card-border-opacity: {{ settings.card_border_opacity | divided_by: 100.0 }};
-        --card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
-        --card-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
-        --card-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
-        --card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
+        --buttons-radius: {{ settings.buttons_radius }}px;
 
-        --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}rem;
+        --inputs-radius: {{ settings.inputs_radius }}px;
 
-        --popup-border-width: {{ settings.popup_border_thickness }}px;
-        --popup-border-opacity: {{ settings.popup_border_opacity | divided_by: 100.0 }};
+        --variant-pills-radius: {{ settings.variant_pills_radius }}px;
+
+        --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}px;
+        --color-sale-badge: rgb({{ settings.color_sale_badge.red }}, {{ settings.color_sale_badge.green }}, {{ settings.color_sale_badge.blue }});
+        --color-sold-out-badge: rgb({{ settings.color_sold_out_badge.red }}, {{ settings.color_sold_out_badge.green }}, {{ settings.color_sold_out_badge.blue }});
+
         --popup-corner-radius: {{ settings.popup_corner_radius }}px;
         --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
         --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
         --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
         --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
 
-        --drawer-border-width: {{ settings.drawer_border_thickness }}px;
-        --drawer-border-opacity: {{ settings.drawer_border_opacity | divided_by: 100.0 }};
         --drawer-shadow-opacity: {{ settings.drawer_shadow_opacity | divided_by: 100.0 }};
         --drawer-shadow-horizontal-offset: {{ settings.drawer_shadow_horizontal_offset }}px;
         --drawer-shadow-vertical-offset: {{ settings.drawer_shadow_vertical_offset }}px;
         --drawer-shadow-blur-radius: {{ settings.drawer_shadow_blur }}px;
-
-        --spacing-sections-desktop: {{ settings.spacing_sections }}px;
-        --spacing-sections-mobile: {% if settings.spacing_sections < 24 %}
-          {{ settings.spacing_sections }}
-        {% else %}
-          {{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}
-        {% endif %}px;
-
-        --text-boxes-border-opacity: {{ settings.text_boxes_border_opacity | divided_by: 100.0 }};
-        --text-boxes-border-width: {{ settings.text_boxes_border_thickness }}px;
-        --text-boxes-radius: {{ settings.text_boxes_radius }}px;
-        --text-boxes-shadow-opacity: {{ settings.text_boxes_shadow_opacity | divided_by: 100.0 }};
-        --text-boxes-shadow-horizontal-offset: {{ settings.text_boxes_shadow_horizontal_offset }}px;
-        --text-boxes-shadow-vertical-offset: {{ settings.text_boxes_shadow_vertical_offset }}px;
-        --text-boxes-shadow-blur-radius: {{ settings.text_boxes_shadow_blur }}px;
-
-        --buttons-radius: {{ settings.buttons_radius }}px;
-        --buttons-radius-outset: {% if settings.buttons_radius > 0 %}
-          {{ settings.buttons_radius | plus: settings.buttons_border_thickness }}
-        {% else %}
-          0{% endif %}px;
-        --buttons-border-width: {% if settings.buttons_border_opacity > 0 %}
-          {{ settings.buttons_border_thickness }}
-        {% else %}
-          0{% endif %}px;
-        --buttons-border-opacity: {{ settings.buttons_border_opacity | divided_by: 100.0 }};
-        --buttons-shadow-opacity: {{ settings.buttons_shadow_opacity | divided_by: 100.0 }};
-        --buttons-shadow-horizontal-offset: {{ settings.buttons_shadow_horizontal_offset }}px;
-        --buttons-shadow-vertical-offset: {{ settings.buttons_shadow_vertical_offset }}px;
-        --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
-        --buttons-border-offset: {% if settings.buttons_radius > 0 or settings.buttons_shadow_opacity > 0 %}
-          0.3{% else %}
-          0{% endif %}px;
-
-        --inputs-radius: {{ settings.inputs_radius }}px;
-        --inputs-border-width: {{ settings.inputs_border_thickness }}px;
-        --inputs-border-opacity: {{ settings.inputs_border_opacity | divided_by: 100.0 }};
-        --inputs-shadow-opacity: {{ settings.inputs_shadow_opacity | divided_by: 100.0 }};
-        --inputs-shadow-horizontal-offset: {{ settings.inputs_shadow_horizontal_offset }}px;
-        --inputs-margin-offset: {% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_opacity > 0 %}
-          {{ settings.inputs_shadow_vertical_offset | abs }}
-        {% else %}
-          0{% endif %}px;
-        --inputs-shadow-vertical-offset: {{ settings.inputs_shadow_vertical_offset }}px;
-        --inputs-shadow-blur-radius: {{ settings.inputs_shadow_blur }}px;
-        --inputs-radius-outset: {% if settings.inputs_radius > 0 %}
-          {{ settings.inputs_radius | plus: settings.inputs_border_thickness }}
-        {% else %}
-          0{% endif %}px;
-
-        --variant-pills-radius: {{ settings.variant_pills_radius }}px;
-        --variant-pills-border-width: {{ settings.variant_pills_border_thickness }}px;
-        --variant-pills-border-opacity: {{ settings.variant_pills_border_opacity | divided_by: 100.0 }};
-        --variant-pills-shadow-opacity: {{ settings.variant_pills_shadow_opacity | divided_by: 100.0 }};
-        --variant-pills-shadow-horizontal-offset: {{ settings.variant_pills_shadow_horizontal_offset }}px;
-        --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
-        --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
-      }
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: inherit;
-      }
-
-      html {
-        box-sizing: border-box;
-        height: 100%;
-      }
-      body {
-        font-size: calc(var(--font-body-scale) * 14px);
-        font-family: var(--font-body-family);
-        font-style: var(--font-body-style);
-        font-weight: var(--font-body-weight);
-        line-height: 1.5;
-        letter-spacing: 0.3px;
-        color: rgb(var(--color-foreground));
-      }
-      svg {
-        width: 14px;
-        height: 14px;
-        transition: 0.3s ease;
-        vertical-align: middle;
-      }
-      .allslideprt ul.slider__slide{
-         border-right: {{ settings.bard_border_width }}px solid {{ settings.bard_border_color }};
-      }
-      .product-tab-item:before,.product-tab-item:after,
-      .wp_productside:before,.wp_productside:after{
-         border-right: {{ settings.bard_border_width }}px solid var(--gradient-background);
-      }
+        }
 
     {% endstyle %}
 
@@ -266,14 +104,15 @@
     {{ 'vtquickview.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+        <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
     {%- unless settings.type_header_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+        <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
 
     {%- if settings.predictive_search_enabled -%}
-      <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print"
+              onload="this.media='all'">
     {%- endif -%}
 
     <script>
@@ -281,49 +120,59 @@
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
       }
+
+
+
+
     </script>
 
-  </head>
-  <svg style="display: none;">
-    <symbol viewBox="0 0 24 24" id="arleft"><path d="M13.775,18.707,8.482,13.414a2,2,0,0,1,0-2.828l5.293-5.293,1.414,1.414L9.9,12l5.293,5.293Z"/></symbol>
-    <symbol viewBox="0 0 24 24" id="arright"><path d="M10.811,18.707,9.4,17.293,14.689,12,9.4,6.707l1.415-1.414L16.1,10.586a2,2,0,0,1,0,2.828Z"/></symbol>
+</head>
+<svg style="display: none;">
+    <symbol viewBox="0 0 24 24" id="arleft">
+        <path d="M13.775,18.707,8.482,13.414a2,2,0,0,1,0-2.828l5.293-5.293,1.414,1.414L9.9,12l5.293,5.293Z"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="arright">
+        <path d="M10.811,18.707,9.4,17.293,14.689,12,9.4,6.707l1.415-1.414L16.1,10.586a2,2,0,0,1,0,2.828Z"/>
+    </symbol>
     <symbol id="wish" viewBox="0 0 32.791 30.316">
-      <path id="Path_2" data-name="Path 2" d="M23.39.917A8.57,8.57,0,0,0,16.04,5.27,8.57,8.57,0,0,0,8.689.917,9.018,9.018,0,0,0,0,10.217c0,8.938,14.643,19.261,15.266,19.7l.772.54.772-.54c.623-.435,15.266-10.761,15.266-19.7A9.018,9.018,0,0,0,23.39.917ZM16.04,27.208C11.692,24,2.675,16.126,2.675,10.217A6.363,6.363,0,0,1,8.689,3.555,6.363,6.363,0,0,1,14.7,10.217h2.673A6.363,6.363,0,0,1,23.39,3.555,6.363,6.363,0,0,1,29.4,10.217C29.4,16.129,20.387,24,16.04,27.208Z" transform="translate(0.356 -0.567)" stroke-width="0.7"/>
+        <path id="Path_2" data-name="Path 2"
+              d="M23.39.917A8.57,8.57,0,0,0,16.04,5.27,8.57,8.57,0,0,0,8.689.917,9.018,9.018,0,0,0,0,10.217c0,8.938,14.643,19.261,15.266,19.7l.772.54.772-.54c.623-.435,15.266-10.761,15.266-19.7A9.018,9.018,0,0,0,23.39.917ZM16.04,27.208C11.692,24,2.675,16.126,2.675,10.217A6.363,6.363,0,0,1,8.689,3.555,6.363,6.363,0,0,1,14.7,10.217h2.673A6.363,6.363,0,0,1,23.39,3.555,6.363,6.363,0,0,1,29.4,10.217C29.4,16.129,20.387,24,16.04,27.208Z"
+              transform="translate(0.356 -0.567)" stroke-width="0.7"/>
     </symbol>
 
     <symbol id="icon-close" viewBox="0 0 512.021 512.021">
-      <path d="M301.258,256.01L502.645,54.645c12.501-12.501,12.501-32.769,0-45.269c-12.501-12.501-32.769-12.501-45.269,0l0,0   L256.01,210.762L54.645,9.376c-12.501-12.501-32.769-12.501-45.269,0s-12.501,32.769,0,45.269L210.762,256.01L9.376,457.376   c-12.501,12.501-12.501,32.769,0,45.269s32.769,12.501,45.269,0L256.01,301.258l201.365,201.387   c12.501,12.501,32.769,12.501,45.269,0c12.501-12.501,12.501-32.769,0-45.269L301.258,256.01z"/>
+        <path d="M301.258,256.01L502.645,54.645c12.501-12.501,12.501-32.769,0-45.269c-12.501-12.501-32.769-12.501-45.269,0l0,0   L256.01,210.762L54.645,9.376c-12.501-12.501-32.769-12.501-45.269,0s-12.501,32.769,0,45.269L210.762,256.01L9.376,457.376   c-12.501,12.501-12.501,32.769,0,45.269s32.769,12.501,45.269,0L256.01,301.258l201.365,201.387   c12.501,12.501,32.769,12.501,45.269,0c12.501-12.501,12.501-32.769,0-45.269L301.258,256.01z"/>
     </symbol>
 
     <symbol id="refresh" viewBox="0 0 513.806 513.806">
-      <path d="M66.074,228.731C81.577,123.379,179.549,50.542,284.901,66.045c35.944,5.289,69.662,20.626,97.27,44.244l-24.853,24.853   c-8.33,8.332-8.328,21.84,0.005,30.17c3.999,3.998,9.423,6.245,15.078,6.246h97.835c11.782,0,21.333-9.551,21.333-21.333V52.39   c-0.003-11.782-9.556-21.331-21.338-21.329c-5.655,0.001-11.079,2.248-15.078,6.246L427.418,65.04   C321.658-29.235,159.497-19.925,65.222,85.835c-33.399,37.467-55.073,83.909-62.337,133.573   c-2.864,17.607,9.087,34.202,26.693,37.066c1.586,0.258,3.188,0.397,4.795,0.417C50.481,256.717,64.002,244.706,66.074,228.731z"/>
-      <path d="M479.429,256.891c-16.108,0.174-29.629,12.185-31.701,28.16C432.225,390.403,334.253,463.24,228.901,447.738   c-35.944-5.289-69.662-20.626-97.27-44.244l24.853-24.853c8.33-8.332,8.328-21.84-0.005-30.17   c-3.999-3.998-9.423-6.245-15.078-6.246H43.568c-11.782,0-21.333,9.551-21.333,21.333v97.835   c0.003,11.782,9.556,21.331,21.338,21.329c5.655-0.001,11.079-2.248,15.078-6.246l27.733-27.733   c105.735,94.285,267.884,85.004,362.17-20.732c33.417-37.475,55.101-83.933,62.363-133.615   c2.876-17.605-9.064-34.208-26.668-37.084C482.655,257.051,481.044,256.91,479.429,256.891z"/>
+        <path d="M66.074,228.731C81.577,123.379,179.549,50.542,284.901,66.045c35.944,5.289,69.662,20.626,97.27,44.244l-24.853,24.853   c-8.33,8.332-8.328,21.84,0.005,30.17c3.999,3.998,9.423,6.245,15.078,6.246h97.835c11.782,0,21.333-9.551,21.333-21.333V52.39   c-0.003-11.782-9.556-21.331-21.338-21.329c-5.655,0.001-11.079,2.248-15.078,6.246L427.418,65.04   C321.658-29.235,159.497-19.925,65.222,85.835c-33.399,37.467-55.073,83.909-62.337,133.573   c-2.864,17.607,9.087,34.202,26.693,37.066c1.586,0.258,3.188,0.397,4.795,0.417C50.481,256.717,64.002,244.706,66.074,228.731z"/>
+        <path d="M479.429,256.891c-16.108,0.174-29.629,12.185-31.701,28.16C432.225,390.403,334.253,463.24,228.901,447.738   c-35.944-5.289-69.662-20.626-97.27-44.244l24.853-24.853c8.33-8.332,8.328-21.84-0.005-30.17   c-3.999-3.998-9.423-6.245-15.078-6.246H43.568c-11.782,0-21.333,9.551-21.333,21.333v97.835   c0.003,11.782,9.556,21.331,21.338,21.329c5.655-0.001,11.079-2.248,15.078-6.246l27.733-27.733   c105.735,94.285,267.884,85.004,362.17-20.732c33.417-37.475,55.101-83.933,62.363-133.615   c2.876-17.605-9.064-34.208-26.668-37.084C482.655,257.051,481.044,256.91,479.429,256.891z"/>
     </symbol>
-  </svg>
-  <body class="gradient {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ "accessibility.skip_to_text" | t }}
-    </a>
+</svg>
+<body class="gradient {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
+<a class="skip-to-content-link button visually-hidden" href="#MainContent">
+    {{ "accessibility.skip_to_text" | t }}
+</a>
 
-    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
-    {%- endif -%}
+{%- if settings.cart_type == 'drawer' -%}
+    {%- render 'cart-drawer' -%}
+{%- endif -%}
 
-    {% section 'announcement-bar' %}
-    {% section 'header' %}
-    {% render 'breadcrumbs' %}
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
-    </main>
+{% section 'announcement-bar' %}
+{% section 'header' %}
+{% render 'breadcrumbs' %}
+<main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    {{ content_for_layout }}
+</main>
 
-    {% section 'footer' %}
+{% section 'footer' %}
 
-    <ul hidden>
-      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
-      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
-    </ul>
+<ul hidden>
+    <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+    <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
+</ul>
 
-    <script>
+<script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
@@ -350,35 +199,43 @@
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`
       }
-    </script>
 
-    {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
 
-    {% comment %}
-      Villatheme Code
-    {% endcomment %}
-    <script src="{{ 'jquery.js' | asset_url }}"></script>
-    <script src="{{ 'jquery.magnific-popup.js' | asset_url }}"></script>
-    <script src="{{ 'vtcustom.js' | asset_url }}"></script>
-    <script src="{{ 'vtcountdown.js' | asset_url }}"></script>
-    {%- if settings.cart_type == 'notification' -%}
-      <script src="{{ 'vtcartdropdown.js' | asset_url }}"></script>
-    {%- endif -%}
-    {% if template == 'index' or template contains 'page' %}
-      <script src="{{ 'product-form.js' | asset_url }}"></script>
-    {%- endif -%}
-    <script src="{{ 'vtquickview.js' | asset_url }}" async></script>
-    <script>
+
+
+</script>
+
+{%- if settings.predictive_search_enabled -%}
+    <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{% comment %}
+  Villatheme Code
+{% endcomment %}
+<script src="{{ 'jquery.js' | asset_url }}"></script>
+<script src="{{ 'jquery.magnific-popup.js' | asset_url }}"></script>
+<script src="{{ 'vtcustom.js' | asset_url }}"></script>
+<script src="{{ 'vtcountdown.js' | asset_url }}"></script>
+{%- if settings.cart_type == 'notification' -%}
+    <script src="{{ 'vtcartdropdown.js' | asset_url }}"></script>
+{%- endif -%}
+{% if template == 'index' or template contains 'page' %}
+    <script src="{{ 'product-form.js' | asset_url }}"></script>
+{%- endif -%}
+<script src="{{ 'vtquickview.js' | asset_url }}" async></script>
+<script>
       window.lazySizesConfig = window.lazySizesConfig || {};
       window.lazySizesConfig.expand = 10;
-    </script>
-    <script src="{{ 'lazysizes.js' | asset_url }}"></script>
 
-    {% if settings.vt_enablewish %}
-      {{ 'wishlist.js' | asset_url | script_tag }}
-      <script>
+
+
+
+</script>
+<script src="{{ 'lazysizes.js' | asset_url }}"></script>
+
+{% if settings.vt_enablewish %}
+    {{ 'wishlist.js' | asset_url | script_tag }}
+    <script>
         $(".vtwishremove").on('click', function() {
           $(this).addClass("vtloadtowish vtwishadding");
           setTimeout(function() {
@@ -391,64 +248,16 @@
         (function() {
           Wishlist.init();
         }());
-      </script>
-    {% endif %}
 
-    {% comment %}Villatheme Color Customizer{% endcomment %}
-    {% if settings.displaycustomizer %}
-      <div class="vtallcor">
-        <div class="vtopen-closeclr vtclrdisable">
-          <a href="javascript:void(0)" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
-        </div>
-        <div class="vtcolor_box">
-          <h3>Live Settings</h3>
-          <h5>Theme Color</h5>
-          <ul class="vtinnerclr">
-            <li>
-              <a href="{{ 'vtcolor1.css' | asset_url }}" class="vtclr1" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
-            </li>
-            <li>
-              <a href="{{ 'vtcolor2.css' | asset_url }}" class="vtclr2" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
-            </li>
-            <li>
-              <a href="{{ 'vtcolor3.css' | asset_url }}" class="vtclr3" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
-            </li>
-            <li>
-              <a href="{{ 'vtcolor4.css' | asset_url }}" class="vtclr4" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
-            </li>
-            <li>
-              <a href="{{ 'vtcolor5.css' | asset_url }}" class="vtclr5" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
-            </li>
-            <li>
-              <a href="{{ 'vtcolor6.css' | asset_url }}" class="vtclr6" title="{{ 'vtcustomlabel.vtalltext.colors' | t }}"></a>
-            </li>
-          </ul>
-          <div class="clearfix"></div>
-          <hr>
-          <h5>Box Layout</h5>
-          <ul class="vtsitebox">
-            <li class="vtboxdemo">box</li>
-            <li class="vtwidedemo">Full</li>
-          </ul>
-          <hr>
-          <h5>Mode</h5>
-          <ul class="rtlmode">
-            <li>
-              <a href="{{ 'rtl.css' | asset_url }}" class="rtlinner">RTL</a>
-            </li>
-            <li>
-              <a href="#" class="vtltrinner">LTR</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    {% endif %}
-    {% comment %}Villatheme Color Customizer Over{% endcomment %}
 
-    {% comment %}Villatheme RTL{% endcomment %}
-    {% if settings.villathemertl or request.locale.iso_code == 'ar' %}
-      <link rel="stylesheet" href="{{ 'rtl.css' | asset_url }}" type="text/css">
-    {% endif %}
 
-  </body>
+
+    </script>
+{% endif %}
+
+{% if request.locale.iso_code == 'ar' %}
+    <link rel="stylesheet" href="{{ 'rtl.css' | asset_url }}" type="text/css">
+{% endif %}
+
+</body>
 </html>

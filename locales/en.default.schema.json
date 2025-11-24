@@ -103,7 +103,7 @@
         "header__2": {
           "content": "Headings"
         },
-        "type_header_font": {
+        "type_heading_font": {
           "label": "Font",
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
         },
@@ -146,11 +146,11 @@
     "badges": {
       "name": "Badges",
       "settings": {
-        "sale_badge_color_scheme": {
-          "label": "Sale badge color scheme"
+        "color_sale_badge": {
+          "label": "Sale badge color"
         },
-        "sold_out_badge_color_scheme": {
-          "label": "Sold out badge color scheme"
+        "color_sold_out_badge": {
+          "label": "Sold out badge color"
         }
       }
     },

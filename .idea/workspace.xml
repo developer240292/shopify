@@ -21,7 +21,19 @@
   <component name="ChangeListManager">
     <list default="true" id="44102a6a-4e56-46e4-804e-3d4049815b62" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vtcolor1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vtcolor2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vtcolor3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vtcolor4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vtcolor5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vtcolor6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vtcustom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vtcustom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/password.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/password.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/theme.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/theme.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en.default.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.default.schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763946661981</updated>
-      <workItem from="1763946663412" duration="13719000" />
+      <workItem from="1763946663412" duration="19057000" />
     </task>
     <servers />
   </component>
@@ -68,9 +80,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1056" y="425" width="585" height="592" key="find.popup" timestamp="1763960555707">
+    <state x="1112" y="412" width="585" height="592" key="find.popup" timestamp="1763969159480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1056" y="425" width="585" height="592" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763960555707" />
+    <state x="1112" y="412" width="585" height="592" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763969159480" />
   </component>
 </project>

@@ -129,46 +129,6 @@ $(document).ready(function() {
             $this.html(event.strftime('<li><span>%D</span><p>Days</p></li><li><span>%H</span><p>Hours</p></li><li><span>%M</span><p>Mins</p></li><li><span>%S</span><p>Secs</p></li>'));
         });
     });
-
-    // Box Layout
-    $(".vtboxdemo").click(function(){
-        $(".vtboxlt").attr("id","vtboxlayout");
-    });
-    $(".vtwidedemo").click(function(){
-        $(".vtboxlt").removeAttr("id");
-    }); 
-    // Color Customizer
-    $("body").on("click", ".vtinnerclr a", function(e){
-    e.preventDefault();
-    $('.vtinnerclr').find(".active").removeClass("active");
-    $(this).parent().addClass("active");
-    $('[vtcolorname=""]').remove();
-    if(!$(this).hasClass($('html').attr(''))) $("body").append('<link rel="stylesheet" type="text/css" vtcolorname href="' + $(this).attr('href') + '">');
-    });
-    // Rtl Mode
-    $("body").on("click", ".rtlmode a", function(e){
-    e.preventDefault();
-    $('.rtlmode').find(".active").removeClass("active");
-    $(this).parent().addClass("active");
-    $('[rtl=""]').remove();
-    if(!$(this).hasClass($('html').attr(''))) $("body").append('<link rel="stylesheet" type="text/css" rtl href="' + $(this).attr('href') + '">');
-    });
-    // Color Open/Close 
-    $('.vtopen-closeclr').click(function() {
-        if ($(this).hasClass('vtclrdisable')) {
-            $(this).removeClass('vtclrdisable');
-            $(this).addClass('vtclrenable');
-            $('.vtcolor_box').animate({right: '30px'}, 450);
-            $('.vtcolor_box').css({'box-shadow': '0 10px 35px 10px rgba(0,0,0,.06)', 'background': '#fff', 'border-radius': '4px 0 4px 4px'});
-            $('.vtcolor_option,.vtcolor_title').animate({'opacity': '1'}, 450);
-        } else {
-            $(this).removeClass('vtclrenable');
-            $(this).addClass('vtclrdisable');
-            $('.vtcolor_box').animate({right: '-250px'}, 450);
-            $('.vtcolor_box').css({'box-shadow': 'none', 'background': 'transparent'});
-            $('.vtcolor_option,.vtcolor_title').animate({'opacity': '0'}, 450);
-        }
-    });
     
 
 }); // Document Ready Div End
