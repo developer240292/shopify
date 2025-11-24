@@ -21,13 +21,6 @@
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 <style>
-  
-  .vtheadtop{
-    background: {{ section.settings.topbg_clr }};
-  }
-  .vtheadtop ul li,.vtheadtop .localization-selector.link{
-    color: {{ section.settings.topc_clr }};
-  }
   .header__heading-logo {
     max-width: {{ section.settings.logo_width }}px;
   }
@@ -354,7 +347,7 @@
                     {%- if settings.social_twitter_link != blank -%}
                       <li class="list-social__item">
                         <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
-                          {%- render 'icon-twitter' -%}
+                          {%- render 'icon-social-twitter' -%}
                           <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
                         </a>
                       </li>
@@ -362,7 +355,7 @@
                     {%- if settings.social_facebook_link != blank -%}
                       <li class="list-social__item">
                         <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
-                          {%- render 'icon-facebook' -%}
+                          {%- render 'icon-social-facebook' -%}
                           <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
                         </a>
                       </li>
@@ -378,7 +371,7 @@
                     {%- if settings.social_instagram_link != blank -%}
                       <li class="list-social__item">
                         <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
-                          {%- render 'icon-instagram' -%}
+                          {%- render 'icon-social-instagram' -%}
                           <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
                         </a>
                       </li>
@@ -410,7 +403,7 @@
                     {%- if settings.social_youtube_link != blank -%}
                       <li class="list-social__item">
                         <a href="{{ settings.social_youtube_link }}" class="list-social__link link">
-                          {%- render 'icon-youtube' -%}
+                          {%- render 'icon-social-youtube' -%}
                           <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
                         </a>
                       </li>

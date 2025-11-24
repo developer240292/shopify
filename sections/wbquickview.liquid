@@ -303,12 +303,12 @@
                                 <ul class="social-sharing">
                                     {% if block.settings.share_facebook %}
                                         <li>
-                                            <a target="_blank" rel="noopener" rel="noreferrer" href="//www.facebook.com/sharer.php?u={{ request.origin }}" class="share-facebook">{% render 'icon-facebook' %}</a>
+                                            <a target="_blank" rel="noopener" rel="noreferrer" href="//www.facebook.com/sharer.php?u={{ request.origin }}" class="share-facebook">{% render 'icon-social-facebook' %}</a>
                                         </li>
                                     {% endif %}
                                     {% if block.settings.share_twitter %}
                                         <li>
-                                            <a target="_blank" rel="noopener" rel="noreferrer" href="//twitter.com/share?url={{ request.origin }}" class="share-twitter">{% render 'icon-twitter' %}</a>
+                                            <a target="_blank" rel="noopener" rel="noreferrer" href="//twitter.com/share?url={{ request.origin }}" class="share-twitter">{% render 'icon-social-twitter' %}</a>
                                         </li>
                                     {% endif %}
                                     {% if block.settings.share_pinterest %}

@@ -127,25 +127,25 @@
           <div class="draly-social">
             {%- if settings.social_facebook_link != blank -%}
               <a href="{{ settings.social_facebook_link }}">
-                {%- render 'icon-facebook' -%}
+                {%- render 'icon-social-facebook' -%}
                 <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
               </a>
             {%- endif -%}
             {%- if settings.social_twitter_link != blank -%}
               <a href="{{ settings.social_twitter_link }}">
-                {%- render 'icon-twitter' -%}
+                {%- render 'icon-social-twitter' -%}
                 <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
               </a>
             {%- endif -%}
             {%- if settings.social_instagram_link != blank -%}
               <a href="{{ settings.social_instagram_link }}">
-                {%- render 'icon-instagram' -%}
+                {%- render 'icon-social-instagram' -%}
                 <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
               </a>
             {%- endif -%}
             {%- if settings.social_youtube_link != blank -%}
               <a href="{{ settings.social_youtube_link }}">
-                {%- render 'icon-youtube' -%}
+                {%- render 'icon-social-youtube' -%}
                 <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
               </a>
             {%- endif -%}
@@ -218,22 +218,22 @@
                             <span>{{ block.settings.footer_address }}</span>
                           </li>
                         {%- endif -%}
-                        {%- if block.settings.footer_contact_no != blank -%}
+                        {%- if block.settings.footer_phone != blank -%}
                           <li>
                             {% render 'icon-fcontact' %}
                             <span>
-                              <a href="tel:{{ block.settings.footer_contact_no }}">
-                                {{- block.settings.footer_contact_no -}}
+                              <a href="tel:{{ block.settings.footer_phone }}">
+                                {{- block.settings.footer_phone -}}
                               </a></span
                             >
                           </li>
                         {%- endif -%}
-                        {%- if block.settings.footer_contact_id != blank -%}
+                        {%- if block.settings.footer_email != blank -%}
                           <li>
                             {% render 'icon-fmail' %}
                             <span>
-                              <a href="mailto:{{ block.settings.footer_contact_id }}">
-                                {{- block.settings.footer_contact_id -}}
+                              <a href="mailto:{{ block.settings.footer_email }}">
+                                {{- block.settings.footer_email -}}
                               </a></span
                             >
                           </li>
@@ -300,8 +300,7 @@
     class="button"
     id="scroll"
     style="display: block;"
-    title="{{ 'vtcustomlabel.vtalltext.scrolltop' | t }}"
-  >
+    title="{{ 'vtcustomlabel.vtalltext.scrolltop' | t }}">
     {% render 'icon-double-arrow-up' %}
   </button>
 </footer>
@@ -369,19 +368,19 @@
           "type": "textarea",
           "id": "footer_address",
           "label": "Address",
-          "default": "demo store United States."
+          "default": "1234 Maple Street, Suite 500, Springfield, CA 90210, USA"
         },
         {
           "type": "text",
-          "id": "footer_contact_no",
-          "label": "Phone",
-          "default": "0123-456-789"
+          "id": "footer_phone",
+          "label": "Phone Number",
+          "default": "+1 (555) 123-4567"
         },
         {
           "type": "text",
-          "id": "footer_contact_id",
+          "id": "footer_email",
           "label": "E-Mail",
-          "default": "demo@demo.com"
+          "default": "support@draly.com "
         }
       ]
     },

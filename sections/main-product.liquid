@@ -522,7 +522,7 @@
                 {% if block.settings.share_facebook %}
                     <li>
                         <a target="_blank" rel="noopener" rel="noreferrer" href="//www.facebook.com/sharer.php?u={{ request.origin }}" class="share-facebook">
-                            {% render 'icon-facebook' %}
+                            {% render 'icon-social-facebook' %}
                             <span>{{ 'vtcustomlabel.vtalltext.share_on_facebook' | t }}</span>
                         </a>
                     </li>
@@ -530,7 +530,7 @@
                 {% if block.settings.share_twitter %}
                     <li>
                         <a target="_blank" rel="noopener" rel="noreferrer" href="//twitter.com/share?url={{ request.origin }}" class="share-twitter">
-                        {% render 'icon-twitter' %}
+                        {% render 'icon-social-twitter' %}
                             <span>{{ 'vtcustomlabel.vtalltext.share_on_twitter' | t }}</span>
                         </a>
                     </li>
