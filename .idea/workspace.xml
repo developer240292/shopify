@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44102a6a-4e56-46e4-804e-3d4049815b62" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/theme.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/theme.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/vtquickview.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/vtquickview.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gift_card.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gift_card.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763946661981</updated>
-      <workItem from="1763946663412" duration="19939000" />
+      <workItem from="1763946663412" duration="20009000" />
     </task>
     <servers />
   </component>
