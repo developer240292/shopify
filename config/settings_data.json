@@ -151,7 +151,6 @@
           "mobile_logo_width": 110,
           "logo_position": "top-left",
           "show_acicon": true,
-          "show_mail": true,
           "email_head": "Email us:",
           "home_email": "contact@gmail.com",
           "show_contact": true,
@@ -198,8 +197,8 @@
               "heading": "Contact us",
               "contsubtext": "",
               "footer_address": "demo store United States.",
-              "footer_contact_no": "0123-456-789",
-              "footer_contact_id": "demo@demo.com"
+              "footer_phone": "+1 (555) 123-4567",
+              "footer_email": "support@draly.com"
             }
           }
         },
@@ -213,11 +212,11 @@
           "vtfoot_color": "#777777",
           "vtfoot_hcolor": "#2bbef9",
           "logo_width": 192,
+          "conthead": "zxc",
           "contsubtext": "<p>Nam pretium et orci eget vestibulum. Aenean pellentesque, quis vulputate eros elit eu ligula. Ut nec lacus congue, fermentum nulla sed, congue risus.</p>",
           "show_social": true,
-          "enable_newsletter": true,
+          "enable_newsletter": false,
           "newsheading": "Subscribe to our newsletter",
-          "social_head": "Follow us",
           "payment_enable": true,
           "show_copyright": true,
           "margin_top": 60,
