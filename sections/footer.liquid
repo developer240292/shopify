@@ -9,17 +9,12 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
-  :root {
-  --color-vtfootbgcolor: {{ section.settings.vtfoot_bgcolor.red }}, {{ section.settings.vtfoot_bgcolor.green }}, {{ section.settings.vtfoot_bgcolor.blue }};
-  --color-vtfootcolor: {{ section.settings.vtfoot_color.red }}, {{ section.settings.vtfoot_color.green }}, {{ section.settings.vtfoot_color.blue }};
-  --color-vtfoothcolor: {{ section.settings.vtfoot_hcolor.red }}, {{ section.settings.vtfoot_hcolor.green }}, {{ section.settings.vtfoot_hcolor.blue }};
-  }
   .footer {
-  margin-top: {{ section.settings.margin_top }}px;
+    margin-top: {{ section.settings.margin_top }}px;
   }
   .section-{{ section.id }}-padding {
-  padding-top: {{ section.settings.padding_top }}px;
-  padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
 <footer class="footer">
@@ -28,12 +23,9 @@
       {% if section.settings.enable_newsletter %}
         <div class="wp_nws_rws">
           {%- if section.settings.newsheading != blank -%}
-            <div class="wp_nwstxts">
-              {% render 'icon_foot_aeroplane' %}
-              <h3>{{ section.settings.newsheading }}</h3>
-            </div>
+            <h3 class="newsheading">{{ section.settings.newsheading }}</h3>
           {%- endif -%}
-          <div class=" footer-block--newsletter">
+          <div class="footer-block--newsletter">
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div class="newsletter-form__field-wrapper">
@@ -124,7 +116,7 @@
           {{ section.settings.contsubtext }}
         {%- endif -%}
         {%- if section.settings.show_social -%}
-          <div class="draly-social">
+          <div class="footer-social">
             {%- if settings.social_facebook_link != blank -%}
               <a href="{{ settings.social_facebook_link }}">
                 {%- render 'icon-social-facebook' -%}
@@ -166,15 +158,9 @@
                 {{ block.shopify_attributes }}
               >
                 {%- if block.settings.heading != blank -%}
-                  <button
-                    data-toggle="collapse"
-                    data-target="#vt-{{ block.settings.heading | camelcase }}"
-                    class="toggle collapsed"
-                    aria-expanded="false"
-                    aria-controls="vt-{{ block.settings.heading | camelcase }}"
-                  >
+                  <h3 class="footer-heading">
                     {{- block.settings.heading | escape -}}
-                  </button>
+                  </h3>
                 {%- endif -%}
 
                 {%- case block.type -%}
@@ -269,8 +255,7 @@
       </div>
     </div>
   </div>
-
-  <div class="footer__content-bottom text-center">
+  <div class="footer-bottom">
     <div class="container">
       <div class="vtftpaym">
         <div class="footer__copyright">
@@ -300,7 +285,8 @@
     class="button"
     id="scroll"
     style="display: block;"
-    title="{{ 'vtcustomlabel.vtalltext.scrolltop' | t }}">
+    title="{{ 'vtcustomlabel.vtalltext.scrolltop' | t }}"
+  >
     {% render 'icon-double-arrow-up' %}
   </button>
 </footer>
@@ -428,28 +414,6 @@
   ],
   "settings": [
     {
-      "type": "header",
-      "content": "Colors"
-    },
-    {
-      "type": "color",
-      "id": "vtfoot_bgcolor",
-      "default": "#f5f5f5",
-      "label": "Background"
-    },
-    {
-      "type": "color",
-      "id": "vtfoot_color",
-      "default": "#121212",
-      "label": "Link"
-    },
-    {
-      "type": "color",
-      "id": "vtfoot_hcolor",
-      "default": "#555555",
-      "label": "Link hover"
-    },
-    {
       "type": "image_picker",
       "id": "logo",
       "label": "t:sections.header.settings.logo.label"
@@ -467,12 +431,6 @@
     {
       "type": "header",
       "content": "Contact info"
-    },
-    {
-      "type": "text",
-      "id": "conthead",
-      "label": "Heading",
-      "default": "contact info"
     },
     {
       "type": "richtext",
@@ -502,11 +460,6 @@
       "id": "newsheading",
       "label": "Heading",
       "default": "Newsletter"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__2.content",
-      "info": "t:sections.footer.settings.header__2.info"
     },
     {
       "type": "header",
