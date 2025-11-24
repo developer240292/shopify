@@ -33,7 +33,7 @@
 }
 {%- endstyle -%}
 <div class="section-{{ section.id }}-padding">
-    <div class="page-width {% if section.settings.filter_type == 'vertical' %} vtverticalcoll {% endif %}">
+    <div class="container {% if section.settings.filter_type == 'vertical' %} vtverticalcoll {% endif %}">
         <div class="vtblank"><div class="vtblankinner"></div></div>
         <div class="vtsortbar">
             <div class="vtglbtn">
@@ -43,7 +43,7 @@
             </div>
             {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
             {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
-            <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
+            <facet-filters-form class="facets facets-vertical-sort container small-hide no-js-hidden">
               <form class="facets-vertical-form" id="FacetSortForm">
                 <div class="facet-filters sorting caption">
                   <div class="facet-filters__field">
@@ -89,18 +89,18 @@
         </div>
     </div>
 
-  <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
+  <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical container{% endif %}">
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
     {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-      <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
+      <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} container{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
         {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type, enable_ptag: section.settings.enable_ptag %}
       </aside>
     {%- endif -%}
     <div class="product-grid-container{% if section.settings.filter_type == 'vertical' and section.settings.collapse_on_larger_devices %} product-grid-container-vertical{% endif %}" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
         {%- if collection.products.size == 0 -%}
-          <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+          <div class="collection collection--empty container" id="product-grid" data-id="{{ section.id }}">
             <div class="loading-overlay gradient"></div>
             <div class="title-wrapper center">
               <h5 class="title title--primary">
@@ -110,7 +110,7 @@
             </div>
           </div>
         {%- else -%}
-          <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
+          <div class="collection{% if section.settings.filter_type != 'vertical' %} container{% endif %}">
             <div class="loading-overlay gradient"></div>
             <ul id="product-grid" data-id="{{ section.id }}" class="
               grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down

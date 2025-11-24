@@ -35,10 +35,10 @@
   .wpbg-{{ section.id }}-grid_background {
     background: {{ section.settings.grid_background_color }}
   }
-  .main_section-{{ section.id }}-target .page-width .wp_mainproduct_huk .wp_workproducts .wp_productside .tab-content > .tab-pane_next.active {
+  .main_section-{{ section.id }}-target .container .wp_mainproduct_huk .wp_workproducts .wp_productside .tab-content > .tab-pane_next.active {
     display: block;
   }
-  .main_section-{{ section.id }}-target .page-width .wp_mainproduct_huk .wp_workproducts .wp_productside .tab-content > .tab-pane_next {
+  .main_section-{{ section.id }}-target .container .wp_mainproduct_huk .wp_workproducts .wp_productside .tab-content > .tab-pane_next {
     display: none;
   }
   @media screen and (min-width: 992px) {
@@ -55,7 +55,7 @@
 {%- endstyle -%}
 
 <div class="product-tab-item_second main_section-{{ section.id }}-target section-{{ section.id }}-padding  wpbg-{{ section.id }}-section_background">
-  <div class="page-width  {% if section.settings.full_width %} collection--full-width{% endif %}">
+  <div class="container  {% if section.settings.full_width %} collection--full-width{% endif %}">
     <div class="wp_mainproduct_huk wpbg-{{ section.id }}-grid_background">
       <div class="pro-tab tabs">
         <h2 class="heading text-center {{ section.settings.heading_size }}">

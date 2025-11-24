@@ -133,7 +133,7 @@ button#scroll {
     margin-top: 10px;
     font-size: calc(var(--font-body-scale) * 14px);
 }
-.footer-block--newsletter > .page-width {
+.footer-block--newsletter > .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -275,7 +275,7 @@ ul.footer__list-social {
     .ftsocial{
         margin-top: 12px;
     }
-    .footer-block--newsletter > .page-width {
+    .footer-block--newsletter > .container {
         display: block;
     }
     .footer-block--newsletter h3, .ftsocial h3 {

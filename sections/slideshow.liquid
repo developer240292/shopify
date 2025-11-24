@@ -33,7 +33,7 @@
   {% endstyle %}
 {% endif %}
 
-<div class="wp_slidmain {% if section.settings.layout == 'grid' %} page-width {% endif %} section-{{ section.id }}-padding">
+<div class="wp_slidmain {% if section.settings.layout == 'grid' %} container {% endif %} section-{{ section.id }}-padding">
   <div class="row rless">
     <div class="{% if section.settings.layout == 'grid' %}cless wpsls1 {% endif %}"></div>
     <div class="cless wp_full_spc {% if section.settings.layout == 'grid' %}wpsls2{% endif %}">
@@ -94,7 +94,7 @@
                {% comment %}Mobile view image end {% endcomment %}
 
 
-              <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+              <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} container{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
                 <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
                   {%- if block.settings.heading != blank -%}
                     <h2 class="banner__heading slidehsmall{% if block.settings.heading_size == 'medium' %} slidehmedium{% elsif block.settings.heading_size == 'large' %} slidehlarge{% endif %}">{{ block.settings.heading | escape }}</h2>

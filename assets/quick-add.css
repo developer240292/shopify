@@ -99,7 +99,7 @@ quick-add-modal .product--stacked .product__info-container--sticky {
     top: 0;
     position: relative;
 }
-quick-add-modal .page-width {
+quick-add-modal .container {
     padding: 0;
 }
 quick-add-modal .product__title > h1 {

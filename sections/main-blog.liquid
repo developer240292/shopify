@@ -16,7 +16,7 @@
 
 {%- paginate blog.articles by 6 -%}
 
-  <div class="vtmainblog section-{{ section.id }}-padding page-width">
+  <div class="vtmainblog section-{{ section.id }}-padding container">
     <h1 class="heading text-left"><span>{{ blog.title | escape }}</span></h1>
 
     <div class="row blog-articles {% if section.settings.layout == 'collage' %}vtbloglist {% else %} text-center {% endif %}">

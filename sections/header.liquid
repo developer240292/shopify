@@ -107,7 +107,7 @@
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient">
    {% if section.settings.show_topheader %}
     <div class="vtheadtop">
-      <div class="page-width">
+      <div class="container">
         <div class="text-left">
           <ul>
             <li>{{ section.settings.topoffer }}</li>
@@ -204,7 +204,7 @@
     </div>
    {% endif %}
 
-  <header class="header header--{{ section.settings.logo_position }} color-{{ section.settings.color_scheme }} gradient page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if section.settings.menu == blank %} vtdisableboth{% endif %}  {% if settings.vt_cartnumber == 'vt_shoptotal' or settings.vt_cartnumber == 'vt_shopqtytotal' %} vtcartbth{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} color-{{ section.settings.color_scheme }} gradient container{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if section.settings.menu == blank %} vtdisableboth{% endif %}  {% if settings.vt_cartnumber == 'vt_shoptotal' or settings.vt_cartnumber == 'vt_shopqtytotal' %} vtcartbth{% endif %}">
 
     {%- if section.settings.menu != blank -%} 
       <header-drawer data-breakpoint="tablet">
@@ -1189,7 +1189,7 @@
 {% comment %} Megamenu bottom menu {% endcomment %}
 {%- if section.settings.logo_position == 'top-left' or section.settings.logo_position == 'top-center' -%}
 <div class="color-{{ section.settings.color_schememenu }} gradient vtmenuup header__inline-menu">
-    <div class="page-width vtmenubtm">
+    <div class="container vtmenubtm">
         {% comment %}Simple Menu{% endcomment %}
         {%- if section.settings.menu != blank -%}
           <nav class="vtsimplemenuxs">

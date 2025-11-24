@@ -158,31 +158,8 @@
       "name": "Dropdowns and pop-ups",
       "paragraph": "Affects areas like navigation dropdowns, pop-up modals, and cart pop-ups."
     },
-    "media": {
-      "name": "Media"
-    },
     "drawers": {
       "name": "Drawers"
-    },
-    "styles": {
-      "name": "Icons",
-      "settings": {
-        "accent_icons": {
-          "options__1": {
-            "label": "Accent 1"
-          },
-          "options__2": {
-            "label": "Accent 2"
-          },
-          "options__3": {
-            "label": "Outline button"
-          },
-          "options__4": {
-            "label": "Text"
-          },
-          "label": "Color"
-        }
-      }
     },
     "social-media": {
       "name": "Social media",
@@ -195,33 +172,13 @@
           "label": "Twitter",
           "info": "https:\/\/twitter.com\/shopify"
         },
-        "social_pinterest_link": {
-          "label": "Pinterest",
-          "info": "https:\/\/pinterest.com\/shopify"
-        },
         "social_instagram_link": {
           "label": "Instagram",
           "info": "http:\/\/instagram.com\/shopify"
         },
-        "social_tiktok_link": {
-          "label": "TikTok",
-          "info": "https:\/\/tiktok.com\/@shopify"
-        },
-        "social_tumblr_link": {
-          "label": "Tumblr",
-          "info": "https:\/\/shopify.tumblr.com"
-        },
-        "social_snapchat_link": {
-          "label": "Snapchat",
-          "info": "https:\/\/www.snapchat.com\/add\/shopify"
-        },
         "social_youtube_link": {
           "label": "YouTube",
           "info": "https:\/\/www.youtube.com\/shopify"
-        },
-        "social_vimeo_link": {
-          "label": "Vimeo",
-          "info": "https:\/\/vimeo.com\/shopify"
         }
       }
     },
