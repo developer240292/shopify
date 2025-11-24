@@ -316,13 +316,13 @@
         "type": "color",
         "id": "color_sale_badge",
         "default": "#000000",
-        "label": "t:settings_schema.colors.settings.color_sale_badge.label"
+        "label": "t:settings_schema.badges.settings.color_sale_badge.label"
       },
       {
         "type": "color",
         "id": "color_sold_out_badge",
         "default": "#000000",
-        "label": "t:settings_schema.colors.settings.color_sold_out_badge.label"
+        "label": "t:settings_schema.badges.settings.color_sold_out_badge.label"
       }
     ]
   },
