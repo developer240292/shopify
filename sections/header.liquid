@@ -655,19 +655,6 @@
 
     <div class="header__icons">
       {%- unless section.settings.logo_position == 'middle-left' or section.settings.logo_position == 'top-center' -%}
-        {%- if section.settings.show_mail -%}
-          <div class="home-email">
-            <a href="mailto:{{ section.settings.home_email }}">
-              {% if section.settings.home_email != blank %}
-              <span>{%- render 'icon-fmail' -%}</span>
-              <span class="text-left">
-                <h3>{{ section.settings.email_head }}</h3>
-                <span class="wpmail">{{ section.settings.home_email }}</span>
-              </span>
-              {% endif %}
-            </a>
-          </div>
-        {%- endif -%}
         <details-modal class="header__search {% if section.settings.logo_position == 'top-left' %} wp_clpess {% endif %}">    
             <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}">
               {%- if settings.predictive_search_enabled -%}
@@ -1598,12 +1585,6 @@
       {
         "type": "header",
         "content": "Email"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_mail",
-        "default": true,
-        "label": "Show mail us"
       },
        {
         "type": "text",
