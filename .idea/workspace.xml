@@ -20,22 +20,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44102a6a-4e56-46e4-804e-3d4049815b62" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wbcartdropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/wbcartdropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wbcustom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/wbcustom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wbrtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings_schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/theme.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/theme.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/wbquickview.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/wbquickview.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/cart-icon-bubble.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/cart-icon-bubble.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/header.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/header.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/card-product-banner.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/card-product-banner.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/card-product-catbanner.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/card-product-catbanner.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/card-product-special.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/card-product-special.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/card-product.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/card-product.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/card-productupsell.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/card-productupsell.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/bg-BG.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/cs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/cs.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/da.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/da.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/de.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/de.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/el.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en.default.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en.default.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/es.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/es.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/fi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/fi.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/fr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/fr.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/hr-HR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/hu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/id.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/it.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/it.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ja.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ja.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ko.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ko.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/lt-LT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/nb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/nb.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/nl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/nl.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/pl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/pl.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/pt-BR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/pt-BR.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/pt-PT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/pt-PT.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ro-RO.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ru.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/sk-SK.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/sl-SI.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/sv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/sv.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/th.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/th.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/tr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/tr.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/vi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/vi.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/zh-CN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/zh-CN.schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/zh-TW.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/zh-TW.schema.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +105,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763946661981</updated>
-      <workItem from="1763946663412" duration="742000" />
+      <workItem from="1763946663412" duration="1970000" />
     </task>
     <servers />
   </component>
@@ -82,9 +121,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1085" y="261" width="585" height="592" key="find.popup" timestamp="1763947405762">
+    <state x="1330" y="261" width="585" height="592" key="find.popup" timestamp="1763948641358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1085" y="261" width="585" height="592" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763947405762" />
+    <state x="1330" y="261" width="585" height="592" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1763948641358" />
   </component>
 </project>
