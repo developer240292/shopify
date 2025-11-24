@@ -81,17 +81,7 @@
     "typography": {
       "name": "Typography",
       "settings": {
-        "type_header_font": {
-          "label": "Font",
-          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
-        },
-        "heading_scale": {
-          "label": "Font size scale"
-        },
         "header__1": {
-          "content": "Headings"
-        },
-        "header__2": {
           "content": "Body"
         },
         "type_body_font": {
@@ -99,6 +89,16 @@
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
         },
         "body_scale": {
+          "label": "Font size scale"
+        },
+        "header__2": {
+          "content": "Headings"
+        },
+        "type_header_font": {
+          "label": "Font",
+          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
+        "heading_scale": {
           "label": "Font size scale"
         }
       }
@@ -117,18 +117,18 @@
     "buttons": {
       "name": "Buttons"
     },
+    "variant_pills": {
+      "name": "Variant pills"
+    },
     "cards": {
       "name": "Cards",
       "settings": {
-        "header__badge": {
-          "content": "Badge"
-        },
         "style": {
           "options__1": {
-            "label": "Standard"
+            "label": "Style 01"
           },
           "options__2": {
-            "label": "Card"
+            "label": "Style 02"
           },
           "label": "Style"
         }
@@ -137,21 +137,6 @@
     "badges": {
       "name": "Badges",
       "settings": {
-        "position": {
-          "options__1": {
-            "label": "Bottom left"
-          },
-          "options__2": {
-            "label": "Bottom right"
-          },
-          "options__3": {
-            "label": "Top left"
-          },
-          "options__4": {
-            "label": "Top right"
-          },
-          "label": "Product card position"
-        },
         "sale_badge_color_scheme": {
           "label": "Sale badge color scheme"
         },
@@ -159,12 +144,6 @@
           "label": "Sold out badge color scheme"
         }
       }
-    },
-    "variant_pills": {
-      "name": "Variant pills"
-    },
-    "content_containers": {
-      "name": "Content containers"
     },
     "popups": {
       "name": "Dropdowns and pop-ups",
