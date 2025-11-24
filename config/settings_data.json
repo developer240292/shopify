@@ -185,13 +185,6 @@
               "menu": "footer"
             }
           },
-          "footer-1": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Services",
-              "menu": ""
-            }
-          },
           "958c9aca-bc3d-44ff-aa05-5f18c868f7ee": {
             "type": "link_list",
             "settings": {
@@ -212,7 +205,6 @@
         },
         "block_order": [
           "footer-0",
-          "footer-1",
           "958c9aca-bc3d-44ff-aa05-5f18c868f7ee",
           "66cf8672-198d-43dc-8e2d-78702a5640bb"
         ],
