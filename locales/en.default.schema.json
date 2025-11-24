@@ -107,75 +107,17 @@
     "colors": {
       "name": "Colors",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Solid button label",
-          "info": "Used as foreground color on accent colors."
+        "colors_text": {
+          "label": "Text"
+        },
+        "colors_heading": {
+          "label": "Heading"
         },
         "colors_accent_1": {
-          "label": "Accent 1",
-          "info": "Used for solid button background."
-        },
-        "gradient_accent_1": {
-          "label": "Accent 1 gradient"
+          "label": "Main"
         },
         "colors_accent_2": {
-          "label": "Accent 2"
-        },
-        "gradient_accent_2": {
-          "label": "Accent 2 gradient"
-        },
-        "header__1": {
-          "content": "Primary colors"
-        },
-        "header__2": {
-          "content": "Secondary colors"
-        },
-        "colors_text": {
-          "label": "Text",
-          "info": "Used as foreground color on background colors."
-        },
-        "colors_outline_button_labels": {
-          "label": "Outline button",
-          "info": "Also used for text links."
-        },
-        "colors_background_1": {
-          "label": "Background 1"
-        },
-        "gradient_background_1": {
-          "label": "Background 1 gradient"
-        },
-        "colors_background_2": {
-          "label": "Background 2"
-        },
-        "gradient_background_2": {
-          "label": "Background 2 gradient"
-        },
-        "header__3": {
-          "content": "Other"
-        },
-        "vtmainclr": {
-          "label": "Body text hover color"
-        },
-        "header__4": {
-          "content": "Image overlay button color"
-        },
-        "vtoverlaycolor": {
-          "label": "Button label"
-        },
-        "vtoverlaybg": {
-          "label": "Button background"
-        },
-        "vtoverlayoutline": {
-          "label": "Outline button"
-        },
-        "vtoverlayhcolor": {
-          "label": "Button hover label"
-        },
-        "vtoverlayhbg": {
-          "label": "Button background hover"
-        },
-        "vtoverlayhoutline": {
-          "label": "Outline button hover"
+          "label": "Blockquote"
         }
       }
     },
@@ -360,21 +302,6 @@
       "settings": {
         "page_width": {
           "label": "Page width"
-        },
-        "spacing_sections": {
-          "label": "Vertical space between sections"
-        },
-        "header__grid": {
-          "content": "Grid"
-        },
-        "paragraph__grid": {
-          "content": "Affects areas with a multicolumn layout."
-        },
-        "spacing_grid_horizontal": {
-          "label": "Horizontal space"
-        },
-        "spacing_grid_vertical": {
-          "label": "Vertical space"
         }
       }
     }
