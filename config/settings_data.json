@@ -98,9 +98,9 @@
         "settings": {
           "home_only": false,
           "mobile_bar": true,
-          "color_scheme": "inverse",
+          "color_scheme": "background-1",
           "auto_rotate": true,
-          "change_slides_speed": 3
+          "change_slides_speed": 5
         }
       },
       "header": {
@@ -208,11 +208,7 @@
           "66cf8672-198d-43dc-8e2d-78702a5640bb"
         ],
         "settings": {
-          "vtfoot_bgcolor": "#ffffff",
-          "vtfoot_color": "#777777",
-          "vtfoot_hcolor": "#2bbef9",
           "logo_width": 192,
-          "conthead": "zxc",
           "contsubtext": "<p>Nam pretium et orci eget vestibulum. Aenean pellentesque, quis vulputate eros elit eu ligula. Ut nec lacus congue, fermentum nulla sed, congue risus.</p>",
           "show_social": true,
           "enable_newsletter": false,
