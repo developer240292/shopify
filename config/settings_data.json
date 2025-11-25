@@ -156,7 +156,7 @@
           "bnts1": "call us now:",
           "mobile": "+12 567 2567 125",
           "link_s": "",
-          "primary_menu": "main-menu",
+          "menu": "main-menu",
           "vertical_menu": "",
           "enable_sticky_header": false,
           "show_topheader": true,
