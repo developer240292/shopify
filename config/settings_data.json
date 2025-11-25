@@ -145,13 +145,13 @@
           "42ec77b4-c7ae-4e25-aebf-d8aea1746ed1"
         ],
         "settings": {
-          "color_scheme": "accent-1",
           "logo_width": 192,
           "mobile_logo_width": 110,
-          "logo_position": "top-left",
           "show_acicon": true,
-          "email_head": "Email us:",
-          "home_email": "contact@gmail.com",
+          "show_topheader": true,
+          "topbg_clr": "#ffffff",
+          "topc_clr": "#000000",
+          "topoffer": "Get 30% Off On Selected Items",
           "show_contact": true,
           "bnts1": "call us now:",
           "mobile": "+12 567 2567 125",
@@ -159,11 +159,7 @@
           "primary_menu": "main-menu",
           "vertical_menu": "",
           "enable_sticky_header": false,
-          "show_topheader": true,
-          "topbg_clr": "#ffffff",
-          "topc_clr": "#000000",
-          "topoffer": "Get 30% Off On Selected Items",
-          "topemail": "demo@demo.com",
+          "enable_sticky_header_mobile": true,
           "enable_country_selector": true,
           "enable_language_selector": true,
           "margin_bottom": 0,
@@ -667,9 +663,6 @@
             "footer-2"
           ],
           "settings": {
-            "vtfoot_bgcolor": "#f5f5f5",
-            "vtfoot_color": "#121212",
-            "vtfoot_hcolor": "#555555",
             "margin_top": 48
           }
         },
