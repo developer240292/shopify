@@ -140,242 +140,239 @@
           </button>
         </div>
       </details-modal>
-      <div class="header__icons">
-        <div class="header-control">
-          {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-            <noscript>
-              {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form' -%}
-                <div class="localization-form__select">
-                  <h2 class="visually-hidden" id="FooterCountryLabelNoScript">
-                    {{ 'localization.country_label' | t }}
-                  </h2>
-                  <select
-                    class="localization-selector link"
-                    name="country_code"
-                    aria-labelledby="FooterCountryLabelNoScript"
-                  >
-                    {%- for country in localization.available_countries -%}
-                      <option
-                        value="{{ country.iso_code }}"
-                        {%- if country.iso_code == localization.country.iso_code %}
-                          selected
-                        {% endif %}
-                      >
-                        {{ country.name }} ({{ country.currency.iso_code }}
-                        {{ country.currency.symbol }})
-                      </option>
-                    {%- endfor -%}
-                  </select>
-                  {% render 'icon-caret' %}
-                </div>
-                <button class="button button-primary">{{ 'localization.update_country' | t }}</button>
-              {%- endform -%}
-            </noscript>
-            <localization-form>
-              {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
-                <div class="no-js-hidden">
-                  <div class="disclosure">
-                    <button
-                      type="button"
-                      class="focus-inset disclosure__button localization-form__select localization-selector link link--text caption-large"
-                      aria-expanded="false"
-                      aria-controls="FooterCountryList"
-                      aria-describedby="FooterCountryLabel"
-                    >
-                      {{ localization.country.name }} ({{ localization.country.currency.iso_code }}
-                      {{ localization.country.currency.symbol }})
-                      {% render 'icon-caret' %}
-                    </button>
-                    <div class="disclosure__list-wrapper" hidden>
-                      <ul id="FooterCountryList" class="disclosure__list list-unstyled">
-                        {%- for country in localization.available_countries -%}
-                          <li class="disclosure__item" tabindex="-1">
-                            <a
-                              class="link link--text disclosure__link caption-large{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %} focus-inset"
-                              href="#"
-                              {% if country.iso_code == localization.country.iso_code %}
-                                aria-current="true"
-                              {% endif %}
-                              data-value="{{ country.iso_code }}"
-                            >
-                              {{ country.name }}
-                              <span class="localization-form__currency"
-                                >({{ country.currency.iso_code }}
-                                {{ country.currency.symbol }})</span
-                              >
-                            </a>
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-                    </div>
-                  </div>
-                  <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
-                </div>
-              {%- endform -%}
-            </localization-form>
-          {%- endif -%}
-
-          {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-            <noscript>
-              {%- form 'localization', id: 'FooterLanguageFormNoScript', class: 'localization-form' -%}
-                <div class="localization-form__select">
-                  <h2 class="visually-hidden" id="FooterLanguageLabelNoScript">
-                    {{ 'localization.language_label' | t }}
-                  </h2>
-                  <select
-                    class="localization-selector link"
-                    name="locale_code"
-                    aria-labelledby="FooterLanguageLabelNoScript"
-                  >
-                    {%- for language in localization.available_languages -%}
-                      <option
-                        value="{{ language.iso_code }}"
-                        lang="{{ language.iso_code }}"
-                        {%- if language.iso_code == localization.language.iso_code %}
-                          selected
-                        {% endif %}
-                      >
-                        {{ language.endonym_name | capitalize }}
-                      </option>
-                    {%- endfor -%}
-                  </select>
-                  {% render 'icon-caret' %}
-                </div>
-                <button class="button button-primary">{{ 'localization.update_language' | t }}</button>
-              {%- endform -%}
-            </noscript>
-            <localization-form>
-              {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
-                <div class="no-js-hidden">
-                  <div class="disclosure">
-                    <button
-                      type="button"
-                      class="focus-inset disclosure__button localization-form__select localization-selector link link--text caption-large"
-                      aria-expanded="false"
-                      aria-controls="FooterLanguageList"
-                      aria-describedby="FooterLanguageLabel"
-                    >
-                      {{ localization.language.endonym_name | capitalize }}
-                      {% render 'icon-caret' %}
-                    </button>
-                    <div class="disclosure__list-wrapper" hidden>
-                      <ul id="FooterLanguageList" class="disclosure__list list-unstyled">
-                        {%- for language in localization.available_languages -%}
-                          <li class="disclosure__item" tabindex="-1">
-                            <a
-                              class="link link--text disclosure__link caption-large{% if language.iso_code == localization.language.iso_code %} disclosure__link--active{% endif %} focus-inset"
-                              href="#"
-                              hreflang="{{ language.iso_code }}"
-                              lang="{{ language.iso_code }}"
-                              {% if language.iso_code == localization.language.iso_code %}
-                                aria-current="true"
-                              {% endif %}
-                              data-value="{{ language.iso_code }}"
-                            >
-                              {{ language.endonym_name | capitalize }}
-                            </a>
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-                    </div>
-                  </div>
-                  <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
-                </div>
-              {%- endform -%}
-            </localization-form>
-          {%- endif -%}
-
-          <div class="header-icon">
-            {%- if shop.customer_accounts_enabled -%}
-              {% if section.settings.show_acicon %}
-                <div class="vtheaduser">
-                  <a
-                    data-draly="draly-dropdown"
-                    title="{% if customer %}{{ 'vtcustomlabel.vtalltext.account' | t }}{% else %}{{ 'vtcustomlabel.vtalltext.log_in' | t }}{% endif %}"
-                  >
-                    <span class="svgbg">{% render 'icon-account' %}</span>
-                  </a>
-                  <div class="draly-dropdown">
-                    <ul>
-                      {% if customer %}
-                        <li>
-                          <a href="/account">
-                            {% render 'icon-login' %}
-                            {{ 'vtcustomlabel.vtalltext.account' | t }}
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/account/logout">
-                            {% render 'icon-signout' %}
-                            {{ 'vtcustomlabel.vtalltext.log_out' | t }}
-                          </a>
-                        </li>
-                      {% else %}
-                        <li>
-                          <a href="/account/login">
-                            {% render 'icon-lock' %}
-                            {{ 'vtcustomlabel.vtalltext.log_in' | t }}
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/account/register"
-                            title="{{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}"
-                          >
-                            {% render 'icon-login' %}
-                            {{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}
-                          </a>
-                        </li>
+      <div class="header-control">
+        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+          <noscript>
+            {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form' -%}
+              <div class="localization-form__select">
+                <h2 class="visually-hidden" id="FooterCountryLabelNoScript">
+                  {{ 'localization.country_label' | t }}
+                </h2>
+                <select
+                  class="localization-selector link"
+                  name="country_code"
+                  aria-labelledby="FooterCountryLabelNoScript"
+                >
+                  {%- for country in localization.available_countries -%}
+                    <option
+                      value="{{ country.iso_code }}"
+                      {%- if country.iso_code == localization.country.iso_code %}
+                        selected
                       {% endif %}
+                    >
+                      {{ country.name }} ({{ country.currency.iso_code }}
+                      {{ country.currency.symbol }})
+                    </option>
+                  {%- endfor -%}
+                </select>
+                {% render 'icon-caret' %}
+              </div>
+              <button class="button button-primary">{{ 'localization.update_country' | t }}</button>
+            {%- endform -%}
+          </noscript>
+          <localization-form>
+            {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
+              <div class="no-js-hidden">
+                <div class="disclosure">
+                  <button
+                    type="button"
+                    class="focus-inset disclosure__button localization-form__select localization-selector link link--text caption-large"
+                    aria-expanded="false"
+                    aria-controls="FooterCountryList"
+                    aria-describedby="FooterCountryLabel"
+                  >
+                    {{ localization.country.name }} ({{ localization.country.currency.iso_code }}
+                    {{ localization.country.currency.symbol }})
+                    {% render 'icon-caret' %}
+                  </button>
+                  <div class="disclosure__list-wrapper" hidden>
+                    <ul id="FooterCountryList" class="disclosure__list list-unstyled">
+                      {%- for country in localization.available_countries -%}
+                        <li class="disclosure__item" tabindex="-1">
+                          <a
+                            class="link link--text disclosure__link caption-large{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %} focus-inset"
+                            href="#"
+                            {% if country.iso_code == localization.country.iso_code %}
+                              aria-current="true"
+                            {% endif %}
+                            data-value="{{ country.iso_code }}"
+                          >
+                            {{ country.name }}
+                            <span class="localization-form__currency"
+                              >({{ country.currency.iso_code }}
+                              {{ country.currency.symbol }})</span
+                            >
+                          </a>
+                        </li>
+                      {%- endfor -%}
                     </ul>
                   </div>
                 </div>
-              {% endif %}
-            {%- endif -%}
+                <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {%- endif -%}
 
-            {% comment %} Villatheme Cart Dropdown {% endcomment %}
-            {% if settings.show_shopicon %}
-              <div class="vthcart">
-                <a href="{{ routes.cart_url }}" class="focus-inset" id="cart-icon-bubble">
-                  <span class="svgbg">
-                    {%- if settings.vt_carticon == 'vt_shopcart' -%}
-                      {% render 'icon-hcart' %}
-                    {%- else -%}
-                      {% render 'icon-hcartbag' %}
-                    {%- endif -%}
-                  </span>
+        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+          <noscript>
+            {%- form 'localization', id: 'FooterLanguageFormNoScript', class: 'localization-form' -%}
+              <div class="localization-form__select">
+                <h2 class="visually-hidden" id="FooterLanguageLabelNoScript">
+                  {{ 'localization.language_label' | t }}
+                </h2>
+                <select
+                  class="localization-selector link"
+                  name="locale_code"
+                  aria-labelledby="FooterLanguageLabelNoScript"
+                >
+                  {%- for language in localization.available_languages -%}
+                    <option
+                      value="{{ language.iso_code }}"
+                      lang="{{ language.iso_code }}"
+                      {%- if language.iso_code == localization.language.iso_code %}
+                        selected
+                      {% endif %}
+                    >
+                      {{ language.endonym_name | capitalize }}
+                    </option>
+                  {%- endfor -%}
+                </select>
+                {% render 'icon-caret' %}
+              </div>
+              <button class="button button-primary">{{ 'localization.update_language' | t }}</button>
+            {%- endform -%}
+          </noscript>
+          <localization-form>
+            {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
+              <div class="no-js-hidden">
+                <div class="disclosure">
+                  <button
+                    type="button"
+                    class="focus-inset disclosure__button localization-form__select localization-selector link link--text caption-large"
+                    aria-expanded="false"
+                    aria-controls="FooterLanguageList"
+                    aria-describedby="FooterLanguageLabel"
+                  >
+                    {{ localization.language.endonym_name | capitalize }}
+                    {% render 'icon-caret' %}
+                  </button>
+                  <div class="disclosure__list-wrapper" hidden>
+                    <ul id="FooterLanguageList" class="disclosure__list list-unstyled">
+                      {%- for language in localization.available_languages -%}
+                        <li class="disclosure__item" tabindex="-1">
+                          <a
+                            class="link link--text disclosure__link caption-large{% if language.iso_code == localization.language.iso_code %} disclosure__link--active{% endif %} focus-inset"
+                            href="#"
+                            hreflang="{{ language.iso_code }}"
+                            lang="{{ language.iso_code }}"
+                            {% if language.iso_code == localization.language.iso_code %}
+                              aria-current="true"
+                            {% endif %}
+                            data-value="{{ language.iso_code }}"
+                          >
+                            {{ language.endonym_name | capitalize }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                </div>
+                <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {%- endif -%}
 
-                  {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
-                    <span class="vthcartitem">{{ cart.item_count }}</span>
-                  {%- elsif settings.vt_cartnumber == 'vt_shoptotal' -%}
-                    <span class="vtcarthtotal text-left">
-                      <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
-                      {%- if settings.currency_code_enabled -%}
-                        <span>{{ cart.total_price | money_with_currency }}</span>
-                      {%- else -%}
-                        <span>{{ cart.total_price | money }}</span>
-                      {%- endif -%}
-                    </span>
-                  {%- else -%}
-                    <span class="vthcartitem vtqtyboth">{{ cart.item_count }}</span>
-                    <span class="vtcarthtotal text-left">
-                      <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
-                      {%- if settings.currency_code_enabled -%}
-                        <span>{{ cart.total_price | money_with_currency }}</span>
-                      {%- else -%}
-                        <span>{{ cart.total_price | money }}</span>
-                      {%- endif -%}
-                    </span>
-                  {%- endif -%}
+        <div class="header-meta">
+          {%- if shop.customer_accounts_enabled -%}
+            {% if section.settings.show_acicon %}
+              <div class="vtheaduser">
+                <a
+                  data-draly="draly-dropdown"
+                  title="{% if customer %}{{ 'vtcustomlabel.vtalltext.account' | t }}{% else %}{{ 'vtcustomlabel.vtalltext.log_in' | t }}{% endif %}"
+                >
+                  <span class="svgbg">{% render 'icon-account' %}</span>
                 </a>
+                <div class="draly-dropdown">
+                  <ul>
+                    {% if customer %}
+                      <li>
+                        <a href="/account">
+                          {% render 'icon-login' %}
+                          {{ 'vtcustomlabel.vtalltext.account' | t }}
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/account/logout">
+                          {% render 'icon-signout' %}
+                          {{ 'vtcustomlabel.vtalltext.log_out' | t }}
+                        </a>
+                      </li>
+                    {% else %}
+                      <li>
+                        <a href="/account/login">
+                          {% render 'icon-lock' %}
+                          {{ 'vtcustomlabel.vtalltext.log_in' | t }}
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/account/register"
+                          title="{{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}"
+                        >
+                          {% render 'icon-login' %}
+                          {{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}
+                        </a>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </div>
               </div>
             {% endif %}
-            {% comment %} Villatheme Cart Dropdown Over {% endcomment %}
-          </div>
+          {%- endif -%}
+
+          {% comment %} Villatheme Cart Dropdown {% endcomment %}
+          {% if settings.show_shopicon %}
+            <div class="vthcart">
+              <a href="{{ routes.cart_url }}" class="focus-inset" id="cart-icon-bubble">
+                <span class="svgbg">
+                  {%- if settings.vt_carticon == 'vt_shopcart' -%}
+                    {% render 'icon-header-minicart' %}
+                  {%- else -%}
+                    {% render 'icon-hcartbag' %}
+                  {%- endif -%}
+                </span>
+
+                {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
+                  <span class="vthcartitem">{{ cart.item_count }}</span>
+                {%- elsif settings.vt_cartnumber == 'vt_shoptotal' -%}
+                  <span class="vtcarthtotal text-left">
+                    <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
+                    {%- if settings.currency_code_enabled -%}
+                      <span>{{ cart.total_price | money_with_currency }}</span>
+                    {%- else -%}
+                      <span>{{ cart.total_price | money }}</span>
+                    {%- endif -%}
+                  </span>
+                {%- else -%}
+                  <span class="vthcartitem vtqtyboth">{{ cart.item_count }}</span>
+                  <span class="vtcarthtotal text-left">
+                    <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
+                    {%- if settings.currency_code_enabled -%}
+                      <span>{{ cart.total_price | money_with_currency }}</span>
+                    {%- else -%}
+                      <span>{{ cart.total_price | money }}</span>
+                    {%- endif -%}
+                  </span>
+                {%- endif -%}
+              </a>
+            </div>
+          {% endif %}
+          {% comment %} Villatheme Cart Dropdown Over {% endcomment %}
         </div>
       </div>
     </div>
-
     <div class="header-desktop-wrap">
       <div class="header-position">
         <div class="header-nav">
@@ -561,7 +558,7 @@
               {% if section.settings.show_contact %}
                 <div class="header-contact">
                   <div class="header-contact-inner">
-                    <div class="header-contact-image">{% render 'icon-head-call' %}</div>
+                    <div class="header-contact-image">{% render 'icon-header-phone' %}</div>
                     <div class="header-contact-info">
                       <span class="header-contact-title">{{ section.settings.bnts1 }}</span>
                       <a href="tel:{{section.settings.mobile}}">{{ section.settings.mobile }}</a>
@@ -576,51 +573,152 @@
     </div>
   </div>
   <div class="header-mobile-wrap">
-    {%- if section.settings.menu != blank -%}
-      <div class="header-logo">
-        <a href="{{ routes.root_url }}">
-          {% comment %}Mobile view logo{% endcomment %}
-          {%- if section.settings.mobile_logo -%}
-            {%- if section.settings.mobile_logo != blank -%}
-              {%- assign logo_alt = section.settings.mobile_logo.alt | default: shop.name | escape -%}
-              {%- assign logo_height = section.settings.mobile_logo_width
-                | divided_by: section.settings.mobile_logo.aspect_ratio
-              -%}
-              {{
-                section.settings.mobile_logo
-                | image_url: width: section.settings.width
-                | image_tag:
-                  class: 'header__heading-mobile-logo',
-                  widths: '50, 100, 130, 150, 162, 200, 250, 300, 400, 500',
-                  height: logo_height,
-                  width: section.settings.mobile_logo_width,
-                  alt: logo_alt
-              }}
+    <div class="header-position">
+      <div class="container">
+        <div class="header-mobile">
+          <div class="header-mobile-left">
+            <div class="header-logo">
+              <a href="{{ routes.root_url }}">
+                {% comment %}Mobile view logo{% endcomment %}
+                {%- if section.settings.mobile_logo -%}
+                  {%- if section.settings.mobile_logo != blank -%}
+                    {%- assign logo_alt = section.settings.mobile_logo.alt | default: shop.name | escape -%}
+                    {%- assign logo_height = section.settings.mobile_logo_width
+                      | divided_by: section.settings.mobile_logo.aspect_ratio
+                    -%}
+                    {{
+                      section.settings.mobile_logo
+                      | image_url: width: section.settings.width
+                      | image_tag:
+                        class: 'header__heading-mobile-logo',
+                        widths: '50, 100, 130, 150, 162, 200, 250, 300, 400, 500',
+                        height: logo_height,
+                        width: section.settings.mobile_logo_width,
+                        alt: logo_alt
+                    }}
+                  {%- endif -%}
+                {%- else -%}
+                  {%- if section.settings.logo != blank -%}
+                    {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+                    {%- assign logo_height = section.settings.mobile_logo_width
+                      | divided_by: section.settings.logo.aspect_ratio
+                    -%}
+                    {{
+                      section.settings.logo
+                      | image_url: width: section.settings.width
+                      | image_tag:
+                        class: 'header__heading-mobile-logo',
+                        widths: '50, 100, 130, 150, 162, 200, 250, 300, 400, 500',
+                        height: logo_height,
+                        width: section.settings.mobile_logo_width,
+                        alt: logo_alt
+                    }}
+                  {%- endif -%}
+                {%- else -%}
+                  <span class="h1">{{ shop.name }}</span>
+                {%- endif -%}
+                {% comment %}Mobile view logo end{% endcomment %}
+              </a>
+            </div>
+          </div>
+          <div class="header-mobile-right">
+            <div class="header-search draly-dropdown">
+              <div data-draly="draly-dropdown">
+                <a class="block-link link-dropdown" href="#"> </a>
+              </div>
+            </div>
+            <div class="header-meta">
+              {%- if shop.customer_accounts_enabled -%}
+                {% if section.settings.show_acicon %}
+                  <div class="vtheaduser header-block">
+                    <a
+                      data-draly="draly-dropdown"
+                      title="{% if customer %}{{ 'vtcustomlabel.vtalltext.account' | t }}{% else %}{{ 'vtcustomlabel.vtalltext.log_in' | t }}{% endif %}"
+                    >
+                      <span class="block-icon">{% render 'icon-account' %}</span>
+                    </a>
+                    <div class="draly-dropdown">
+                      <ul>
+                        {% if customer %}
+                          <li>
+                            <a href="/account">
+                              {% render 'icon-login' %}
+                              {{ 'vtcustomlabel.vtalltext.account' | t }}
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/account/logout">
+                              {% render 'icon-signout' %}
+                              {{ 'vtcustomlabel.vtalltext.log_out' | t }}
+                            </a>
+                          </li>
+                        {% else %}
+                          <li>
+                            <a href="/account/login">
+                              {% render 'icon-lock' %}
+                              {{ 'vtcustomlabel.vtalltext.log_in' | t }}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/account/register"
+                              title="{{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}"
+                            >
+                              {% render 'icon-login' %}
+                              {{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}
+                            </a>
+                          </li>
+                        {% endif %}
+                      </ul>
+                    </div>
+                  </div>
+                {% endif %}
+              {%- endif -%}
+
+              {% comment %} Villatheme Cart Dropdown {% endcomment %}
+              {% if settings.show_shopicon %}
+                <div class="vthcart header-block">
+                  <a href="{{ routes.cart_url }}" class="block-link" id="cart-icon-bubble">
+                    <span class="block-icon">
+                      {% render 'icon-header-minicart' %}
+                    </span>
+
+                    {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
+                      <span class="vthcartitem">{{ cart.item_count }}</span>
+                    {%- elsif settings.vt_cartnumber == 'vt_shoptotal' -%}
+                      <span class="vtcarthtotal text-left">
+                        <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
+                        {%- if settings.currency_code_enabled -%}
+                          <span>{{ cart.total_price | money_with_currency }}</span>
+                        {%- else -%}
+                          <span>{{ cart.total_price | money }}</span>
+                        {%- endif -%}
+                      </span>
+                    {%- else -%}
+                      <span class="vthcartitem vtqtyboth">{{ cart.item_count }}</span>
+                      <span class="vtcarthtotal text-left">
+                        <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
+                        {%- if settings.currency_code_enabled -%}
+                          <span>{{ cart.total_price | money_with_currency }}</span>
+                        {%- else -%}
+                          <span>{{ cart.total_price | money }}</span>
+                        {%- endif -%}
+                      </span>
+                    {%- endif -%}
+                  </a>
+                </div>
+              {% endif %}
+              {% comment %} Villatheme Cart Dropdown Over {% endcomment %}
+            </div>
+            {%- if section.settings.menu != blank -%}
+              <div class="block-menu-bar">
+                <div class="menu-bar mobile-menu-toggle">{% render 'icon-header-menubar' %}</div>
+              </div>
             {%- endif -%}
-          {%- else -%}
-            {%- if section.settings.logo != blank -%}
-              {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
-              {%- assign logo_height = section.settings.mobile_logo_width
-                | divided_by: section.settings.logo.aspect_ratio
-              -%}
-              {{
-                section.settings.logo
-                | image_url: width: section.settings.width
-                | image_tag:
-                  class: 'header__heading-mobile-logo',
-                  widths: '50, 100, 130, 150, 162, 200, 250, 300, 400, 500',
-                  height: logo_height,
-                  width: section.settings.mobile_logo_width,
-                  alt: logo_alt
-              }}
-            {%- endif -%}
-          {%- else -%}
-            <span class="h1">{{ shop.name }}</span>
-          {%- endif -%}
-          {% comment %}Mobile view logo end{% endcomment %}
-        </a>
+          </div>
+        </div>
       </div>
-    {%- endif -%}
+    </div>
   </div>
 </div>
 {% javascript %}

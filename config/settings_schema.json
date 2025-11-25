@@ -451,22 +451,6 @@
       },
       {
         "type": "select",
-        "id": "vt_carticon",
-        "options": [
-          {
-            "value": "vt_shopcart",
-            "label": "Shopping cart"
-          },
-          {
-            "value": "vt_shopbag",
-            "label": "Shopping basket"
-          }
-        ],
-        "default": "vt_shopcart",
-        "label": "Cart icon"
-      },
-      {
-        "type": "select",
         "id": "vt_cartnumber",
         "options": [
           {

@@ -40,7 +40,6 @@
     "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": true,
-    "vt_carticon": "vt_shopcart",
     "vt_cartnumber": "vt_shopqtytotal",
     "show_shopicon": true,
     "vtenable_ship": true,

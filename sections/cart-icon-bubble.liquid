@@ -3,11 +3,7 @@
     <div class="vthcart">
         <a href="{{ routes.cart_url }}" class="focus-inset" id="cart-icon-bubble">
             <span class="svgbg"> 
-                {%- if settings.vt_carticon == 'vt_shopcart' -%}
-                {% render 'icon-hcart' %}
-              {%- else -%}
-                {% render 'icon-hcartbag' %}
-              {%- endif -%}
+                {% render 'icon-header-minicart' %}
             </span>
             {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
                 <span class="vthcartitem">{{ cart.item_count }}</span>
@@ -38,11 +34,7 @@
         <div class="vthcart">
             <a href="#" title="{{ 'templates.cart.cart' | t }}">
                 <span class="svgbg">
-                    {% if settings.vt_carticon == 'vt_shopcart' %}
-                        {% render 'icon-hcart' %}
-                      {% else %}
-                        {% render 'icon-hcartbag' %}
-                      {% endif %}
+                    {% render 'icon-header-minicart' %}
                 </span>
                 {% if settings.vt_cartnumber == 'vt_shopqty' %}
                     <span class="vthcartitem">{{ cart.item_count }}</span>
