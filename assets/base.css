@@ -14527,6 +14527,7 @@ details[open] .modal-overlay::after {
     display: block;
     max-width: 80px;
 }
+
 .header-desktop .header-contact {
     text-align: right;
     padding-left: 10px;
@@ -14559,6 +14560,41 @@ details[open] .modal-overlay::after {
     font-size: 16px;
     font-weight: 600;
 }
+
+.header-mobile-wrap {
+    position: relative;
+    border-bottom: 1px solid #f1f1f1;
+    display: none;
+    max-height: 60px;
+}
+
+.header-mobile {
+    display: table;
+    width: 100%;
+    padding: 15px 0 14px;
+}
+
+.header-mobile>* {
+    display: table-cell;
+    vertical-align: middle;
+    width: 33.333%;
+}
+
+.header-mobile .header-meta {
+    padding-left: 0;
+    justify-content: end;
+    display: inline-block;
+}
+
+.header-mobile .header-meta .header-block {
+    margin-left: 0;
+}
+
+.header-mobile .block-menu-bar {
+    display: inline-block;
+    cursor: pointer;
+}
+
 /* Banner Effect */
 .dummysvg::after {
     content: '';
