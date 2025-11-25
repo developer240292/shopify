@@ -287,14 +287,20 @@
         <div class="header-meta">
           {%- if shop.customer_accounts_enabled -%}
             {% if section.settings.show_acicon %}
-              <div class="vtheaduser">
-                <a
-                  data-draly="draly-dropdown"
-                  title="{% if customer %}{{ 'vtcustomlabel.vtalltext.account' | t }}{% else %}{{ 'vtcustomlabel.vtalltext.log_in' | t }}{% endif %}"
-                >
-                  <span class="svgbg">{% render 'icon-header-user' %}</span>
+              <div class="block-user header-block draly-dropdown">
+                <a class="block-link" data-draly="draly-dropdown">
+                  <span class="block-icon">{% render 'icon-header-user' %}</span>
+                  <span class="block-text">
+                    {% if customer %}
+                      <span></span>
+                      <strong>{{ 'vtcustomlabel.vtalltext.account' | t }}</strong>
+                    {% else %}
+                      <span></span>
+                      <strong>{{ 'vtcustomlabel.vtalltext.log_in' | t }}</strong>
+                    {% endif %}
+                  </span>
                 </a>
-                <div class="draly-dropdown">
+                <div class="sub-menu">
                   <ul>
                     {% if customer %}
                       <li>
@@ -330,12 +336,11 @@
 
           {% comment %} Villatheme Cart Dropdown {% endcomment %}
           {% if settings.show_shopicon %}
-            <div class="vthcart">
-              <a href="{{ routes.cart_url }}" class="focus-inset" id="cart-icon-bubble">
-                <span class="svgbg">
+            <div class="block-minicart block-woo draly-dropdown minicart-slideout">
+              <a href="{{ routes.cart_url }}" data-draly="draly-dropdown" class="block-link link-dropdown" id="cart-icon-bubble">
+                <span class="block-icon">
                   {% render 'icon-header-minicart' %}
                 </span>
-
                 {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
                   <span class="vthcartitem">{{ cart.item_count }}</span>
                 {%- elsif settings.vt_cartnumber == 'vt_shoptotal' -%}
