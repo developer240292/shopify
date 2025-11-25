@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-    "use strict";
+    "use strict"; 
 
     function draly_init_carousel($elem) {
         $elem.not('.slick-initialized').each(function () {
@@ -80,7 +80,6 @@ jQuery(document).ready(function ($) {
             $this.html(event.strftime('<li><span>%D</span><p>Days</p></li><li><span>%H</span><p>Hours</p></li><li><span>%M</span><p>Mins</p></li><li><span>%S</span><p>Secs</p></li>'));
         });
     });
-
 
     // Scroll To top
     $("#scroll").addClass("scrollhide");
