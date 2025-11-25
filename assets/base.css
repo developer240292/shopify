@@ -14444,22 +14444,23 @@ details[open] .modal-overlay::after {
     color: #fff;
     text-align: center;
 }
-.header-desktop .header-middle {
+
+.header-middle {
     padding: 25px 0;
 }
 
-.header-desktop .header-middle .header-middle-inner {
+.header-middle .header-middle-inner {
     display: table;
     width: 100%;
     position: relative;
 }
 
-.header-desktop .header-middle .header-middle-inner>* {
+.header-middle .header-middle-inner>* {
     display: table-cell;
     vertical-align: middle;
 }
 
-.header-desktop .header-control {
+.header-control {
     text-align: right;
 }
 
@@ -14532,6 +14533,39 @@ details[open] .modal-overlay::after {
     text-overflow: ellipsis;
     display: block;
     max-width: 80px;
+}
+
+.header-block .sub-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 220px;
+    z-index: 99;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 20px;
+    border-radius: 10px;
+    -webkit-transition: margin-top 0.4s ease 0s;
+    -moz-transition: margin-top 0.4s ease 0s;
+    -o-transition: margin-top 0.4s ease 0s;
+    transition: margin-top 0.4s ease 0s;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 22px 0 24px;
+}
+
+.header-block.open .sub-menu {
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-block.sub-menu li {
+    margin: 0 20px;
+    padding: 8px 0 7px;
 }
 
 .header-desktop .header-contact {
