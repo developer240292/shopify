@@ -14639,7 +14639,7 @@ details[open] .modal-overlay::after {
     position: relative
 }
 
-.localization-selector {
+.disclosure-selector {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -14659,14 +14659,14 @@ details[open] .modal-overlay::after {
     color: #000;
 }
 
-.disclosure__list {
+.disclosure__list-wrapper {
     margin-top: 0;
     max-width: 260px;
     min-width: 200px;
     width: max-content;
     padding: 11px 8px 11px 16px;
     position: absolute;
-    bottom: 100%;
+    top: calc(100% + 15px);
     border-radius: 10px;
     transform: translateY(-10px);
     z-index: 2;
@@ -14676,7 +14676,7 @@ details[open] .modal-overlay::after {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.localization-selector+.disclosure__list {
+.localization-selector+.disclosure__list-wrapper {
     opacity: 1;
     animation: animateLocalization var(--duration-default) ease;
 }
