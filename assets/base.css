@@ -14563,7 +14563,7 @@ details[open] .modal-overlay::after {
     visibility: visible;
 }
 
-.header-block.sub-menu li {
+.header-block .sub-menu li {
     margin: 0 20px;
     padding: 8px 0 7px;
 }
@@ -14635,28 +14635,16 @@ details[open] .modal-overlay::after {
     cursor: pointer;
 }
 
-.localization-form__currency {
-    display: inline-block;
+.disclosure-form-field {
+    position: relative
 }
 
-.localization-form__select {
-    position: relative;
-}
-
-noscript #FooterCountryFormNoScript {
-    margin-bottom: 3px;
-}
-
-noscript .localization-form__select {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.localization-selector.link {
+.localization-selector {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     height: auto;
+    line-height: inherit;
     width: 100%;
     border-radius: 0;
     margin: 0;
@@ -14667,23 +14655,25 @@ noscript .localization-form__select {
     text-decoration: none;
     letter-spacing: 0;
     min-width: auto;
+    background: none;
+    color: #000;
 }
 
-.localization-form .disclosure__button svg {
-    width: 8px;
-    height: 8px;
-    margin-left: 5px;
-}
-
-noscript .localization-selector.link {
-    display: inline-block;
-    width: 250px;
-    padding: 5px 10px;
-    font-size: 14px;
-}
-
-.localization-selector option {
-    color: rgb(var(--color-foreground));
+.disclosure__list {
+    margin-top: 0;
+    max-width: 260px;
+    min-width: 200px;
+    width: max-content;
+    padding: 11px 8px 11px 16px;
+    position: absolute;
+    bottom: 100%;
+    border-radius: 10px;
+    transform: translateY(-10px);
+    z-index: 2;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .localization-selector+.disclosure__list {
@@ -14691,6 +14681,29 @@ noscript .localization-selector.link {
     animation: animateLocalization var(--duration-default) ease;
 }
 
+@keyframes animateLocalization {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes animateSortBy {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
 
 /* Timer */
 .timer_outer {
