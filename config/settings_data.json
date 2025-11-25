@@ -157,7 +157,7 @@
           "mobile": "+12 567 2567 125",
           "link_s": "",
           "menu": "main-menu",
-          "vertical_menu": "",
+          "vertical_menu": "vertical-menu",
           "enable_sticky_header": false,
           "enable_sticky_header_mobile": true,
           "enable_country_selector": true,
