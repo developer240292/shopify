@@ -1,105 +1,56 @@
-// Dropdown Hover
-$(document).on("click", function(event){
-    var $trigger = $(".dropdown");
-    if($trigger !== event.target && !$trigger.has(event.target).length){
-        $(".dropdown-menu").slideUp("fast");
-    }            
-});
-$(document).ready(function() {
+jQuery(document).ready(function ($) {
+    "use strict";
 
-    // User and Cart Toggle
-    $(document).on('click', '.hmuser,.vtcollscart', function(e) {
-        $(this).toggleClass('active');
-        $(this).next().slideToggle('fast');
-        $(".dropdown-menu").not($(this).next()).slideUp('fast');
-    });
-    
-    // Left side Product Tab first
-    $(".nav-tabs_secons .nav-item_second.active").click();
-    $(document).on('click', '.nav-tabs_secons .nav-item_second', function(e) {
-        e.preventDefault();
-        $(".nav-tabs_secons .nav-item_second").removeClass('active');
-        $(this).addClass('active');
-        let tid=  $(this).find('a').attr('href');
-        $('.tab-pane_second').removeClass('active show');
-        $(tid).addClass('active show');
-    });
+    function draly_init_carousel($elem) {
+        $elem.not('.slick-initialized').each(function () {
+            var _this = $(this),
+                _responsive = _this.data('responsive'),
+                _config = [];
 
-    // Left side Product Tab second
-    $(".nav-tabs_next .nav-item_next.active").click();
-    $(document).on('click', '.nav-tabs_next .nav-item_next', function(e) {
-        e.preventDefault();
-        $(".nav-tabs_next .nav-item_next").removeClass('active');
-        $(this).addClass('active');
-        let tid=  $(this).find('a').attr('href');
-        $('.tab-pane_next').removeClass('active show');
-        $(tid).addClass('active show');
-    });
+            if (_this.hasClass('slick-vertical')) {
+                _config.prevArrow = '<span class="fa fa-angle-up prev"></span>';
+                _config.nextArrow = '<span class="fa fa-angle-down next"></span>';
+            } else {
+                _config.prevArrow = '<span class="prev"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1L1.59055 9.33564C1.25376 9.71452 1.25376 10.2855 1.59055 10.6644L9 19" stroke="currentColor" stroke-linecap="round"/></svg></span>';
+                _config.nextArrow = '<span class="next"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L8.40945 9.33564C8.74624 9.71452 8.74624 10.2855 8.40945 10.6644L1 19" stroke="currentColor" stroke-linecap="round"/></svg></span>';
+            }
+            _config.responsive = _responsive;
 
-    // Left side Product Tab third
-    $(".nav-tabs_third .nav-item_third.active").click();
-    $(document).on('click', '.nav-tabs_third .nav-item_third', function(e) {
-        e.preventDefault();
-        $(".nav-tabs_third .nav-item_third").removeClass('active');
-        $(this).addClass('active');
-        let tid=  $(this).find('a').attr('href');
-        $('.tab-pane_third').removeClass('active show');
-        $(tid).addClass('active show');
-    });
-    // Category tab
-    $(".catnav-tabs .catnav-item.active").click();
-    $(document).on('click', '.catnav-tabs .catnav-item', function(e) {
-        e.preventDefault();
-        $(".catnav-tabs .catnav-item").removeClass('active');
-        $(this).addClass('active');
-        let tid=  $(this).find('a').attr('href');
-        $('.cattab-pane').removeClass('active show');
-        $(tid).addClass('active show');
-    });
+            _this.slick(_config);
+        });
+    }
 
-    // Collapse Toggle
-    $(document).on('click', '.toggle.collapsed', function(e) {
-        $(this).toggleClass('active');
-        $(this).next().slideToggle('fast');
+    $(document).on('click', function (event) {
+        var _target = $(event.target).closest('.draly-dropdown'),
+            _parent = $('.draly-dropdown');
+
+        if (_target.length > 0) {
+            _parent.not(_target).removeClass('open');
+            if (
+                $(event.target).is('[data-draly="draly-dropdown"]') ||
+                $(event.target).closest('[data-draly="draly-dropdown"]').length > 0
+            ) {
+                _target.toggleClass('open');
+                event.preventDefault();
+            }
+        } else {
+            $('.draly-dropdown').removeClass('open');
+        }
     });
 
     // Home Page Product Tab
     $(".nav-tabs .nav-item.active").click();
-    $(document).on('click', '.nav-tabs .nav-item', function(e) {
+    $(document).on('click', '.nav-tabs .nav-item', function (e) {
         e.preventDefault();
         $(".nav-tabs .nav-item").removeClass('active');
         $(this).addClass('active');
-        let tid=  $(this).find('a').attr('href');
+        let tid = $(this).find('a').attr('href');
         $('.tab-pane').removeClass('active show');
         $(tid).addClass('active show');
     });
 
-    // Scroll to top sticky cart
-    $(".vtstickyadd_cart").addClass("scrollsky");
-        $(window).scroll(function () {
-        if ($(this).scrollTop() === 0) {
-            $(".vtstickyadd_cart").addClass("scrollsky")
-        } else {
-            $(".vtstickyadd_cart").removeClass("scrollsky")
-        }
-    });
-
-    // Scroll To top
-    $("#scroll").addClass("scrollhide");
-        $(window).scroll(function () {
-        if ($(this).scrollTop() === 0) {
-            $("#scroll").addClass("scrollhide")
-        } else {
-            $("#scroll").removeClass("scrollhide")
-        }
-    });
-    $(document).on('click', '#scroll', function(e) {
-        $("html, body").animate({scrollTop: 0}, 600);
-        return false;
-    });
-
     // Collection Grid/List View
-    $(document).on('click', '.vtlistgridbtn', function(e) {
+    $(document).on('click', '.vtlistgridbtn', function (e) {
         $(this).addClass('active').siblings().removeClass('active');
         if ($(this).hasClass('listv')) {
             $('#product-grid').addClass('product-list').removeClass('product-grid').removeClass('product-galleryv');
@@ -111,27 +62,50 @@ $(document).ready(function() {
     });
 
     // Countdown Timer
-    $('[data-countdown]').each(function() {
+    $('[data-countdown]').each(function () {
         var $this = $(this), finalDate = $(this).data('countdown');
-        Date.prototype.yyyymmdd = function() {
+        Date.prototype.yyyymmdd = function () {
             var yyyy = this.getFullYear().toString();
-            var mm = (this.getMonth()+1).toString(); // getMonth() is zero-based
-            var dd  = this.getDate().toString();
-            return yyyy + "/" + (mm[1]?mm:"0"+mm[0]) + "/" + (dd[1]?dd:"0"+dd[0]); // padding
+            var mm = (this.getMonth() + 1).toString(); // getMonth() is zero-based
+            var dd = this.getDate().toString();
+            return yyyy + "/" + (mm[1] ? mm : "0" + mm[0]) + "/" + (dd[1] ? dd : "0" + dd[0]); // padding
         };
         var date = new Date();
-        if (finalDate > date.yyyymmdd()){
-            $(this).parents('.timer_outer').css('display','block');
-        }else{
-            $(this).parents('.timer_outer').css('display','none');  
+        if (finalDate > date.yyyymmdd()) {
+            $(this).parents('.timer_outer').css('display', 'block');
+        } else {
+            $(this).parents('.timer_outer').css('display', 'none');
         }
-        $this.countdown(finalDate, function(event) {
+        $this.countdown(finalDate, function (event) {
             $this.html(event.strftime('<li><span>%D</span><p>Days</p></li><li><span>%H</span><p>Hours</p></li><li><span>%M</span><p>Mins</p></li><li><span>%S</span><p>Secs</p></li>'));
         });
     });
-    
-
-}); // Document Ready Div End
 
 
+    // Scroll To top
+    $("#scroll").addClass("scrollhide");
+    $(window).scroll(function () {
+        if ($(this).scrollTop() === 0) {
+            $("#scroll").addClass("scrollhide")
+        } else {
+            $("#scroll").removeClass("scrollhide")
+        }
+    });
+    $(document).on('click', '#scroll', function (e) {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+
+    setTimeout(function () {
+        if ($('.owl-slick').length) {
+            $('.owl-slick').each(function () {
+                draly_init_carousel($(this));
+            });
+        }
+    }, 10);
+});
+
+jQuery(window).on('load', function () {
+    jQuery('body').addClass('loaded');
+});
 
