@@ -901,43 +901,7 @@
 
             {% comment %} Villatheme Cart Dropdown {% endcomment %}
             {% if settings.show_shopicon %}
-              {%- if settings.cart_type == 'drawer' or settings.cart_type == 'page' -%}
-                  <div class="vthcart">
-                      <a href="{{ routes.cart_url }}" class="focus-inset" id="cart-icon-bubble">
-                          <span class="svgbg">
-                            {%- if settings.vt_carticon == 'vt_shopcart' -%}
-                              {% render 'icon-hcart' %}
-                            {%- else -%}
-                              {% render 'icon-hcartbag' %}
-                            {%- endif -%}
-                          </span>
-
-                          {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
-                            <span class="vthcartitem">{{ cart.item_count }}</span>
-                          {%- elsif settings.vt_cartnumber == 'vt_shoptotal' -%}
-                            <span class="vtcarthtotal text-left">
-                              <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
-                              {%- if settings.currency_code_enabled -%}
-                                <span>{{ cart.total_price | money_with_currency }}</span>
-                              {%- else -%}
-                                <span>{{ cart.total_price | money }}</span>
-                              {%- endif -%}
-                            </span>
-                          {%- else -%}
-                              <span class="vthcartitem vtqtyboth">{{ cart.item_count }}</span>
-                              <span class="vtcarthtotal text-left">
-                                <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
-                              {%- if settings.currency_code_enabled -%}
-                                <span>{{ cart.total_price | money_with_currency }}</span>
-                              {%- else -%}
-                                <span>{{ cart.total_price | money }}</span>
-                              {%- endif -%}
-                            </span>
-                          {%- endif -%}
-
-                      </a>
-                  </div>
-              {%- else -%}
+            
                   <div class="dropdown" id="cart-icon-bubble">
                       <div class="vtcollscart" data-toggle="dropdown">
                           <div class="vthcart">
@@ -1143,7 +1107,6 @@
                       </div> 
                   </div>
               {%- endif -%}
-            {% endif %}
             {% comment %} Villatheme Cart Dropdown Over {% endcomment %}
         </div>
     </div>
