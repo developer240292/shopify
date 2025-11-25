@@ -36,6 +36,7 @@
     max-width: {{ section.settings.mobile_logo_width }}px;
   }
 {%- endstyle -%}
+<script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
@@ -146,18 +147,7 @@
           </details-modal>
           <div class="header-control">
             <div class="header-meta">
-              {% if shop.currencies.size > 1 %}
-  <ul class="currency-menu">
-    {% for currency in shop.currencies %}
-      <li>
-        <a href="#" data-currency="{{ currency }}" class="currency-option">
-          {{ currency }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-{% endif %}
-
+              {% include 'localization-form' %}
               {%- if shop.customer_accounts_enabled -%}
                 {% if section.settings.show_acicon %}
                   <div class="block-user header-block draly-dropdown">
@@ -588,24 +578,6 @@
     </div>
   </div>
 </div>
-{% javascript %}
-  document.querySelectorAll('.currency-option').forEach(function (currencyLink) {
-    currencyLink.addEventListener('click', function (event) {
-      event.preventDefault();
-      const currency = currencyLink.getAttribute('data-currency');
-      // Thực hiện thay đổi tiền tệ, ví dụ thông qua API hoặc gửi yêu cầu đến Shopify
-      window.location.href = '/?currency=' + currency;
-    });
-  });
-  document.querySelectorAll('.language-option').forEach(function (languageLink) {
-    languageLink.addEventListener('click', function (event) {
-      event.preventDefault();
-      const locale = languageLink.getAttribute('data-locale');
-      // Thực hiện thay đổi ngôn ngữ, ví dụ thông qua API hoặc gửi yêu cầu đến Shopify
-      window.location.href = '/?locale=' + locale;
-    });
-  });
-{% endjavascript %}
 
 <script type="application/ld+json">
   {

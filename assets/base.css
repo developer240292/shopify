@@ -14635,35 +14635,6 @@ details[open] .modal-overlay::after {
     cursor: pointer;
 }
 
-/* Banner Effect */
-.dummysvg::after {
-    content: '';
-    background-color: rgba(var(--color-foreground));
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 0.2;
-    border-radius: var(--media-radius);
-}
-
-.dummysvg {
-    position: relative;
-}
-
-.dummysvg .placeholder-svg {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding: 30px 0;
-}
-
-.vtlogos .dummysvg .placeholder-svg {
-    padding: 0;
-}
-
-/* Language/ Currency */
 .localization-form__currency {
     display: inline-block;
 }
@@ -14711,12 +14682,6 @@ noscript .localization-selector.link {
     font-size: 14px;
 }
 
-noscript .localization-selector.link~svg {
-    position: absolute;
-    right: 10px;
-    top: 15px;
-}
-
 .localization-selector option {
     color: rgb(var(--color-foreground));
 }
@@ -14726,34 +14691,6 @@ noscript .localization-selector.link~svg {
     animation: animateLocalization var(--duration-default) ease;
 }
 
-@keyframes appear-down {
-    0% {
-        opacity: 0;
-        margin-top: -1rem;
-    }
-
-    100% {
-        opacity: 1;
-        margin-top: 0;
-    }
-}
-
-@keyframes animateLocalization {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(-1rem);
-    }
-}
-
-/* Language/ Currency End */
-.vtcollfea ul.grid {
-    margin: 0
-}
 
 /* Timer */
 .timer_outer {
