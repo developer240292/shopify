@@ -14657,6 +14657,7 @@ details[open] .modal-overlay::after {
     min-width: auto;
     background: none;
     color: #000;
+    font-weight: 400;
 }
 
 .disclosure__list-wrapper {
@@ -14676,7 +14677,7 @@ details[open] .modal-overlay::after {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.localization-selector+.disclosure__list-wrapper {
+.disclosure-selector+.disclosure__list-wrapper {
     opacity: 1;
     animation: animateLocalization var(--duration-default) ease;
 }
