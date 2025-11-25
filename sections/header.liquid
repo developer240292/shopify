@@ -21,51 +21,6 @@
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
-<style>
-  .header__heading-logo {
-    max-width: {{ section.settings.logo_width }}px;
-  }
-  .header__heading-mobile-logo {
-    max-width: {{ section.settings.mobile_logo_width }}px;
-  }
-  header-drawer {
-    justify-self: start;
-  }
-  @media screen and (min-width: 1024px) {
-    header-drawer {
-      display: none;
-    }
-  }
-  .menu-drawer-container {
-    display: flex;
-  }
-  .list-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .list-menu--inline {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .list-menu__item {
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
-  }
-  .list-menu__item--link {
-    text-decoration: none;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-  }
-  @media screen and (min-width: 768px) {
-    .list-menu__item--link {
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
-    }
-  }
-</style>
 {%- style -%}
   .section-header {
     margin-bottom: {{ section.settings.margin_bottom }}px;
@@ -73,6 +28,12 @@
   .header-middle {
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  .header__heading-logo {
+    max-width: {{ section.settings.logo_width }}px;
+  }
+  .header__heading-mobile-logo {
+    max-width: {{ section.settings.mobile_logo_width }}px;
   }
 {%- endstyle -%}
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
