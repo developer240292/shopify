@@ -414,105 +414,40 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="header-desktop-wrap">
-    <div class="header-position">
-      <div class="header-nav">
-        <div class="container">
-          <div class="header-nav-inner">
-            {% comment %}Simple Menu{% endcomment %}
-            {%- if section.settings.menu != blank -%}
-              <nav class="vertical-wrapper block-nav-category has-vertical-menu has-open">
-                <div class="block-title active">
-                  <span class="text-title">{{ 'vtcustomlabel.vtalltext.allcategories' | t }}</span>
-                </div>
-                <div class="block-content verticalmenu-content">
-                  <div class="villa-menu-wrapper vertical">
-                    <ul id="menu-vertical-menu" class="draly-nav vertical-menu villa-menu">
-                      {%- for link in section.settings.menu.links -%}
-                        {% assign assignsubmenu = true %}
-                        {% assign displaymegamenu = false %}
-                        {% assign blank_link = false %}
-                        {% for block in section.blocks %}
-                          {% assign case_title = block.settings.menuname | downcase %}
-                          {% assign lower_title = link.title | downcase %}
-                          {% if lower_title == case_title %}
-                            {% assign displaymegamenu = true %}
-                            {% if block.settings.showsubmenu == false %}
-                              {% assign assignsubmenu = false %}
+
+    <div class="header-desktop-wrap">
+      <div class="header-position">
+        <div class="header-nav">
+          <div class="container">
+            <div class="header-nav-inner">
+              {% comment %}Simple Menu{% endcomment %}
+              {%- if section.settings.menu != blank -%}
+                <nav class="vertical-wrapper block-nav-category has-vertical-menu has-open">
+                  <div class="block-title active">
+                    <span class="text-title">{{ 'vtcustomlabel.vtalltext.allcategories' | t }}</span>
+                  </div>
+                  <div class="block-content verticalmenu-content">
+                    <div class="villa-menu-wrapper vertical">
+                      <ul id="menu-vertical-menu" class="draly-nav vertical-menu villa-menu">
+                        {%- for link in section.settings.menu.links -%}
+                          {% assign assignsubmenu = true %}
+                          {% assign displaymegamenu = false %}
+                          {% assign blank_link = false %}
+                          {% for block in section.blocks %}
+                            {% assign case_title = block.settings.menuname | downcase %}
+                            {% assign lower_title = link.title | downcase %}
+                            {% if lower_title == case_title %}
+                              {% assign displaymegamenu = true %}
+                              {% if block.settings.showsubmenu == false %}
+                                {% assign assignsubmenu = false %}
+                              {% endif %}
+                              {%- if link.links == blank -%}
+                                {% assign blank_link = lower_title %}
+                              {% endif %}
                             {% endif %}
-                            {%- if link.links == blank -%}
-                              {% assign blank_link = lower_title %}
-                            {% endif %}
-                          {% endif %}
-                        {%- endfor -%}
-                        <li>
-                          {%- if link.links != blank -%}
-                            <details-disclosure>
-                              <details id="Details-HeaderMenu-{{ forloop.index }}">
-                                <summary class="header__menu-item list-menu__item link focus-inset">
-                                  <span
-                                    {%- if link.child_active %}
-                                      class="header__active-menu-item"
-                                    {% endif %}
-                                  >
-                                    {{- link.title | escape -}}
-                                  </span>
-                                  {% render 'icon-caret' %}
-                                </summary>
-                                <div
-                                  id="HeaderMenu-MenuList-{{ forloop.index }}"
-                                  class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}"
-                                  tabindex="-1"
-                                >
-                                  {% if assignsubmenu %}
-                                    <div class="container">
-                                      <div class="row wp_submenus_dep">
-                                        {%- for childlink in link.links -%}
-                                          <div class="{% if link.links.size == 1 %}col-12 {% elsif link.links.size == 2 %}col-12 {% else %}col-3 {% endif %}">
-                                            <div class="vtmenuinner">
-                                              <a
-                                                href="{{ childlink.url }}"
-                                                class="header__menu-item list-menu__item link link--text focus-inset caption-large wp_atitls{% if childlink.current %} list-menu__item--active{% endif %}"
-                                                {% if childlink.current %}
-                                                  aria-current="page"
-                                                {% endif %}
-                                              >
-                                                {{ childlink.title | escape }}
-                                              </a>
-                                              <ul
-                                                id="HeaderMenu-SubMenuList-{{ forloop.index }}"
-                                                class="header__submenu list-menu motion-reduce"
-                                              >
-                                                {%- for grandchildlink in childlink.links -%}
-                                                  <li>
-                                                    <a
-                                                      href="{{ grandchildlink.url }}"
-                                                      class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
-                                                      {% if grandchildlink.current %}
-                                                        aria-current="page"
-                                                      {% endif %}
-                                                    >
-                                                      {{ grandchildlink.title | escape }}
-                                                    </a>
-                                                  </li>
-                                                {%- endfor -%}
-                                              </ul>
-                                            </div>
-                                          </div>
-                                        {%- endfor -%}
-                                      </div>
-                                    </div>
-                                  {% endif %}
-                                  {% render 'megamenu', blocks: section.blocks, title: link.title %}
-                                  <div class="text-right vthseeall container">
-                                    <a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a>
-                                  </div>
-                                </div>
-                              </details>
-                            </details-disclosure>
-                          {%- else -%}
-                            {% if blank_link %}
+                          {%- endfor -%}
+                          <li>
+                            {%- if link.links != blank -%}
                               <details-disclosure>
                                 <details id="Details-HeaderMenu-{{ forloop.index }}">
                                   <summary class="header__menu-item list-menu__item link focus-inset">
@@ -530,6 +465,45 @@
                                     class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}"
                                     tabindex="-1"
                                   >
+                                    {% if assignsubmenu %}
+                                      <div class="container">
+                                        <div class="row wp_submenus_dep">
+                                          {%- for childlink in link.links -%}
+                                            <div class="{% if link.links.size == 1 %}col-12 {% elsif link.links.size == 2 %}col-12 {% else %}col-3 {% endif %}">
+                                              <div class="vtmenuinner">
+                                                <a
+                                                  href="{{ childlink.url }}"
+                                                  class="header__menu-item list-menu__item link link--text focus-inset caption-large wp_atitls{% if childlink.current %} list-menu__item--active{% endif %}"
+                                                  {% if childlink.current %}
+                                                    aria-current="page"
+                                                  {% endif %}
+                                                >
+                                                  {{ childlink.title | escape }}
+                                                </a>
+                                                <ul
+                                                  id="HeaderMenu-SubMenuList-{{ forloop.index }}"
+                                                  class="header__submenu list-menu motion-reduce"
+                                                >
+                                                  {%- for grandchildlink in childlink.links -%}
+                                                    <li>
+                                                      <a
+                                                        href="{{ grandchildlink.url }}"
+                                                        class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
+                                                        {% if grandchildlink.current %}
+                                                          aria-current="page"
+                                                        {% endif %}
+                                                      >
+                                                        {{ grandchildlink.title | escape }}
+                                                      </a>
+                                                    </li>
+                                                  {%- endfor -%}
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          {%- endfor -%}
+                                        </div>
+                                      </div>
+                                    {% endif %}
                                     {% render 'megamenu', blocks: section.blocks, title: link.title %}
                                     <div class="text-right vthseeall container">
                                       <a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a>
@@ -537,129 +511,156 @@
                                   </div>
                                 </details>
                               </details-disclosure>
-                              {% assign blank_link = false %}
-                            {% else %}
-                              <a
-                                href="{{ link.url }}"
-                                class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"
-                                {% if link.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                <span
-                                  {%- if link.current %}
-                                    class="header__active-menu-item"
+                            {%- else -%}
+                              {% if blank_link %}
+                                <details-disclosure>
+                                  <details id="Details-HeaderMenu-{{ forloop.index }}">
+                                    <summary class="header__menu-item list-menu__item link focus-inset">
+                                      <span
+                                        {%- if link.child_active %}
+                                          class="header__active-menu-item"
+                                        {% endif %}
+                                      >
+                                        {{- link.title | escape -}}
+                                      </span>
+                                      {% render 'icon-caret' %}
+                                    </summary>
+                                    <div
+                                      id="HeaderMenu-MenuList-{{ forloop.index }}"
+                                      class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}"
+                                      tabindex="-1"
+                                    >
+                                      {% render 'megamenu', blocks: section.blocks, title: link.title %}
+                                      <div class="text-right vthseeall container">
+                                        <a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a>
+                                      </div>
+                                    </div>
+                                  </details>
+                                </details-disclosure>
+                                {% assign blank_link = false %}
+                              {% else %}
+                                <a
+                                  href="{{ link.url }}"
+                                  class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"
+                                  {% if link.current %}
+                                    aria-current="page"
                                   {% endif %}
                                 >
-                                  {{- link.title | escape -}}
-                                </span>
-                              </a>
-                            {% endif %}
-                          {%- endif -%}
+                                  <span
+                                    {%- if link.current %}
+                                      class="header__active-menu-item"
+                                    {% endif %}
+                                  >
+                                    {{- link.title | escape -}}
+                                  </span>
+                                </a>
+                              {% endif %}
+                            {%- endif -%}
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              {%- endif -%}
+              {%- if section.settings.secmenu != blank -%}
+                <div class="box-header-nav">
+                  <div class="villa-menu-wrapper horizontal">
+                    <ul id="menu-primary-menu" class="draly-nav main-menu horizontal-menu villa-menu">
+                      {%- for link in section.settings.secmenu.links -%}
+                        <li class="menu-item">
+                          <a href="{{ link.url }}">
+                            <span>{{ link.title | escape }}</span>
+                          </a>
                         </li>
                       {%- endfor -%}
                     </ul>
                   </div>
                 </div>
-              </nav>
-            {%- endif -%}
-            {%- if section.settings.secmenu != blank -%}
-              <div class="box-header-nav">
-                <div class="villa-menu-wrapper horizontal">
-                  <ul id="menu-primary-menu" class="draly-nav main-menu horizontal-menu villa-menu">
-                    {%- for link in section.settings.secmenu.links -%}
-                      <li class="menu-item">
-                        <a href="{{ link.url }}">
-                          <span>{{ link.title | escape }}</span>
-                        </a>
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                </div>
+              {%- endif -%}
+              {% comment %} Villatheme Wishlist {% endcomment %}
+              <div class="block-wishlist block-icon">
+                {% if customer %}
+                  <a href="/pages/wishlist" class="block-link"
+                    ><strong>
+                      {%- render 'icon-wishlist' -%}
+                      <span class="vtwishcount">0</span></strong
+                    ><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a
+                  >
+                {% else %}
+                  <a href="/account/login" class="block-link"
+                    ><strong>
+                      {%- render 'icon-wishlist' -%}
+                      <span class="vtwishcount count">0</span></strong
+                    ><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a
+                  >
+                {% endif %}
               </div>
-            {%- endif -%}
-            {% comment %} Villatheme Wishlist {% endcomment %}
-            <div class="block-wishlist block-icon">
-              {% if customer %}
-                <a href="/pages/wishlist" class="block-link"
-                  ><strong>
-                    {%- render 'icon-wishlist' -%}
-                    <span class="vtwishcount">0</span></strong
-                  ><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a
-                >
-              {% else %}
-                <a href="/account/login" class="block-link"
-                  ><strong>
-                    {%- render 'icon-wishlist' -%}
-                    <span class="vtwishcount count">0</span></strong
-                  ><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a
-                >
-              {% endif %}
-            </div>
-            {% comment %} Villatheme Wishlist Over {% endcomment %}
-            {% if section.settings.show_contact %}
-              <div class="header-contact">
-                <div class="header-contact-inner">
-                  <div class="header-contact-image">{% render 'icon-head-call' %}</div>
-                  <div class="header-contact-info">
-                    <span class="header-contact-title">{{ section.settings.bnts1 }}</span>
-                    <a href="tel:{{section.settings.mobile}}">{{ section.settings.mobile }}</a>
+              {% comment %} Villatheme Wishlist Over {% endcomment %}
+              {% if section.settings.show_contact %}
+                <div class="header-contact">
+                  <div class="header-contact-inner">
+                    <div class="header-contact-image">{% render 'icon-head-call' %}</div>
+                    <div class="header-contact-info">
+                      <span class="header-contact-title">{{ section.settings.bnts1 }}</span>
+                      <a href="tel:{{section.settings.mobile}}">{{ section.settings.mobile }}</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            {% endif %}
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="header-mobile-wrap">
-  {%- if section.settings.menu != blank -%}
-    <div class="header-logo">
-      <a href="{{ routes.root_url }}">
-        {% comment %}Mobile view logo{% endcomment %}
-        {%- if section.settings.mobile_logo -%}
-          {%- if section.settings.mobile_logo != blank -%}
-            {%- assign logo_alt = section.settings.mobile_logo.alt | default: shop.name | escape -%}
-            {%- assign logo_height = section.settings.mobile_logo_width
-              | divided_by: section.settings.mobile_logo.aspect_ratio
-            -%}
-            {{
-              section.settings.mobile_logo
-              | image_url: width: section.settings.width
-              | image_tag:
-                class: 'header__heading-mobile-logo',
-                widths: '50, 100, 130, 150, 162, 200, 250, 300, 400, 500',
-                height: logo_height,
-                width: section.settings.mobile_logo_width,
-                alt: logo_alt
-            }}
+  <div class="header-mobile-wrap">
+    {%- if section.settings.menu != blank -%}
+      <div class="header-logo">
+        <a href="{{ routes.root_url }}">
+          {% comment %}Mobile view logo{% endcomment %}
+          {%- if section.settings.mobile_logo -%}
+            {%- if section.settings.mobile_logo != blank -%}
+              {%- assign logo_alt = section.settings.mobile_logo.alt | default: shop.name | escape -%}
+              {%- assign logo_height = section.settings.mobile_logo_width
+                | divided_by: section.settings.mobile_logo.aspect_ratio
+              -%}
+              {{
+                section.settings.mobile_logo
+                | image_url: width: section.settings.width
+                | image_tag:
+                  class: 'header__heading-mobile-logo',
+                  widths: '50, 100, 130, 150, 162, 200, 250, 300, 400, 500',
+                  height: logo_height,
+                  width: section.settings.mobile_logo_width,
+                  alt: logo_alt
+              }}
+            {%- endif -%}
+          {%- else -%}
+            {%- if section.settings.logo != blank -%}
+              {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+              {%- assign logo_height = section.settings.mobile_logo_width
+                | divided_by: section.settings.logo.aspect_ratio
+              -%}
+              {{
+                section.settings.logo
+                | image_url: width: section.settings.width
+                | image_tag:
+                  class: 'header__heading-mobile-logo',
+                  widths: '50, 100, 130, 150, 162, 200, 250, 300, 400, 500',
+                  height: logo_height,
+                  width: section.settings.mobile_logo_width,
+                  alt: logo_alt
+              }}
+            {%- endif -%}
+          {%- else -%}
+            <span class="h1">{{ shop.name }}</span>
           {%- endif -%}
-        {%- else -%}
-          {%- if section.settings.logo != blank -%}
-            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
-            {%- assign logo_height = section.settings.mobile_logo_width
-              | divided_by: section.settings.logo.aspect_ratio
-            -%}
-            {{
-              section.settings.logo
-              | image_url: width: section.settings.width
-              | image_tag:
-                class: 'header__heading-mobile-logo',
-                widths: '50, 100, 130, 150, 162, 200, 250, 300, 400, 500',
-                height: logo_height,
-                width: section.settings.mobile_logo_width,
-                alt: logo_alt
-            }}
-          {%- endif -%}
-        {%- else -%}
-          <span class="h1">{{ shop.name }}</span>
-        {%- endif -%}
-        {% comment %}Mobile view logo end{% endcomment %}
-      </a>
-    </div>
-  {%- endif -%}
+          {% comment %}Mobile view logo end{% endcomment %}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
 </div>
 {% javascript %}
   class LocalizationForm extends HTMLElement {
