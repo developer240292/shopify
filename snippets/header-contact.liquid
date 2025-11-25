@@ -1,0 +1,11 @@
+{% if section.settings.show_contact %}
+  <div class="header-contact">
+    <div class="header-contact-inner">
+      <div class="header-contact-image">{% render 'icon-header-phone' %}</div>
+      <div class="header-contact-info">
+        <span class="header-contact-title">{{ section.settings.bnts1 }}</span>
+        <a href="tel:{{section.settings.mobile}}">{{ section.settings.mobile }}</a>
+      </div>
+    </div>
+  </div>
+{% endif %}

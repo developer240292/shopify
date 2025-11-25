@@ -39,14 +39,6 @@
 <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
-<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-  <symbol id="icon-search" vievtox="0 0 18 19" >
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" />
-  </symbol>
-  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
-    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" />
-  </symbol>
-</svg>
 <div class="header-wrapper {% if section.settings.enable_sticky_header %}header-sticky{% endif %} {% if section.settings.enable_sticky_header_mobile %}header-mobile-sticky{% endif %}">
   {% if section.settings.show_topheader %}
     <div class="header-top">
@@ -147,84 +139,9 @@
           </details-modal>
           <div class="header-control">
             <div class="header-meta">
-              {% include 'localization-form' %}
-              {%- if shop.customer_accounts_enabled -%}
-                {% if section.settings.show_acicon %}
-                  <div class="block-user header-block draly-dropdown">
-                    <a class="block-link" data-draly="draly-dropdown">
-                      <span class="block-icon">{% render 'icon-header-user' %}</span>
-                      <span class="block-text">
-                        {% if customer %}
-                          <span>{{ 'vtcustomlabel.vtalltext.account' | t }}</span>
-                          <strong>
-                            {{- customer.first_name }}
-                            {{ customer.last_name -}}
-                          </strong>
-                        {% else %}
-                          <span>{{ 'vtcustomlabel.vtalltext.account' | t }}</span>
-                          <strong>{{ 'vtcustomlabel.vtalltext.log_in' | t }}</strong>
-                        {% endif %}
-                      </span>
-                    </a>
-                    <ul class="sub-menu">
-                      {% if customer %}
-                        <li>
-                          <a href="/account">
-                            {{ 'vtcustomlabel.vtalltext.account' | t }}
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/account/logout">
-                            {{ 'vtcustomlabel.vtalltext.log_out' | t }}
-                          </a>
-                        </li>
-                      {% else %}
-                        <li>
-                          <a href="/account/login">
-                            {{ 'vtcustomlabel.vtalltext.log_in' | t }}
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/account/register"
-                            title="{{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}"
-                          >
-                            {{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}
-                          </a>
-                        </li>
-                      {% endif %}
-                    </ul>
-                  </div>
-                {% endif %}
-              {%- endif -%}
-
-              {% comment %} Villatheme Cart Dropdown {% endcomment %}
-              {% if settings.show_shopicon %}
-                <div class="block-minicart header-block draly-dropdown minicart-slideout">
-                  <a
-                    href="{{ routes.cart_url }}"
-                    data-draly="draly-dropdown"
-                    class="block-link link-dropdown"
-                    id="cart-icon-bubble"
-                  >
-                    <span class="block-icon">
-                      {% render 'icon-header-minicart' %}
-                      <span class="count">{{ cart.item_count }}</span>
-                    </span>
-                    <span class="block-text">
-                      <span>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</span>
-                      <strong>
-                        {%- if settings.currency_code_enabled -%}
-                          {{ cart.total_price | money_with_currency }}
-                        {%- else -%}
-                          {{ cart.total_price | money }}
-                        {%- endif -%}
-                      </strong>
-                    </span>
-                  </a>
-                </div>
-              {% endif %}
-              {% comment %} Villatheme Cart Dropdown Over {% endcomment %}
+              {% include 'header-localization-form' %}
+              {% include 'header-user' %}
+              {% include 'header-minicart' %}
             </div>
           </div>
         </div>
@@ -236,193 +153,27 @@
           <div class="container">
             <div class="header-nav-inner">
               {% comment %}Simple Menu{% endcomment %}
-              {%- if section.settings.menu != blank -%}
+              {%- if section.settings.verticalmenu != blank -%}
                 <nav class="vertical-wrapper block-nav-category has-vertical-menu has-open">
                   <div class="block-title active">
                     <span class="text-title">{{ 'vtcustomlabel.vtalltext.allcategories' | t }}</span>
                   </div>
                   <div class="block-content verticalmenu-content">
                     <div class="villa-menu-wrapper vertical">
-                      <ul id="menu-vertical-menu" class="draly-nav vertical-menu villa-menu">
-                        {%- for link in section.settings.menu.links -%}
-                          {% assign assignsubmenu = true %}
-                          {% assign displaymegamenu = false %}
-                          {% assign blank_link = false %}
-                          {% for block in section.blocks %}
-                            {% assign case_title = block.settings.menuname | downcase %}
-                            {% assign lower_title = link.title | downcase %}
-                            {% if lower_title == case_title %}
-                              {% assign displaymegamenu = true %}
-                              {% if block.settings.showsubmenu == false %}
-                                {% assign assignsubmenu = false %}
-                              {% endif %}
-                              {%- if link.links == blank -%}
-                                {% assign blank_link = lower_title %}
-                              {% endif %}
-                            {% endif %}
-                          {%- endfor -%}
-                          <li>
-                            {%- if link.links != blank -%}
-                              <details-disclosure>
-                                <details id="Details-HeaderMenu-{{ forloop.index }}">
-                                  <summary class="header__menu-item list-menu__item link focus-inset">
-                                    <span
-                                      {%- if link.child_active %}
-                                        class="header__active-menu-item"
-                                      {% endif %}
-                                    >
-                                      {{- link.title | escape -}}
-                                    </span>
-                                    {% render 'icon-caret' %}
-                                  </summary>
-                                  <div
-                                    id="HeaderMenu-MenuList-{{ forloop.index }}"
-                                    class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}"
-                                    tabindex="-1"
-                                  >
-                                    {% if assignsubmenu %}
-                                      <div class="container">
-                                        <div class="row wp_submenus_dep">
-                                          {%- for childlink in link.links -%}
-                                            <div class="{% if link.links.size == 1 %}col-12 {% elsif link.links.size == 2 %}col-12 {% else %}col-3 {% endif %}">
-                                              <div class="vtmenuinner">
-                                                <a
-                                                  href="{{ childlink.url }}"
-                                                  class="header__menu-item list-menu__item link link--text focus-inset caption-large wp_atitls{% if childlink.current %} list-menu__item--active{% endif %}"
-                                                  {% if childlink.current %}
-                                                    aria-current="page"
-                                                  {% endif %}
-                                                >
-                                                  {{ childlink.title | escape }}
-                                                </a>
-                                                <ul
-                                                  id="HeaderMenu-SubMenuList-{{ forloop.index }}"
-                                                  class="header__submenu list-menu motion-reduce"
-                                                >
-                                                  {%- for grandchildlink in childlink.links -%}
-                                                    <li>
-                                                      <a
-                                                        href="{{ grandchildlink.url }}"
-                                                        class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
-                                                        {% if grandchildlink.current %}
-                                                          aria-current="page"
-                                                        {% endif %}
-                                                      >
-                                                        {{ grandchildlink.title | escape }}
-                                                      </a>
-                                                    </li>
-                                                  {%- endfor -%}
-                                                </ul>
-                                              </div>
-                                            </div>
-                                          {%- endfor -%}
-                                        </div>
-                                      </div>
-                                    {% endif %}
-                                    {% render 'megamenu', blocks: section.blocks, title: link.title %}
-                                    <div class="text-right vthseeall container">
-                                      <a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a>
-                                    </div>
-                                  </div>
-                                </details>
-                              </details-disclosure>
-                            {%- else -%}
-                              {% if blank_link %}
-                                <details-disclosure>
-                                  <details id="Details-HeaderMenu-{{ forloop.index }}">
-                                    <summary class="header__menu-item list-menu__item link focus-inset">
-                                      <span
-                                        {%- if link.child_active %}
-                                          class="header__active-menu-item"
-                                        {% endif %}
-                                      >
-                                        {{- link.title | escape -}}
-                                      </span>
-                                      {% render 'icon-caret' %}
-                                    </summary>
-                                    <div
-                                      id="HeaderMenu-MenuList-{{ forloop.index }}"
-                                      class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}"
-                                      tabindex="-1"
-                                    >
-                                      {% render 'megamenu', blocks: section.blocks, title: link.title %}
-                                      <div class="text-right vthseeall container">
-                                        <a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a>
-                                      </div>
-                                    </div>
-                                  </details>
-                                </details-disclosure>
-                                {% assign blank_link = false %}
-                              {% else %}
-                                <a
-                                  href="{{ link.url }}"
-                                  class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"
-                                  {% if link.current %}
-                                    aria-current="page"
-                                  {% endif %}
-                                >
-                                  <span
-                                    {%- if link.current %}
-                                      class="header__active-menu-item"
-                                    {% endif %}
-                                  >
-                                    {{- link.title | escape -}}
-                                  </span>
-                                </a>
-                              {% endif %}
-                            {%- endif -%}
-                          </li>
-                        {%- endfor -%}
-                      </ul>
+                      {% include 'header-menu-vertical' %}
                     </div>
                   </div>
                 </nav>
               {%- endif -%}
-              {%- if section.settings.secmenu != blank -%}
+              {%- if section.settings.primarymenu != blank -%}
                 <div class="box-header-nav">
                   <div class="villa-menu-wrapper horizontal">
-                    <ul id="menu-primary-menu" class="draly-nav main-menu horizontal-menu villa-menu">
-                      {%- for link in section.settings.secmenu.links -%}
-                        <li class="menu-item">
-                          <a href="{{ link.url }}">
-                            <span>{{ link.title | escape }}</span>
-                          </a>
-                        </li>
-                      {%- endfor -%}
-                    </ul>
+                    {% include 'header-menu-primary' %}
                   </div>
                 </div>
               {%- endif -%}
-              {% comment %} Villatheme Wishlist {% endcomment %}
-              <div class="block-wishlist block-icon">
-                {% if customer %}
-                  <a href="/pages/wishlist" class="block-link"
-                    ><strong>
-                      {%- render 'icon-header-wishlist' -%}
-                      <span class="vtwishcount">0</span></strong
-                    ><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a
-                  >
-                {% else %}
-                  <a href="/account/login" class="block-link"
-                    ><strong>
-                      {%- render 'icon-header-wishlist' -%}
-                      <span class="vtwishcount count">0</span></strong
-                    ><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a
-                  >
-                {% endif %}
-              </div>
-              {% comment %} Villatheme Wishlist Over {% endcomment %}
-              {% if section.settings.show_contact %}
-                <div class="header-contact">
-                  <div class="header-contact-inner">
-                    <div class="header-contact-image">{% render 'icon-header-phone' %}</div>
-                    <div class="header-contact-info">
-                      <span class="header-contact-title">{{ section.settings.bnts1 }}</span>
-                      <a href="tel:{{section.settings.mobile}}">{{ section.settings.mobile }}</a>
-                    </div>
-                  </div>
-                </div>
-              {% endif %}
+              {% include 'header-wishlist' %}
+              {% include 'header-contact' %}
             </div>
           </div>
         </div>
@@ -470,9 +221,9 @@
                         width: section.settings.mobile_logo_width,
                         alt: logo_alt
                     }}
+                  {%- else -%}
+                    <span class="h1">{{ shop.name }}</span>
                   {%- endif -%}
-                {%- else -%}
-                  <span class="h1">{{ shop.name }}</span>
                 {%- endif -%}
                 {% comment %}Mobile view logo end{% endcomment %}
               </a>
@@ -485,87 +236,8 @@
               </div>
             </div>
             <div class="header-meta">
-              {%- if shop.customer_accounts_enabled -%}
-                {% if section.settings.show_acicon %}
-                  <div class="vtheaduser header-block">
-                    <a
-                      data-draly="draly-dropdown"
-                      title="{% if customer %}{{ 'vtcustomlabel.vtalltext.account' | t }}{% else %}{{ 'vtcustomlabel.vtalltext.log_in' | t }}{% endif %}"
-                    >
-                      <span class="block-icon">{% render 'icon-account' %}</span>
-                    </a>
-                    <div class="draly-dropdown">
-                      <ul>
-                        {% if customer %}
-                          <li>
-                            <a href="/account">
-                              {% render 'icon-header-user' %}
-                              {{ 'vtcustomlabel.vtalltext.account' | t }}
-                            </a>
-                          </li>
-                          <li>
-                            <a href="/account/logout">
-                              {% render 'icon-signout' %}
-                              {{ 'vtcustomlabel.vtalltext.log_out' | t }}
-                            </a>
-                          </li>
-                        {% else %}
-                          <li>
-                            <a href="/account/login">
-                              {% render 'icon-lock' %}
-                              {{ 'vtcustomlabel.vtalltext.log_in' | t }}
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="/account/register"
-                              title="{{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}"
-                            >
-                              {% render 'icon-header-user' %}
-                              {{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}
-                            </a>
-                          </li>
-                        {% endif %}
-                      </ul>
-                    </div>
-                  </div>
-                {% endif %}
-              {%- endif -%}
-
-              {% comment %} Villatheme Cart Dropdown {% endcomment %}
-              {% if settings.show_shopicon %}
-                <div class="vthcart header-block">
-                  <a href="{{ routes.cart_url }}" class="block-link" id="cart-icon-bubble">
-                    <span class="block-icon">
-                      {% render 'icon-header-minicart' %}
-                    </span>
-
-                    {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
-                      <span class="vthcartitem">{{ cart.item_count }}</span>
-                    {%- elsif settings.vt_cartnumber == 'vt_shoptotal' -%}
-                      <span class="vtcarthtotal text-left">
-                        <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
-                        {%- if settings.currency_code_enabled -%}
-                          <span>{{ cart.total_price | money_with_currency }}</span>
-                        {%- else -%}
-                          <span>{{ cart.total_price | money }}</span>
-                        {%- endif -%}
-                      </span>
-                    {%- else -%}
-                      <span class="vthcartitem vtqtyboth">{{ cart.item_count }}</span>
-                      <span class="vtcarthtotal text-left">
-                        <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
-                        {%- if settings.currency_code_enabled -%}
-                          <span>{{ cart.total_price | money_with_currency }}</span>
-                        {%- else -%}
-                          <span>{{ cart.total_price | money }}</span>
-                        {%- endif -%}
-                      </span>
-                    {%- endif -%}
-                  </a>
-                </div>
-              {% endif %}
-              {% comment %} Villatheme Cart Dropdown Over {% endcomment %}
+              {% include 'header-user' %}
+              {% include 'header-minicart' %}
             </div>
             {%- if section.settings.menu != blank -%}
               <div class="block-menu-bar">
@@ -659,56 +331,6 @@
     },
     {
       "type": "header",
-      "content": "Contact"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_contact",
-      "default": true,
-      "label": "Show contact details"
-    },
-    {
-      "type": "text",
-      "id": "bnts1",
-      "default": "call us now:",
-      "label": "Contact label"
-    },
-    {
-      "type": "text",
-      "id": "mobile",
-      "label": "Add contact no",
-      "default": "+12 567 2567 125"
-    },
-    {
-      "type": "url",
-      "id": "link_s",
-      "label": "Link URL"
-    },
-    {
-      "type": "header",
-      "content": "Menu"
-    },
-    {
-      "type": "link_list",
-      "id": "menu",
-      "default": "main-menu",
-      "label": "t:sections.header.settings.menu.label"
-    },
-    {
-      "type": "link_list",
-      "id": "secmenu",
-      "default": "main-menu",
-      "label": "Secondary menu",
-      "info": "Secondary menu won't show when the 'Logo left, menu center' setting is enabled. This menu won't show dropdown items."
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_sticky_header",
-      "default": true,
-      "label": "t:sections.header.settings.enable_sticky_header.label"
-    },
-    {
-      "type": "header",
       "content": "Top bar"
     },
     {
@@ -736,10 +358,59 @@
       "default": "Get 30% Off On Selected Items"
     },
     {
+      "type": "header",
+      "content": "Contact"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact",
+      "default": true,
+      "label": "Show contact details"
+    },
+    {
       "type": "text",
-      "id": "topemail",
-      "label": "Email",
-      "default": "support@draly.com"
+      "id": "bnts1",
+      "default": "Support 24/7",
+      "label": "Contact label"
+    },
+    {
+      "type": "text",
+      "id": "mobile",
+      "label": "Add contact no",
+      "default": "+1 (555) 123-4567"
+    },
+    {
+      "type": "url",
+      "id": "link_s",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "primary_menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "link_list",
+      "id": "vertical_menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_header",
+      "default": true,
+      "label": "t:sections.header.settings.enable_sticky_header.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_header_mobile",
+      "default": true,
+      "label": "t:sections.header.settings.enable_sticky_header.label"
     },
     {
       "type": "header",
@@ -763,7 +434,6 @@
       "default": true,
       "label": "t:sections.footer.settings.enable_language_selector.label"
     },
-
     {
       "type": "header",
       "content": "t:sections.all.spacing"

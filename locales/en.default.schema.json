@@ -890,8 +890,10 @@
           "label": "Show separator line"
         },
         "enable_sticky_header": {
-          "label": "Enable sticky header",
-          "info": "Header shows on the screen as customers scroll up."
+          "label": "Enable sticky header"
+        },
+        "enable_sticky_header_mobile": {
+          "label": "Enable sticky header mobile"
         },
         "margin_bottom": {
           "label": "Bottom margin"

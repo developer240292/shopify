@@ -1,0 +1,15 @@
+<div class="block-wishlist block-icon">
+  {% if customer %}
+    <a href="/pages/wishlist" class="block-link"
+      ><strong>
+        {%- render 'icon-header-wishlist' -%}
+        <span class="vtwishcount">0</span></strong
+      ><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a
+    >
+  {% else %}
+    <a href="/account/login" class="block-link">
+      {%- render 'icon-header-wishlist' -%}
+      <span class="vtwishcount count">0</span>
+    </a>
+  {% endif %}
+</div>

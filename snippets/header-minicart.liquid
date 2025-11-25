@@ -1,0 +1,25 @@
+{% if settings.show_shopicon %}
+  <div class="block-minicart header-block draly-dropdown minicart-slideout">
+    <a
+      href="{{ routes.cart_url }}"
+      data-draly="draly-dropdown"
+      class="block-link link-dropdown"
+      id="cart-icon-bubble"
+    >
+      <span class="block-icon">
+        {% render 'icon-header-minicart' %}
+        <span class="count">{{ cart.item_count }}</span>
+      </span>
+      <span class="block-text">
+        <span>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</span>
+        <strong>
+          {%- if settings.currency_code_enabled -%}
+            {{ cart.total_price | money_with_currency }}
+          {%- else -%}
+            {{ cart.total_price | money }}
+          {%- endif -%}
+        </strong>
+      </span>
+    </a>
+  </div>
+{% endif %}
