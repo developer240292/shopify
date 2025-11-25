@@ -14437,7 +14437,13 @@ details[open] .modal-overlay::after {
     }
 }
 
-/* Header*/
+/*HEADER*/
+.header-top {
+    padding: 15px 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
 .header-desktop .header-middle {
     padding: 25px 0;
 }
@@ -15194,17 +15200,6 @@ button.loading .loading-overlay__spinner svg .path {
     border-radius: var(--media-radius);
 }
 
-.wp_pro_banner_text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 
 /* Special product */
 .vtslickspe .card {

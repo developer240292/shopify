@@ -292,10 +292,13 @@
                   <span class="block-icon">{% render 'icon-header-user' %}</span>
                   <span class="block-text">
                     {% if customer %}
-                      <span></span>
-                      <strong>{{ 'vtcustomlabel.vtalltext.account' | t }}</strong>
+                      <span>{{ 'vtcustomlabel.vtalltext.account' | t }}</span>
+                      <strong>
+                        {{- customer.first_name }}
+                        {{ customer.last_name -}}
+                      </strong>
                     {% else %}
-                      <span></span>
+                      <span>{{ 'vtcustomlabel.vtalltext.account' | t }}</span>
                       <strong>{{ 'vtcustomlabel.vtalltext.log_in' | t }}</strong>
                     {% endif %}
                   </span>
@@ -336,33 +339,27 @@
 
           {% comment %} Villatheme Cart Dropdown {% endcomment %}
           {% if settings.show_shopicon %}
-            <div class="block-minicart block-woo draly-dropdown minicart-slideout">
-              <a href="{{ routes.cart_url }}" data-draly="draly-dropdown" class="block-link link-dropdown" id="cart-icon-bubble">
+            <div class="block-minicart header-block draly-dropdown minicart-slideout">
+              <a
+                href="{{ routes.cart_url }}"
+                data-draly="draly-dropdown"
+                class="block-link link-dropdown"
+                id="cart-icon-bubble"
+              >
                 <span class="block-icon">
                   {% render 'icon-header-minicart' %}
+                  <span class="count">{{ cart.item_count }}</span>
                 </span>
-                {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
-                  <span class="vthcartitem">{{ cart.item_count }}</span>
-                {%- elsif settings.vt_cartnumber == 'vt_shoptotal' -%}
-                  <span class="vtcarthtotal text-left">
-                    <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
+                <span class="block-text">
+                  <span>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</span>
+                  <strong>
                     {%- if settings.currency_code_enabled -%}
-                      <span>{{ cart.total_price | money_with_currency }}</span>
+                      {{ cart.total_price | money_with_currency }}
                     {%- else -%}
-                      <span>{{ cart.total_price | money }}</span>
+                      {{ cart.total_price | money }}
                     {%- endif -%}
-                  </span>
-                {%- else -%}
-                  <span class="vthcartitem vtqtyboth">{{ cart.item_count }}</span>
-                  <span class="vtcarthtotal text-left">
-                    <strong>{{ 'vtcustomlabel.vtalltext.mycart' | t }}</strong>
-                    {%- if settings.currency_code_enabled -%}
-                      <span>{{ cart.total_price | money_with_currency }}</span>
-                    {%- else -%}
-                      <span>{{ cart.total_price | money }}</span>
-                    {%- endif -%}
-                  </span>
-                {%- endif -%}
+                  </strong>
+                </span>
               </a>
             </div>
           {% endif %}
