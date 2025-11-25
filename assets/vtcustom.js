@@ -1,6 +1,35 @@
 jQuery(document).ready(function ($) {
-    "use strict"; 
-
+    "use strict";
+    function draly_header_sticky($elem) {
+        var $this = $elem;
+        $this.on('draly_header_sticky', function () {
+            $this.each(function () {
+                var previousScroll = 0,
+                    header_wrap = $(this),
+                    header_position = $(this).find('.header-position'),
+                    headerOrgOffset = header_position.offset().top;
+                header_wrap.css('height', header_position.outerHeight());
+                $(document).on('scroll', function (ev) {
+                    var currentScroll = $(this).scrollTop();
+                    if (currentScroll > headerOrgOffset) {
+                        header_position.addClass('fixed');
+                    } else {
+                        header_position.removeClass('fixed');
+                    }
+                    previousScroll = currentScroll;
+                });
+            })
+        }).trigger('draly_header_sticky');
+        $(window).on('resize', function () {
+            $this.trigger('draly_header_sticky');
+        });
+    }
+    if ($('.header-sticky .header-desktop-wrap').length) {
+        draly_header_sticky($('.header-sticky .header-desktop-wrap'));
+    }
+    if ($('.header-mobile-sticky .header-mobile-wrap').length) {
+        draly_header_sticky($('.header-mobile-sticky .header-mobile-wrap'));
+    }
     function draly_init_carousel($elem) {
         $elem.not('.slick-initialized').each(function () {
             var _this = $(this),

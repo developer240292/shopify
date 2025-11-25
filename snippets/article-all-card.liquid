@@ -54,7 +54,7 @@
 
         <div class="allblgdate">
             {%- if show_author -%}
-                <div class="vtblogauth">{% render 'icon-login' %}&nbsp;{{ article.author -}}</div>
+                <div class="vtblogauth">{% render 'icon-header-user' %}&nbsp;{{ article.author -}}</div>
             {%- endif -%}
             {%- if show_date -%}
                 <div class="vtblogdate">{% render 'icon-calendar' %}&nbsp;{{- article.published_at | time_tag: format: 'date' -}}</div>

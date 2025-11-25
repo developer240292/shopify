@@ -292,14 +292,14 @@
                   data-draly="draly-dropdown"
                   title="{% if customer %}{{ 'vtcustomlabel.vtalltext.account' | t }}{% else %}{{ 'vtcustomlabel.vtalltext.log_in' | t }}{% endif %}"
                 >
-                  <span class="svgbg">{% render 'icon-account' %}</span>
+                  <span class="svgbg">{% render 'icon-header-user' %}</span>
                 </a>
                 <div class="draly-dropdown">
                   <ul>
                     {% if customer %}
                       <li>
                         <a href="/account">
-                          {% render 'icon-login' %}
+                          {% render 'icon-header-user' %}
                           {{ 'vtcustomlabel.vtalltext.account' | t }}
                         </a>
                       </li>
@@ -321,7 +321,7 @@
                           href="/account/register"
                           title="{{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}"
                         >
-                          {% render 'icon-login' %}
+                          {% render 'icon-header-user' %}
                           {{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}
                         </a>
                       </li>
@@ -541,14 +541,14 @@
                 {% if customer %}
                   <a href="/pages/wishlist" class="block-link"
                     ><strong>
-                      {%- render 'icon-wishlist' -%}
+                      {%- render 'icon-header-wishlist' -%}
                       <span class="vtwishcount">0</span></strong
                     ><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a
                   >
                 {% else %}
                   <a href="/account/login" class="block-link"
                     ><strong>
-                      {%- render 'icon-wishlist' -%}
+                      {%- render 'icon-header-wishlist' -%}
                       <span class="vtwishcount count">0</span></strong
                     ><span>{{ 'vtcustomlabel.vtalltext.wishlist' | t }}</span></a
                   >
@@ -642,7 +642,7 @@
                         {% if customer %}
                           <li>
                             <a href="/account">
-                              {% render 'icon-login' %}
+                              {% render 'icon-header-user' %}
                               {{ 'vtcustomlabel.vtalltext.account' | t }}
                             </a>
                           </li>
@@ -664,7 +664,7 @@
                               href="/account/register"
                               title="{{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}"
                             >
-                              {% render 'icon-login' %}
+                              {% render 'icon-header-user' %}
                               {{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}
                             </a>
                           </li>
