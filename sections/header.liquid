@@ -299,20 +299,17 @@
                     {% if customer %}
                       <li>
                         <a href="/account">
-                          {% render 'icon-header-user' %}
                           {{ 'vtcustomlabel.vtalltext.account' | t }}
                         </a>
                       </li>
                       <li>
                         <a href="/account/logout">
-                          {% render 'icon-signout' %}
                           {{ 'vtcustomlabel.vtalltext.log_out' | t }}
                         </a>
                       </li>
                     {% else %}
                       <li>
                         <a href="/account/login">
-                          {% render 'icon-lock' %}
                           {{ 'vtcustomlabel.vtalltext.log_in' | t }}
                         </a>
                       </li>
@@ -321,7 +318,6 @@
                           href="/account/register"
                           title="{{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}"
                         >
-                          {% render 'icon-header-user' %}
                           {{ 'vtcustomlabel.vtalltext.create_accounthome' | t }}
                         </a>
                       </li>
@@ -337,11 +333,7 @@
             <div class="vthcart">
               <a href="{{ routes.cart_url }}" class="focus-inset" id="cart-icon-bubble">
                 <span class="svgbg">
-                  {%- if settings.vt_carticon == 'vt_shopcart' -%}
-                    {% render 'icon-header-minicart' %}
-                  {%- else -%}
-                    {% render 'icon-hcartbag' %}
-                  {%- endif -%}
+                  {% render 'icon-header-minicart' %}
                 </span>
 
                 {%- if settings.vt_cartnumber == 'vt_shopqty' -%}
