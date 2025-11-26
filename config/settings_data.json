@@ -94,37 +94,6 @@
     "sections": {
       "header": {
         "type": "header",
-        "blocks": {
-          "55d0341f-b43a-490b-9a67-ef52e5414661": {
-            "type": "megamenu-gallery",
-            "settings": {
-              "menuname": "Shop Grid",
-              "showsubmenu": false,
-              "vt1_img": "shopify://shop_images/stylish-summer-necklace_925x_20730d4a-c93d-47b5-a90f-26dcf85929b6.jpg",
-              "vt1_link": "shopify://collections/frontpage",
-              "vt1_text": "tesst",
-              "vt2_link": "shopify://collections/women",
-              "vt2_text": "asdsad",
-              "vt3_link": "shopify://collections/accessories",
-              "vt3_text": "sada",
-              "vt4_link": "shopify://collections/shoes",
-              "vt4_text": "e2342"
-            }
-          },
-          "megamenu_blog_aG6pFG": {
-            "type": "megamenu-blog",
-            "settings": {
-              "menuname": "Shop list",
-              "showsubmenu": false,
-              "blog": "news",
-              "blog_to_show": 4
-            }
-          }
-        },
-        "block_order": [
-          "55d0341f-b43a-490b-9a67-ef52e5414661",
-          "megamenu_blog_aG6pFG"
-        ],
         "settings": {
           "logo_width": 192,
           "mobile_logo_width": 110,
@@ -136,7 +105,7 @@
           "show_contact": true,
           "bnts1": "Support 24/7",
           "mobile": "+1 (555) 123-4567",
-          "primary_menu": "megamenu-shop",
+          "primary_menu": "main-menu",
           "vertical_menu": "vertical-menu",
           "vertical_menu_always_open_on_home": true,
           "enable_sticky_header": true,
