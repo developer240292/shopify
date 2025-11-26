@@ -143,14 +143,14 @@
             <div class="header-nav-inner">
               {% comment %}Simple Menu{% endcomment %}
               {%- if section.settings.vertical_menu != blank -%}
-                <nav class="vertical-wrapper block-nav-category has-vertical-menu has-open">
-                  <div class="block-title active">
+                <nav class="vertical-wrapper block-nav-category has-vertical-menu always-open">
+                  <div class="block-title">
                     {% render 'icon-header-menubar' %}
                     <span class="text-title">{{ 'vtcustomlabel.vtalltext.allcategories' | t }}</span>
                     {% render 'icon-caret' %}
                   </div>
                   <div class="block-content verticalmenu-content">
-                    <div class="villa-menu-wrapper vertical"> 
+                    <div class="villa-menu-wrapper vertical">
                       {% render 'header-menu-vertical' %}
                     </div>
                   </div>
@@ -385,6 +385,12 @@
       "id": "vertical_menu",
       "default": "main-menu",
       "label": "t:sections.header.settings.vertical_menu.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "vertical_menu_always_open_on_home",
+      "default": false,
+      "label": "t:sections.header.settings.vertical_menu_always_open_on_home.label"
     },
     {
       "type": "checkbox",

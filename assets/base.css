@@ -14820,7 +14820,7 @@ details[open] .modal-overlay::after {
 }
 
 .vertical-wrapper.block-nav-category .block-title {
-    padding: 0 15px 0 20px;
+    padding: 0 15px;
     cursor: pointer;
     background-color: var(--color-base-accent-1);
     color: #fff;
@@ -14856,7 +14856,7 @@ details[open] .modal-overlay::after {
     z-index: 99;
     border: 1px solid var(--color-base-accent-1);
     border-radius: 10px;
-    padding: 5px 10px 5px 0;
+    padding: 5px 0;
     margin-top: 10px;
 }
 

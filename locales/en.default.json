@@ -30,11 +30,7 @@
         "facebook": "Facebook",
         "pinterest": "Pinterest",
         "instagram": "Instagram",
-        "tumblr": "Tumblr",
-        "snapchat": "Snapchat",
         "youtube": "YouTube",
-        "vimeo": "Vimeo",
-        "tiktok": "TikTok"
       }
     },
     "continue_shopping": "Continue shopping",
@@ -232,10 +228,8 @@
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
-      "cart_count": {
-        "one": "{{ count }} item",
-        "other": "{{ count }} items"
-      }
+      "vertical_menu": "Vertical Menu",
+      "vertical_menu_always_open_on_home": "Vertical Menu Always Open On Home"
     },
     "cart": {
       "title": "Your cart",
