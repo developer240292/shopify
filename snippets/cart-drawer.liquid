@@ -1,8 +1,8 @@
 {% comment %}
-    Renders cart drawer
+  Renders cart drawer
 
-    Usage:
-    {% render 'cart-drawer' %}
+  Usage:
+  {% render 'cart-drawer' %}
 {% endcomment %}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
@@ -10,24 +10,37 @@
 <style>
   .drawer {
     visibility: hidden;
-  } 
+  }
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
-    <div class="drawer__inner" role="dialog" aria-modal="true" aria-label="{{ 'sections.cart.title' | t }}" tabindex="-1">
-       {%- if cart == empty -%}
+    <div
+      class="drawer__inner"
+      role="dialog"
+      aria-modal="true"
+      aria-label="{{ 'sections.cart.title' | t }}"
+      tabindex="-1"
+    >
+      {%- if cart == empty -%}
         <div class="drawer__inner-empty">
           <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
             <div class="cart-drawer__empty-content">
               <div class="cart__empty-text">{{ 'sections.cart.empty' | t }}</div>
-              <button class="drawer__close focus-inset" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+              <button
+                class="drawer__close focus-inset"
+                type="button"
+                onclick="this.closest('cart-drawer').close()"
+                aria-label="{{ 'accessibility.close' | t }}"
+              >
+                {% render 'icon-close' %}
+              </button>
               <a href="{{ routes.all_products_collection_url }}" class="button button--primary">
                 {{ 'general.continue_shopping' | t }}
               </a>
 
-              {%- if shop.customer_accounts_enabled and customer == nil -%}
+              {%- if shop.customer_accounts_enabled and customer == null -%}
                 <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
                 <p class="cart__login-paragraph">
                   {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
@@ -37,40 +50,58 @@
           </div>
           {%- if settings.cart_drawer_collection != blank -%}
             <div class="cart-drawer__collection">
-              {% render 'card-collection',
-                card_collection: settings.cart_drawer_collection,
-                columns: 1
-              %}
+              {% render 'card-collection', card_collection: settings.cart_drawer_collection, columns: 1 %}
             </div>
           {%- endif -%}
         </div>
       {%- endif -%}
       <div class="drawer__header">
         <div class="drawer__heading">{{ 'sections.cart.title' | t }}</div>
-        <button class="drawer__close focus-inset" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+        <button
+          class="drawer__close focus-inset"
+          type="button"
+          onclick="this.closest('cart-drawer').close()"
+          aria-label="{{ 'accessibility.close' | t }}"
+        >
+          {% render 'icon-close' %}
+        </button>
       </div>
-      <cart-drawer-items {% if cart == empty %}class=" is-empty"{% endif %}>
-        <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">
+      <cart-drawer-items
+        {% if cart == empty %}
+          class=" is-empty"
+        {% endif %}
+      >
+        <form
+          action="{{ routes.cart_url }}"
+          id="CartDrawer-Form"
+          class="cart__contents cart-drawer__form"
+          method="post"
+        >
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
-
-            {% if settings.vtenable_ship %}
-              {% assign shipminprice = settings.vtmin_order | times: 100 %}
-              <div class="vtship">
-                <div class="progress" max="100">
-                    <div class="determinate" style="width: {{ cart.total_price | times: 100 | divided_by: shipminprice | round | at_most: 100 }}%" value="{{ cart.total_price | times: 100 | divided_by: shipminprice | round: 2 | at_most: 100 }}">
+              {% if settings.vtenable_ship %}
+                {% assign shipminprice = settings.vtmin_order | times: 100 %}
+                <div class="vtship">
+                  <div class="progress" max="100">
+                    <div
+                      class="determinate"
+                      style="width: {{ cart.total_price | times: 100 | divided_by: shipminprice | round | at_most: 100 }}%"
+                      value="{{ cart.total_price | times: 100 | divided_by: shipminprice | round: 2 | at_most: 100 }}"
+                    >
                       {%- render 'icon-delivery' -%}
                     </div>
+                  </div>
+                  <p>
+                    {% if cart.total_price >= shipminprice %}
+                      {{ 'vtcustomlabel.vtalltext.free_ship' | t }}
+                    {% elsif cart.total_price < shipminprice %}
+                      {{ 'vtcustomlabel.vtalltext.free_shiponly' | t }}
+                      <b>{{ shipminprice | minus: cart.total_price | money }}</b>
+                      {{ 'vtcustomlabel.vtalltext.free_shipaway' | t }}
+                    {% endif %}
+                  </p>
                 </div>
-                <p>
-                  {% if cart.total_price >= shipminprice %}
-                    {{ 'vtcustomlabel.vtalltext.free_ship' | t }}
-                  {% elsif cart.total_price < shipminprice %}
-                    {{ 'vtcustomlabel.vtalltext.free_shiponly' | t }} <b>{{ shipminprice | minus: cart.total_price | money }}</b> {{ 'vtcustomlabel.vtalltext.free_shipaway' | t }}
-                  {% endif %}
-                </p>
-              </div>
-            {% endif %}
+              {% endif %}
 
               <div class="drawer__cart-items-wrapper">
                 <table class="cart-items">
@@ -81,7 +112,8 @@
                           {% if item.image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                             <a href="{{ item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
-                            <img class="cart-item__image img-fluid"
+                            <img
+                              class="cart-item__image img-fluid"
                               src="{{ item.image | image_url: width: 150 }}"
                               alt="{{ item.image.alt | escape }}"
                               loading="lazy"
@@ -93,15 +125,26 @@
 
                         <td class="cart-item__details">
                           {%- if settings.show_vendor -%}
-                            <p class="light"><small>{{ item.product.vendor }}</small></p>
+                            <p class="light">
+                              <small>{{ item.product.vendor }}</small>
+                            </p>
                           {%- endif -%}
 
-                          <a href="{{ item.url }}" class="cart-item__name h4 text-break">{{ item.product.title | escape }}</a>
+                          <a href="{{ item.url }}" class="cart-item__name h4 text-break">
+                            {{- item.product.title | escape -}}
+                          </a>
 
                           <div class="cart-item__totals">
                             <div class="loading-overlay hidden">
                               <div class="loading-overlay__spinner">
-                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  role="presentation"
+                                  class="spinner"
+                                  viewBox="0 0 66 66"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
                                   <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                                 </svg>
                               </div>
@@ -132,7 +175,9 @@
                                   <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
                                   {{ item.variant.unit_price | money }}
                                   <span aria-hidden="true">/</span>
-                                  <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+                                  <span class="visually-hidden"
+                                    >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
+                                  >
                                   {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
                                     {{- item.variant.unit_price_measurement.reference_value -}}
                                   {%- endif -%}
@@ -142,13 +187,19 @@
                             </div>
                           </div>
 
-                          {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
+                          {%- if item.product.has_only_default_variant == false
+                            or item.properties.size != 0
+                            or item.selling_plan_allocation != null
+                          -%}
                             <dl>
                               {%- if item.product.has_only_default_variant == false -%}
                                 {%- for option in item.options_with_values -%}
                                   <div class="product-option">
-                                    <dt>{{ option.name }}: </dt>
-                                    <dd>{{ option.value }}{% unless forloop.last %}, {% endunless %}</dd>
+                                    <dt>{{ option.name }}:</dt>
+                                    <dd>
+                                      {{ option.value -}}
+                                      {%- unless forloop.last %}, {% endunless %}
+                                    </dd>
                                   </div>
                                 {%- endfor -%}
                               {%- endif -%}
@@ -157,10 +208,15 @@
                                 {%- assign property_first_char = property.first | slice: 0 -%}
                                 {%- if property.last != blank and property_first_char != '_' -%}
                                   <div class="product-option">
-                                    <dt>{{ property.first }}: </dt>
+                                    <dt>{{ property.first }}:</dt>
                                     <dd>
                                       {%- if property.last contains '/uploads/' -%}
-                                        <a href="{{ property.last }}" class="link" target="_blank" aria-describedby="a11y-new-window-message">
+                                        <a
+                                          href="{{ property.last }}"
+                                          class="link"
+                                          target="_blank"
+                                          aria-describedby="a11y-new-window-message"
+                                        >
                                           {{ property.last | split: '/' | last }}
                                         </a>
                                       {%- else -%}
@@ -185,15 +241,17 @@
                           </ul>
                         </td>
 
-
                         <td class="cart-item__quantity">
                           <div class="cart-item__quantity-wrapper">
                             <quantity-input class="quantity">
                               <button class="quantity__button no-js-hidden" name="minus" type="button">
-                                <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
+                                <span class="visually-hidden">
+                                  {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
+                                </span>
                                 {% render 'icon-minus' %}
                               </button>
-                              <input class="quantity__input"
+                              <input
+                                class="quantity__input"
                                 type="number"
                                 name="updates[]"
                                 value="{{ item.quantity }}"
@@ -203,21 +261,40 @@
                                 data-index="{{ item.index | plus: 1 }}"
                               >
                               <button class="quantity__button no-js-hidden" name="plus" type="button">
-                                <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
+                                <span class="visually-hidden">
+                                  {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
+                                </span>
                                 {% render 'icon-plus' %}
                               </button>
                             </quantity-input>
 
-                            <cart-remove-button id="CartDrawer-Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
-                              <button class="focus-inset button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
-                                {% render 'icon-removecart' %}<span>{{ 'vtcustomlabel.vtalltext.remove' | t }}</span>
+                            <cart-remove-button
+                              id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
+                              data-index="{{ item.index | plus: 1 }}"
+                            >
+                              <button
+                                class="focus-inset button button--tertiary"
+                                aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
+                              >
+                                {% render 'icon-removecart' -%}
+                                <span>{{ 'vtcustomlabel.vtalltext.remove' | t }}</span>
                               </button>
                             </cart-remove-button>
                           </div>
 
-                          <div id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}" class="cart-item__error" role="alert">
+                          <div
+                            id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}"
+                            class="cart-item__error"
+                            role="alert"
+                          >
                             <small class="cart-item__error-text"></small>
-                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                            <svg
+                              aria-hidden="true"
+                              focusable="false"
+                              role="presentation"
+                              class="icon icon-error"
+                              viewBox="0 0 13 13"
+                            >
                               <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
                               <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
                               <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
@@ -232,7 +309,9 @@
               </div>
             {%- endif -%}
             <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
-            <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>
+            <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">
+              {{ 'accessibility.loading' | t }}
+            </p>
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
@@ -240,24 +319,44 @@
       {% comment %}Cart upsell product{% endcomment %}
       {%- if settings.upsellp -%}
         <slider-component class="vtcartupsell {% if cart == empty %} is-empty{% endif %} {% if settings.upsellpempty %} is-emptyrmv{% endif %}">
-          {%- if settings.vtuphead -%}<p class="upshead">{{ settings.vtuphead }}</p>{%- endif -%}
-            <ul class="grid slider" id="Slider-{{ section.id }}" >
-              {%- for product in settings.upsellcollection.products limit: settings.upsell_to_show -%}
-                <li class="cartupciner slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
-                  {% render 'card-productupsell', card_product: product %}
-                </li>
-              {%- else -%}
-                {%- for i in (1..4) -%}
-                  <div class="cartupselldummy cartupciner slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
-                    {% render 'product-card-placeholder' %}
-                  </div>
-                {%- endfor -%}
+          {%- if settings.vtuphead -%}
+            <p class="upshead">{{ settings.vtuphead }}</p>
+          {%- endif -%}
+          <ul class="grid slider" id="Slider-{{ section.id }}">
+            {%- for product in settings.upsellcollection.products limit: settings.upsell_to_show -%}
+              <li class="cartupciner slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
+                {% render 'card-productupsell', card_product: product %}
+              </li>
+            {%- else -%}
+              {%- for i in (1..4) -%}
+                <div class="cartupselldummy cartupciner slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
+                  {% render 'product-card-placeholder' %}
+                </div>
               {%- endfor -%}
-            </ul>
-            <div class="vthomesbtn no-js-hidden">
-              <button type="button" class="slider-button slider-button--prev focus-inset" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" data-step="1">{% render 'icon-caret' %}</button>
-              <button type="button" class="slider-button slider-button--next focus-inset" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" data-step="1">{% render 'icon-caret' %}</button>
-            </div>
+            {%- endfor -%}
+          </ul>
+          <div class="vthomesbtn no-js-hidden">
+            <button
+              type="button"
+              class="slider-button slider-button--prev focus-inset"
+              name="previous"
+              aria-label="{{ 'general.slider.previous_slide' | t }}"
+              aria-controls="Slider-{{ section.id }}"
+              data-step="1"
+            >
+              {% render 'icon-caret' %}
+            </button>
+            <button
+              type="button"
+              class="slider-button slider-button--next focus-inset"
+              name="next"
+              aria-label="{{ 'general.slider.next_slide' | t }}"
+              aria-controls="Slider-{{ section.id }}"
+              data-step="1"
+            >
+              {% render 'icon-caret' %}
+            </button>
+          </div>
         </slider-component>
       {%- endif -%}
       {% comment %} Cart upsell product over {% endcomment %}
@@ -271,8 +370,15 @@
               </span>
             </summary>
             <cart-note class="cart__note field">
-              <label class="visually-hidden" for="CartDrawer-Note">{{ 'vtcustomlabel.vtalltext.order_note' | t }}</label>
-              <textarea id="CartDrawer-Note" class="text-area text-area--resize-vertical field__input" name="note" placeholder="{{ 'vtcustomlabel.vtalltext.order_note' | t }}">{{ cart.note }}</textarea>
+              <label class="visually-hidden" for="CartDrawer-Note">
+                {{- 'vtcustomlabel.vtalltext.order_note' | t -}}
+              </label>
+              <textarea
+                id="CartDrawer-Note"
+                class="text-area text-area--resize-vertical field__input"
+                name="note"
+                placeholder="{{ 'vtcustomlabel.vtalltext.order_note' | t }}"
+              >{{ cart.note }}</textarea>
             </cart-note>
           </details>
         {%- endif -%}
@@ -321,38 +427,46 @@
               {{ 'sections.cart.update' | t }}
             </button>
           </noscript>
-          <a href="{{ routes.cart_url }}" class="button button--primary btn-block">{{ 'vtcustomlabel.vtalltext.viewcart' | t }}</a>
-          <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button button--primary" name="checkout" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
+          <a href="{{ routes.cart_url }}" class="button">{{ 'vtcustomlabel.vtalltext.viewcart' | t }}</a>
+          <button
+            type="submit"
+            id="CartDrawer-Checkout"
+            class="button cart__checkout-button"
+            name="checkout"
+            form="CartDrawer-Form"
+            {% if cart == empty %}
+              disabled
+            {% endif %}
+          >
             {{ 'sections.cart.checkout' | t }}
           </button>
         </div>
 
-        {%- if settings.show_cartpayment -%} 
-            <div class="cartdrawfpay text-center"> 
-                <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-                <ul>
-                  {%- for type in shop.enabled_payment_types -%}
-                    <li>
-                      {{ type | payment_type_svg_tag: class: 'icon' }}
-                    </li>
-                  {%- endfor -%}
-                </ul>
-            </div>
+        {%- if settings.show_cartpayment -%}
+          <div class="cartdrawfpay text-center">
+            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+            <ul>
+              {%- for type in shop.enabled_payment_types -%}
+                <li>
+                  {{ type | payment_type_svg_tag: class: 'icon' }}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
         {%- endif -%}
-
       </div>
     </div>
   </div>
 </cart-drawer>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     function isIE() {
       const ua = window.navigator.userAgent;
       const msie = ua.indexOf('MSIE ');
       const trident = ua.indexOf('Trident/');
 
-      return (msie > 0 || trident > 0);
+      return msie > 0 || trident > 0;
     }
 
     if (!isIE()) return;
@@ -360,9 +474,8 @@
     cartSubmitInput.setAttribute('name', 'checkout');
     cartSubmitInput.setAttribute('type', 'hidden');
     document.querySelector('#cart').appendChild(cartSubmitInput);
-    document.querySelector('#checkout').addEventListener('click', function(event) {
+    document.querySelector('#checkout').addEventListener('click', function (event) {
       document.querySelector('#cart').submit();
     });
   });
 </script>
-
