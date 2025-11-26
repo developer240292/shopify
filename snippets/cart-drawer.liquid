@@ -88,7 +88,7 @@
                       style="width: {{ cart.total_price | times: 100 | divided_by: shipminprice | round | at_most: 100 }}%"
                       value="{{ cart.total_price | times: 100 | divided_by: shipminprice | round: 2 | at_most: 100 }}"
                     >
-                      {%- render 'icon-delivery' -%}
+                      {%- render 'icon-cart-shipping' -%}
                     </div>
                   </div>
                   <p>
@@ -366,8 +366,8 @@
             <summary>
               <span class="summary__title">
                 {{ 'vtcustomlabel.vtalltext.order_note' | t }}
-                {% render 'icon-caret' %}
               </span>
+              {% render 'icon-caret' %}
             </summary>
             <cart-note class="cart__note field">
               <label class="visually-hidden" for="CartDrawer-Note">

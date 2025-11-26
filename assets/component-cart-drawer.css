@@ -223,26 +223,15 @@ cart-drawer-items .cart-item__quantity-wrapper quantity-input.quantity {
 }
 
 cart-drawer-items .cart-item__quantity-wrapper .quantity__input {
-  width: 55px;
   height: 30px;
   line-height: 30px;
 }
 
 cart-drawer-items .cart-item__quantity-wrapper .quantity__button {
-  width: 30px;
   height: 30px;
+  line-height: 30px;
   float: left;
   font-size: 0;
-}
-
-cart-drawer-items cart-remove-button .button {
-  min-width: auto;
-  min-height: auto;
-  font-size: calc(var(--font-body-scale) * 14px);
-}
-
-cart-drawer-items cart-remove-button .button:not([disabled]):hover::after {
-  box-shadow: none;
 }
 
 cart-drawer-items .cart-item__name {
