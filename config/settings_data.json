@@ -98,7 +98,7 @@
           "55d0341f-b43a-490b-9a67-ef52e5414661": {
             "type": "megamenu-gallery",
             "settings": {
-              "menuname": "smart watch",
+              "menuname": "46464987",
               "showsubmenu": true,
               "vt1_img": "shopify://shop_images/stylish-summer-necklace_925x_20730d4a-c93d-47b5-a90f-26dcf85929b6.jpg",
               "vt1_link": "shopify://collections/frontpage",
@@ -110,40 +110,10 @@
               "vt4_link": "shopify://collections/shoes",
               "vt4_text": "e2342"
             }
-          },
-          "megamenu_product_GqKVtp": {
-            "type": "megamenu-product",
-            "settings": {
-              "menuname": "Shop",
-              "showsubmenu": true,
-              "collection": "frontpage",
-              "products_to_show": 6
-            }
-          },
-          "2b885d94-9dbc-4570-9274-59692ee5faaa": {
-            "type": "megamenu-blog",
-            "settings": {
-              "menuname": "imperdiet justo",
-              "showsubmenu": true,
-              "blog": "news",
-              "blog_to_show": 4
-            }
-          },
-          "42ec77b4-c7ae-4e25-aebf-d8aea1746ed1": {
-            "type": "megamenu-product",
-            "settings": {
-              "menuname": "camera",
-              "showsubmenu": true,
-              "collection": "bestseller",
-              "products_to_show": 6
-            }
           }
         },
         "block_order": [
-          "55d0341f-b43a-490b-9a67-ef52e5414661",
-          "megamenu_product_GqKVtp",
-          "2b885d94-9dbc-4570-9274-59692ee5faaa",
-          "42ec77b4-c7ae-4e25-aebf-d8aea1746ed1"
+          "55d0341f-b43a-490b-9a67-ef52e5414661"
         ],
         "settings": {
           "logo_width": 192,
