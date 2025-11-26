@@ -228,8 +228,6 @@
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
-      "vertical_menu": "Vertical Menu",
-      "vertical_menu_always_open_on_home": "Vertical Menu Always Open On Home"
     },
     "cart": {
       "title": "Your cart",

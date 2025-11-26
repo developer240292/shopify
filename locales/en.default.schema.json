@@ -883,8 +883,14 @@
           },
           "info": "Position is automatically optimized for mobile."
         },
-        "menu": {
-          "label": "Menu"
+        "primary_menu": {
+          "label": "Primary Menu"
+        },
+        "vertical_menu": {
+          "label": "Vertical Menu"
+        },
+        "vertical_menu_always_open_on_home": {
+          "label": "Vertical Menu Always Open On Home"
         },
         "show_line_separator": {
           "label": "Show separator line"
