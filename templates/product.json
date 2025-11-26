@@ -61,7 +61,7 @@
         "53d1b536-e8c6-416b-81ae-5537d48a8356": {
           "type": "share_button",
           "settings": {
-            "share_facebook": false,
+            "share_facebook": true,
             "share_twitter": true,
             "share_pinterest": true
           }
