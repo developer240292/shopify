@@ -111,8 +111,9 @@
           >
             <span
               class="disclosure-form-field__flag"
-              style="background-image: url('//cdn.shopify.com/static/images/flags/{{ localization.country.currency.iso_code | downcase }}.svg?width=40')"
-            ></span>
+            >
+              {{- localization.country | image_url: width: 32 | image_tag -}}
+            </span>
             {{ localization.country.name }} ({{ localization.country.currency.iso_code }}
             {{ localization.country.currency.symbol }})
           </button>
@@ -127,10 +128,9 @@
                       aria-current="true"
                     {% endif %}
                     data-value="{{ country.iso_code }}"
-                    ><span
-                      class="disclosure-form-field__flag"
-                      style="background-image: url('//cdn.shopify.com/static/images/flags/{{ country.currency.iso_code | downcase }}.svg?width=40')"
-                    ></span>
+                    ><span class="disclosure-form-field__flag">
+                      {{ country | image_url: width: 32 | image_tag }}
+                    </span>
                     {{ country.name }} ({{ country.currency.iso_code }}
                     {{ country.currency.symbol }})
                   </a>
