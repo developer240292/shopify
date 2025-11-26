@@ -95,6 +95,15 @@
       "header": {
         "type": "header",
         "blocks": {
+          "megamenu_blog_aG6pFG": {
+            "type": "megamenu-blog",
+            "settings": {
+              "menuname": "",
+              "showsubmenu": false,
+              "blog": "news",
+              "blog_to_show": 4
+            }
+          },
           "55d0341f-b43a-490b-9a67-ef52e5414661": {
             "type": "megamenu-gallery",
             "settings": {
@@ -113,6 +122,7 @@
           }
         },
         "block_order": [
+          "megamenu_blog_aG6pFG",
           "55d0341f-b43a-490b-9a67-ef52e5414661"
         ],
         "settings": {
