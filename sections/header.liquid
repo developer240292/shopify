@@ -141,9 +141,8 @@
         <div class="header-nav">
           <div class="container">
             <div class="header-nav-inner">
-              {% comment %}Simple Menu{% endcomment %}
               {%- if section.settings.vertical_menu != blank -%}
-                <nav class="vertical-wrapper block-nav-category has-vertical-menu always-open">
+                <nav class="vertical-wrapper block-nav-category has-vertical-menu {% if section.settings.vertical_menu_always_open_on_home %}always-open{% endif %}">
                   <div class="block-title">
                     {% render 'icon-header-menubar' %}
                     <span class="text-title">{{ 'vtcustomlabel.vtalltext.allcategories' | t }}</span>

@@ -1,5 +1,15 @@
 jQuery(document).ready(function ($) {
     "use strict";
+    function draly_vertical_menu($elem) {
+        var _blockTitle = $elem.find('.block-title');
+        _blockTitle.on('click', function () {
+            $(this).toggleClass('active');
+            $(this).parent().toggleClass('has-open');
+        });
+    }
+    if ($('.block-nav-category').length) {
+        draly_vertical_menu($('.block-nav-category'));
+    }
     function draly_header_sticky($elem) {
         var $this = $elem;
         $this.on('draly_header_sticky', function () {
