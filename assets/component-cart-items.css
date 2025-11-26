@@ -179,45 +179,30 @@ dl .product-option {
   background-color: transparent;
   padding: 0;
 }
+
+.cart-item__quantity-wrapper .quantity__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .cart-item__quantity-wrapper .quantity__button {
   width: 30px;
   height: 40px;
   float: left;
   font-size: 0;
+  padding: 0;
+  background-color: transparent;
+  color: #000;
 }
 
 .carthead a.underlined-link {
   text-decoration: underline;
-  color: var(--color-vtmaincolors-text);
-  font-size: calc(var(--font-body-scale) * 16px);
 }
 
 cart-remove-button .button {
-  box-shadow: none;
-  color: rgba(0, 0, 0, 0.75);
-  min-height: 4.5rem;
+  height: auto;
   padding: 0;
-  margin: 0 0.1rem 0.1rem 0;
   background-color: transparent;
-}
-
-cart-remove-button .button::after {
-  display: none;
-}
-
-cart-remove-button .button:not([disabled]):hover {
-  box-shadow: none;
-}
-
-cart-remove-button .button:not([disabled]):focus-visible {
-  box-shadow: none;
-}
-
-@media screen and (min-width: 768px) {
-  cart-remove-button .button {
-    min-width: 3.5rem;
-    min-height: 3.5rem;
-  }
 }
 
 cart-remove-button .icon-remove {
