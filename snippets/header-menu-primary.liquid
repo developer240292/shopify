@@ -6,7 +6,7 @@
 {% endcomment %}
 <ul id="menu-primary-menu" class="draly-nav main-menu horizontal-menu villa-menu">
   {%- for link in section.settings.primary_menu.links -%}
-    {% assign assignsubmenu = true %}
+    {% assign assignsubmenu = false %}
     {% assign displaymegamenu = false %}
     {% assign blank_link = false %}
     {% for block in section.blocks %}
@@ -14,8 +14,8 @@
       {% assign lower_title = link.title | downcase %}
       {% if lower_title == case_title %}
         {% assign displaymegamenu = true %}
-        {% if block.settings.showsubmenu == false %}
-          {% assign assignsubmenu = false %}
+        {% if block.settings.showsubmenu %}
+          {% assign assignsubmenu = true %}
         {% endif %}
         {%- if link.links == blank -%}
           {% assign blank_link = lower_title %}
