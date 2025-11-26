@@ -15053,14 +15053,24 @@ details[open] .modal-overlay::after {
 .disclosure-form-field {
     position: relative
 }
+
 .disclosure-form-field__flag {
-    display: inline-flex;
-  width: 20px;
-  height: 20px;
-  clip-path: circle(50%);
-  background-position: center;
-  background-size: cover;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
 }
+
+.disclosure-form-field__flag img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .disclosure-selector {
     appearance: none;
     -webkit-appearance: none;
