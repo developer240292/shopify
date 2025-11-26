@@ -329,9 +329,9 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 }
 
 .drawer__heading {
-  font-weight: 600;
+  font-weight: 500;
   color: #000;
-  font-size: calc(var(--font-body-scale) * 22px);
+  font-size: calc(var(--font-body-scale) * 20px);
 }
 
 .drawer__close {
@@ -384,8 +384,10 @@ cart-drawer-items.is-empty+.drawer__footer,
   position: relative;
   line-height: 1;
   padding: 15px;
-  background: rgba(0, 0, 0, 0.05);
+  background: #0000000d;
   border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #CartDrawer-Note {

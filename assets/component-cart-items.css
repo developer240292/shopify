@@ -13,6 +13,7 @@
   background-color: var(--color-base-accent-1);
   transition: width 1.15s ease-in-out;
   display: block;
+  color: #fff;
 }
 
 .progress .determinate svg {
