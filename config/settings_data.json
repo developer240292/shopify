@@ -94,6 +94,20 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "megamenu_product_RpzcwW": {
+            "type": "megamenu-product",
+            "settings": {
+              "menuname": "Home",
+              "showsubmenu": false,
+              "collection": "",
+              "products_to_show": 6
+            }
+          }
+        },
+        "block_order": [
+          "megamenu_product_RpzcwW"
+        ],
         "settings": {
           "logo_width": 192,
           "mobile_logo_width": 110,
