@@ -6,47 +6,50 @@
 {% endcomment %}
 <ul class="draly-nav main-menu horizontal-menu villa-menu">
   {%- for link in section.settings.primary_menu.links -%}
-    {% assign assignsubmenu = false %}
-    {% assign displaymegamenu = false %}
-    {% assign blank_link = false %}
+    {% assign display_megamenu = false %}
     {% for block in section.blocks %}
-      {% assign case_title = block.settings.menuname | downcase %}
-      {% assign lower_title = link.title | downcase %}
-      {% if lower_title == case_title %}
-        {% assign displaymegamenu = true %}
+      {% assign megamenu_title = block.settings.menuname | downcase %}
+      {% assign menu_title = link.title | downcase %}
+      {% if megamenu_title == menu_title %}
+        {% assign display_megamenu = true %}
         {% if block.settings.showsubmenu == true %}
-          {% assign assignsubmenu = true %}
-        {% endif %}
-        {%- if link.links == blank -%}
-          {% assign blank_link = lower_title %}
+          {% assign display_megamenu = false %}
         {% endif %}
       {% endif %}
     {%- endfor -%}
-    <li class="menu-item{% if link.current %} current-menu-item{% endif %}{%- if link.links.size > 0 %} menu-item-has-children{% endif %}">
-      {%- if link.links != blank -%}
-        <a
-          href="{{ link.url }}"
-          {% if link.current %}
-            aria-current="page"
-          {% endif %}
-        >
-          {{- link.title | escape -}}
-        </a>
-        {% if assignsubmenu %}
-          <ul class="sub-menu">
-            {%- for childlink in link.links -%}
-              <li class="menu-item{% if childlink.current %} current-menu-item{% endif %}{%- if link.grandchild_active %} menu-item-has-children{% endif %}"">
-                <a href="{{ childlink.url }}"
-                  {% if childlink.current %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  {{ childlink.title | escape }}
-                </a>
+    {%- if link.links != blank %}
+      {% assign display_megamenu = false %}
+    {% endif %}
+    <li class="menu-item{% if link.current %} current-menu-item{% endif %}{% if display_megamenu or link.links != blank) %} menu-item-has-children{% endif %}">
+      <a
+        href="{{ link.url }}"
+        {% if link.current %}
+          aria-current="page"
+        {% endif %}
+      >
+        {{- link.title | escape -}}
+      </a>
+      {%- if display_megamenu %}
+        {% render 'megamenu', blocks: section.blocks, title: link.title %}
+      {% endif %}
+      {%- if link.links != blank %}
+        <ul class="sub-menu">
+          {%- for childlink in link.links -%}
+            <li class="menu-item{% if childlink.current %} current-menu-item{% endif %}{%- if link.childlink != blank %} menu-item-has-children{% endif %}">
+              <a
+                href="{{ childlink.url }}"
+                {% if childlink.current %}
+                  aria-current="page"
+                {% endif %}
+              >
+                {{ childlink.title | escape }}
+              </a>
+              {%- if link.childlink != blank %}
                 <ul class="sub-menu">
                   {%- for grandchildlink in childlink.links -%}
                     <li class="menu-item{% if grandchildlink.current %} current-menu-item{% endif %}">
-                      <a href="{{ grandchildlink.url }}"
+                      <a
+                        href="{{ grandchildlink.url }}"
                         {% if grandchildlink.current %}
                           aria-current="page"
                         {% endif %}
@@ -56,33 +59,11 @@
                     </li>
                   {%- endfor -%}
                 </ul>
-              </li>
-            {%- endfor -%}
-          </ul>
-        {% endif %}
-      {%- else -%}
-        {% if blank_link %}
-          <a
-            href="{{ link.url }}"
-            {% if link.current %}
-              aria-current="page"
-            {% endif %}
-          >
-            {{- link.title | escape -}}
-          </a>
-          {% render 'megamenu', blocks: section.blocks, title: link.title %}
-          {% assign blank_link = false %}
-        {% else %}
-          <a
-            href="{{ link.url }}"
-            {% if link.current %}
-              aria-current="page"
-            {% endif %}
-          >
-            {{- link.title | escape -}}
-          </a>
-        {% endif %}
-      {%- endif -%}
+              {% endif %}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {% endif %}
     </li>
   {%- endfor -%}
 </ul>
