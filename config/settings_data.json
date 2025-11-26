@@ -95,15 +95,6 @@
       "header": {
         "type": "header",
         "blocks": {
-          "megamenu_blog_aG6pFG": {
-            "type": "megamenu-blog",
-            "settings": {
-              "menuname": "",
-              "showsubmenu": false,
-              "blog": "news",
-              "blog_to_show": 4
-            }
-          },
           "55d0341f-b43a-490b-9a67-ef52e5414661": {
             "type": "megamenu-gallery",
             "settings": {
@@ -119,11 +110,20 @@
               "vt4_link": "shopify://collections/shoes",
               "vt4_text": "e2342"
             }
+          },
+          "megamenu_blog_aG6pFG": {
+            "type": "megamenu-blog",
+            "settings": {
+              "menuname": "Shop list",
+              "showsubmenu": false,
+              "blog": "news",
+              "blog_to_show": 4
+            }
           }
         },
         "block_order": [
-          "megamenu_blog_aG6pFG",
-          "55d0341f-b43a-490b-9a67-ef52e5414661"
+          "55d0341f-b43a-490b-9a67-ef52e5414661",
+          "megamenu_blog_aG6pFG"
         ],
         "settings": {
           "logo_width": 192,
