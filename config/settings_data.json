@@ -115,7 +115,7 @@
             "type": "megamenu-blog",
             "settings": {
               "menuname": "Shop list",
-              "showsubmenu": true,
+              "showsubmenu": false,
               "blog": "news",
               "blog_to_show": 4
             }
