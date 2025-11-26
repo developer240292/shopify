@@ -155,7 +155,7 @@
           "show_contact": true,
           "bnts1": "Support 24/7",
           "mobile": "+1 (555) 123-4567",
-          "primary_menu": "main-menu",
+          "primary_menu": "megamenu-shop",
           "vertical_menu": "vertical-menu",
           "vertical_menu_always_open_on_home": false,
           "enable_sticky_header": true,
