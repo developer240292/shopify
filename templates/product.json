@@ -55,7 +55,7 @@
           "settings": {
             "show_vendor": true,
             "display_product_type": true,
-            "display_tags": false
+            "display_tags": true
           }
         },
         "53d1b536-e8c6-416b-81ae-5537d48a8356": {
