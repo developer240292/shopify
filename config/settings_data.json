@@ -100,8 +100,9 @@
             "settings": {
               "menuname": "smart watch",
               "showsubmenu": true,
-              "vt1_link": "shopify://collections/men",
-              "vt1_text": "",
+              "vt1_img": "shopify://shop_images/stylish-summer-necklace_925x_20730d4a-c93d-47b5-a90f-26dcf85929b6.jpg",
+              "vt1_link": "shopify://collections/frontpage",
+              "vt1_text": "tesst",
               "vt2_link": "shopify://collections/women",
               "vt2_text": "",
               "vt3_link": "shopify://collections/accessories",
