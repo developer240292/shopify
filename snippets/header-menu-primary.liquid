@@ -22,7 +22,7 @@
         {% endif %}
       {% endif %}
     {%- endfor -%}
-    <li class="menu-item{% if link.current %} current-menu-item{% endif %}{%- if childlink %} menu-item-has-children{% endif %}">
+    <li class="menu-item{% if link.current %} current-menu-item{% endif %}{%- if link.links.size > 0 %} menu-item-has-children{% endif %}">
       {%- if link.links != blank -%}
         <a
           href="{{ link.url }}"
