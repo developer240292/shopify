@@ -3,6 +3,7 @@
   height: 10px;
   display: block;
   background-color: rgba(0, 0, 0, 0.08);
+  overflow: visible;
 }
 .progress .determinate {
   position: absolute;

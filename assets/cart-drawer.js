@@ -8,7 +8,7 @@ class CartDrawer extends HTMLElement {
   }
 
   setHeaderCartIconAccessibility() {
-    const cartLink = document.querySelector('#cart-icon-bubble');
+    const cartLink = document.querySelector('#header-minicart');
     cartLink.setAttribute('role', 'button');
     cartLink.setAttribute('aria-haspopup', 'dialog');
     cartLink.addEventListener('click', (event) => {
@@ -88,7 +88,7 @@ class CartDrawer extends HTMLElement {
         selector: '#CartDrawer'
       },
       {
-        id: 'cart-icon-bubble'
+        id: 'header-minicart'
       }
     ];
   }
@@ -115,8 +115,8 @@ class CartDrawerItems extends CartItems {
         selector: '.drawer__inner'
       },
       {
-        id: 'cart-icon-bubble',
-        section: 'cart-icon-bubble',
+        id: 'header-minicart',
+        section: 'header-minicart',
         selector: '.shopify-section'
       }
     ];
