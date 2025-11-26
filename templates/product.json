@@ -12,6 +12,34 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "sku_G7qfJm": {
+          "type": "sku",
+          "settings": {}
+        },
+        "rating_bENXWy": {
+          "type": "rating",
+          "settings": {}
+        },
+        "collapsible_tab_hjpXLC": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible tab",
+            "content": "",
+            "page": "",
+            "icon": "check_mark"
+          }
+        },
+        "trust_content_f3E3dT": {
+          "type": "trust_content",
+          "settings": {
+            "pay_title": "Payment & Security",
+            "payment_enable": true,
+            "pay1_title": "Payment methods",
+            "pay_desc": "Show details about payment methods",
+            "pay2_title": "Security",
+            "payment_width": 100
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -101,6 +129,10 @@
         }
       },
       "block_order": [
+        "sku_G7qfJm",
+        "rating_bENXWy",
+        "collapsible_tab_hjpXLC",
+        "trust_content_f3E3dT",
         "title",
         "price",
         "variant_picker",
