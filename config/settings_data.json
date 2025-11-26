@@ -99,7 +99,7 @@
             "type": "megamenu-gallery",
             "settings": {
               "menuname": "Shop Grid",
-              "showsubmenu": true,
+              "showsubmenu": false,
               "vt1_img": "shopify://shop_images/stylish-summer-necklace_925x_20730d4a-c93d-47b5-a90f-26dcf85929b6.jpg",
               "vt1_link": "shopify://collections/frontpage",
               "vt1_text": "tesst",
