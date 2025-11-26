@@ -5,7 +5,7 @@
   {% render 'share-button' %}
 {% endcomment %}
 <ul class="social-sharing">
-  {% if block.settings.share_facebook %}
+  {% if share_facebook %}
     <li>
       <a
         target="_blank"
@@ -19,7 +19,7 @@
       </a>
     </li>
   {% endif %}
-  {% if block.settings.share_twitter %}
+  {% if share_twitter %}
     <li>
       <a
         target="_blank"
@@ -33,7 +33,7 @@
       </a>
     </li>
   {% endif %}
-  {% if block.settings.share_pinterest %}
+  {% if share_pinterest %}
     <li>
       <a
         target="_blank"
