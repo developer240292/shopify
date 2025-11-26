@@ -105,6 +105,15 @@
       "header": {
         "type": "header",
         "blocks": {
+          "megamenu_product_GqKVtp": {
+            "type": "megamenu-product",
+            "settings": {
+              "menuname": "Shop",
+              "showsubmenu": true,
+              "collection": "frontpage",
+              "products_to_show": 6
+            }
+          },
           "55d0341f-b43a-490b-9a67-ef52e5414661": {
             "type": "megamenu-gallery",
             "settings": {
@@ -140,6 +149,7 @@
           }
         },
         "block_order": [
+          "megamenu_product_GqKVtp",
           "55d0341f-b43a-490b-9a67-ef52e5414661",
           "2b885d94-9dbc-4570-9274-59692ee5faaa",
           "42ec77b4-c7ae-4e25-aebf-d8aea1746ed1"
@@ -153,8 +163,8 @@
           "topc_clr": "#000000",
           "topoffer": "Get 30% Off On Selected Items",
           "show_contact": true,
-          "bnts1": "call us now:",
-          "mobile": "+12 567 2567 125",
+          "bnts1": "Support 24/7",
+          "mobile": "+1 (555) 123-4567",
           "menu": "main-menu",
           "vertical_menu": "vertical-menu",
           "enable_sticky_header": false,
