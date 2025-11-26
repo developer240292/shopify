@@ -108,7 +108,7 @@
           "megamenu_product_GqKVtp": {
             "type": "megamenu-product",
             "settings": {
-              "menuname": "Home",
+              "menuname": "Shop",
               "showsubmenu": true,
               "collection": "frontpage",
               "products_to_show": 6
