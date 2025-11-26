@@ -15502,11 +15502,11 @@ ul.twopro {
 .wp_rcomd_cover {
     border: 1px solid rgb(0, 0, 0, .1);
     padding: 15px;
-    border-radius: var(--card-corner-radius);
+    border-radius: 0;
 }
 
 .vtcollfea {
-    border: 2px solid var(--gradient-base-accent-1);
+    border: 2px solid var(--color-base-accent-1);
 }
 
 .pro-tab .heading {
@@ -15525,7 +15525,7 @@ ul.twopro {
 }
 
 .pro-tab .nav-tabs .nav-item.active .nav-link {
-    color: var(--gradient-base-accent-2);
+    color: var(--color-base-accent-1);
 }
 
 .pro-tab .nav-tabs {
@@ -15575,13 +15575,13 @@ button.loading .loading-overlay__spinner svg .path {
 }
 
 .wp_mainproduct_huk {
-    border-radius: var(--card-corner-radius);
+    border-radius: 0;
     padding: 15px;
 }
 
 .wp_banner_inner h2 {
     font-size: calc(var(--font-body-scale) * 35px);
-    color: var(--gradient-base-accent-1);
+    color: var(--color-base-accent-1);
     margin: 0;
 }
 
@@ -15598,7 +15598,7 @@ button.loading .loading-overlay__spinner svg .path {
 .wp_product_banner .beffect img,
 .homecolbnr .beffect img,
 .slideshow__media {
-    border-radius: var(--media-radius);
+    border-radius: 0;
 }
 
 
@@ -15641,7 +15641,7 @@ button.loading .loading-overlay__spinner svg .path {
     min-width: 50px;
     min-height: 50px;
     background: rgba(0, 0, 0, .05);
-    border-radius: var(--card-corner-radius);
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15911,7 +15911,7 @@ button.loading .loading-overlay__spinner svg .path {
 /* Service */
 .deliveryinfo.grid {
     border: 1px solid rgb(0, 0, 0, .1);
-    border-radius: var(--card-corner-radius);
+    border-radius: 0;
     background-color: rgb(var(--color-base-background-2));
     margin: 0;
 }

@@ -5,7 +5,7 @@
     margin-bottom: 20px;
 }
 .vtsingleblog .article-template__hero-container .media{
-  border-radius: var(--media-radius);
+  border-radius: 0;
 }
 .article-template__link {
     font-size: calc(var(--font-body-scale) * 18px);

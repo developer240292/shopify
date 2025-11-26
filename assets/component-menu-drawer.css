@@ -226,7 +226,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   margin-right: 1rem;
 }
 .menu-drawer a.list-social__link:hover{
-  color: var(--gradient-base-accent-2);
+  color: var(--color-base-accent-1);
 }
 .menu-drawer__account:hover .icon-account {
   transform: scale(1.07);

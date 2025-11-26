@@ -11,7 +11,7 @@
   fill: rgb(var(--color-vtfootcolor));
 }
 .footer a:hover{
-  color: var(--gradient-base-accent-2);
+  color: var(--color-base-accent-1);
 }
 .vtfootcont.footer-block-image svg{
     width: 100%;
@@ -50,7 +50,7 @@ button#scroll {
     fill: rgb(0, 0, 0);
 }
 .footer .footer__list-social li a:hover{
-    background: var(--gradient-base-accent-2);
+    background: var(--color-base-accent-1);
 }
 .footer .footer__list-social li a:hover svg, .footer .footer__list-social li a:hover svg path{
     fill: rgb(0, 0, 0);

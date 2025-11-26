@@ -36,13 +36,13 @@
 .deferred-media__poster:focus-visible {
   outline: none;
   box-shadow: 0 0 0 var(--media-border-width) rgba(0, 0, 0, var(--media-border-opacity)), 0 0 0 calc(var(--media-border-width) + 0.3rem) rgb(0, 0, 0),0 0 0 calc(var(--media-border-width) + 0.5rem) rgba(0, 0, 0,.5);
-  border-radius: calc(var(--media-radius) - var(--media-border-width));
+  border-radius: calc(0 - var(--media-border-width));
 }
 
 .deferred-media__poster:focus {
   outline: none;
   box-shadow: 0 0 0 var(--media-border-width) rgba(0, 0, 0, var(--media-border-opacity)), 0 0 0 calc(var(--media-border-width) + 0.3rem) rgb(0, 0, 0),0 0 0 calc(var(--media-border-width) + 0.5rem) rgba(0, 0, 0,.5);
-  border-radius: calc(var(--media-radius) - var(--media-border-width));
+  border-radius: calc(0 - var(--media-border-width));
 }
 
 .deferred-media__poster:focus:not(:focus-visible) {

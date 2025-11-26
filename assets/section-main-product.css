@@ -974,7 +974,7 @@ a.product__text {
 .product__info-container .product-form__input .quantity{
     width: 135px;
     border: 1px solid rgba(0, 0, 0,0.08);
-    border-radius: var(--card-corner-radius);
+    border-radius: 0;
 }
 .product__info-container .product-form__buttons .button--primary{
     padding: 8px 10px;
@@ -983,11 +983,11 @@ a.product__text {
     column-gap: 10px;
 }
 .product__modal-opener{
-    border-radius: var(--media-radius);
+    border-radius: 0;
 }
 .shopify-payment-button__button--unbranded{
     border-radius: var(--buttons-radius) !important;
-    background: var(--gradient-base-accent-2);
+    background: var(--color-base-accent-1);
     color: rgb(0, 0, 0);
     min-height: 45px;
     padding: 0 0;
@@ -1086,7 +1086,7 @@ a.product__text {
     border-radius: 5px;
 }
 .vtproducttab .spr-container .spr-summary-actions-newreview:hover{
-    background: var(--gradient-base-accent-2);
+    background: var(--color-base-accent-1);
     color: var(--color-forground);
 }
 .vtproducttab .spr-content .spr-review {

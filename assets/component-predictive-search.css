@@ -138,5 +138,5 @@ predictive-search .price--on-sale .price-item--regular{
 }
 
 .predictive-search__item-heading:hover{
-   color: var(--gradient-base-accent-2);
+   color: var(--color-base-accent-1);
 }

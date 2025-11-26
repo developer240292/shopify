@@ -10,7 +10,7 @@
 .vthomesbtn button{
     position: absolute;
     top: 42%;
-    background: var(--gradient-base-accent-1);
+    background: var(--color-base-accent-1);
     color: rgba(var(--color-base-background-1));
     transition: 0.3s ease;
     opacity: 0;
@@ -21,7 +21,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     opacity: 1;
 }
 .vthomesbtn button:hover{
-    background-color:var(--gradient-base-accent-2);
+    background-color:var(--color-base-accent-1);
     color: rgb(0, 0, 0);
 }
 .vthomesbtn button:hover svg,.vthomesbtn .slider-button[disabled]:hover .icon{
@@ -101,7 +101,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
 .card--card,
 .card--standard .card__inner,
 .vtlookimglazy  {
-    border-radius: var(--card-corner-radius);
+    border-radius: 0;
     border: var(--card-border-width) solid rgba(0, 0, 0, var(--card-border-opacity));
     position: relative;
     box-sizing: border-box;
@@ -116,7 +116,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     top: calc(var(--card-border-width) * -1);
     left: calc(var(--card-border-width) * -1);
     z-index: -1;
-    border-radius: var(--card-corner-radius);
+    border-radius: 0;
     box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
 }
 
@@ -124,7 +124,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
   overflow: hidden;
   /* Fix for Safari border bug on hover */
   z-index: 0;
-  border-radius: calc(var(--card-corner-radius) - var(--card-border-width) - var(--card-image-padding));
+  border-radius: calc(0 - var(--card-border-width) - var(--card-image-padding));
 }
 .vtlookimgin {
   margin: var(--card-image-padding);  
@@ -479,7 +479,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     justify-content: center;
 }
 .product-form .cartb:hover,.product-form .vtquickv:hover,.product-form .wishlist:hover{
-    background: var(--gradient-base-accent-1);
+    background: var(--color-base-accent-1);
     color: rgb(0, 0, 0);
 }
 .product-form .cartb:hover svg,.product-form .vtquickv:hover svg,.product-form .wishlist:hover svg{

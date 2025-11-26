@@ -101,7 +101,7 @@
 
 .collage-card {
   background: rgb(0, 0, 0);
-  border-radius: var(--card-corner-radius);
+  border-radius: 0;
   border: var(--card-border-width) solid rgba(0, 0, 0, var(--card-border-opacity));
   height: 100%;
   padding: var(--card-image-padding);
@@ -109,7 +109,7 @@
 }
 
 .collage-card:after {
-  border-radius: var(--card-corner-radius);
+  border-radius: 0;
   box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
   content: '';
   position: absolute;
@@ -121,7 +121,7 @@
 }
 
 .collage-card .media {
-  border-radius: calc(var(--card-corner-radius) - var(--card-border-width) - var(--card-image-padding));
+  border-radius: calc(0 - var(--card-border-width) - var(--card-image-padding));
   height: 100%;
   overflow: hidden;
 }

@@ -110,7 +110,7 @@
     align-items: center;
     padding: 0 15px;
     min-height: 46px;
-    background: var(--gradient-base-accent-2);
+    background: var(--color-base-accent-1);
 }
 .vtmenubtm{
     display: flex;
@@ -234,10 +234,10 @@
   max-width: 15%;
   border: 1px solid rgb(0, 0, 0,.1);
   padding: 8px;
-  border-radius: var(--card-corner-radius);
+  border-radius: 0;
 }
 .vtmenugllazy img{
-  border-radius: var(--media-radius);
+  border-radius: 0;
 }
 
 .header__submenu slider-component .icon-caret{
