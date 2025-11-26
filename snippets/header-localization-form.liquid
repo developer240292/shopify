@@ -1,3 +1,9 @@
+{% comment %}
+  Renders header localization form
+
+  Usage:
+  {% render 'header-localization-form' %}
+{% endcomment %}
 {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
   <noscript>
     {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form' -%}

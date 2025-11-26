@@ -329,9 +329,9 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 }
 
 .drawer__heading {
-  margin: 0;
-  font-weight: 500;
-  font-size: calc(var(--font-body-scale) * 20px);
+  font-weight: 600;
+  color: #000;
+  font-size: calc(var(--font-body-scale) * 22px);
 }
 
 .drawer__close {
