@@ -14708,7 +14708,7 @@ details[open] .modal-overlay::after {
 }
 
 .vertical-wrapper.block-nav-category+.box-header-nav {
-    margin-left: 30px;
+    padding-left: 30px;
 }
 
 .box-header-nav .main-menu>.menu-item {
@@ -15090,6 +15090,7 @@ details[open] .modal-overlay::after {
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .disclosure-selector+.disclosure__list-wrapper {
