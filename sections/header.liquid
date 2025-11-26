@@ -156,7 +156,9 @@
               {%- if section.settings.vertical_menu != blank -%}
                 <nav class="vertical-wrapper block-nav-category has-vertical-menu has-open">
                   <div class="block-title active">
+                    {% render 'icon-header-menubar' %}
                     <span class="text-title">{{ 'vtcustomlabel.vtalltext.allcategories' | t }}</span>
+                    {% render 'icon-caret' %}
                   </div>
                   <div class="block-content verticalmenu-content">
                     <div class="villa-menu-wrapper vertical"> 
