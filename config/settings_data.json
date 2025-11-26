@@ -92,16 +92,6 @@
     "colorImg": "<p> heather-black.jpg, black.png, heather-gray.gif, white.png, red.png</p>",
     "type_base_font": "Google+Poppins",
     "sections": {
-      "announcement-bar": {
-        "type": "announcement-bar",
-        "settings": {
-          "home_only": false,
-          "mobile_bar": true,
-          "color_scheme": "background-1",
-          "auto_rotate": true,
-          "change_slides_speed": 5
-        }
-      },
       "header": {
         "type": "header",
         "blocks": {
@@ -165,10 +155,10 @@
           "show_contact": true,
           "bnts1": "Support 24/7",
           "mobile": "+1 (555) 123-4567",
-          "menu": "main-menu",
+          "primary_menu": "main-menu",
           "vertical_menu": "vertical-menu",
           "vertical_menu_always_open_on_home": false,
-          "enable_sticky_header": false,
+          "enable_sticky_header": true,
           "enable_sticky_header_mobile": false,
           "enable_country_selector": true,
           "enable_language_selector": true,
@@ -626,19 +616,6 @@
   "presets": {
     "Default": {
       "sections": {
-        "announcement-bar": {
-          "type": "announcement-bar",
-          "blocks": {
-            "announcement-bar-0": {
-              "type": "announcement",
-              "settings": {}
-            }
-          },
-          "block_order": [
-            "announcement-bar-0"
-          ],
-          "settings": {}
-        },
         "header": {
           "type": "header",
           "settings": {
