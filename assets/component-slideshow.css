@@ -63,8 +63,8 @@ slideshow-component .slideshow.banner {
 @media screen and (max-width: 767px) {
 
   slideshow-component.container .slideshow__text {
-    border-right: var(--text-boxes-border-width) solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
-    border-left: var(--text-boxes-border-width) solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
+    border-right: var(--text-boxes-border-width) solid rgba(0, 0, 0, var(--text-boxes-border-opacity));
+    border-left: var(--text-boxes-border-width) solid rgba(0, 0, 0, var(--text-boxes-border-opacity));
   }
   .banner--mobile-bottom .slideshow__text-wrapper {
     flex-grow: 1;
@@ -197,7 +197,7 @@ slideshow-component:not(.container) .slider-buttons {
     font-size: calc(var(--font-body-scale) * 30px);
     letter-spacing: 4px;
     text-transform: capitalize;
-    color: rgb(var(--color-foreground),.6);
+    color: rgb(0, 0, 0,.6);
 }
 .vtslideshow .banner__heading{
     text-transform: capitalize;
@@ -264,7 +264,7 @@ slideshow-component:not(.container) .slider-buttons {
 }
 .slideshow__text .banner__text span::after{
   content: "";
-  border-bottom: 1px solid rgba(var(--color-foreground));
+  border-bottom: 1px solid rgba(0, 0, 0);
   width: 100px;
   position: relative;
   height: 2px;

@@ -17,7 +17,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(var(--color-foreground), 0.2);
+    background: rgba(0, 0, 0, 0.2);
     height: 100%;
 }
 .quick-add-modal[open] {
@@ -32,7 +32,7 @@
     transform: translateX(-50%);
     margin: 3.2rem auto 0;
     width: 100%;
-    background-color: rgb(var(--color-background));
+    background-color: rgb(0, 0, 0);
     overflow: hidden;
     max-width: var(--page-width);
     width: calc(100% - 3rem);
@@ -54,10 +54,10 @@
     width: 100%;
 }
 .quick-add-modal__toggle {
-    background-color: rgb(var(--color-background));
-    border: .1rem solid rgba(var(--color-foreground),.1);
+    background-color: rgb(0, 0, 0);
+    border: .1rem solid rgba(0, 0, 0,.1);
     border-radius: 50%;
-    color: rgba(var(--color-foreground),.55);
+    color: rgba(0, 0, 0,.55);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,7 +71,7 @@
     height: 40px;
 }
 .quick-add-modal__toggle:hover {
-    color: rgba(var(--color-foreground), 0.75);
+    color: rgba(0, 0, 0, 0.75);
 }
 .quick-add-modal__toggle .icon {
     height: auto;
@@ -110,7 +110,7 @@ quick-add-modal .product__title > a {
     text-decoration: none;
 }
 quick-add-modal .product__title > a:hover {
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
     text-decoration: underline;
     text-underline-offset: 0.2rem;
     text-decoration-thickness: 0.3rem;

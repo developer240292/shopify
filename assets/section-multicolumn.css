@@ -57,15 +57,15 @@
 }
 
 .multicolumn:not(.background-none) .multicolumn-card {
-  background: rgb(var(--color-background));
+  background: rgb(0, 0, 0);
   height: 100%;
 }
 
 .multicolumn.background-primary .multicolumn-card {
-  background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground), 0.04), rgba(var(--color-foreground), 0.04));
+  background: rgb(0, 0, 0) linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
 }
 .background-primary .deliveryinfo {
-  background: rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground), 0.04), rgba(var(--color-foreground), 0.04));  
+  background: rgb(0, 0, 0) linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));  
 }
 
 .multicolumn-list h4,

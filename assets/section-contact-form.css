@@ -28,7 +28,7 @@
     margin-bottom: 10px;
 }
 .vtcontform li p{
-    font-size: rgb(var(--color-foreground));
+    font-size: rgb(0, 0, 0);
     margin-bottom: 0;
 }
 .vtcontforminner{

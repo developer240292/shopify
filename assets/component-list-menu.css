@@ -21,7 +21,7 @@
 }
 #under-menu .wp_submenus_dep .vtmenuinner .list-menu li .link--text{
   font-size: calc(var(--font-body-scale) * 12px);
-  color: rgb(var(--color-foreground));
+  color: rgb(0, 0, 0);
 }
 .wr-menu .cate {
     display: inline-block;
@@ -53,7 +53,7 @@
     top: 0;
     left: 100%;
     z-index: 1;
-    background: rgb(var(--color-foreground));
+    background: rgb(0, 0, 0);
     transition:.3s;
     transition-delay: 0s
 }
@@ -88,8 +88,8 @@
     left: 0;
     right: 0;
     z-index: 3;
-    background: rgb(var(--color-background));
-    border: 1px solid rgb(var(--color-foreground),0.08);
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0,0.08);
     border-radius: 5px;
     margin-top: 25px;
 }
@@ -126,14 +126,14 @@
 .vtsecmenu li a {
     text-transform: capitalize;
     font-weight: var(--font-body-weight-medium);
-    color: rgb(var(--color-foreground),.8);
+    color: rgb(0, 0, 0,.8);
 }
 .vtsimplemenuxs .list-menu__item {
     font-size: calc(var(--font-body-scale) * 14px);
     text-transform: capitalize;
     font-weight: var(--font-body-weight);
     justify-content: space-between;
-    color: rgb(var(--color-foreground),.8);
+    color: rgb(0, 0, 0,.8);
 }
 .header__inline-menu details > .header__submenu summary,.header__inline-menu details > .header__submenu li a {
     text-transform: capitalize;
@@ -146,7 +146,7 @@
 
 .list-menu--disclosure {
   position: absolute;
-  border: 1px solid rgba(var(--color-foreground), 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 30px 15px;
 }
 
@@ -196,7 +196,7 @@
 }
 .vtmenugallery p{
     font-size: calc(var(--font-body-scale) * 16px);
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
     margin-top: 10px;
     margin-bottom: 0;
 }
@@ -232,7 +232,7 @@
 .vtmgproduct .grid__item {
   width: 15%;
   max-width: 15%;
-  border: 1px solid rgb(var(--color-foreground),.1);
+  border: 1px solid rgb(0, 0, 0,.1);
   padding: 8px;
   border-radius: var(--card-corner-radius);
 }
@@ -344,7 +344,7 @@
         padding-top: 10px;
     }
     .menu-drawer__close-button {
-        background: rgba(var(--color-foreground),.04);
+        background: rgba(0, 0, 0,.04);
         margin-bottom: 10px;
     }
     .vtmenusimg [class*='col-'],.vtmgproduct{

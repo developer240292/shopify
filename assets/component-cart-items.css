@@ -2,7 +2,7 @@
   position: relative;
   height: 10px;
   display: block;
-  background-color: rgba(var(--color-foreground), 0.08);
+  background-color: rgba(0, 0, 0, 0.08);
 }
 .progress .determinate {
   position: absolute;
@@ -19,7 +19,7 @@
   width: 30px;
   height: 30px;
   fill: var(--color-vtprogscolor);
-  stroke: rgba(var(--color-background));
+  stroke: rgba(0, 0, 0);
 }
 .vtship{
   margin-top: 15px;
@@ -29,7 +29,7 @@
   margin-bottom: 0;
   margin-top: 6px;
   font-size: calc(var(--font-body-scale) * 12px);
-  color: rgba(var(--color-foreground));
+  color: rgba(0, 0, 0);
 }
 #main-cart-footer .js-contents .vtship{
   margin-top: 30px;
@@ -133,7 +133,7 @@ dl .product-option {
     font-size: calc(var(--font-body-scale) * 16px);
 }
 .cart-item__quantity-wrapper quantity-input{
-    border: 1px solid rgba(var(--color-foreground),0.08);
+    border: 1px solid rgba(0, 0, 0,0.08);
     position: relative;
     min-width: 120px;
     border-radius: var(--card-corner-radius);
@@ -148,7 +148,7 @@ dl .product-option {
 }
 cart-remove-button .button {
   box-shadow: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(0, 0, 0, 0.75);
   min-height: 4.5rem;
   padding: 0;
   margin: 0 0.1rem 0.1rem 0;
@@ -186,7 +186,7 @@ cart-remove-button .icon-remove {
   padding: 0;
 }
 .cart__footer{
-    border-top: 1px solid rgba(var(--color-foreground),0.08);
+    border-top: 1px solid rgba(0, 0, 0,0.08);
     margin-top: 30px;
 }
 @media screen and (min-width: 768px) {
@@ -274,7 +274,7 @@ cart-remove-button .icon-remove {
   .cart-items thead tr {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(var(--color-foreground),0.08);
+    border-bottom: 1px solid rgba(0, 0, 0,0.08);
   }
 
   .cart-item {
@@ -314,7 +314,7 @@ cart-remove-button .icon-remove {
     display: table;
   }
   .cart-items th {
-    border-bottom: 1px solid rgba(var(--color-foreground),0.08);
+    border-bottom: 1px solid rgba(0, 0, 0,0.08);
   }
   .cart-items thead th:first-child {
     width: 50%;

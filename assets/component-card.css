@@ -22,10 +22,10 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
 }
 .vthomesbtn button:hover{
     background-color:var(--gradient-base-accent-2);
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
 }
 .vthomesbtn button:hover svg,.vthomesbtn .slider-button[disabled]:hover .icon{
-    color: rgb(var(--color-foreground));   
+    color: rgb(0, 0, 0);   
 }
 .vthomesbtn button.slider-button--prev{
     left: 0;
@@ -84,7 +84,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     text-decoration: none;
 }
 .vthomevendor{
-    color: rgba(var(--color-foreground), 0.8);
+    color: rgba(0, 0, 0, 0.8);
     margin-bottom: 8px;
 }
 .card {
@@ -102,7 +102,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
 .card--standard .card__inner,
 .vtlookimglazy  {
     border-radius: var(--card-corner-radius);
-    border: var(--card-border-width) solid rgba(var(--color-foreground), var(--card-border-opacity));
+    border: var(--card-border-width) solid rgba(0, 0, 0, var(--card-border-opacity));
     position: relative;
     box-sizing: border-box;
 }
@@ -241,13 +241,13 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
 }
 
 .card__heading a:focus:after {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  box-shadow: 0 0 0 0.3rem rgb(0, 0, 0), 0 0 0.5rem 0.4rem rgba(0, 0, 0, 0.3);
+  outline: 0.2rem solid rgba(0, 0, 0, 0.5);
 }
 
 .card__heading a:focus-visible:after {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  box-shadow: 0 0 0 0.3rem rgb(0, 0, 0), 0 0 0.5rem 0.4rem rgba(0, 0, 0, 0.3);
+  outline: 0.2rem solid rgba(0, 0, 0, 0.5);
 }
 
 .card__heading a:focus:not(:focus-visible):after {
@@ -321,11 +321,11 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
 }
 
 .card-information > * {
-  color: rgb(var(--color-foreground));
+  color: rgb(0, 0, 0);
 }
 
 .card-information > .price {
-  color: rgb(var(--color-foreground));
+  color: rgb(0, 0, 0);
 }
 
 .card-information > .rating {
@@ -393,15 +393,15 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     margin-bottom: 10px;
 }
 .vtnorating.rating-star::before{
-    color: rgba(var(--color-foreground),0.15);
+    color: rgba(0, 0, 0,0.15);
     background: transparent;
-    -webkit-text-fill-color: rgba(var(--color-foreground),0.15);
+    -webkit-text-fill-color: rgba(0, 0, 0,0.15);
 }
 .vtproduct-container .quantity__input{
     width: 22px;
     flex-grow: unset;
     padding: 0;
-    font-size: rgb(var(--color-foreground));
+    font-size: rgb(0, 0, 0);
     height: 35px;
     vertical-align: top;
     color: var(--color-base-solid-button-labels);
@@ -411,7 +411,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     border-radius: 25px;
     display: inline-block;
     vertical-align: middle;
-    background-color: rgb(var(--color-background));
+    background-color: rgb(0, 0, 0);
 }
 .vtproduct-container .quantity__button{
     font-size: 13px;
@@ -466,11 +466,11 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
 .product-form .cartb,.product-form .vtquickv,.product-form .wishlist{
     border: none;
     text-transform: capitalize;
-    background: rgb(var(--color-background));
+    background: rgb(0, 0, 0);
     min-width: 38px;
     min-height: 38px;
     border-radius: var(--buttons-radius);
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
     text-align: center;
     transition: .3s ease;
     letter-spacing: .5px;
@@ -480,10 +480,10 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
 }
 .product-form .cartb:hover,.product-form .vtquickv:hover,.product-form .wishlist:hover{
     background: var(--gradient-base-accent-1);
-    color: rgb(var(--color-background));
+    color: rgb(0, 0, 0);
 }
 .product-form .cartb:hover svg,.product-form .vtquickv:hover svg,.product-form .wishlist:hover svg{
-    fill: rgb(var(--color-background));
+    fill: rgb(0, 0, 0);
 }
 .product-form .cartb span{
     vertical-align: middle;
@@ -499,7 +499,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     display: none;
 }
 .vtproduct-container .inner-class .form__label{
-    font-size: rgb(var(--color-foreground));
+    font-size: rgb(0, 0, 0);
 }
 .vtproduct-container .product-form__input input[type="radio"],.vtproduct-container .vtswatchclr input[type="radio"] {
     clip: rect(0,0,0,0);
@@ -518,9 +518,9 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     text-align: center;
     transition: border var(--duration-short) ease;
     cursor: pointer;
-    border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
-    background-color: rgb(var(--color-background));
-    color: rgba(var(--color-foreground));
+    border: var(--variant-pills-border-width) solid rgba(0, 0, 0, var(--variant-pills-border-opacity));
+    background-color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0);
     border-radius: var(--variant-pills-radius);
     margin: 0 3px 3px 0;
     box-shadow: none;
@@ -528,9 +528,9 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     min-height: 32px;
 }
  .vtproduct-container .product-form__input input[type=radio]:checked + label  {
-    background-color: rgb(var(--color-foreground));
-    border-color: rgb(var(--color-foreground));
-    color: rgb(var(--color-background));
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     box-shadow: none;
 }
 .vtproduct-container .product-form__input input + label:before,.vtproduct-container .vtswatchclr input + label:before {
@@ -550,7 +550,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     border-radius: 100%;
     min-width: 18px;
     min-height: 18px;
-    box-shadow: 0 0px 0px 1px rgba(var(--color-foreground),0.1);
+    box-shadow: 0 0px 0px 1px rgba(0, 0, 0,0.1);
     border: none;
     font-size: 0;
     display: inline-block;
@@ -563,14 +563,14 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     background-position: 50%;
     background-size: 20px;
     margin: 3px;
-    border: var(--variant-pills-border-width) solid rgba(var(--color-foreground),var(--variant-pills-border-opacity));
+    border: var(--variant-pills-border-width) solid rgba(0, 0, 0,var(--variant-pills-border-opacity));
 }
 /*.vtproduct-container .vtswatchclr input + label.active{
-    box-shadow: 0 0px 0px 1px rgba(var(--color-foreground),1);
+    box-shadow: 0 0px 0px 1px rgba(0, 0, 0,1);
 }*/
 .vtproduct-container .vtswatchclr input + label.active::after{
     content: "";
-    box-shadow: 0 0px 0px 1px rgba(var(--color-foreground),1);
+    box-shadow: 0 0px 0px 1px rgba(0, 0, 0,1);
     position: absolute;
     left: -3px;
     right: -3px;
@@ -579,7 +579,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     border-radius: 100%;
 }
 .vtproduct-container .product-form__input input:focus-visible + label,.vtproduct-container .vtswatchclr input:focus-visible + label{
-    box-shadow: 0 0 0 .2rem rgb(var(--color-background)),0 0 0 .3rem rgba(var(--color-foreground),.3),0 0 .3rem .2rem rgba(var(--color-foreground),.1);
+    box-shadow: 0 0 0 .2rem rgb(0, 0, 0),0 0 0 .3rem rgba(0, 0, 0,.3),0 0 .3rem .2rem rgba(0, 0, 0,.1);
 }
 variant-radios,variant-selects{
     display: block;
@@ -702,7 +702,7 @@ variant-selects .product-form__input .select{
     .product-form .cartb, .product-form .vtquickv, .product-form .wishlist{
         min-width: 36px;
         min-height: 36px;
-        border: 1px solid rgba(var(--color-foreground),0.08);
+        border: 1px solid rgba(0, 0, 0,0.08);
     }
     .vtproduct-container .quantity__input,.vtproduct-container .quantity{
         height: 30px;

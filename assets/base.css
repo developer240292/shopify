@@ -14369,7 +14369,7 @@ menu-drawer+.header__search {
 
 details[open]>.search-modal {
     opacity: 1;
-    animation: animateMenuOpen var(--duration-default) ease;
+    animation: animateMenuOpen 0.25s ease;
 }
 
 details[open] .modal-overlay {
@@ -14379,7 +14379,7 @@ details[open] .modal-overlay {
 details[open] .modal-overlay::after {
     position: absolute;
     content: '';
-    background-color: rgb(var(--color-foreground), 0.5);
+    background-color: rgb(0, 0, 0, 0.5);
     top: 100%;
     left: 0;
     right: 0;
@@ -14393,7 +14393,7 @@ details[open] .modal-overlay::after {
 
 .search-modal {
     opacity: 0;
-    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.08);
     min-height: calc(100% + var(--inputs-margin-offset) + (2 * var(--inputs-border-width)));
     height: 100%;
 }
@@ -15095,7 +15095,7 @@ details[open] .modal-overlay::after {
 
 .disclosure-selector+.disclosure__list-wrapper {
     opacity: 1;
-    animation: animateLocalization var(--duration-default) ease;
+    animation: animateLocalization 0.25s ease;
 }
 
 @keyframes animateLocalization {
@@ -15146,9 +15146,9 @@ details[open] .modal-overlay::after {
 }
 
 .cdownright_inner {
-    border: 1px solid rgba(var(--color-foreground), .1);
+    border: 1px solid rgba(0, 0, 0, .1);
     padding: 30px 15px;
-    background: rgb(var(--color-background));
+    background: rgb(0, 0, 0);
     position: relative;
     margin-left: -100px;
 }
@@ -15160,7 +15160,7 @@ details[open] .modal-overlay::after {
 
 .cdownright_inner p {
     font-size: calc(var(--font-body-scale) * 24px);
-    color: rgba(var(--color-foreground));
+    color: rgba(0, 0, 0);
     margin-bottom: 30px;
     font-weight: var(--font-body-weight-medium);
     text-transform: capitalize;
@@ -15169,7 +15169,7 @@ details[open] .modal-overlay::after {
 .vt_product_countdown .time {
     display: inline-block;
     vertical-align: middle;
-    border: 1px solid rgba(var(--color-foreground), .1);
+    border: 1px solid rgba(0, 0, 0, .1);
     min-width: 80px;
     min-height: 80px;
     padding: 10px 4px;
@@ -15208,7 +15208,7 @@ details[open] .modal-overlay::after {
 
 .marquee_inner p {
     margin-bottom: 0;
-    color: rgba(var(--color-foreground));
+    color: rgba(0, 0, 0);
 }
 
 @keyframes rightmarquee {
@@ -15286,7 +15286,7 @@ details[open] .modal-overlay::after {
     text-transform: capitalize;
     font-weight: var(--font-body-weight);
     margin: 0;
-    color: rgb(var(--color-foreground), 0.7);
+    color: rgb(0, 0, 0, 0.7);
     margin-bottom: 15px;
     display: block;
 }
@@ -15500,7 +15500,7 @@ ul.twopro {
 .product-tab-item,
 .vtcollfea,
 .wp_rcomd_cover {
-    border: 1px solid rgb(var(--color-foreground), .1);
+    border: 1px solid rgb(0, 0, 0, .1);
     padding: 15px;
     border-radius: var(--card-corner-radius);
 }
@@ -15554,7 +15554,7 @@ button.loading .loading-overlay__spinner svg {
 }
 
 button.loading .loading-overlay__spinner svg .path {
-    stroke: rgb(var(--color-background));
+    stroke: rgb(0, 0, 0);
 }
 
 .quick-add__submit.button.button--primary span,
@@ -15640,7 +15640,7 @@ button.loading .loading-overlay__spinner svg .path {
 .vtsettimer li span {
     min-width: 50px;
     min-height: 50px;
-    background: rgba(var(--color-foreground), .05);
+    background: rgba(0, 0, 0, .05);
     border-radius: var(--card-corner-radius);
     display: flex;
     align-items: center;
@@ -15655,13 +15655,13 @@ button.loading .loading-overlay__spinner svg .path {
     text-transform: uppercase;
     margin-top: 6px;
     font-size: calc(var(--font-body-scale) * 12px);
-    color: rgba(var(--color-foreground), .7);
+    color: rgba(0, 0, 0, .7);
     font-weight: var(--font-body-weight-medium);
 }
 
 /* Category product */
 .catnav-tabs {
-    border: 1px solid rgba(var(--color-foreground), 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 5px;
 }
 
@@ -15689,8 +15689,8 @@ button.loading .loading-overlay__spinner svg .path {
     padding: 8px 15px;
     font-size: calc(var(--font-body-scale) * 16px);
     border: none;
-    border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
-    color: rgba(var(--color-foreground), .5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    color: rgba(0, 0, 0, .5);
     border-radius: 0;
 }
 
@@ -15726,7 +15726,7 @@ button.loading .loading-overlay__spinner svg .path {
 .vtslicktesti.slick-slider .slick-arrow,
 .vtslickbest.slick-slider .slick-arrow {
     top: -41px;
-    background-color: rgb(var(--color-background));
+    background-color: rgb(0, 0, 0);
 }
 
 .vtslicktopr.slick-slider .slick-arrow:hover,
@@ -15745,7 +15745,7 @@ button.loading .loading-overlay__spinner svg .path {
     padding: 12px;
     position: relative;
     border-radius: 5px;
-    color: rgb(var(--color-background));
+    color: rgb(0, 0, 0);
     margin-bottom: 20px;
 }
 
@@ -15774,7 +15774,7 @@ button.loading .loading-overlay__spinner svg .path {
 
 .vtslicktopr .card-wrapper,
 .vtslickbest .card-wrapper {
-    border-bottom: 1px solid rgba(var(--color-foreground), .08);
+    border-bottom: 1px solid rgba(0, 0, 0, .08);
     padding-bottom: 15px;
     margin-bottom: 15px;
 }
@@ -15876,13 +15876,13 @@ button.loading .loading-overlay__spinner svg .path {
 }
 
 .vtimgtxt_right p {
-    color: rgba(var(--color-foreground), .8);
+    color: rgba(0, 0, 0, .8);
     font-size: calc(var(--font-body-scale) * 16px);
     line-height: normal;
 }
 
 .vtvidewithtxt p {
-    color: rgba(var(--color-foreground), .8);
+    color: rgba(0, 0, 0, .8);
     margin: 0;
     font-size: calc(var(--font-body-scale) * 16px);
     line-height: normal;
@@ -15910,7 +15910,7 @@ button.loading .loading-overlay__spinner svg .path {
 
 /* Service */
 .deliveryinfo.grid {
-    border: 1px solid rgb(var(--color-foreground), .1);
+    border: 1px solid rgb(0, 0, 0, .1);
     border-radius: var(--card-corner-radius);
     background-color: rgb(var(--color-base-background-2));
     margin: 0;
@@ -15937,7 +15937,7 @@ button.loading .loading-overlay__spinner svg .path {
 
 .deliveryinfo .grid__item::before {
     position: absolute;
-    border-right: 1px solid rgb(var(--color-foreground), .1);
+    border-right: 1px solid rgb(0, 0, 0, .1);
     content: "";
     right: -1px;
     top: 24px;
@@ -15955,11 +15955,11 @@ button.loading .loading-overlay__spinner svg .path {
 }
 
 .deliveryinfo ul .multis-svg svg {
-    fill: rgb(var(--color-foreground));
+    fill: rgb(0, 0, 0);
 }
 
 .deliveryinfo ul .multis-svg svg.iconoffer {
-    stroke: rgb(var(--color-foreground));
+    stroke: rgb(0, 0, 0);
     transition: transform 0.5s;
 }
 
@@ -16008,7 +16008,7 @@ button.loading .loading-overlay__spinner svg .path {
 .deliveryinfo .multis-svg {
     text-align: center;
     transition: 0.3s ease;
-    background: rgb(var(--color-foreground), .06);
+    background: rgb(0, 0, 0, .06);
     width: 70px;
     height: 70px;
     border-radius: 100%;
@@ -16113,7 +16113,7 @@ button.loading .loading-overlay__spinner svg .path {
     font-weight: var(--font-body-weight);
     float: right;
     cursor: pointer;
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
 }
 
 .faqhead.toggle.collapsed.active::after {
@@ -16132,14 +16132,14 @@ button.loading .loading-overlay__spinner svg .path {
 
 .faqhead {
     display: block;
-    border: 1px solid rgba(var(--color-foreground), .08);
+    border: 1px solid rgba(0, 0, 0, .08);
     margin-bottom: 10px;
     padding: 8px 15px;
     text-transform: capitalize;
     font-size: calc(var(--font-body-scale) * 14px);
     width: 100%;
     text-align: left;
-    background: rgba(var(--color-foreground), 0.03);
+    background: rgba(0, 0, 0, 0.03);
 }
 
 .faqhead span {
@@ -16153,11 +16153,11 @@ button.loading .loading-overlay__spinner svg .path {
 
 /* Shipping and Return */
 .vtshiprtnsub {
-    border: 1px solid rgba(var(--color-foreground), 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     height: 100%;
     padding: 15px;
     margin-top: 15px;
-    background: rgba(var(--color-foreground), 0.03);
+    background: rgba(0, 0, 0, 0.03);
     border-radius: 5px;
 }
 
@@ -16166,7 +16166,7 @@ button.loading .loading-overlay__spinner svg .path {
 }
 
 .vtshiprtnsub ul {
-    color: rgba(var(--color-foreground), .8);
+    color: rgba(0, 0, 0, .8);
 }
 
 /* theme feature */
@@ -16203,7 +16203,7 @@ button.loading .loading-overlay__spinner svg .path {
 }
 
 .thefhigh p {
-    color: rgba(var(--color-foreground));
+    color: rgba(0, 0, 0);
 }
 
 /* Breadcrumb */
@@ -16226,7 +16226,7 @@ button.loading .loading-overlay__spinner svg .path {
 }
 
 .vtloginwish li p {
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
     margin-bottom: 10px;
 }
 
@@ -16236,7 +16236,7 @@ button.loading .loading-overlay__spinner svg .path {
 }
 
 .vtloginwish li a:hover {
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
 }
 
 .wishanimated {
@@ -16300,9 +16300,9 @@ a.go-to-wishlist {
     position: absolute;
     right: 15px;
     top: 15px;
-    background: rgb(var(--color-background));
+    background: rgb(0, 0, 0);
     ;
-    border: 1px solid rgb(var(--color-foreground), 0.08);
+    border: 1px solid rgb(0, 0, 0, 0.08);
     min-width: 35px;
     min-height: 35px;
     text-align: center;
@@ -16338,7 +16338,7 @@ a.go-to-wishlist {
 
 .vtwishdesc .product-price .compare-price {
     text-decoration: line-through;
-    color: rgb(var(--color-foreground), 0.7);
+    color: rgb(0, 0, 0, 0.7);
 }
 
 .vtwishdesc .product-price .price-sale,
@@ -16352,7 +16352,7 @@ a.go-to-wishlist {
 
 .vtwishempty p {
     font-size: 24px;
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
 }
 
 .heading .vtwish_box::after,
@@ -16386,15 +16386,15 @@ a.go-to-wishlist {
 .testimonial,
 .bestsinr {
     position: relative;
-    box-shadow: 0 0 6px rgb(var(--color-foreground), 0.1);
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.1);
     background-color: rgb(var(--color-base-background-2));
     padding: 5px;
     border-radius: 5px;
 }
 
 .mfp-close-btn-in .mfp-close {
-    background: rgb(var(--color-background));
-    color: rgb(var(--color-foreground));
+    background: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     opacity: 1;
 }
 
@@ -16410,7 +16410,7 @@ a.go-to-wishlist {
 .vtmenusimglazy,
 .blog_img,
 .vtmenugllazy {
-    background-color: rgba(var(--color-foreground), 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .arrowleftw,

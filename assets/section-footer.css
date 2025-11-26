@@ -41,19 +41,19 @@ button#scroll {
     transform:scale(0)
 }
 #scroll svg{
-    fill: rgb(var(--color-background));
+    fill: rgb(0, 0, 0);
     width: 20px;
     height: 20px;
     transition: .3s ease;
 }
 #scroll:hover svg{
-    fill: rgb(var(--color-foreground));
+    fill: rgb(0, 0, 0);
 }
 .footer .footer__list-social li a:hover{
     background: var(--gradient-base-accent-2);
 }
 .footer .footer__list-social li a:hover svg, .footer .footer__list-social li a:hover svg path{
-    fill: rgb(var(--color-foreground));
+    fill: rgb(0, 0, 0);
 }
 .subnews{
     font-size: calc(var(--font-body-scale) * 16px);
@@ -63,8 +63,8 @@ button#scroll {
     top: 15px;
 }
 .wp_fot_full_border{
-    border-top: 1px solid rgba(var(--color-foreground),.08);
-    border-bottom: 1px solid rgba(var(--color-foreground),.08);
+    border-top: 1px solid rgba(0, 0, 0,.08);
+    border-bottom: 1px solid rgba(0, 0, 0,.08);
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -76,7 +76,7 @@ button#scroll {
 }
 .newsletter-form__field-wrapper input {
     height: 50px;
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
 }
 .wp_nws_rws,.wp_nwstxts{
     display: flex;
@@ -101,7 +101,7 @@ button#scroll {
     box-shadow: none; 
 }
 .newsletter-form__field-wrapper .field__input{
-    background: rgb(var(--color-foreground),0.05);
+    background: rgb(0, 0, 0,0.05);
 }
 .newsletter-form__field-wrapper .field{
     column-gap: 15px;
@@ -207,7 +207,7 @@ button#scroll {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 6px rgb(var(--color-foreground),.1);
+    box-shadow: 0 0 6px rgb(0, 0, 0,.1);
 }
 .footer__list-social li{
     display: inline-block;
@@ -248,7 +248,7 @@ ul.footer__list-social {
         cursor: text;
     }
     .vtftleft,.footer__blocks-wrapper .footer-block--menu{
-        border-right: 1px solid rgba(var(--color-foreground),.08);
+        border-right: 1px solid rgba(0, 0, 0,.08);
     }
 }
 @media (max-width: 1199px){

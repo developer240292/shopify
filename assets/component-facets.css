@@ -12,7 +12,7 @@
     width: 100%;
     margin-bottom: 30px;
     align-items: center;
-    border: 1px solid rgba(var(--color-foreground),0.08);
+    border: 1px solid rgba(0, 0, 0,0.08);
     border-radius: 5px;
     padding: 8px 15px;
     justify-content: space-between;
@@ -28,10 +28,10 @@
 .vtglbtn button svg{
     width: 23px;
     height: 23px;
-    fill: rgba(var(--color-foreground),0.5);
+    fill: rgba(0, 0, 0,0.5);
 }
 .vtlistgridbtn.active svg,.vtlistgridbtn svg:hover {
-    fill: rgb(var(--color-foreground));
+    fill: rgb(0, 0, 0);
 }
 /*.listv.vtlistgridbtn{
     margin: 0 15px;
@@ -105,7 +105,7 @@
   padding: 0 1.5rem;
   min-width: 25rem;
   margin-top: 2.4rem;
-  border: 0.1rem solid rgba(var(--color-foreground), 0.55);
+  border: 0.1rem solid rgba(0, 0, 0, 0.55);
 }
 
 .facet-filters__summary::after {
@@ -152,7 +152,7 @@
     border-radius: 0;
     height: auto;
     margin: 0;
-    border: 1px solid rgba(var(--color-foreground),0.08);
+    border: 1px solid rgba(0, 0, 0,0.08);
     padding: 8px 1.75rem 8px 8px;
     font-size: 13px;
 }
@@ -170,32 +170,32 @@
 }
 
 .mobile-facets__sort .select__select:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline: 0.2rem solid rgba(0, 0, 0, 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(0, 0, 0),
+    0 0 0.5rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
 .mobile-facets__sort .select__select.focused,
 .no-js .mobile-facets__sort .select__select:focus {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline: 0.2rem solid rgba(0, 0, 0, 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(0, 0, 0),
+    0 0 0.5rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 
 .facet-filters__sort:focus-visible {
-    outline: 0.1rem solid rgba(var(--color-foreground), 0.5);
-    box-shadow: 0 0 0calc(var(--inputs-border-width)) rgba(var(--color-foreground),.1);
+    outline: 0.1rem solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0calc(var(--inputs-border-width)) rgba(0, 0, 0,.1);
     border-radius: var(--inputs-radius);
 }
 
 .facet-filters__sort.focused,
 .no-js .facet-filters__sort:focus {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline: 0.2rem solid rgba(0, 0, 0, 0.5);
   outline-offset: 1rem;
-  box-shadow: 0 0 0 1rem rgb(var(--color-background)),
-    0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 1rem rgb(0, 0, 0),
+    0 0 0.2rem 1.2rem rgba(0, 0, 0, 0.3);
 }
 
 .no-js .facet-filters__sort:focus:not(:focus-visible),
@@ -247,12 +247,12 @@
 
 .facets__disclosure[open] .facets__summary,
 .facets__summary:hover {
-  color: rgb(var(--color-foreground));
+  color: rgb(0, 0, 0);
 }
 
 .facets__disclosure[open] .facets__display,
 .facets__disclosure-vertical[open] .facets__display-vertical  {
-  animation: animateMenuOpen var(--duration-default) ease;
+  animation: animateMenuOpen 0.25s ease;
 }
 
 .facets__summary span {
@@ -276,10 +276,10 @@
 .facets__display {
   border-width: var(--popup-border-width);
   border-style: solid;
-  border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
+  border-color: rgba(0, 0, 0, var(--popup-border-opacity));
   border-radius: var(--popup-corner-radius);
   box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
-  background-color: rgb(var(--color-background));
+  background-color: rgb(0, 0, 0);
   position: absolute;
   top: calc(100% + 0.5rem);
   left: 0;
@@ -289,13 +289,13 @@
 }
 
 .facets__header {
-  border-bottom: 1px solid rgba(var(--color-foreground), 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 15px;
   display: flex;
   justify-content: space-between;
   position: sticky;
   top: 0;
-  background-color: rgb(var(--color-background));
+  background-color: rgb(0, 0, 0);
   z-index: 1;
 }
 
@@ -342,11 +342,11 @@
     z-index: -1;
     appearance: none;
     -webkit-appearance: none;
-    border: 1px solid rgba(var(--color-foreground),0.08);
+    border: 1px solid rgba(0, 0, 0,0.08);
     border-radius: 5px;
 }
 .facet-checkbox > svg {
-    background-color: rgb(var(--color-background));
+    background-color: rgb(0, 0, 0);
     margin-right: 10px;
     flex-shrink: 0;
     width: 18px;
@@ -365,7 +365,7 @@
 .facet-checkbox > input[type='checkbox']:checked ~ .icon-checkmark {
     visibility: visible;
     background: var(--color-vtmaincolors-text);
-    color: rgb(var(--color-background));
+    color: rgb(0, 0, 0);
     padding: 2px;
     border-radius: 5px;
 }
@@ -389,7 +389,7 @@
 @media screen and (forced-colors: active) {
     .facet-checkbox > svg {
         background-color: inherit;
-        border: 0.1rem solid rgb(var(--color-background));
+        border: 0.1rem solid rgb(0, 0, 0);
     }
     .facet-checkbox > input[type='checkbox']:checked ~ .icon-checkmark {
         border: none;
@@ -398,7 +398,7 @@
 
 
 .facet-checkbox--disabled {
-  color: rgba(var(--color-foreground), 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .facets__price {
@@ -452,8 +452,8 @@ button.facets__button {
 }
 
 span.active-facets__button-inner {
-    color: rgb(var(--color-foreground));
-    box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 0 0.1rem rgb(0, 0, 0);
     font-size: 13px;
     min-height: 0;
     min-width: 0;
@@ -484,15 +484,15 @@ span.active-facets__button-inner:after {
 }
 
 .active-facets__button:hover .active-facets__button-inner {
-  box-shadow: 0 0 0 2px rgb(var(--color-foreground));
+  box-shadow: 0 0 0 2px rgb(0, 0, 0);
 }
 
 .active-facets__button--light .active-facets__button-inner {
-  box-shadow: 0 0 0 1px rgba(var(--color-foreground), 0.2);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
 .active-facets__button--light:hover .active-facets__button-inner {
-  box-shadow: 0 0 0 2px rgba(var(--color-foreground), 0.4);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.4);
   background-color: transparent;
 }
 
@@ -508,17 +508,17 @@ a.active-facets__button.focused,
 }
 
 a.active-facets__button:focus-visible .active-facets__button-inner {
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2),
-    0 0 0 0.2rem rgb(var(--color-background)),
-    0 0 0 0.4rem rgb(var(--color-foreground));
+  box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.2),
+    0 0 0 0.2rem rgb(0, 0, 0),
+    0 0 0 0.4rem rgb(0, 0, 0);
   outline: none;
 }
 
 a.active-facets__button.focused .active-facets__button-inner,
 .no-js a.active-facets__button:focus .active-facets__button-inner {
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2),
-    0 0 0 0.2rem rgb(var(--color-background)),
-    0 0 0 0.4rem rgb(var(--color-foreground));
+  box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.2),
+    0 0 0 0.2rem rgb(0, 0, 0),
+    0 0 0 0.4rem rgb(0, 0, 0);
   outline: none;
 }
 
@@ -581,7 +581,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   right: 0;
   bottom: 0;
   z-index: 100;
-  background-color: rgba(var(--color-foreground), 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
 
@@ -600,7 +600,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__inner {
-    background-color: rgb(var(--color-background));
+    background-color: rgb(0, 0, 0);
     width: calc(100% - 15px);
     margin-left: auto;
     height: 100%;
@@ -610,7 +610,7 @@ a.active-facets__button.focused .active-facets__button-inner,
     max-width: 310px;
     display: flex;
     flex-direction: column;
-    border-color: rgba(var(--color-foreground),var(--drawer-border-opacity));
+    border-color: rgba(0, 0, 0,var(--drawer-border-opacity));
     border-style: solid;
     border-width: 0 0 0 var(--drawer-border-width);
     filter: drop-shadow(var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius) rgba(var(--color-shadow),var(--drawer-shadow-opacity)));
@@ -626,7 +626,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__header {
-    border-bottom: .1rem solid rgba(var(--color-foreground),.08);
+    border-bottom: .1rem solid rgba(0, 0, 0,.08);
     padding: 15px;
     display: flex;
     position: sticky;
@@ -649,7 +649,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__count {
-    color: rgba(var(--color-foreground),.7);
+    color: rgba(0, 0, 0,.7);
     flex-grow: 1;
     margin: 5px 0 0;
     font-size: 12px;
@@ -758,7 +758,7 @@ details.menu-opening .mobile-facets__close svg {
 }
 
 .no-js .mobile-facets__details {
-  border-bottom: 1px solid rgba(var(--color-foreground), 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .mobile-facets__highlight {
@@ -775,7 +775,7 @@ details.menu-opening .mobile-facets__close svg {
   right: 0px;
   bottom: 0px;
   display: block;
-  background-color: rgba(var(--color-foreground), 0.04);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .mobile-facets__summary {
@@ -827,7 +827,7 @@ details.menu-opening .mobile-facets__close svg {
     position: relative;
 }
 input.mobile-facets__checkbox {
-    border: 1px solid rgba(var(--color-foreground),0.08);
+    border: 1px solid rgba(0, 0, 0,0.08);
     position: absolute;
     width: 20px;
     height: 20px;
@@ -842,7 +842,7 @@ input.mobile-facets__checkbox {
 .mobile-facets__label {
     padding: 10px 15px;
     width: 100%;
-    background-color: rgb(var(--color-background));
+    background-color: rgb(0, 0, 0);
     transition: background-color .2s ease;
     word-break: break-word;
     display: flex;
@@ -863,7 +863,7 @@ input.mobile-facets__checkbox {
     position: absolute;
     visibility: hidden;
     background-color: var(--color-vtmaincolors-text);
-    color: rgb(var(--color-background));
+    color: rgb(0, 0, 0);
     border-radius: 0px;
 }
 .mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark {
@@ -883,14 +883,14 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.08);
   padding: 15px;
   bottom: 0;
   position: sticky;
   display: flex;
   z-index: 2;
   margin-top: auto;
-  background-color:rgb(var(--color-background));
+  background-color:rgb(0, 0, 0);
   background: var(--gradient-background);
 }
 
@@ -981,7 +981,7 @@ input.mobile-facets__checkbox {
 }
 .tag-filters li a {
     display: inline-block;
-    border: 1px solid rgba(var(--color-foreground),0.08);
+    border: 1px solid rgba(0, 0, 0,0.08);
     text-transform: capitalize;
     padding: 3px 7px;
     font-size: 12px;
@@ -989,9 +989,9 @@ input.mobile-facets__checkbox {
     margin-right: 5px;
 }
 .tag-filters li a:hover {
-    background-color: rgb(var(--color-foreground));
+    background-color: rgb(0, 0, 0);
     color: rgb(var(--color-button-text));
-    border-color: rgb(var(--color-foreground));
+    border-color: rgb(0, 0, 0);
 }
 @media screen and (min-width: 768px) {
   .facets__form.vtdrawerfacet{
@@ -1020,7 +1020,7 @@ input.mobile-facets__checkbox {
   }
   .facets-vertical .facets__summary {
     font-size: calc(var(--font-body-scale) * 16px);
-    border-bottom: 1px solid rgba(var(--color-foreground),0.08);
+    border-bottom: 1px solid rgba(0, 0, 0,0.08);
     padding-bottom: 10px;
     text-transform: uppercase;
     font-weight: var(--font-body-weight-semibold);
@@ -1163,7 +1163,7 @@ input.mobile-facets__checkbox {
         width: 100%;
         margin-bottom: 30px;
         align-items: center;
-        border: 1px solid rgba(var(--color-foreground),0.08);
+        border: 1px solid rgba(0, 0, 0,0.08);
         border-radius: 5px;
         padding: 8px 6px;
         justify-content: space-between;
@@ -1206,7 +1206,7 @@ input.mobile-facets__checkbox {
         border-radius: 0;
         height: auto;
         margin: 0;
-        border: 1px solid rgba(var(--color-foreground),0.08);
+        border: 1px solid rgba(0, 0, 0,0.08);
         padding: 8px 1.75rem 8px 8px;
         font-size: 13px;
     }

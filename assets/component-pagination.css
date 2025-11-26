@@ -1,5 +1,5 @@
 .pagination__item {
-    background: rgba(var(--color-foreground),.03);
+    background: rgba(0, 0, 0,.03);
     border-radius: 5px;
     min-width: 40px;
     min-height: 40px;
@@ -7,11 +7,11 @@
     vertical-align: middle;
     font-size: calc(var(--font-body-scale) * 16px);
     padding-top: 8px;
-    color: rgba(var(--color-foreground));
+    color: rgba(0, 0, 0);
 }
 .pagination__item.pagination__item--current,.pagination__item:hover{
-    background: rgba(var(--color-foreground));
-    color: rgb(var(--color-background))
+    background: rgba(0, 0, 0);
+    color: rgb(0, 0, 0)
 }
 .pagination-wrapper .pagination{
     display: block;
@@ -23,7 +23,7 @@
     margin: 0 5px;
 }
 .pagination__item:hover svg{
-    fill: rgb(var(--color-background));
+    fill: rgb(0, 0, 0);
 }
 .pagination-wrapper{
     margin-top: 30px;

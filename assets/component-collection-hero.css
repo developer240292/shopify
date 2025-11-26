@@ -3,7 +3,7 @@
     margin-bottom: 15px;
 }
 .collection-hero__description{
-    color: rgba(var(--color-foreground),.5);
+    color: rgba(0, 0, 0,.5);
 }
 .vtmain_bnr{
     margin-bottom: 30px;

@@ -14,7 +14,7 @@
   );
   top: 100%;
   left: 0;
-  background: rgba(var(--color-foreground), 0.5);
+  background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
   z-index: 2;
@@ -24,8 +24,8 @@
 menu-drawer > details[open] > summary::before {
   visibility: visible;
   opacity: 1;
-  transition: opacity var(--duration-default) ease,
-    visibility var(--duration-default) ease;
+  transition: opacity 0.25s ease,
+    visibility 0.25s ease;
 }
 
 .menu-drawer {
@@ -38,10 +38,10 @@ menu-drawer > details[open] > summary::before {
   width: calc(100vw - 4rem);
   padding: 0;
   border-width: 0 var(--drawer-border-width) 0 0;
-  background-color: rgb(var(--color-background));
+  background-color: rgb(0, 0, 0);
   overflow-x: hidden;
   border-style: solid;
-  border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
+  border-color: rgba(0, 0, 0, var(--drawer-border-opacity));
   filter: drop-shadow(
     var(--drawer-shadow-horizontal-offset)
     var(--drawer-shadow-vertical-offset)
@@ -59,8 +59,8 @@ menu-drawer > details[open] > summary::before {
 
 .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {
-  transition: transform var(--duration-default) ease,
-    visibility var(--duration-default) ease;
+  transition: transform 0.25s ease,
+    visibility 0.25s ease;
 }
 
 .no-js details[open] > .menu-drawer,
@@ -103,11 +103,11 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .no-js .menu-drawer__navigation > ul > li {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.04);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.04);
 }
 
 .no-js .menu-drawer__submenu ul > li {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.04);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.04);
 }
 
 .js .menu-drawer__menu li {
@@ -145,12 +145,12 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__close-button:focus,
 .menu-drawer__menu-item:hover,
 .menu-drawer__close-button:hover {
-  color: rgb(var(--color-foreground));
-  background-color: rgba(var(--color-foreground), 0.04);
+  color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .menu-drawer__menu-item--active:hover {
-  background-color: rgba(var(--color-foreground), 0.08);
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .js .menu-drawer__menu-item .icon-caret,
@@ -171,8 +171,8 @@ details[open].menu-opening > .menu-drawer__submenu {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: rgb(var(--color-background));
-  border-left: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  background-color: rgb(0, 0, 0);
+  border-left: 0.1rem solid rgba(0, 0, 0, 0.2);
   z-index: 1;
   transform: translateX(100%);
   visibility: hidden;
@@ -206,10 +206,10 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__utility-links {
   padding: 20px;
-  background-color: rgba(var(--color-foreground), 0.03);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 .menu-drawer__account svg{
-    fill: rgb(var(--color-foreground));
+    fill: rgb(0, 0, 0);
     margin-right: 10px;
 }
 .menu-drawer__account {
@@ -217,7 +217,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   align-items: center;
   text-decoration: none;
   font-size: calc(var(--font-body-scale) * 14px);
-  color: rgb(var(--color-foreground));
+  color: rgb(0, 0, 0);
 }
 
 .menu-drawer__account .icon-account {
@@ -266,7 +266,7 @@ details[open].menu-opening > .menu-drawer__submenu {
     #menu-drawer{
         margin-left: 0;
         width: calc(100vw - 0rem);
-        border: 1px solid rgba(var(--color-foreground), 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
         margin-top: 0px;
     }
     .header__icon--menu.header__icon .icon {

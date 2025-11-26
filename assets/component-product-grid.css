@@ -10,7 +10,7 @@
     flex-direction: row;
     padding: 15px;
     column-gap: 15px;
-    border:1px solid rgba(var(--color-foreground),.08);
+    border:1px solid rgba(0, 0, 0,.08);
 }
 .product-list .vtimgblock{
     float: left;
@@ -34,7 +34,7 @@
 }
 .product-list .product-form .cartb, .product-list .product-form .vtquickv,
 .product-list .product-form .wishlist {
-    border: 1px solid rgba(var(--color-foreground),.08);
+    border: 1px solid rgba(0, 0, 0,.08);
 }
 .vtlistpdesc{
     margin: 0 0 10px 0;
@@ -81,7 +81,7 @@
 }
 .template-search .vtsearchpages.card-wrapper .card{
     height: 100%;
-    background: rgba(var(--color-foreground),0.03);
+    background: rgba(0, 0, 0,0.03);
     display: block;
 }
 .vtsearchblog .card .media{

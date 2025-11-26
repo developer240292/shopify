@@ -4,7 +4,7 @@
     margin-top: 10px;
     height: 3px;
     border-radius: 4px;
-    background: rgba(var(--color-foreground),0.08);
+    background: rgba(0, 0, 0,0.08);
     overflow: hidden;
 }
 .vtstockinfo {

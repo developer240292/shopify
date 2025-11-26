@@ -1,5 +1,5 @@
 .vtordbill{
-    background: rgba(var(--color-foreground),0.03);
+    background: rgba(0, 0, 0,0.03);
     padding: 15px;
     margin-bottom: 30px;
 }
@@ -21,7 +21,7 @@
 
 .customer strong {
   font-weight: var(--font-body-weight);
-  color: rgb(var(--color-foreground));
+  color: rgb(0, 0, 0);
 }
 
 .customer h2.form__message {
@@ -53,7 +53,7 @@
   display: block;
   position: absolute;
   left: 0;
-  background: rgba(var(--color-foreground), 0.08);
+  background: rgba(0, 0, 0, 0.08);
 }*/
 
 @media screen and (forced-colors: active) {
@@ -82,11 +82,11 @@
     position: relative;
     padding: 0;
     text-decoration: none;
-    background: rgba(var(--color-foreground),.03);
+    background: rgba(0, 0, 0,.03);
     min-width: 34px;
     min-height: 34px;
     text-align: center;
-    color: rgba(var(--color-foreground));
+    color: rgba(0, 0, 0);
     margin: 0 2px;
 }
 .customer .pagination li:first-of-type svg {
@@ -96,8 +96,8 @@
   transform: rotate(-90deg);
 }
 .customer .pagination li [aria-current] ,.customer .pagination li a:hover,.customer .pagination li span:hover {
-    background: rgba(var(--color-foreground));
-    color: rgb(var(--color-background));
+    background: rgba(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 .customer .pagination li [aria-current]::after {
   content: '';
@@ -162,8 +162,8 @@
 .addresses li > button,
 .addresses form button[type] {
   background-color: transparent;
-  border: 1px solid rgba(var(--color-foreground),0.08);
-  color: rgb(var(--color-foreground));
+  border: 1px solid rgba(0, 0, 0,0.08);
+  color: rgb(0, 0, 0);
 }
 
 .activate button[name='decline']:hover,
@@ -218,7 +218,7 @@
 
 .order .fulfillment {
   width: fit-content;
-  border: 0.01rem solid rgba(var(--color-foreground), 0.2);
+  border: 0.01rem solid rgba(0, 0, 0, 0.2);
   padding: 1rem;
   margin-top: 1rem;
   font-size: 1.4rem;
@@ -300,12 +300,12 @@
 }
 
 .order dd s {
-  color: rgba(var(--color-foreground), 0.7);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .order .unit-price {
   margin-top: 0.2rem;
-  color: rgba(var(--color-foreground), 0.7);
+  color: rgba(0, 0, 0, 0.7);
 }
 .order-details #RowTotal ~ td{
     font-size: calc(var(--font-body-scale) * 18px);
@@ -323,7 +323,7 @@
   width: 100%;
 }
 .vtaddpg div[data-address] {
-    border: 1px solid rgba(var(--color-foreground),0.08);
+    border: 1px solid rgba(0, 0, 0,0.08);
     border-radius: var(--card-corner-radius);
     display: block;
     padding: 15px;
@@ -384,7 +384,7 @@ li[data-address] > h2 {
 }
 
 .vtpagereg{
-    border: 1px solid rgba(var(--color-foreground),0.08);
+    border: 1px solid rgba(0, 0, 0,0.08);
     padding: 15px;
     border-radius: var(--card-corner-radius);
     height: 100%;
@@ -402,10 +402,10 @@ li[data-address] > h2 {
     fill: var(--color-vtmaincolors-text);
 }
 .vtrtaddress:hover{
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
 }
 .vtrtaddress:hover svg{
-    fill: rgb(var(--color-foreground));
+    fill: rgb(0, 0, 0);
 }
 .vtordhis{
     margin-bottom: 30px;
@@ -416,7 +416,7 @@ li[data-address] > h2 {
 .customer button.vtaddrbtn{
     background-color: transparent;
     padding: 0;
-    color: rgb(var(--color-foreground));
+    color: rgb(0, 0, 0);
     border: none;
     margin-top: 10px;
     margin-right: 10px;
@@ -425,7 +425,7 @@ li[data-address] > h2 {
     color: var(--color-vtmaincolors-text);
 }
 .customer button.vtaddrbtnsvg svg{
-    fill: rgb(var(--color-foreground));
+    fill: rgb(0, 0, 0);
 }
 .customer button.vtaddrbtnsvg:hover svg{
     fill: var(--color-vtmaincolors-text);
@@ -448,7 +448,7 @@ li[data-address] > h2 {
         margin-bottom: 0;
     }
     .customer .vtordhis .order-history tbody tr,.customer.order .order-details tbody tr {
-        border-bottom: 1px solid rgba(var(--color-foreground),.08);
+        border-bottom: 1px solid rgba(0, 0, 0,.08);
         margin-bottom: 15px;
         padding-bottom: 15px;
     }

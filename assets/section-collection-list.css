@@ -1,6 +1,6 @@
 .collection-list-wrapper .card-wrapper .card__content.dummyimg {
     width: 100%;
-    background: rgba(var(--color-foreground),0.1);
+    background: rgba(0, 0, 0,0.1);
 }
 .collection-list__item .card__heading {
     margin-top: 12px;
