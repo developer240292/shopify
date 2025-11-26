@@ -1,0 +1,50 @@
+{% comment %}
+  Renders share button
+
+  Usage:
+  {% render 'share-button' %}
+{% endcomment %}
+<ul class="social-sharing">
+  {% if block.settings.share_facebook %}
+    <li>
+      <a
+        target="_blank"
+        rel="noopener"
+        rel="noreferrer"
+        href="//www.facebook.com/sharer.php?u={{ request.origin }}"
+        class="share-facebook"
+      >
+        {% render 'icon-social-facebook' %}
+        <span>{{ 'vtcustomlabel.vtalltext.share_on_facebook' | t }}</span>
+      </a>
+    </li>
+  {% endif %}
+  {% if block.settings.share_twitter %}
+    <li>
+      <a
+        target="_blank"
+        rel="noopener"
+        rel="noreferrer"
+        href="//twitter.com/share?url={{ request.origin }}"
+        class="share-twitter"
+      >
+        {% render 'icon-social-twitter' %}
+        <span>{{ 'vtcustomlabel.vtalltext.share_on_twitter' | t }}</span>
+      </a>
+    </li>
+  {% endif %}
+  {% if block.settings.share_pinterest %}
+    <li>
+      <a
+        target="_blank"
+        rel="noopener"
+        rel="noreferrer"
+        href="//pinterest.com/pin/create/button/?url={{ request.origin }}"
+        class="share-pinterest"
+      >
+        {% render 'icon-social-pinterest' %}
+        <span>{{ 'vtcustomlabel.vtalltext.share_on_pinterest' | t }}</span>
+      </a>
+    </li>
+  {% endif %}
+</ul>

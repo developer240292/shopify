@@ -74,7 +74,7 @@
             </a>
           </div>
           <details-modal class="header__search">
-            <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}">
+            <div class="search-modal__content">
               {%- if settings.predictive_search_enabled -%}
                 <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
               {%- endif -%}
@@ -82,7 +82,6 @@
                 <div class="field">
                   <input
                     class="search__input field__input"
-                    id="Search-In-Modal"
                     type="search"
                     name="q"
                     value=""
@@ -93,7 +92,6 @@
                       autocomplete="off" autocapitalize="off" spellcheck="false"
                     {%- endif -%}
                   >
-                  <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
                   <input type="hidden" name="options[prefix]" value="last">
                   <button
                     class="search__button button button--primary focus-inset"
@@ -126,15 +124,6 @@
               {%- if settings.predictive_search_enabled -%}
                 </predictive-search>
               {%- endif -%}
-              <button
-                type="button"
-                class="searchwithbox search-modal__close-button modal__close-button link link--text focus-inset"
-                aria-label="{{ 'accessibility.close' | t }}"
-              >
-                <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                  <use href="#icon-close"/>
-                </svg>
-              </button>
             </div>
           </details-modal>
           <div class="header-control">
