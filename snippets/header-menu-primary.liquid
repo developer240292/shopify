@@ -4,7 +4,7 @@
   Usage:
   {% render 'header-menu-primary' %}
 {% endcomment %}
-<ul id="menu-primary-menu" class="draly-nav main-menu horizontal-menu villa-menu">
+<ul class="draly-nav main-menu horizontal-menu villa-menu">
   {%- for link in section.settings.primary_menu.links -%}
     {% assign assignsubmenu = true %}
     {% assign displaymegamenu = false %}
@@ -22,7 +22,7 @@
         {% endif %}
       {% endif %}
     {%- endfor -%}
-    <li class="menu-item {% if link.current %}current-menu-item{% endif %} {%- if link.child_active %}menu-item-has-children{% endif %}">
+    <li class="menu-item{% if link.current %} current-menu-item{% endif %}{%- if childlink %} menu-item-has-children{% endif %}">
       {%- if link.links != blank -%}
         <a
           href="{{ link.url }}"
@@ -35,7 +35,7 @@
         {% if assignsubmenu %}
           <ul class="sub-menu">
             {%- for childlink in link.links -%}
-              <li class="menu-item {% if childlink.current %}current-menu-item{% endif %} {%- if link.grandchild_active %}menu-item-has-children{% endif %}"">
+              <li class="menu-item{% if childlink.current %} current-menu-item{% endif %}{%- if link.grandchild_active %} menu-item-has-children{% endif %}"">
                 <a href="{{ childlink.url }}"
                   {% if childlink.current %}
                     aria-current="page"
@@ -45,7 +45,7 @@
                 </a>
                 <ul class="sub-menu">
                   {%- for grandchildlink in childlink.links -%}
-                    <li class="menu-item {% if grandchildlink.current %}current-menu-item{% endif %}">
+                    <li class="menu-item{% if grandchildlink.current %} current-menu-item{% endif %}">
                       <a href="{{ grandchildlink.url }}"
                         {% if grandchildlink.current %}
                           aria-current="page"
@@ -60,7 +60,6 @@
             {%- endfor -%}
           </ul>
         {% endif %}
-        {% render 'megamenu', blocks: section.blocks, title: link.title %}
       {%- else -%}
         {% if blank_link %}
           <a
