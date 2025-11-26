@@ -123,7 +123,7 @@
             "type": "megamenu-blog",
             "settings": {
               "menuname": "imperdiet justo",
-              "showsubmenu": false,
+              "showsubmenu": true,
               "blog": "news",
               "blog_to_show": 4
             }
@@ -132,7 +132,7 @@
             "type": "megamenu-product",
             "settings": {
               "menuname": "camera",
-              "showsubmenu": false,
+              "showsubmenu": true,
               "collection": "bestseller",
               "products_to_show": 6
             }
