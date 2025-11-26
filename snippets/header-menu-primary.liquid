@@ -14,7 +14,9 @@
       {% assign lower_title = link.title | downcase %}
       {% if lower_title == case_title %}
         {% assign displaymegamenu = true %}
-     
+        {% if block.settings.showsubmenu %}
+          {% assign assignsubmenu = true %}
+        {% endif %}
         {%- if link.links == blank -%}
           {% assign blank_link = lower_title %}
         {% endif %}
