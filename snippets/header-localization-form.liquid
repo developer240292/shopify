@@ -109,6 +109,10 @@
             aria-expanded="false"
             aria-describedby="FooterCountryLabel"
           >
+            <span
+              class="disclosure-form-field__flag"
+              style="background-image: url('//cdn.shopify.com/static/images/flags/{{ localization.country.iso_code }}.svg?width=40')"
+            ></span>
             {{ localization.country.name }} ({{ localization.country.currency.iso_code }}
             {{ localization.country.currency.symbol }})
           </button>
@@ -123,8 +127,12 @@
                       aria-current="true"
                     {% endif %}
                     data-value="{{ country.iso_code }}"
-                  ><span class="disclosure-form-field__flag" style="background-image: url('flags/{{ country_code }}.svg?width=40)"></span>
-                    {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                    ><span
+                      class="disclosure-form-field__flag"
+                      style="background-image: url('//cdn.shopify.com/static/images/flags/{{ country.iso_code }}.svg?width=40')"
+                    ></span>
+                    {{ country.name }} ({{ country.currency.iso_code }}
+                    {{ country.currency.symbol }})
                   </a>
                 </li>
               {%- endfor -%}
