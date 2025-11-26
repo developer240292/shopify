@@ -139,9 +139,9 @@
           </details-modal>
           <div class="header-control">
             <div class="header-meta">
-              {% include 'header-localization-form' %}
-              {% include 'header-user' %}
-              {% include 'header-minicart' %}
+              {% render 'header-localization-form' %}
+              {% render 'header-user' %}
+              {% render 'cart-icon-bubble' %}
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@
                   </div>
                   <div class="block-content verticalmenu-content">
                     <div class="villa-menu-wrapper vertical"> 
-                      {% include 'header-menu-vertical' %}
+                      {% render 'header-menu-vertical' %}
                     </div>
                   </div>
                 </nav>
@@ -168,12 +168,12 @@
               {%- if section.settings.menu != blank -%}
                 <div class="box-header-nav">
                   <div class="villa-menu-wrapper horizontal">
-                    {% include 'header-menu-primary' %}
+                    {% render 'header-menu-primary' %}
                   </div>
                 </div>
               {%- endif -%}
-              {% include 'header-wishlist' %}
-              {% include 'header-contact' %}
+              {% render 'header-wishlist' %}
+              {% render 'header-contact' %}
             </div>
           </div>
         </div>
@@ -236,8 +236,8 @@
               </div>
             </div>
             <div class="header-meta">
-              {% include 'header-user' %}
-              {% include 'header-minicart' %}
+              {% render 'header-user' %}
+              {% render 'cart-icon-bubble' %}
             </div>
             {%- if section.settings.menu != blank -%}
               <div class="block-menu-bar">
