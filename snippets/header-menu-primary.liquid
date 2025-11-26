@@ -6,7 +6,7 @@
 {% endcomment %}
 <ul id="menu-primary-menu" class="draly-nav main-menu horizontal-menu villa-menu">
   {%- for link in section.settings.primary_menu.links -%}
-    {% assign assignsubmenu = false %}
+    {% assign assignsubmenu = true %}
     {% assign displaymegamenu = false %}
     {% assign blank_link = false %}
     {% for block in section.blocks %}
@@ -14,121 +14,73 @@
       {% assign lower_title = link.title | downcase %}
       {% if lower_title == case_title %}
         {% assign displaymegamenu = true %}
-        {% if block.settings.showsubmenu %}
-          {% assign assignsubmenu = true %}
+        {% if block.settings.showsubmenu == false %}
+          {% assign assignsubmenu = false %}
         {% endif %}
         {%- if link.links == blank -%}
           {% assign blank_link = lower_title %}
         {% endif %}
       {% endif %}
     {%- endfor -%}
-    <li class="menu-item">
+    <li class="menu-item {% if link.current %}current-menu-item{% endif %} {%- if link.child_active %}menu-item-has-children{% endif %}">
       {%- if link.links != blank -%}
-        <details-disclosure>
-          <details id="Details-HeaderMenu-{{ forloop.index }}">
-            <summary class="header__menu-item list-menu__item link focus-inset">
-              <span
-                {%- if link.child_active %}
-                  class="header__active-menu-item"
-                {% endif %}
-              >
-                {{- link.title | escape -}}
-              </span>
-              {% render 'icon-caret' %}
-            </summary>
-            <div
-              id="HeaderMenu-MenuList-{{ forloop.index }}"
-              class="color-{{ section.settings.color_dropmenu }} header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}"
-              tabindex="-1"
-            >
-              {% if assignsubmenu11 %}
-                <div class="container">
-                  <div class="row wp_submenus_dep">
-                    {%- for childlink in link.links -%}
-                      <div class="{% if link.links.size == 1 %}col-12 {% elsif link.links.size == 2 %}col-12 {% else %}col-3 {% endif %}">
-                        <div class="vtmenuinner">
-                          <a
-                            href="{{ childlink.url }}"
-                            class="header__menu-item list-menu__item link link--text focus-inset caption-large wp_atitls{% if childlink.current %} list-menu__item--active{% endif %}"
-                            {% if childlink.current %}
-                              aria-current="page"
-                            {% endif %}
-                          >
-                            {{ childlink.title | escape }}
-                          </a>
-                          <ul
-                            id="HeaderMenu-SubMenuList-{{ forloop.index }}"
-                            class="header__submenu list-menu motion-reduce"
-                          >
-                            {%- for grandchildlink in childlink.links -%}
-                              <li>
-                                <a
-                                  href="{{ grandchildlink.url }}"
-                                  class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
-                                  {% if grandchildlink.current %}
-                                    aria-current="page"
-                                  {% endif %}
-                                >
-                                  {{ grandchildlink.title | escape }}
-                                </a>
-                              </li>
-                            {%- endfor -%}
-                          </ul>
-                        </div>
-                      </div>
-                    {%- endfor -%}
-                  </div>
-                </div>
-              {% endif %}
-              {% render 'megamenu', blocks: section.blocks, title: link.title %}
-              <div class="text-right vthseeall container">
-                <a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a>
-              </div>
-            </div>
-          </details>
-        </details-disclosure>
-      {%- else -%}
-        {% if blank_link %}
-          <details-disclosure>
-            <details id="Details-HeaderMenu-{{ forloop.index }}">
-              <summary class="header__menu-item list-menu__item link focus-inset">
-                <span
-                  {%- if link.child_active %}
-                    class="header__active-menu-item"
+        <a
+          href="{{ link.url }}"
+          {% if link.current %}
+            aria-current="page"
+          {% endif %}
+        >
+          {{- link.title | escape -}}
+        </a>
+        {% if assignsubmenu %}
+          <ul class="sub-menu">
+            {%- for childlink in link.links -%}
+              <li class="menu-item {% if childlink.current %}current-menu-item{% endif %} {%- if link.grandchild_active %}menu-item-has-children{% endif %}"">
+                <a href="{{ childlink.url }}"
+                  {% if childlink.current %}
+                    aria-current="page"
                   {% endif %}
                 >
-                  {{- link.title | escape -}}
-                </span>
-                {% render 'icon-caret' %}
-              </summary>
-              <div
-                id="HeaderMenu-MenuList-{{ forloop.index }}"
-                class="color-{{ section.settings.color_dropmenu }} gradient header__submenu list-menu list-menu--disclosure caption-large motion-reduce {% if link.links.size > 2 or displaymegamenu %}vtmenufull{% endif %}"
-                tabindex="-1"
-              >
-                {% render 'megamenu', blocks: section.blocks, title: link.title %}
-                <div class="text-right vthseeall container">
-                  <a href="{{ link.url }}">{{ 'vtcustomlabel.vtalltext.see_all' | t }}</a>
-                </div>
-              </div>
-            </details>
-          </details-disclosure>
-          {% assign blank_link = false %}
-        {% else %}
+                  {{ childlink.title | escape }}
+                </a>
+                <ul class="sub-menu">
+                  {%- for grandchildlink in childlink.links -%}
+                    <li class="menu-item {% if grandchildlink.current %}current-menu-item{% endif %}">
+                      <a href="{{ grandchildlink.url }}"
+                        {% if grandchildlink.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {{ grandchildlink.title | escape }}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {% endif %}
+        {% render 'megamenu', blocks: section.blocks, title: link.title %}
+      {%- else -%}
+        {% if blank_link %}
           <a
             href="{{ link.url }}"
-            class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"
             {% if link.current %}
               aria-current="page"
             {% endif %}
           >
-            <span
-              {%- if link.current %}
-                class="header__active-menu-item"
-              {% endif %}
-            >
-              {{- link.title | escape -}}
-            </span>
+            {{- link.title | escape -}}
+          </a>
+          {% render 'megamenu', blocks: section.blocks, title: link.title %}
+          {% assign blank_link = false %}
+        {% else %}
+          <a
+            href="{{ link.url }}"
+            {% if link.current %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{- link.title | escape -}}
           </a>
         {% endif %}
       {%- endif -%}
