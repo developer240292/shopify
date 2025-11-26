@@ -22,7 +22,7 @@
 }
 .totals__subtotal{
   font-size: calc(var(--font-body-scale) * 16px);
-  font-weight: var(--font-body-weight-medium);
+  font-weight: 500;
 }
 .cart__ctas + .totals {
   margin-top: 2rem;

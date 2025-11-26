@@ -9,7 +9,7 @@
 .price .price-item {
     margin: 0;
     font-size: calc(var(--font-body-scale) * 16px);
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
     letter-spacing: 0;
     display: inline-block;
 }

@@ -201,7 +201,7 @@ slideshow-component:not(.container) .slider-buttons {
 }
 .vtslideshow .banner__heading{
     text-transform: capitalize;
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
@@ -331,7 +331,7 @@ slideshow-component:not(.container) .slider-buttons {
         padding: 5px;
         min-width: 126px;
         min-height: 39px;
-        font-weight: var(--font-body-weight-medium);
+        font-weight: 500;
     }
     .slideshow__text .vtsaddtext{
         margin-top: 15px;

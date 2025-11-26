@@ -15162,7 +15162,7 @@ details[open] .modal-overlay::after {
     font-size: calc(var(--font-body-scale) * 24px);
     color: rgba(0, 0, 0);
     margin-bottom: 30px;
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
     text-transform: capitalize;
 }
 
@@ -15183,7 +15183,7 @@ details[open] .modal-overlay::after {
 
 .vt_product_countdown .count {
     font-size: calc(var(--font-body-scale) * 24px);
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
 }
 
 .vt_product_countdown .time .label {
@@ -15275,7 +15275,7 @@ details[open] .modal-overlay::after {
 .vttestisub h3 {
     font-size: calc(var(--font-body-scale) * 16px);
     text-transform: capitalize;
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
     margin-top: 0;
     margin-bottom: 5px;
     color: var(--color-vtmaincolors-text);
@@ -15428,7 +15428,7 @@ details[open] .modal-overlay::after {
 .clist_right .card__content a {
     text-transform: capitalize;
     font-size: calc(var(--font-body-scale) * 16px);
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
     margin-top: 10px;
     display: block;
 }
@@ -15517,7 +15517,7 @@ ul.twopro {
 .pro-tab .nav-tabs .nav-link {
     text-transform: capitalize;
     position: relative;
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
     padding: 0;
     font-size: calc(var(--font-body-scale) * 16px);
     border: none;
@@ -15646,7 +15646,7 @@ button.loading .loading-overlay__spinner svg .path {
     align-items: center;
     justify-content: center;
     color: var(--color-vtmaincolors-text);
-    font-weight: var(--font-body-weight-semibold);
+    font-weight: 600;
     font-size: calc(var(--font-body-scale) * 18px);
 }
 
@@ -15656,7 +15656,7 @@ button.loading .loading-overlay__spinner svg .path {
     margin-top: 6px;
     font-size: calc(var(--font-body-scale) * 12px);
     color: rgba(0, 0, 0, .7);
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
 }
 
 /* Category product */
@@ -15685,7 +15685,7 @@ button.loading .loading-overlay__spinner svg .path {
 .catpro-tab .catnav-tabs .nav-link {
     text-transform: capitalize;
     position: relative;
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
     padding: 8px 15px;
     font-size: calc(var(--font-body-scale) * 16px);
     border: none;
@@ -15740,7 +15740,7 @@ button.loading .loading-overlay__spinner svg .path {
 
 .leftheading {
     font-size: calc(var(--font-body-scale) * 16px);
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
     text-transform: capitalize;
     padding: 12px;
     position: relative;
@@ -15983,7 +15983,7 @@ button.loading .loading-overlay__spinner svg .path {
 .deliveryinfo li .h4 {
     font-size: calc(var(--font-body-scale) * 18px);
     text-transform: capitalize;
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
     margin-bottom: 8px;
     margin-top: 0;
 }

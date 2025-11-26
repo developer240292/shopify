@@ -969,7 +969,7 @@ input.mobile-facets__checkbox {
 .tag-filters h3{
     margin: 0 0 1.5rem;
     font-size: calc(var(--font-body-scale) * 22px);
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
 }
 .tag-filters{
     padding: 0;
@@ -1023,14 +1023,14 @@ input.mobile-facets__checkbox {
     border-bottom: 1px solid rgba(0, 0, 0,0.08);
     padding-bottom: 10px;
     text-transform: uppercase;
-    font-weight: var(--font-body-weight-semibold);
+    font-weight: 600;
     margin-bottom: 12px;
   }
   
   .facets__heading--vertical {
     margin: 0 0 1.5rem 0;
     font-size: calc(var(--font-body-scale) * 22px);
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
   }
 
   .facets__header-vertical {

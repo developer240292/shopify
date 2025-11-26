@@ -12,7 +12,7 @@
     position: relative;
 }
 .vtsimplemenuxs  .vtmenuinner .wp_atitls{
-    font-weight: var(--font-body-weight-semibold); 
+    font-weight: 600; 
 }
 #under-menu .wp_submenus_dep .vtmenuinner .list-menu li{
   margin:0;
@@ -125,7 +125,7 @@
 }
 .vtsecmenu li a {
     text-transform: capitalize;
-    font-weight: var(--font-body-weight-medium);
+    font-weight: 500;
     color: rgb(0, 0, 0,.8);
 }
 .vtsimplemenuxs .list-menu__item {

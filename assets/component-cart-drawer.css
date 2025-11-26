@@ -144,7 +144,7 @@
   line-height: 40px;
   padding: 0 20px;
   background-color: var(--color-base-accent-2);
-  color: var(--draly-main-color);
+  color: var(--color-base-accent-1);
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
@@ -163,10 +163,6 @@ cart-drawer .cart-item__totals {
 cart-remove-button svg {
   width: 36px;
   height: 26px;
-}
-
-cart-drawer-items .cart-item__quantity-wrapper {
-  justify-content: space-between;
 }
 
 .cartdrawfpay {
@@ -214,6 +210,11 @@ cart-drawer-items ul:empty,
 cart-drawer-items p:empty,
 cart-drawer-items div:empty {
   display: none;
+}
+
+cart-drawer-items .cart-item__quantity-wrapper {
+  justify-content: space-between;
+  align-items: center;
 }
 
 cart-drawer-items .cart-item__quantity-wrapper quantity-input.quantity {
@@ -329,7 +330,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__heading {
   margin: 0;
-  font-weight: var(--font-body-weight-medium);
+  font-weight: 500;
   font-size: calc(var(--font-body-scale) * 20px);
 }
 

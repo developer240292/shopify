@@ -1,6 +1,6 @@
 .progress {
   position: relative;
-  height: 10px;
+  height: 14px;
   display: block;
   background-color: rgba(0, 0, 0, 0.08);
   overflow: visible;
@@ -15,14 +15,10 @@
   display: block;
 }
 
-.determinate svg {
+.progress .determinate svg {
   position: absolute;
-  right: 0;
-  bottom: -5px;
-  width: 30px;
-  height: 30px;
-  fill: var(--color-base-accent-1);
-  stroke: rgba(0, 0, 0);
+  right: 2px;
+  bottom: 1px;
 }
 
 .vtship {
@@ -145,12 +141,12 @@ dl .product-option {
 }
 
 .cart-item__name~.product-option {
-  font-weight: var(--font-body-weight-medium);
+  font-weight: 500;
   letter-spacing: 0;
 }
 
 .cart-item__price-wrapper {
-  font-weight: var(--font-body-weight-medium);
+  font-weight: 500;
   font-size: calc(var(--font-body-scale) * 16px);
 }
 
