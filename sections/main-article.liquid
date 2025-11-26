@@ -81,7 +81,11 @@
             </div>
 
           {%- when 'share_button' -%}
-            {% render 'share-button' %}
+            {% render 'share-button',
+              share_facebook: block.settings.share_facebook,
+              share_twitter: block.settings.share_twitter,
+              share_pinterest: block.settings.share_pinterest
+            %}
         {%- endcase -%}
       {%- endfor -%}
 
