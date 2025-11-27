@@ -39,6 +39,7 @@
 <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'megamenu.js' | asset_url }}" defer="defer"></script>
 <div class="header-wrapper {% if section.settings.enable_sticky_header %}header-sticky{% endif %} {% if section.settings.enable_sticky_header_mobile %}header-mobile-sticky{% endif %}">
   {% if section.settings.show_topheader %}
     <div class="header-top">
@@ -140,7 +141,7 @@
       <div class="header-position">
         <div class="header-nav">
           <div class="container">
-            <div class="header-nav-inner">
+            <div class="header-nav-inner container-megamenu">
               {%- if section.settings.vertical_menu != blank -%}
                 <nav class="vertical-wrapper block-nav-category has-vertical-menu {% if section.settings.vertical_menu_always_open_on_home %}always-open{% endif %}">
                   <div class="block-title">
@@ -150,7 +151,9 @@
                   </div>
                   <div class="block-content verticalmenu-content">
                     <div class="villa-menu-wrapper vertical">
-                      {% render 'header-menu-vertical' %}
+                      <ul class="draly-nav vertical-menu villa-menu">
+                        {% render 'header-menu' %}
+                      </ul>
                     </div>
                   </div>
                 </nav>
@@ -158,7 +161,9 @@
               {%- if section.settings.primary_menu != blank -%}
                 <div class="box-header-nav">
                   <div class="villa-menu-wrapper horizontal">
-                    {% render 'header-menu-primary' %}
+                    <ul class="draly-nav main-menu horizontal-menu villa-menu">
+                      {% render 'header-menu' %}
+                    </ul>
                   </div>
                 </div>
               {%- endif -%}

@@ -1,0 +1,65 @@
+{% comment %}
+  Renders header menu
+
+  Usage:
+  {% render 'header-menu' %}
+{% endcomment %}
+{%- for link in section.settings.primary_menu.links -%}
+  {% assign display_megamenu = false %}
+  {% for block in section.blocks %}
+    {% assign megamenu_title = block.settings.menuname | downcase %}
+    {% assign menu_title = link.title | downcase %}
+    {% if megamenu_title == menu_title %}
+      {% assign display_megamenu = false %}
+      {% if block.settings.showsubmenu == true %}
+        {% assign display_megamenu = true %}
+      {% endif %}
+    {% endif %}
+  {%- endfor -%}
+  <li class="menu-item{% if link.current %} current-menu-item{% endif %}{% if link.links != blank %} menu-item-has-children{% else %}{% if display_megamenu %} menu-item-has-children menu-item-has-megamenu{% endif %}{% endif %}">
+    <a
+      href="{{ link.url }}"
+      {% if link.current %}
+        aria-current="page"
+      {% endif %}
+    >
+      {{- link.title | escape -}}
+    </a>
+    {%- if link.links != blank %}
+      <ul class="sub-menu">
+        {%- for childlink in link.links -%}
+          <li class="menu-item{% if childlink.current %} current-menu-item{% endif %}{%- if link.childlink != blank %} menu-item-has-children{% endif %}">
+            <a
+              href="{{ childlink.url }}"
+              {% if childlink.current %}
+                aria-current="page"
+              {% endif %}
+            >
+              {{ childlink.title | escape }}
+            </a>
+            {%- if link.childlink != blank %}
+              <ul class="sub-menu">
+                {%- for grandchildlink in childlink.links -%}
+                  <li class="menu-item{% if grandchildlink.current %} current-menu-item{% endif %}">
+                    <a
+                      href="{{ grandchildlink.url }}"
+                      {% if grandchildlink.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      {{ grandchildlink.title | escape }}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {% endif %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {% else %}
+      {%- if display_megamenu %}
+        {% render 'megamenu', blocks: section.blocks, title: link.title %}
+      {% endif %}
+    {% endif %}
+  </li>
+{%- endfor -%}

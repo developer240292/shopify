@@ -15026,21 +15026,28 @@ details[open] .modal-overlay::after {
 }
 
 .disclosure__list-wrapper {
-    margin-top: 0;
-    max-width: 260px;
-    min-width: 200px;
-    width: max-content;
-    padding: 11px 8px 11px 16px;
+    list-style: none;
     position: absolute;
-    top: calc(100% + 15px);
-    border-radius: 10px;
-    transform: translateY(-10px);
-    z-index: 2;
+    top: 100%;
+    right: 0;
+    min-width: 220px;
+    z-index: 99;
     background-color: #fff;
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px #0000001a;
+    padding: 22px 0 24px;
     text-align: left;
+    transform: translateY(-10px);
+}
+
+.disclosure__list-wrapper .disclosure__item {
+    margin: 0 20px;
+    padding: 8px 0 7px;
 }
 
 .disclosure-selector+.disclosure__list-wrapper {
