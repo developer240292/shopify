@@ -15007,13 +15007,17 @@ details[open] .modal-overlay::after {
     cursor: pointer;
 }
 
+.localization-form {
+    margin-left: auto;
+}
+
 .disclosure-form-field {
     position: relative
 }
 
 .disclosure-form-field__flag {
     display: inline-block;
-    width: 20px;
+    min-width: 20px;
     height: 20px;
     position: relative;
     border-radius: 50%;
