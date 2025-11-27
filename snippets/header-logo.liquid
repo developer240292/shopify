@@ -14,7 +14,7 @@
 {%- endif -%}
 <div class="header-logo">
   <a href="{{ routes.root_url }}">
-    {%- if section.settings.mobile_logo AND is_mobile -%}
+    {%- if section.settings.mobile_logo and is_mobile -%}
       {%- if section.settings.mobile_logo != blank -%}
         {%- assign logo_alt = section.settings.mobile_logo.alt | default: shop.name | escape -%}
         {%- assign logo_height = section.settings.mobile_logo_width
