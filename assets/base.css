@@ -14870,7 +14870,6 @@ details[open] .modal-overlay::after {
     z-index: 99;
     border: 1px solid var(--color-base-accent-1);
     border-radius: 10px;
-    padding: 5px 0;
     margin-top: 10px;
 }
 
@@ -14902,10 +14901,6 @@ details[open] .modal-overlay::after {
     line-height: 19px;
     display: block;
     padding: 14px 0 15px;
-}
-
-.vertical-wrapper.block-nav-category .vertical-menu>.menu-item:first-child>a {
-    padding-top: 9px;
 }
 
 .vertical-wrapper.block-nav-category .vertical-menu>.menu-item:not(:first-child)>a {
@@ -15023,6 +15018,7 @@ details[open] .modal-overlay::after {
     position: relative;
     border-radius: 50%;
     overflow: hidden;
+    vertical-align: top;
 }
 
 .disclosure-form-field__flag img {
