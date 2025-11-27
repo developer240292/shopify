@@ -11,9 +11,9 @@
       {% assign megamenu_title = block.settings.menuname | downcase %}
       {% assign menu_title = link.title | downcase %}
       {% if megamenu_title == menu_title %}
-        {% assign display_megamenu = true %}
+        {% assign display_megamenu = false %}
         {% if block.settings.showsubmenu == true %}
-          {% assign display_megamenu = false %}
+          {% assign display_megamenu = true %}
         {% endif %}
       {% endif %}
     {%- endfor -%}
@@ -29,7 +29,9 @@
       >
         {{- link.title | escape -}}
       </a>
+      {%- if display_megamenu %}
         {% render 'megamenu', blocks: section.blocks, title: link.title %}
+      {% endif %}
       {%- if link.links != blank %}
         <ul class="sub-menu">
           {%- for childlink in link.links -%}
