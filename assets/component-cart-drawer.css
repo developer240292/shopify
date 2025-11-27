@@ -218,7 +218,6 @@ cart-drawer-items .cart-item__quantity-wrapper {
 }
 
 cart-drawer-items .cart-item__quantity-wrapper quantity-input.quantity {
-  width: 135px;
   height: 30px;
   line-height: 30px;
 }

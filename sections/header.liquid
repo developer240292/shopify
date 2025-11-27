@@ -95,13 +95,11 @@
                   >
                   <input type="hidden" name="options[prefix]" value="last">
                   <button
-                    class="search__button button button--primary focus-inset"
+                    class="search__button button"
                     tabindex="0"
                     aria-label="{{ 'general.search.search' | t }}"
                   >
-                    <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                      <use href="#icon-search">
-                    </svg>
+                    {% render 'icon-header-search' %}
                   </button>
                 </div>
                 {%- if settings.predictive_search_enabled -%}
