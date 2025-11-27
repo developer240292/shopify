@@ -99,8 +99,8 @@
             "type": "megamenu-product",
             "settings": {
               "menuname": "Home",
-              "showsubmenu": false,
-              "collection": "",
+              "showsubmenu": true,
+              "collection": "frontpage",
               "products_to_show": 6
             }
           }
