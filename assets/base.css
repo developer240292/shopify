@@ -14551,6 +14551,7 @@ details[open] .modal-overlay::after {
     -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     padding: 22px 0 24px;
+    font-size: 14px;
 }
 
 .header-block.open .sub-menu {
@@ -14915,6 +14916,36 @@ details[open] .modal-overlay::after {
     color: var(--color-base-accent-1);
 }
 
+.vertical-wrapper.block-nav-category .vertical-menu .menu-item .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 210px;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 20px;
+    padding-left: 0;
+    text-align: left;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    box-shadow: 0 0 10px #0000001a;
+    z-index: 999;
+    border-radius: 10px;
+}
+
+.vertical-wrapper.block-nav-category .vertical-menu .menu-item:hover>.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+
+.vertical-wrapper.block-nav-category .vertical-menu .menu-item .sub-menu.megamenu {
+    width: 100vw;
+}
+
 @media (min-width: 1200px) {
 
     .vertical-wrapper.block-nav-category.always-open .vertical-menu,
@@ -15035,7 +15066,6 @@ details[open] .modal-overlay::after {
     z-index: 99;
     background-color: #fff;
     opacity: 0;
-    visibility: hidden;
     margin-top: 20px;
     border-radius: 10px;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
@@ -15044,6 +15074,7 @@ details[open] .modal-overlay::after {
     padding: 22px 0 24px;
     text-align: left;
     transform: translateY(-10px);
+    font-size: 14px;
 }
 
 .disclosure__list-wrapper .disclosure__item {
