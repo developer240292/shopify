@@ -14672,6 +14672,7 @@ details[open] .modal-overlay::after {
 
 .box-header-nav .main-menu>.menu-item .sub-menu.megamenu {
     padding: 30px 20px;
+    width: 100vw;
 }
 
 .box-header-nav .main-menu>.menu-item .sub-menu .menu-item::before {

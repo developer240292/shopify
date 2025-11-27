@@ -110,12 +110,7 @@
 
                 menu.find('.megamenu').each(function () {
                     var megamenu = $(this),
-                        class_responsive = megamenu.data('responsive'),
                         element_caculator = megamenu.closest('.container-megamenu');
-
-                    if (class_responsive !== '') {
-                        element_caculator = megamenu.closest(class_responsive);
-                    }
 
                     if (element_caculator.length > 0) {
                         var container_width = parseInt(element_caculator.innerWidth()) - 30,
@@ -131,7 +126,6 @@
                         if (width > 0) {
                             $(this).css('max-width', width + 'px');
                         }
-
                     }
 
                 });
