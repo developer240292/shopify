@@ -20,7 +20,7 @@
     {%- if link.links != blank %}
       {% assign display_megamenu = false %}
     {% endif %}
-    <li class="menu-item{% if link.current %} current-menu-item{% endif %}{% if display_megamenu or link.links != blank) %} menu-item-has-children{% endif %}">
+    <li class="menu-item{% if link.current %} current-menu-item{% endif %}{% if display_megamenu or link.links != blank %} menu-item-has-children{% endif %}">
       <a
         href="{{ link.url }}"
         {% if link.current %}
