@@ -14929,6 +14929,8 @@ details[open] .modal-overlay::after {
     box-shadow: 0 0 10px #0000001a;
     z-index: 999;
     border-radius: 10px;
+    padding: 22px 0 24px;
+    list-style: none;
 }
 
 .vertical-wrapper.block-nav-category .vertical-menu .menu-item:hover>.sub-menu {
@@ -14939,6 +14941,7 @@ details[open] .modal-overlay::after {
 
 .vertical-wrapper.block-nav-category .vertical-menu .menu-item .sub-menu.megamenu {
     width: 100vw;
+    padding: 30px 20px;
 }
 
 @media (min-width: 1200px) {
