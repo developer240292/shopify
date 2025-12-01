@@ -15030,6 +15030,10 @@ predictive-search {
     width: calc(100% - 120px);
 }
 
+.header-mobile-menu .tab-mobile-menu li.mobile-menu-close svg {
+    width: 24px
+}
+
 .header-mobile-menu .mobile-menu-title {
     margin: 0;
     padding: 15px 20px 15px 40px;
@@ -15158,7 +15162,7 @@ predictive-search {
 }
 
 .header-mobile-menu .header-contact .header-contact-inner {
-    background-color: #000000;
+    background-color: #f3f3f3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15308,6 +15312,13 @@ localization-form {
 .disclosure-selector+.disclosure__list-wrapper {
     opacity: 1;
     animation: animateLocalization 0.25s ease;
+}
+
+.header-mobile-menu .disclosure__list-wrapper {
+    top: auto;
+    right: auto;
+    left: 0;
+    bottom: 100%;
 }
 
 @keyframes animateLocalization {

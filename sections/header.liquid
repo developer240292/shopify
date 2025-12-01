@@ -202,7 +202,9 @@
         </h6>
         <div class="mobile-menu-inner" id="main-mobile-menu">
           {%- if section.settings.primary_menu != blank -%}
-            {% render 'header-menu', menu_links: section.settings.primary_menu.links %}
+            <ul class="draly-nav main-menu horizontal-menu villa-menu">
+              {% render 'header-menu', menu_links: section.settings.primary_menu.links %}
+            </ul>
           {%- endif -%}
         </div>
       </div>
@@ -213,7 +215,9 @@
         </h6>
         <div class="mobile-menu-inner" id="vertical-mobile-menu">
           {%- if section.settings.vertical_menu != blank -%}
-            {% render 'header-menu', menu_links: section.settings.vertical_menu.links %}
+            <ul class="draly-nav vertical-menu villa-menu">
+              {% render 'header-menu', menu_links: section.settings.vertical_menu.links %}
+            </ul>
           {%- endif -%}
         </div>
       </div>
