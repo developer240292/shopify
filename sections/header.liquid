@@ -51,7 +51,7 @@
       <div class="container">
         <div class="header-middle-inner">
           {% render 'header-logo' %}
-          <details-modal class="header__search">
+          <div class="header__search">
             <div class="search-modal__content">
               {%- if settings.predictive_search_enabled -%}
                 <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
@@ -101,7 +101,7 @@
                 </predictive-search>
               {%- endif -%}
             </div>
-          </details-modal>
+          </div>
           <div class="header-control">
             <div class="header-meta">
               {% render 'header-localization-form' %}
