@@ -98,7 +98,7 @@
             "type": "megamenu-blog",
             "settings": {
               "menuname": "Blog",
-              "showsubmenu": false,
+              "showsubmenu": true,
               "blog": "news",
               "blog_to_show": 4
             }
