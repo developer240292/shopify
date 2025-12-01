@@ -93,7 +93,8 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 .predictive-search__item-heading {
     font-size: calc(var(--font-body-scale) * 16px);
     text-transform: capitalize;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .predictive-search__item--term {
@@ -104,6 +105,7 @@ predictive-search[loading] .predictive-search__results-list:first-child {
     margin: 0;
     background-color: #fff;
     font-size: calc(var(--font-body-scale) * 16px);
+    height: auto;
 }
 
 .predictive-search__item--term .icon-arrow {
@@ -138,7 +140,6 @@ predictive-search .price--on-sale .price-item--regular {
 
     .predictive-search__item-heading {
         font-size: calc(var(--font-body-scale) * 14px);
-        margin-bottom: 6px;
     }
 
     .predictive-search .price .price-item {

@@ -1,37 +1,13 @@
+.field {
+    position: relative;
+}
 .search__input.field__input {
-    padding-right: 5rem;
+    padding-right: 60px;
+    width: 100%;
 }
 
 .search__button {
-    right: var(--inputs-border-width);
-    top: var(--inputs-border-width);
-}
-
-.search__button:focus,.search__button:focus-visible {
-    z-index: 2;
-}
-.search__button .icon {
-    height: 24px;
-    width: 24px;
-}
-
-/* Remove extra spacing for search inputs in Safari */
-input::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-.template-search .vtverticalcoll .vtsortbar{
-    border: none;
-    padding: 0;
-    justify-content: end;
-}
-.header .search__button{
-    right: 5px;
-    top: 5px;
-    border-radius: var(--buttons-radius);
-    height: 40px;
-    text-transform: uppercase;
-    min-width: 40px;
-}
-.header .search__button.button::after,.header .search__button.button:not([disabled]):hover::after,.search-modal__form .field__input:focus-visible{
-    box-shadow: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
