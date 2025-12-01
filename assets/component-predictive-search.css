@@ -110,6 +110,7 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 
 .predictive-search__item--term .icon-arrow {
     flex-shrink: 0;
+    width: 24px;
 }
 
 .predictive-search__image {
