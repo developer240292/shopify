@@ -14341,10 +14341,9 @@ td {
 }
 
 /* Search */
-menu-drawer+.header__search {
-    display: none;
+.icon-arrow {
+width: 24px;
 }
-
 .header>.header__search {
     grid-area: left-icon;
     justify-self: start;
