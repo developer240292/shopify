@@ -19,7 +19,7 @@
     "inputs_radius": 0,
     "buttons_radius": 0,
     "variant_pills_radius": 4,
-    "card_style": "standard",
+    "card_style": "style-02",
     "popup_corner_radius": 6,
     "popup_shadow_opacity": 0,
     "popup_shadow_horizontal_offset": 0,
