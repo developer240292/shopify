@@ -14497,6 +14497,12 @@ td {
     font-weight: 600;
 }
 
+@media(max-width: 1024px) {
+    .header-desktop {
+        display: none;
+    }
+}
+
 /*MAIN MENU*/
 .box-header-nav .main-menu {
     padding: 0;
@@ -14875,10 +14881,18 @@ td {
         display: block;
     }
 }
+
 /* SEARCH */
 predictive-search {
     position: relative;
+    display: block;
 }
+
+.search-modal__form {
+    display: block;
+    position: relative;
+}
+
 .field {
     position: relative;
 }
@@ -14893,12 +14907,20 @@ predictive-search {
     top: 0;
     right: 0;
 }
+
 /*MOBILE*/
 .header-mobile-wrap {
     position: relative;
     border-bottom: 1px solid #f1f1f1;
     display: none;
     max-height: 60px;
+}
+
+@media(max-width: 1024px) {
+    .header-mobile-wrap {
+        display: block;
+    }
+
 }
 
 .header-mobile {
