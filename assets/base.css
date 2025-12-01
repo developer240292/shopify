@@ -14973,8 +14973,6 @@ details[open] .modal-overlay::after {
     }
 }
 
-
-
 /*MOBILE*/
 .header-mobile-wrap {
     position: relative;
@@ -15122,6 +15120,12 @@ localization-form {
     border: none;
     margin: 0;
     text-transform: capitalize;
+}
+
+/*social-link*/
+.social-link {
+    display: flex;
+    gap: 20px;
 }
 
 /* Timer */
