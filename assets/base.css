@@ -15094,6 +15094,11 @@ predictive-search {
     cursor: pointer;
 }
 
+.header-mobile-menu .draly-nav .menu-item .caret svg {
+    width: 20px;
+    height: 20px;
+}
+
 .header-mobile-menu .draly-nav .menu-item .caret.active {
     position: fixed;
     top: 75px;
@@ -15120,8 +15125,8 @@ predictive-search {
     padding: 20px;
 }
 
-.header-mobile-menu .draly-nav .menu-item.show-sub-menu .caret.active svg {
-    transform: rotate(180deg);
+.header-mobile-menu .draly-nav .menu-item.show-sub-menu .caret.active .arrowrightw {
+    transform: rotate(0);
 }
 
 .header-mobile-menu .draly-nav .menu-item.show-sub-menu>.sub-menu {
