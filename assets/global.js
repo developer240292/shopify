@@ -1,4 +1,27 @@
+document.addEventListener('click', function (event) {
+    const target = event.target;
+    const dropdownParent = target.closest('.draly-dropdown');
+    const allDropdowns = document.querySelectorAll('.draly-dropdown');
 
+    if (dropdownParent) {
+        allDropdowns.forEach((el) => {
+            if (el !== dropdownParent) {
+                el.classList.remove('open');
+            }
+        });
+
+        const isToggle =
+            target.matches('[data-draly="draly-dropdown"]') ||
+            target.closest('[data-draly="draly-dropdown"]');
+
+        if (isToggle) {
+            dropdownParent.classList.toggle('open');
+            event.preventDefault();
+        }
+    } else {
+        allDropdowns.forEach((el) => el.classList.remove('open'));
+    }
+});
 
 function getFocusableElements(container) {
   return Array.from(

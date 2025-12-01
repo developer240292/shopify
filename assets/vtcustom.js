@@ -59,24 +59,6 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    $(document).on('click', function (event) {
-        var _target = $(event.target).closest('.draly-dropdown'),
-            _parent = $('.draly-dropdown');
-
-        if (_target.length > 0) {
-            _parent.not(_target).removeClass('open');
-            if (
-                $(event.target).is('[data-draly="draly-dropdown"]') ||
-                $(event.target).closest('[data-draly="draly-dropdown"]').length > 0
-            ) {
-                _target.toggleClass('open');
-                event.preventDefault();
-            }
-        } else {
-            $('.draly-dropdown').removeClass('open');
-        }
-    });
-
     // Home Page Product Tab
     $(".nav-tabs .nav-item.active").click();
     $(document).on('click', '.nav-tabs .nav-item', function (e) {
