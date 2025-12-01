@@ -146,10 +146,6 @@
 
 {% comment %} Villatheme Code {% endcomment %}
 <script src="{{ 'jquery.js' | asset_url }}"></script>
-<script src="{{ 'vtcustom.js' | asset_url }}" defer></script>
-{%- if settings.cart_type == 'notification' -%}
-    <script src="{{ 'vtcartdropdown.js' | asset_url }}"></script>
-{%- endif -%}
 {% if template == 'index' %}
     <script src="{{ 'product-form.js' | asset_url }}" defer></script>
 {%- endif -%}

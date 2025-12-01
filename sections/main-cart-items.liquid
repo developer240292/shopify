@@ -10,9 +10,7 @@
 {%- endif -%}
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
-{%- unless settings.cart_type == 'drawer' -%}
-  <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-{%- endunless -%}
+<script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
 
 

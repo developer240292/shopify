@@ -175,9 +175,6 @@
 <script src="{{ 'jquery.magnific-popup.js' | asset_url }}"></script>
 <script src="{{ 'vtcustom.js' | asset_url }}"></script>
 <script src="{{ 'vtcountdown.js' | asset_url }}"></script>
-{%- if settings.cart_type == 'notification' -%}
-    <script src="{{ 'vtcartdropdown.js' | asset_url }}"></script>
-{%- endif -%}
 {% if template == 'index' or template contains 'page' %}
     <script src="{{ 'product-form.js' | asset_url }}"></script>
 {%- endif -%}
