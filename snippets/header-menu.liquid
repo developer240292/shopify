@@ -58,7 +58,7 @@
       </ul>
     {% else %}
       {%- if display_megamenu %}
-        {% comment %} {% render 'megamenu', blocks: section.blocks, title: link.title %} {% endcomment %}
+        {% render 'megamenu', blocks: section.blocks, title: link.title %}
       {% endif %}
     {% endif %}
   </li>
