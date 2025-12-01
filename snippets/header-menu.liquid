@@ -2,9 +2,11 @@
   Renders header menu
 
   Usage:
-  {% render 'header-menu' %}
+  {% render 'social-share',
+    menu: primary_menu
+  %}
 {% endcomment %}
-{%- for link in section.settings.primary_menu.links -%}
+{%- for link in section.settings.menu.links -%}
   {% assign display_megamenu = false %}
   {% for block in section.blocks %}
     {% assign megamenu_title = block.settings.menuname | downcase %}
