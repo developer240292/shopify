@@ -57,7 +57,7 @@
                 <div class="vtblogauth">{% render 'icon-header-user' %}&nbsp;{{ article.author -}}</div>
             {%- endif -%}
             {%- if show_date -%}
-                <div class="vtblogdate">{% render 'icon-calendar' %}&nbsp;{{- article.published_at | time_tag: format: 'date' -}}</div>
+                <div class="vtblogdate">{% render 'icon-blog-date' %}&nbsp;{{- article.published_at | time_tag: format: 'date' -}}</div>
             {%- endif -%}
             {%- if show_cmment -%}
             <div class="article-card__footer">
