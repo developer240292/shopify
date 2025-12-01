@@ -1,6 +1,7 @@
 .field {
     position: relative;
 }
+
 .search__input.field__input {
     padding-right: 60px;
     width: 100%;
@@ -9,5 +10,5 @@
 .search__button {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
 }
