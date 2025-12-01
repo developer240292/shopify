@@ -99,8 +99,8 @@
             "settings": {
               "menuname": "Shop",
               "showsubmenu": true,
-              "vt1_link": "",
-              "vt1_text": "",
+              "vt1_link": "shopify://blogs/news",
+              "vt1_text": "test",
               "vt2_link": "",
               "vt2_text": "",
               "vt3_link": "",
