@@ -6,7 +6,7 @@
     menu: primary_menu
   %}
 {% endcomment %}
-{%- for link in section.settings.menu.links -%}
+{%- for link in menu_links -%}
   {% assign display_megamenu = false %}
   {% for block in section.blocks %}
     {% assign megamenu_title = block.settings.menuname | downcase %}
