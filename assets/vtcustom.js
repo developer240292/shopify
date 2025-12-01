@@ -17,7 +17,7 @@ jQuery(document).ready(function ($) {
         $('.main-menu-tab, #main-menu-tab').removeClass('active');
     });
 
-    $(document).on("click", ".mobile-menu-clone .caret", function () {
+    $(document).on("click", ".mobile-menu-inner .caret", function () {
         let $this = $(this);
         let titleText = $this.siblings("a").text();
         let $menuItem = $this.closest(".menu-item");
@@ -35,7 +35,7 @@ jQuery(document).ready(function ($) {
         $mobileMenuTitle.text(titleText);
         $this.toggleClass("active");
     });
-    
+
     function draly_vertical_menu($elem) {
         var _blockTitle = $elem.find('.block-title');
         _blockTitle.on('click', function () {
