@@ -14938,11 +14938,15 @@ predictive-search {
     width: 33.333%;
 }
 
+.header-mobile .header-mobile-right {
+    text-align: right;
+}
+
 .header-mobile .header-meta {
     padding-left: 0;
     justify-content: end;
     display: inline-flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .header-mobile .header-block .block-link .block-text {
