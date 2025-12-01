@@ -127,8 +127,7 @@
                   <div class="block-content verticalmenu-content">
                     <div class="villa-menu-wrapper vertical">
                       <ul class="draly-nav vertical-menu villa-menu">
-                        {% render 'header-menu' %}
-                        {% render 'social-share', menu_links: section.settings.vertical_menu.links %}
+                        {% render 'header-menu', menu_links: section.settings.vertical_menu.links %}
                       </ul>
                     </div>
                   </div>
@@ -138,7 +137,7 @@
                 <div class="box-header-nav">
                   <div class="villa-menu-wrapper horizontal">
                     <ul class="draly-nav main-menu horizontal-menu villa-menu">
-                      {% render 'social-share', menu_links: section.settings.primary_menu.links %}
+                      {% render 'header-menu', menu_links: section.settings.primary_menu.links %}
                     </ul>
                   </div>
                 </div>
