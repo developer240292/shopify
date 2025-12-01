@@ -112,32 +112,7 @@
           {{ section.settings.contsubtext }}
         {%- endif -%}
         {%- if section.settings.show_social -%}
-          <div class="footer-social">
-            {%- if settings.social_facebook_link != blank -%}
-              <a href="{{ settings.social_facebook_link }}">
-                {%- render 'icon-social-facebook' -%}
-                <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
-              </a>
-            {%- endif -%}
-            {%- if settings.social_twitter_link != blank -%}
-              <a href="{{ settings.social_twitter_link }}">
-                {%- render 'icon-social-twitter' -%}
-                <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-              </a>
-            {%- endif -%}
-            {%- if settings.social_instagram_link != blank -%}
-              <a href="{{ settings.social_instagram_link }}">
-                {%- render 'icon-social-instagram' -%}
-                <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-              </a>
-            {%- endif -%}
-            {%- if settings.social_youtube_link != blank -%}
-              <a href="{{ settings.social_youtube_link }}">
-                {%- render 'icon-social-youtube' -%}
-                <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-              </a>
-            {%- endif -%}
-          </div>
+          {% render 'social-share' %}
         {%- endif -%}
       </div>
       <div class="foot-middle-right col-md-9">

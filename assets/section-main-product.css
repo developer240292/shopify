@@ -537,14 +537,14 @@ a.product__text {
 }
 
 .product--no-media noscript .product-form__input,
-.product--no-media .share-button {
+.product--no-media .social-share {
     max-width: 100%;
 }
 
 .product--no-media fieldset.product-form__input,
 .product--no-media .product-form__quantity,
 .product--no-media .product-form__input--dropdown,
-.product--no-media .share-button,
+.product--no-media .social-share,
 .product--no-media .product__view-details,
 .product--no-media .product__pickup-availabilities,
 .product--no-media .product-form {
@@ -1101,7 +1101,7 @@ a.product__text {
 .product__info-container .product-form__input,
 .product__info-container .swatchComponent,
 .product__info-container .product-form,
-.product__info-container .share-button,
+.product__info-container .social-share,
 .product__info-container .product-popup-modal__opener,
 .vtstockcount,
 .product__info-container variant-selects,

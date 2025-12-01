@@ -41,17 +41,17 @@
   flex-shrink: 0;
 }
 
-.featured-product .share-button:nth-last-child(2) {
+.featured-product .social-share:nth-last-child(2) {
   display: inline-flex;
 }
 
-.share-button + .product__view-details {
+.social-share + .product__view-details {
   display: inline-flex;
   float: right;
   align-items: center;
 }
 
-.share-button + .product__view-details::after {
+.social-share + .product__view-details::after {
   content: "";
   clear: both;
   display: table;
