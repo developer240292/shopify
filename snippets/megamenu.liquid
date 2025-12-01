@@ -50,7 +50,7 @@
               </div>
             {% else %}
               {%- for i in (1..6) -%}
-                <div class="card--standard {{ vtgridclass }}">
+                <div class="card--standard">
                   {% render 'product-card-placeholder' %}
                 </div>
               {%- endfor -%}
@@ -122,7 +122,7 @@
                     </div>
                     <p class="blog_date">
                       <span class="article_day">
-                        {%- render 'icon-calendar' %}
+                        {%- render 'icon-blog-date' %}
                         {{ article.published_at | date: '%d %b %y' -}}
                       </span>
                     </p>
@@ -141,7 +141,7 @@
                     </div>
                     <p class="blog_date">
                       <span class="article_day">
-                        {%- render 'icon-calendar' %}
+                        {%- render 'icon-blog-date' %}
                         {{ 'now' | date: '%b %d, %Y' -}}
                       </span>
                     </p>
