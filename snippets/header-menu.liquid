@@ -27,13 +27,9 @@
     >
       {{- link.title | escape -}}
     </a>
-    {% if link.links != blank %}
-      <span class="caret"></span>
-    {%- else -%}
-      {%- if display_megamenu %}<span class="caret"></span>{% endif -%}
-    {%- endif %}
     {%- if link.links != blank %}
       <ul class="sub-menu">
+        <span class="caret">{% render 'icon-arrow-right' %}</span>
         {%- for childlink in link.links -%}
           <li class="menu-item{% if childlink.current %} current-menu-item{% endif %}{%- if link.childlink != blank %} menu-item-has-children{% endif %}">
             <a
@@ -44,8 +40,8 @@
             >
               {{ childlink.title | escape }}
             </a>
-            {% if link.childlink != blank %}<span class="caret"></span>{% else %}{% endif %}
             {%- if link.childlink != blank %}
+              <span class="caret">{% render 'icon-arrow-right' %}</span>
               <ul class="sub-menu">
                 {%- for grandchildlink in childlink.links -%}
                   <li class="menu-item{% if grandchildlink.current %} current-menu-item{% endif %}">
@@ -66,6 +62,7 @@
       </ul>
     {% else %}
       {%- if display_megamenu %}
+        <span class="caret">{% render 'icon-arrow-right' %}</span>
         {% render 'megamenu', blocks: section.blocks, title: link.title %}
       {% endif %}
     {% endif %}
