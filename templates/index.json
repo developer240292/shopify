@@ -121,7 +121,7 @@
           "type": "collection",
           "settings": {
             "cat_name": "featured",
-            "collection": "featured-product",
+            "collection": "featured",
             "products_to_show": 6,
             "show_view_all": false,
             "view_all_style": "solid",
@@ -177,7 +177,7 @@
           "type": "collection",
           "settings": {
             "cat_name": "bestseller",
-            "collection": "bestseller",
+            "collection": "featured",
             "products_to_show": 6,
             "show_view_all": false,
             "view_all_style": "solid",
