@@ -14876,6 +14876,9 @@ td {
     }
 }
 /* SEARCH */
+predictive-search {
+    position: relative;
+}
 .field {
     position: relative;
 }
