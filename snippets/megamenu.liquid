@@ -11,7 +11,7 @@
             {% for product in collection.products limit: block.settings.products_to_show %}
               <div class="card--standard">
                 <div class="vtmegaimg">
-                  <a href="{{ product.url | default: '#' }}" title="{{ product.title | escape }}" class="focus-inset">
+                  <a href="{{ product.url | default: '#' }}" title="{{ product.title | escape }}">
                     <img
                       class="img-fluid mx-auto lazyload"
                       srcset="
@@ -65,7 +65,6 @@
                   {% if block.settings[gallerylink] -%}
                     <a
                       href="{{ block.settings[gallerylink] }}"
-                      class="focus-inset"
                       title="{{ block.settings[gallerytext] }}"
                     >
                   {%- endif %}
@@ -93,7 +92,7 @@
               {% for article in blogs[block.settings.blog].articles limit: block.settings.blog_to_show %}
                 <div class="vthblog">
                   <div class="blog_img">
-                    <a href="{{ article.url }}" title="{{ article.title }}" class="focus-inset">
+                    <a href="{{ article.url }}" title="{{ article.title }}">
                       <img
                         loading="lazy"
                         class="lazyload img-fluid"
