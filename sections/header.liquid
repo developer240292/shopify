@@ -165,7 +165,7 @@
               {% render 'header-user' %}
               {% render 'header-minicart' %}
             </div>
-            {%- if section.settings.menu != blank -%}
+            {%- if section.settings.primary_menu != blank -%}
               <div class="block-menu-bar">
                 <div class="menu-bar mobile-menu-toggle">{% render 'icon-header-menubar' %}</div>
               </div>
@@ -176,7 +176,61 @@
     </div>
   </div>
 </div>
-
+<div class="header-mobile-menu">
+  <div class="mobile-menu-overlay mobile-menu-toggle"></div>
+  <div class="mobile-sidebar-content">
+    <div class="sidebar-content">
+      <ul class="tab-mobile-menu">
+        {%- if section.settings.primary_menu != blank -%}
+          <li class="main-menu-tab active">
+            {% render 'icon-header-menubar' %}
+          </li>
+        {%- endif -%}
+        {%- if section.settings.vertical_menu != blank -%}
+          <li class="vertical-menu-tab">
+            <span class="text-title">{{ 'vtcustomlabel.vtalltext.allcategories' | t }}</span>
+          </li>
+        {%- endif -%}
+        <li class="mobile-menu-close mobile-menu-toggle">
+          {% render 'icon-close' %}
+        </li>
+      </ul>
+      <div class="mobile-menu-wrapper active" id="main-menu-tab">
+        <h6 class="mobile-menu-title">
+          {% render 'icon-arrow-left' %}
+          <span></span>
+        </h6>
+        <div class="mobile-menu-inner" id="main-mobile-menu">
+          {%- if section.settings.primary_menu != blank -%}
+            {% render 'header-menu', menu_links: section.settings.primary_menu.links %}
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="mobile-menu-wrapper" id="vertical-menu-tab">
+        <h6 class="mobile-menu-title">
+          {% render 'icon-arrow-left' %}
+          <span></span>
+        </h6>
+        <div class="mobile-menu-inner" id="vertical-mobile-menu">
+          {%- if section.settings.vertical_menu != blank -%}
+            {% render 'header-menu', menu_links: section.settings.vertical_menu.links %}
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="header-group-button">
+        <div class="meta-bottom">
+          <div class="meta-bottom-left">
+            {% render 'header-localization-form' %}
+          </div>
+          <div class="meta-bottom-right">
+            {% render 'header-wishlist' %}
+          </div>
+        </div>
+        {% render 'header-contact' %}
+      </div>
+    </div>
+  </div>
+</div>
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",

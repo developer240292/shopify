@@ -27,6 +27,11 @@
     >
       {{- link.title | escape -}}
     </a>
+    {% if link.links != blank %}
+      <span class="caret"></span>
+    {%- else -%}
+      {%- if display_megamenu %}<span class="caret"></span>{% endif -%}
+    {%- endif %}
     {%- if link.links != blank %}
       <ul class="sub-menu">
         {%- for childlink in link.links -%}
@@ -39,6 +44,7 @@
             >
               {{ childlink.title | escape }}
             </a>
+            {% if link.childlink != blank %}<span class="caret"></span>{% else %}{% endif %}
             {%- if link.childlink != blank %}
               <ul class="sub-menu">
                 {%- for grandchildlink in childlink.links -%}

@@ -1,5 +1,41 @@
 jQuery(document).ready(function ($) {
     "use strict";
+
+    $(document).on("click", ".mobile-menu-toggle", function () {
+        $('.header-mobile-menu').toggleClass('open');
+    });
+
+    $(document).on("click", ".main-menu-tab", function () {
+        $(this).addClass('active');
+        $('#main-menu-tab').addClass('active');
+        $('.vertical-menu-tab, #vertical-menu-tab').removeClass('active');
+    });
+
+    $(document).on("click", ".vertical-menu-tab", function () {
+        $(this).addClass('active');
+        $('#vertical-menu-tab').addClass('active');
+        $('.main-menu-tab, #main-menu-tab').removeClass('active');
+    });
+
+    $(document).on("click", ".mobile-menu-clone .caret", function () {
+        let $this = $(this);
+        let titleText = $this.siblings("a").text();
+        let $menuItem = $this.closest(".menu-item");
+        let $subMenu = $this.closest(".sub-menu");
+        let $mobileMenuTitle = $this.closest(".mobile-menu-inner").siblings(".mobile-menu-title");
+        $menuItem.toggleClass("show-sub-menu");
+        $mobileMenuTitle.addClass('active');
+        if ($this.hasClass("active")) {
+            if ($subMenu.length) {
+                titleText = $subMenu.siblings("a").text();
+            } else {
+                $mobileMenuTitle.removeClass('active');
+            }
+        }
+        $mobileMenuTitle.text(titleText);
+        $this.toggleClass("active");
+    });
+    
     function draly_vertical_menu($elem) {
         var _blockTitle = $elem.find('.block-title');
         _blockTitle.on('click', function () {

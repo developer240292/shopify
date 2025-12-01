@@ -14363,6 +14363,10 @@ td {
     vertical-align: middle;
 }
 
+.header-logo .h4 {
+    margin: 0;
+}
+
 .header-control {
     text-align: right;
 }
@@ -14920,7 +14924,6 @@ predictive-search {
     .header-mobile-wrap {
         display: block;
     }
-
 }
 
 .header-mobile {
@@ -14938,11 +14941,12 @@ predictive-search {
 .header-mobile .header-meta {
     padding-left: 0;
     justify-content: end;
-    display: inline-block;
+    display: inline-flex;
+    gap: 10px;
 }
 
-.header-mobile .header-meta .header-block {
-    margin-left: 0;
+.header-mobile .header-block .block-link .block-text {
+    display: none;
 }
 
 .header-mobile .block-menu-bar {
