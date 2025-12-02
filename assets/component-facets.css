@@ -16,8 +16,12 @@
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 5px;
-  padding: 8px 15px;
+  padding: 15px 20px 15px 15px;
   justify-content: space-between;
+}
+
+.vtglbtn {
+  display: flex;
 }
 
 .vtglbtn button {
@@ -78,6 +82,7 @@
 .facet-filters__label {
   display: block;
   margin: 0;
+  font-size: inherit;
 }
 
 .facet-filters__label label {
@@ -812,7 +817,7 @@ input.mobile-facets__checkbox {
 
 .product-count__text {
   margin: 0;
-  font-size: calc(var(--font-body-scale) * 14px);
+  font-size: inherit;
 }
 
 .product-count__text.loading {
@@ -1089,10 +1094,6 @@ input.mobile-facets__checkbox {
     right: 26px;
     margin-top: -67px;
     width: 43%;
-  }
-
-  .vtverticalcoll .vtsortbar {
-    padding: 8px 10px;
   }
 
   .template-search .mobile-facets__wrapper {
