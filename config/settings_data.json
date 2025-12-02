@@ -159,6 +159,13 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "text_tbaGwD": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share store details, promotions, or brand content with your customers.</p>"
+            }
+          },
           "footer-0": {
             "type": "link_list",
             "settings": {
@@ -185,15 +192,17 @@
           }
         },
         "block_order": [
+          "text_tbaGwD",
           "footer-0",
           "958c9aca-bc3d-44ff-aa05-5f18c868f7ee",
           "66cf8672-198d-43dc-8e2d-78702a5640bb"
         ],
         "settings": {
-          "logo_width": 192,
+          "logo": "shopify://shop_images/logo-2.svg",
+          "logo_width": 130,
           "contsubtext": "<p>Nam pretium et orci eget vestibulum. Aenean pellentesque, quis vulputate eros elit eu ligula. Ut nec lacus congue, fermentum nulla sed, congue risus.</p>",
           "show_social": true,
-          "enable_newsletter": false,
+          "enable_newsletter": true,
           "newsheading": "Subscribe to our newsletter",
           "payment_enable": true,
           "show_copyright": true,
