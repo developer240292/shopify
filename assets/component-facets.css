@@ -32,42 +32,15 @@
 .vtlistgridbtn svg:hover {
   fill: rgb(0, 0, 0);
 }
+
 /* Sorting */
-.facet-filters {
-  align-items: flex-start;
+.facets-form {
   display: flex;
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.facet-filters__label {
-  display: block;
-  margin: 0;
-  font-size: inherit;
-}
-
-.facet-filters__label label {
-  margin-bottom: 0;
-}
-
-.facet-filters__summary {
-  display: flex;
+  gap: 15px;
   align-items: center;
-  justify-content: space-between;
-  font-size: 1.4rem;
-  cursor: pointer;
-  height: 4.5rem;
-  padding: 0 1.5rem;
-  min-width: 25rem;
-  margin-top: 2.4rem;
-  border: 0.1rem solid rgba(0, 0, 0, 0.55);
 }
 
-.facet-filters__summary::after {
-  position: static;
-}
-
-.facet-filters__field {
+.facets-form .facet-filters__field {
   align-items: center;
   display: flex;
   flex-grow: 1;
@@ -75,36 +48,54 @@
   column-gap: 5px;
 }
 
-.facet-filters__sort {
-  font-size: 13px;
-}
-
-.facets__form {
-  display: grid;
-  gap: 0 3.5rem;
-  grid-template-columns: 1fr max-content max-content;
-}
-
-.facets__wrapper {
-  align-items: center;
-  grid-column: 1;
-  grid-row: 1;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.facets__heading {
+.facets-form .facet-filters__label {
   display: block;
   margin: 0;
+  font-size: inherit;
 }
 
-.facets__reset {
-  margin-left: auto;
+.facets-form .facet-filters__label label {
+  margin-bottom: 0;
 }
 
-.facets__disclosure {
-  margin-left: 1.5rem;
+/* sidebar */
+.active-facets .facets__heading {
+  display: block;
+  margin: 0;
+  font-size: 26px;
 }
+
+.active-facets .active-facets-filter {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.active-facets .active-facets-filter:only-child>facet-remove {
+  display: none;
+}
+
+.active-facets .active-facets-filter+facet-remove {
+  margin-top: 20px;
+}
+
+.active-facets facet-remove:only-child {
+  display: none;
+}
+
+.active-facets .active-facets__button svg {
+  align-self: center;
+  flex-shrink: 0;
+  margin-left: 0.6rem;
+  margin-right: -0.2rem;
+  pointer-events: none;
+  width: 1.2rem;
+}
+
+.active-facets .active-facets__button.disabled {
+  pointer-events: none;
+}
+
 /*  */
 .facets__summary {
   margin-bottom: 0;
@@ -142,17 +133,6 @@
   position: absolute;
   right: 0;
   top: calc(50% - .6rem);
-}
-
-.facets__display {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  left: 0;
-  width: 20rem;
-  max-height: 25rem;
-  overflow-y: auto;
 }
 
 .facets__header {
@@ -295,86 +275,6 @@ button.facets__button {
   padding-bottom: 1.4rem;
 }
 
-.facets__button-no-js {
-  transform: translateY(-0.6rem);
-}
-
-.active-facets {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  grid-column: 1 / -1;
-  grid-row: 2;
-  margin-top: -0.5rem;
-}
-
-.active-facets__button {
-  display: block;
-  margin-top: 12px;
-  margin-bottom: 1px;
-  margin-right: 10px;
-}
-
-span.active-facets__button-inner {
-  color: rgb(0, 0, 0);
-  box-shadow: 0 0 0 0.1rem rgb(0, 0, 0);
-  font-size: 13px;
-  min-height: 0;
-  min-width: 0;
-  padding: 8px;
-  display: flex;
-  align-items: stretch;
-}
-
-span.active-facets__button-inner:before,
-span.active-facets__button-inner:after {
-  display: none;
-}
-
-@media screen and (max-width: 991px) {
-  span.active-facets__button-inner {
-    padding-bottom: 0.3rem;
-    padding-top: 0.3rem;
-  }
-}
-
-.active-facets__button svg {
-  align-self: center;
-  flex-shrink: 0;
-  margin-left: 0.6rem;
-  margin-right: -0.2rem;
-  pointer-events: none;
-  width: 1.2rem;
-}
-
-.active-facets facet-remove:only-child {
-  display: none;
-}
-
-.facets .active-facets .active-facets-filter:only-child>facet-remove {
-  display: none;
-}
-
-.facets .active-facets-filter {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.facets .active-facets-filter .active-facets__button-wrapper {
-  padding-top: 0;
-  display: flex;
-  align-items: flex-start;
-}
-
-.facets .active-facets__button {
-  margin-top: 0;
-}
-
-.active-facets__button.disabled {
-  pointer-events: none;
-}
-
 .product-count {
   align-self: center;
   position: relative;
@@ -403,8 +303,4 @@ span.active-facets__button-inner:after {
 
 .product-count__text.loading+.loading-overlay__spinner {
   display: block;
-}
-
-.facets .active-facets__button {
-  margin-bottom: 10px;
 }
