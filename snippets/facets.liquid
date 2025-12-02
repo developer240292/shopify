@@ -17,7 +17,7 @@
     assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
   endif
 -%}
-<div id="main-collection-filters" class="facets-container">
+<div class="facets-container">
   <facet-filters-form class="facets">
     <form id="FacetFiltersForm">
       {%- if results.terms -%}
@@ -26,11 +26,10 @@
       {%- endif -%}
       <div id="FacetsWrapperDesktop">
         <div class="active-facets active-facets-desktop">
-          <div class="active-facets-vertical-filter">
+          <div class="active-facets-filter">
             {%- unless results.filters == empty -%}
               <h2
-                class="facets__heading facets__heading--vertical caption-large text-body"
-                id="verticalTitle"
+                class="facets__heading"
                 tabindex="-1"
               >
                 {{ 'products.facets.filter_by_label' | t }}
@@ -86,26 +85,24 @@
             {% when 'boolean', 'list' %}
               <details
                 id="Details-{{ forloop.index }}-{{ section.id }}"
-                class="facets__disclosure-vertical js-filter"
+                class="facets__disclosure js-filter"
                 data-index="{{ forloop.index }}"
                 open
               >
                 <summary
-                  class="facets__summary caption-large focus-offset"
+                  class="facets__summary"
                   aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
                 >
-                  <div>
-                    <span>
-                      {{- filter.label | escape -}}
-                      <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
-                        ({{ filter.active_values.size }})</span
-                      ></span
+                  <span>
+                    {{- filter.label | escape -}}
+                    <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
+                      ({{ filter.active_values.size }})</span
                     >
-                    {% render 'icon-caret' %}
-                  </div>
+                  </span>
+                  {% render 'icon-caret' %}
                 </summary>
-                <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="parent-display facets__display-vertical">
-                  <fieldset class="facets-wrap parent-wrap facets-wrap-vertical">
+                <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="parent-display facets__display">
+                  <fieldset class="facets-wrap parent-wrap">
                     <legend class="visually-hidden">{{ filter.label | escape }}</legend>
                     <ul class="list-unstyled no-js-hidden" role="list">
                       {%- for value in filter.values -%}
@@ -237,12 +234,12 @@
                 data-index="{{ forloop.index }}"
                 open
               >
-                <summary class="facets__summary caption-large focus-offset">
+                <summary class="facets__summary">
                   <div>
                     <span>{{ filter.label | escape }}</span>{% render 'icon-caret' %}
                   </div>
                 </summary>
-                <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="facets__display-vertical">
+                <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="facets__display">
                   <div class="facets__header-vertical">
                     {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
                     <span class="facets__selected">

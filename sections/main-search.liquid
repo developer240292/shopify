@@ -140,8 +140,8 @@
           and section.settings.filter_type == 'vertical'
           and search.filters != empty
         -%}
-          <facet-filters-form class="facets facets-vertical-sort container no-js-hidden">
-            <form class="facets-vertical-form" id="FacetSortForm">
+          <facet-filters-form class="facets facets-sort container no-js-hidden">
+            <form class="facets-form" id="FacetSortForm">
               <div class="facet-filters sorting caption">
                 <div class="facet-filters__field">
                   <h2 class="facet-filters__label caption-large text-body">
@@ -212,7 +212,7 @@
 
     <div
       {% if section.settings.filter_type == 'vertical' %}
-        class="facets-vertical container"
+        class="facets container"
       {% endif %}
     >
       {%- if search.filters != empty -%}

@@ -26,26 +26,31 @@
   }
 {%- endstyle -%}
 <div class="section-{{ section.id }}-padding">
-  <div class="container shop-filter-{{ section.settings.filter_type }}">
+  <div class="container draly-dropdown shop-filter-{{ section.settings.filter_type }}">
     {%- liquid
       if section.settings.filter_type == 'drawer'
         assign main_content = 'main-content col-12'
         assign sidebar = 'sidebar'
       else
-        assign main_content = 'main-content col-12 col-xl-9 col-lg-8 has-sidebar'
+        assign main_content = 'main-content col-12 col-xl-9 col-lg-8'
         assign sidebar = 'sidebar col-xl-3 col-lg-4 col-12'
       endif
     -%}
     <div class="row">
       <div class="{{ main_content }}">
         <div class="vtsortbar">
+          {%- if section.settings.enable_filtering -%}
+            <a class="shop-filter-button" href="#" data-draly="draly-dropdown">
+              {% render 'icon-shop-filter' %}
+            </a>
+          {%- endif -%}
           <div class="vtglbtn">
             <button class="gridv vtlistgridbtn active" aria-label="grid">{% render 'icon-shop-gridview' %}</button>
             <button class="listv vtlistgridbtn" aria-label="list">{% render 'icon-shop-listview' %}</button>
           </div>
           {%- if section.settings.enable_sorting -%}
-            <facet-filters-form class="facets facets-vertical-sort container small-hide no-js-hidden">
-              <form class="facets-vertical-form" id="FacetSortForm">
+            <facet-filters-form class="facets no-js-hidden">
+              <form class="facets-form" id="FacetSortForm">
                 <div class="facet-filters sorting caption">
                   <div class="facet-filters__field">
                     <h2 class="facet-filters__label caption-large text-body">
