@@ -58,6 +58,34 @@
   margin-bottom: 0;
 }
 
+.facets-form .product-count__text {
+  font-weight: 500;
+  font-size: inherit;
+}
+
+/* filter button */
+.shop-filter-button {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .shop-filter-button {
+    display: block;
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+    z-index: 9;
+    margin: 0;
+    color: #fff;
+    background-color: var(--color-base-accent-1);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+  }
+}
+
 /* sidebar */
 .active-facets .facets__heading {
   display: block;
@@ -173,7 +201,6 @@
 }
 
 .facet-checkbox>svg {
-  background-color: rgb(0, 0, 0);
   margin-right: 10px;
   flex-shrink: 0;
   width: 20px;
@@ -189,6 +216,7 @@
   z-index: 2;
   top: 8px;
   opacity: 1;
+  padding: 5px;
 }
 
 .facet-checkbox>input[type='checkbox']:checked~.icon-checkmark {
@@ -220,6 +248,8 @@
 
 .facets__price {
   display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 15px 0 0;
 }
 
@@ -231,18 +261,13 @@
   margin-left: 1rem;
 }
 
-.facets__price .field-currency {
-  align-self: center;
-  margin-right: 0.6rem;
-}
-
 .facets__price .field__label {
   left: 1.5rem;
   margin-bottom: 0;
   pointer-events: none;
   position: absolute;
   line-height: 1.5;
-  font-size: 12px;
+  font-size: 11px;
   top: 2px;
   letter-spacing: .04rem;
   color: rgba(0, 0, 0, 0.75);
