@@ -1,15 +1,5 @@
 /* List/Grid View */
-.vtverticalcoll {
-  display: flex;
-}
-
-.facets-vertical-sort {
-  margin: 0;
-  max-width: unset;
-  padding: 0;
-}
-
-.vtverticalcoll .vtsortbar {
+.vtsortbar {
   display: flex;
   width: 100%;
   margin-bottom: 30px;
