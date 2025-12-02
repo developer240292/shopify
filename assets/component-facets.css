@@ -76,6 +76,7 @@
 }
 
 .active-facets .active-facets-filter+facet-remove {
+  display: block;
   margin-top: 20px;
 }
 
@@ -109,6 +110,17 @@
   color: #000;
   font-size: 16px;
   font-weight: 500;
+}
+
+.facets__disclosure .facets__summary .active-facets__button-remove {
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.facets__disclosure .facets__summary .active-facets__button {
+  padding: 5px 10px;
+  border: 1px solid;
+  font-size: 14px;
 }
 
 .facets__disclosure fieldset {

@@ -36,7 +36,7 @@
               </h2>
             {%- endunless -%}
             <facet-remove class="active-facets__button-wrapper">
-              <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
+              <a href="{{ results_url }}" class="active-facets__button-remove">
                 <span>{{ 'products.facets.clear_all' | t }}</span>
               </a>
             </facet-remove>
@@ -44,8 +44,8 @@
           {%- for filter in results.filters -%}
             {%- for value in filter.active_values -%}
               <facet-remove>
-                <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
-                  <span class="active-facets__button-inner button button--tertiary">
+                <a href="{{ value.url_to_remove }}" class="active-facets__button">
+                  <span class="active-facets__button-inner">
                     {{ filter.label }}: {{ value.label | escape }}
                     {% render 'icon-close-small' %}
                     <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
@@ -56,8 +56,8 @@
             {% if filter.type == 'price_range' %}
               {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                 <facet-remove>
-                  <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
-                    <span class="active-facets__button-inner button button--tertiary">
+                  <a href="{{ filter.url_to_remove }}" class="active-facets__button">
+                    <span class="active-facets__button-inner">
                       {%- if filter.min_value.value -%}
                         {{ filter.min_value.value | money }}
                       {%- else -%}
