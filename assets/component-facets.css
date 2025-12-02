@@ -818,6 +818,7 @@ input.mobile-facets__checkbox {
 .product-count__text {
   margin: 0;
   font-size: inherit;
+  font-weight: 500;
 }
 
 .product-count__text.loading {
