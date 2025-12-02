@@ -6,11 +6,12 @@
 .newsletter-wrap {
     display: flex;
     justify-content: space-between;
-    padding: 30px 0;
+    align-items: center;
+    padding: 40px 0;
 }
 
 .newsletter-wrap .newsheading {
-    font-size: calc(var(--font-body-scale) * 16px);
+    font-size: calc(var(--font-heading-scale) * 26px);
     margin: 0;
 }
 
@@ -30,7 +31,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 0;
 }
 
 .footer-block--newsletter .newsletter-form__field-wrapper .button svg {
@@ -53,11 +53,22 @@
 /*  */
 .footer-blocks-wrapper {
     display: flex;
+    gap: 30px;
+}
+
+.footer-blocks-wrapper .footer-logo {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 15px;
 }
 
 .footer-blocks-wrapper .footer-heading {
     font-size: 20px;
     margin: 0 0 20px;
+}
+
+.footer-blocks-wrapper .footer-block {
+    width: 100%;
 }
 
 .footer-block .vtfootcont svg {
@@ -70,6 +81,14 @@
     margin: 0;
     list-style: none;
     line-height: 36px;
+}
+
+/* footer-bottom */
+.footer-bottom .vtftpaym {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid #ebebeb;
 }
 
 /* Footer Copyright */
