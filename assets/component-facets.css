@@ -107,7 +107,7 @@
 
 /* facets__disclosure */
 .facets__disclosure {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .facets__disclosure .facets__summary {
@@ -118,6 +118,10 @@
   color: #000;
   font-size: 16px;
   font-weight: 500;
+}
+
+.facets__disclosure[open] .facets__summary svg {
+  transform: rotate(180deg);
 }
 
 .facets__disclosure fieldset {
@@ -171,8 +175,8 @@
   background-color: rgb(0, 0, 0);
   margin-right: 10px;
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   transition: 0.3s ease;
   opacity: 0;
 }
@@ -188,10 +192,8 @@
 
 .facet-checkbox>input[type='checkbox']:checked~.icon-checkmark {
   visibility: visible;
-  background: var(--color-vtmaincolors-text);
   color: rgb(0, 0, 0);
-  padding: 2px;
-  border-radius: 5px;
+  padding: 3px;
 }
 
 .facet-checkbox.catfiltercolor input[type="checkbox"] {
@@ -220,12 +222,12 @@
   padding: 15px 0 0;
 }
 
-.facets__price .field+.field-currency {
-  margin-left: 1rem;
-}
-
 .facets__price .field {
   align-items: center;
+}
+
+.facets__price .field+.field-currency {
+  margin-left: 1rem;
 }
 
 .facets__price .field-currency {
