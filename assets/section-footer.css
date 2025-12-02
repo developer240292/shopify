@@ -1,10 +1,15 @@
+.footer-top {
+    background-color: #f3f3f3;
+}
+
 /* Newsletter */
 .newsletter-wrap {
     display: flex;
     justify-content: space-between;
+    padding: 30px 0;
 }
 
-.newsletter-wrap .subnews {
+.newsletter-wrap .newsheading {
     font-size: calc(var(--font-body-scale) * 16px);
     margin: 0;
 }
@@ -17,16 +22,19 @@
     position: relative;
 }
 
+.footer-block--newsletter .newsletter-form__field-wrapper .field__input {
+    width: 100%;
+}
+
 .footer-block--newsletter .newsletter-form__field-wrapper .button {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
+    font-size: 0;
 }
 
 .footer-block--newsletter .newsletter-form__field-wrapper .button svg {
     fill: currentColor;
-    transform: none;
-    opacity: 1;
     width: 18px;
     height: 18px;
 }
