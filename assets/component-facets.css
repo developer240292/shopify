@@ -76,8 +76,8 @@
 }
 
 .active-facets .active-facets-filter+facet-remove {
-  display: block;
-  margin-top: 20px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .active-facets facet-remove:only-child {
@@ -89,6 +89,7 @@
   border: 1px solid;
   font-size: 14px;
   line-height: 20px;
+  display: inline-block;
 }
 
 .active-facets .active-facets__button svg {
@@ -237,6 +238,20 @@
 
 .facets__price .field__label {
   left: 1.5rem;
+  margin-bottom: 0;
+  pointer-events: none;
+  position: absolute;
+  line-height: 1.5;
+  font-size: 12px;
+  top: 2px;
+  letter-spacing: .04rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.facets__price .field__input {
+  padding: 15px 15px 0;
+  font-size: 13px;
+  color: #000;
 }
 
 button.facets__button {
@@ -248,31 +263,5 @@ button.facets__button {
 }
 
 .product-count {
-  align-self: center;
-  position: relative;
-  text-align: right;
-}
-
-.product-count__text {
-  margin: 0;
-  font-size: inherit;
-  font-weight: 500;
-}
-
-.product-count__text.loading {
-  visibility: hidden;
-}
-
-.product-count .loading-overlay__spinner,
-.product-count-vertical .loading-overlay__spinner {
   display: none;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.8rem;
-}
-
-.product-count__text.loading+.loading-overlay__spinner {
-  display: block;
 }
