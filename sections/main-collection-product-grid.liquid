@@ -37,9 +37,8 @@
         <div class="vtblank"><div class="vtblankinner"></div></div>
         <div class="vtsortbar">
             <div class="vtglbtn">
-                <button class="gridv vtlistgridbtn active focus-inset" aria-label="grid">{% render 'icon-gridview' %}</button>
-                <button class="listv vtlistgridbtn focus-inset" aria-label="list">{% render 'icon-listview' %}</button>
-                <button class="galleryv vtlistgridbtn focus-inset" aria-label="galleryv">{% render 'icon-galleryview' %}</button>
+                <button class="gridv vtlistgridbtn active" aria-label="grid">{% render 'icon-shop-gridview' %}</button>
+                <button class="listv vtlistgridbtn" aria-label="list">{% render 'icon-shop-listview' %}</button>
             </div>
             {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
             {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}

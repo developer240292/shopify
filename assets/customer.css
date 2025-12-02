@@ -44,24 +44,7 @@
     font-size: calc(var(--font-body-scale) * 16px);
     text-transform: uppercase;
 }
-/* works around colspan phantom border issues */
-/*.customer thead::after,
-.customer tfoot::before {
-  content: ' ';
-  height: 0.1rem;
-  width: 100%;
-  display: block;
-  position: absolute;
-  left: 0;
-  background: rgba(0, 0, 0, 0.08);
-}*/
 
-@media screen and (forced-colors: active) {
-  .customer thead::after,
-  .customer tfoot::before {
-    background: CanvasText;
-  }
-}
 /* Pagination */
 .customer .pagination {
   margin-top: 30px;

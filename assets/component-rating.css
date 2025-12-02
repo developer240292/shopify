@@ -40,13 +40,3 @@
   display: inline-block;
   margin: 0;
 }
-
-@media (forced-colors: active) {
-  .rating {
-    display: none;
-  }
-
-  .rating-text {
-    display: block;
-  }
-}

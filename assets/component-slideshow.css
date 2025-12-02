@@ -167,12 +167,6 @@ slideshow-component:not(.container) .slider-buttons {
   height: 1rem;
 }
 
-@media screen and (forced-colors: active) {
-  .slideshow__autoplay path,
-  .slideshow__autoplay:hover path{
-    fill: CanvasText;
-  }
-}
 .vtslideshow .slider-buttons{
     position: absolute;
     left: 0;
