@@ -5,6 +5,7 @@
 {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'component-facets.css' | asset_url | stylesheet_tag }}
 <link
   rel="preload"
   href="{{ 'component-rte.css' | asset_url }}"
@@ -15,24 +16,33 @@
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
+<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
   .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
 <div class="section-{{ section.id }}-padding">
-  <div class="container {{ section.settings.filter_type }}">
+  <div class="container shop-filter-{{ section.settings.filter_type }}">
+    {%- liquid
+      if section.settings.filter_type == 'drawer'
+        assign main_content = 'main-content col-12'
+        assign sidebar = 'sidebar'
+      else
+        assign main_content = 'main-content col-12 col-xl-9 col-lg-8 has-sidebar'
+        assign sidebar = 'sidebar col-xl-3 col-lg-4 col-12'
+      endif
+    -%}
     <div class="row">
-      <div class="main-content col-12 col-xl-9 col-lg-8 has-sidebar">
+      <div class="{{ main_content }}">
         <div class="vtsortbar">
           <div class="vtglbtn">
             <button class="gridv vtlistgridbtn active" aria-label="grid">{% render 'icon-shop-gridview' %}</button>
             <button class="listv vtlistgridbtn" aria-label="list">{% render 'icon-shop-listview' %}</button>
           </div>
-          {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
           {%- if section.settings.enable_sorting -%}
             <facet-filters-form class="facets facets-vertical-sort container small-hide no-js-hidden">
               <form class="facets-vertical-form" id="FacetSortForm">
@@ -124,7 +134,7 @@
                 </div>
               </div>
             {%- else -%}
-              <div class="collection{% if section.settings.filter_type != 'vertical' %} container{% endif %}">
+              <div class="collection">
                 <div class="loading-overlay"></div>
                 <ul
                   id="product-grid"
@@ -166,26 +176,11 @@
           {%- endpaginate -%}
         </div>
       </div>
-      <div class="sidebar col-xl-3 col-lg-4 col-12">
-        {{ 'component-facets.css' | asset_url | stylesheet_tag }}
-        <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
-        {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-          <aside
-            aria-labelledby="verticalTitle"
-            class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}"
-            id="main-collection-filters"
-            data-id="{{ section.id }}"
-          >
-            {% render 'facets',
-              results: collection,
-              enable_filtering: section.settings.enable_filtering,
-              enable_sorting: section.settings.enable_sorting,
-              filter_type: section.settings.filter_type,
-              enable_ptag: section.settings.enable_ptag
-            %}
-          </aside>
-        {%- endif -%}
-      </div>
+      {%- if section.settings.enable_filtering -%}
+        <div class="{{ sidebar }}">
+          {% render 'facets', results: collection %}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </div>
