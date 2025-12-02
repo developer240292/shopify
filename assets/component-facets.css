@@ -78,12 +78,12 @@
 }
 
 /* filter button */
-.shop-filter-button {
+.vtsortbar .shop-filter-button {
   display: none;
 }
 
 @media (max-width: 991px) {
-  .shop-filter-button {
+  .vtsortbar .shop-filter-button {
     display: block;
     position: fixed;
     right: 20px;
@@ -149,10 +149,6 @@
 }
 
 /* facets__disclosure */
-.facets__disclosure {
-  margin-top: 20px;
-}
-
 .facets__disclosure .facets__summary {
   margin-bottom: 0;
   display: flex;
@@ -161,10 +157,18 @@
   color: #000;
   font-size: calc(var(--font-heading-scale) * 16px);
   font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, .08);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .facets__disclosure[open] .facets__summary svg {
   transform: rotate(180deg);
+}
+
+.facets__disclosure .facets__display {
+  padding-bottom: 20px;
 }
 
 .facets__disclosure fieldset {
@@ -290,7 +294,6 @@
 .facets__price .field__input {
   padding: 15px 15px 0;
   font-size: calc(var(--font-body-scale) * 13px);
-  color: #000;
 }
 
 button.facets__button {
