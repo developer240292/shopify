@@ -68,8 +68,7 @@
   margin: 0;
 }
 
-.product-count .loading-overlay__spinner,
-.product-count-vertical .loading-overlay__spinner {
+.facets-form .product-count-vertical .loading-overlay__spinner {
   display: none;
   position: absolute;
   right: 0;
