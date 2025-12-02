@@ -43,9 +43,11 @@ jQuery(document).ready(function ($) {
             $(this).parent().toggleClass('has-open');
         });
     }
+
     if ($('.block-nav-category').length) {
         draly_vertical_menu($('.block-nav-category'));
     }
+
     function draly_header_sticky($elem) {
         var $this = $elem;
         $this.on('draly_header_sticky', function () {
@@ -70,12 +72,15 @@ jQuery(document).ready(function ($) {
             $this.trigger('draly_header_sticky');
         });
     }
+
     if ($('.header-sticky .header-desktop-wrap').length) {
         draly_header_sticky($('.header-sticky .header-desktop-wrap'));
     }
+
     if ($('.header-mobile-sticky .header-mobile-wrap').length) {
         draly_header_sticky($('.header-mobile-sticky .header-mobile-wrap'));
     }
+
     function draly_init_carousel($elem) {
         $elem.not('.slick-initialized').each(function () {
             var _this = $(this),
@@ -94,7 +99,14 @@ jQuery(document).ready(function ($) {
             _this.slick(_config);
         });
     }
-
+    setTimeout(function () {
+        if ($('.owl-slick').length) {
+            $('.owl-slick').each(function () {
+                draly_init_carousel($(this));
+            });
+        }
+    }, 10);
+    
     // Home Page Product Tab
     $(".nav-tabs .nav-item.active").click();
     $(document).on('click', '.nav-tabs .nav-item', function (e) {
@@ -151,14 +163,6 @@ jQuery(document).ready(function ($) {
         $("html, body").animate({ scrollTop: 0 }, 600);
         return false;
     });
-
-    setTimeout(function () {
-        if ($('.owl-slick').length) {
-            $('.owl-slick').each(function () {
-                draly_init_carousel($(this));
-            });
-        }
-    }, 10);
 });
 
 jQuery(window).on('load', function () {

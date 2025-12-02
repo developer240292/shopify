@@ -17,7 +17,7 @@
   <div class="footer-top">
     <div class="container">
       {% if section.settings.enable_newsletter %}
-        <div class="wp_nws_rws">
+        <div class="newsletter-wrap">
           {%- if section.settings.newsheading != blank -%}
             <h3 class="newsheading">{{ section.settings.newsheading }}</h3>
           {%- endif -%}
@@ -45,7 +45,7 @@
                     placeholder="{{ 'newsletter.label' | t }}"
                     required
                   >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                  <label class="field__label visually-hidden" for="NewsletterForm--{{ section.id }}">
                     {{ 'newsletter.label' | t }}
                   </label>
                   <button
@@ -126,7 +126,7 @@
               assign footer_grid_class = 'footer-blocks-4'
             endif
           -%}
-          <div class="d-flex footer-blocks-wrapper {{ footer_grid_class }}">
+          <div class="footer-blocks-wrapper {{ footer_grid_class }}">
             {%- for block in section.blocks -%}
               <div
                 class="footer-block {% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}"
