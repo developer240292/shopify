@@ -112,11 +112,7 @@
           {{ section.settings.contsubtext }}
         {%- endif -%}
         {%- if section.settings.show_social -%}
-          {% render 'social-share',
-            share_facebook: block.settings.share_facebook,
-            share_twitter: block.settings.share_twitter,
-            share_pinterest: block.settings.share_pinterest
-          %}
+          {% render 'social-link' %}
         {%- endif -%}
       </div>
       <div class="foot-middle-right col-md-9">
