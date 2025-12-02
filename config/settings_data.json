@@ -159,18 +159,19 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "image_iPd4PW": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/silver-threader-necklace_925x_0a5faff7-7dd0-477d-a03f-c046e6455ea3.jpg",
+              "image_width": 100,
+              "alignment": ""
+            }
+          },
           "text_tbaGwD": {
             "type": "text",
             "settings": {
               "heading": "Heading",
               "subtext": "<p>Share store details, promotions, or brand content with your customers.</p>"
-            }
-          },
-          "footer-0": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Products",
-              "menu": "footer"
             }
           },
           "958c9aca-bc3d-44ff-aa05-5f18c868f7ee": {
@@ -192,8 +193,8 @@
           }
         },
         "block_order": [
+          "image_iPd4PW",
           "text_tbaGwD",
-          "footer-0",
           "958c9aca-bc3d-44ff-aa05-5f18c868f7ee",
           "66cf8672-198d-43dc-8e2d-78702a5640bb"
         ],
