@@ -140,18 +140,12 @@
 
                 {%- case block.type -%}
                   {%- when 'text' -%}
-                    <div
-                      class="vtfootcont"
-                      id="vt-{{ block.settings.heading | camelcase }}"
-                    >
+                    <div class="vtfootcont">
                       {{ block.settings.subtext }}
                     </div>
                   {%- when 'link_list' -%}
                     {%- if block.settings.menu != blank and block.settings.heading != blank -%}
-                      <ul
-                        class="vtfootcont list-unstyled"
-                        id="vt-{{ block.settings.heading | camelcase }}"
-                      >
+                      <ul class="vtfootcont list-unstyled">
                         {%- for link in block.settings.menu.links -%}
                           <li>
                             <a
@@ -165,10 +159,7 @@
                       </ul>
                     {%- endif -%}
                   {%- when 'textarea' -%}
-                    <div
-                      class="vtfootcont"
-                      id="vt-{{ block.settings.heading | camelcase }}"
-                    >
+                    <div class="vtfootcont">
                       {%- if block.settings.contsubtext != blank -%}
                         {{ block.settings.contsubtext }}
                       {%- endif -%}
@@ -204,7 +195,6 @@
                   {%- when 'image' -%}
                     <div
                       class="footer-block__details-content footer-block-image {{ block.settings.alignment }}"
-                      id="vt-{{ block.settings.heading | camelcase }}"
                     >
                       {%- if block.settings.image != blank -%}
                         {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}

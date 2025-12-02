@@ -51,15 +51,15 @@
 }
 
 /*  */
-.footer-blocks-wrapper {
-    display: flex;
-    gap: 30px;
-}
-
-.footer-blocks-wrapper .footer-logo {
+.footer-midle .footer-logo {
     display: inline-block;
     vertical-align: top;
     margin-bottom: 15px;
+}
+
+.footer-blocks-wrapper {
+    display: flex;
+    gap: 30px;
 }
 
 .footer-blocks-wrapper .footer-heading {
