@@ -58,9 +58,24 @@
   margin-bottom: 0;
 }
 
-.facets-form .product-count__text {
+.facets-form .product-count-vertical {
+  position: relative;
+}
+
+.facets-form .product-count-vertical .product-count__text {
   font-weight: 500;
   font-size: inherit;
+  margin: 0;
+}
+
+.product-count .loading-overlay__spinner,
+.product-count-vertical .loading-overlay__spinner {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.8rem;
 }
 
 /* filter button */
@@ -90,7 +105,7 @@
 .active-facets .facets__heading {
   display: block;
   margin: 0;
-  font-size: 22px;
+  font-size: calc(var(--font-heading-scale) * 22px);
 }
 
 .active-facets .active-facets-filter {
@@ -115,7 +130,7 @@
 .active-facets .active-facets__button {
   padding: 5px 10px;
   border: 1px solid;
-  font-size: 14px;
+  font-size: calc(var(--font-body-scale) * 14px);
   line-height: 20px;
   display: inline-block;
 }
@@ -131,7 +146,7 @@
 
 .active-facets .active-facets__button-remove {
   text-decoration: underline;
-  font-size: 14px;
+  font-size: calc(var(--font-body-scale) * 14px);
 }
 
 /* facets__disclosure */
@@ -145,7 +160,7 @@
   justify-content: space-between;
   align-items: center;
   color: #000;
-  font-size: 16px;
+  font-size: calc(var(--font-heading-scale) * 16px);
   font-weight: 500;
 }
 
@@ -267,7 +282,7 @@
   pointer-events: none;
   position: absolute;
   line-height: 1.5;
-  font-size: 11px;
+  font-size: calc(var(--font-body-scale) * 11px);
   top: 2px;
   letter-spacing: .04rem;
   color: rgba(0, 0, 0, 0.75);
@@ -275,7 +290,7 @@
 
 .facets__price .field__input {
   padding: 15px 15px 0;
-  font-size: 13px;
+  font-size: calc(var(--font-body-scale) * 13px);
   color: #000;
 }
 
