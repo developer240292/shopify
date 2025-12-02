@@ -230,7 +230,7 @@
               %}
               <details
                 id="Details-{{ forloop.index }}-{{ section.id }}"
-                class="facets__disclosure-vertical js-filter"
+                class="facets__disclosure js-filter"
                 data-index="{{ forloop.index }}"
                 open
               >
@@ -240,7 +240,7 @@
                   </div>
                 </summary>
                 <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="facets__display">
-                  <div class="facets__header-vertical">
+                  <div class="facets__header">
                     {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
                     <span class="facets__selected">
                       {{- 'products.facets.max_price' | t: price: max_price_amount -}}
