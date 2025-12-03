@@ -101,10 +101,14 @@
 }
 
 /* sidebar */
+.active-facets {
+  margin-bottom: 20px;
+}
+
 .active-facets .facets__heading {
   display: block;
   margin: 0;
-  font-size: calc(var(--font-heading-scale) * 22px);
+  font-size: calc(var(--font-heading-scale) * 20px);
 }
 
 .active-facets .active-facets-filter {
@@ -120,6 +124,7 @@
 .active-facets .active-facets-filter+facet-remove {
   display: inline-block;
   margin-top: 10px;
+  margin-right: 5px;
 }
 
 .active-facets facet-remove:only-child {
@@ -280,20 +285,37 @@
 }
 
 .facets__price .field__label {
-  left: 1.5rem;
+  font-size: calc(var(--font-body-scale) * 14px);
+  left: 15px;
+  top: 13px;
   margin-bottom: 0;
   pointer-events: none;
   position: absolute;
+  transition: top 0.25s ease, font-size 0.25s ease;
   line-height: 1.5;
-  font-size: calc(var(--font-body-scale) * 11px);
+  color: rgba(0, 0, 0, .75);
+}
+
+.field__input:focus~.field__label,
+.field__input:-webkit-autofill~.field__label {
+  font-size: 12px;
   top: 2px;
   letter-spacing: .04rem;
-  color: rgba(0, 0, 0, 0.75);
 }
 
 .facets__price .field__input {
   padding: 15px 15px 0;
   font-size: calc(var(--font-body-scale) * 13px);
+}
+
+.facets__price .field__input:focus,
+.facets__price .field__input:-webkit-autofill {
+  padding: 15px 15px 0;
+  margin: var(--inputs-border-width);
+}
+
+.facets__price .field__input::placeholder {
+  opacity: 0;
 }
 
 button.facets__button {

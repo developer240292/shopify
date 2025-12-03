@@ -218,7 +218,7 @@
                         if (menu_offset > container_left || menu_left < container_offset.left)
                             width = container_width;
                         if (menu_left > container_left)
-                            width = container_width - (menu_width - (menu_left - container_left)) - 30;
+                            width = container_width - (menu_width - (menu_left - container_left));
 
                         if (width > 0) {
                             $(this).css('max-width', width + 'px');
