@@ -5,7 +5,6 @@
 {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
-{{ 'component-facets.css' | asset_url | stylesheet_tag }}
 <link
   rel="preload"
   href="{{ 'component-rte.css' | asset_url }}"
@@ -16,7 +15,10 @@
   <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+{%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+  {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 {%- style -%}
@@ -26,7 +28,7 @@
   }
 {%- endstyle -%}
 <div class="section-{{ section.id }}-padding">
-  <div class="container draly-dropdown shop-filter-{{ section.settings.filter_type }}">
+  <div class="container draly-dropdown draly-filter-{{ section.settings.filter_type }}">
     {%- liquid
       if section.settings.filter_type == 'drawer'
         assign main_content = 'main-content col-12'
@@ -49,7 +51,7 @@
             <button class="listv vtlistgridbtn" aria-label="list">{% render 'icon-shop-listview' %}</button>
           </div>
           {%- if section.settings.enable_sorting -%}
-            <facet-filters-form class="facets no-js-hidden">
+            <facet-filters-form class="facets facets-sort no-js-hidden">
               <form class="facets-form" id="FacetSortForm">
                 <div class="facet-filters sorting">
                   <div class="facet-filters__field">
@@ -83,7 +85,6 @@
                     </button>
                   </noscript>
                 </div>
-
                 <div class="product-count-vertical" role="status">
                   <h2 class="product-count__text">
                     <span id="ProductCountDesktop">
@@ -127,7 +128,7 @@
             {%- if collection.products.size == 0 -%}
               <div class="collection" id="product-grid" data-id="{{ section.id }}">
                 <div class="loading-overlay"></div>
-                <div class="title-wrapper center">
+                <div class="title-wrapper">
                   <h5 class="title title--primary">
                     {{ 'sections.collection_template.empty' | t -}}
                     <br>
@@ -145,6 +146,7 @@
                   id="product-grid"
                   data-id="{{ section.id }}"
                   class="
+                    product-list-grid
                     product-grid
                     product-grid-{{ section.settings.columns_desktop }}
                   "
