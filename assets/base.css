@@ -14229,6 +14229,41 @@ input[type="button"] {
     transition: color 0.25s, border-color 0.25s, background-color 0.25s, opacity 0.25s, width 0.25s ease 0s;
 }
 
+.field__label {
+    font-size: calc(var(--font-body-scale) * 14px);
+    left: 15px;
+    top: 11px;
+    margin-bottom: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: top 0.25s ease, font-size 0.25s ease;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, .75);
+}
+
+.field__input:focus~.field__label,
+.field__input:not(:placeholder-shown)~.field__label .field__input:-webkit-autofill~.field__label {
+    font-size: 12px;
+    top: 2px;
+    letter-spacing: .04rem;
+}
+
+.facets__price .field__input {
+    padding: 8px 15px;
+    height: 45px;
+    min-width: 120px;
+    font-size: calc(var(--font-body-scale) * 13px);
+}
+
+.field__input:focus,
+.field__input:not(:placeholder-shown) .field__input:-webkit-autofill {
+    padding: 15px 15px 0;
+}
+
+.field__input::placeholder {
+    opacity: 0;
+}
+
 table {
     border: 1px solid #ebebeb;
     border-collapse: collapse;
@@ -14468,7 +14503,8 @@ td {
 
 .header-desktop .header-contact .header-contact-info .header-contact-title {
     display: block;
-    font-size: calc(var(--font-body-scale) * 12px);;
+    font-size: calc(var(--font-body-scale) * 12px);
+    ;
     line-height: 15px;
     color: #444;
 }
