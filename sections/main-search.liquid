@@ -100,7 +100,7 @@
   {%- if search.performed -%}
     <div class="container draly-dropdown draly-filter-{{ section.settings.filter_type }}">
       {%- liquid
-        if section.settings.filter_type == 'drawer'
+        if section.settings.filter_type == 'drawer' or search.filters == empty
           assign main_content = 'main-content col-12'
           assign sidebar = 'sidebar'
         else
