@@ -1,9 +1,9 @@
 {% comment %}
-  Renders facets (filtering and sorting)
+  Renders shop-filter (filtering)
   Accepts:
   - results: {Object} Collection or Search object
   Usage:
-  {% render 'facets', results: collection %}
+  {% render 'shop-filter', results: collection %}
 {% endcomment %}
 
 {{ 'component-show-more.css' | asset_url | stylesheet_tag }}

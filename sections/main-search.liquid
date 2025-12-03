@@ -282,7 +282,7 @@
         {%- if search.filters != empty -%}
           {%- if section.settings.enable_filtering -%}
             <div class="{{ sidebar }}">
-              {% render 'facets', results: search %}
+              {% render 'shop-filter', results: search %}
             </div>
           {%- endif -%}
         {%- endif -%}
