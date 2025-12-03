@@ -14229,6 +14229,33 @@ input[type="button"] {
     transition: color 0.25s, border-color 0.25s, background-color 0.25s, opacity 0.25s, width 0.25s ease 0s;
 }
 
+table {
+    border: 1px solid #ebebeb;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table thead {
+    background-color: #f8f8f8;
+}
+
+th,
+td {
+    border: 1px solid #ebebeb;
+    padding: 10px;
+}
+
+@media (max-width: 991px) {
+
+    th,
+    td {
+        padding: 5px;
+    }
+}
+
 .field__label {
     font-size: calc(var(--font-body-scale) * 14px);
     left: 15px;
@@ -14262,33 +14289,6 @@ input[type="button"] {
 
 .field__input::placeholder {
     opacity: 0;
-}
-
-table {
-    border: 1px solid #ebebeb;
-    border-collapse: collapse;
-    border-spacing: 0;
-    table-layout: auto;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-table thead {
-    background-color: #f8f8f8;
-}
-
-th,
-td {
-    border: 1px solid #ebebeb;
-    padding: 10px;
-}
-
-@media (max-width: 991px) {
-
-    th,
-    td {
-        padding: 5px;
-    }
 }
 
 @media (max-width: 575px) {
