@@ -41,11 +41,6 @@
     padding: 0;
 }
 
-.product-list-grid.product-list .vtproduct-container .vtvariantbadges {
-    top: 15px;
-    left: 15px;
-}
-
 .product-list-grid.product-list .product-form .cartb,
 .product-list-grid.product-list .product-form .vtquickv,
 .product-list-grid.product-list .product-form .wishlist {
