@@ -51,7 +51,7 @@
             <button class="listv vtlistgridbtn" aria-label="list">{% render 'icon-shop-listview' %}</button>
           </div>
           {%- if section.settings.enable_sorting -%}
-            {% render 'shop-sort', results: collection %}
+            {% render 'shop-facets-sort', results: collection %}
           {%- endif -%}
         </div>
         <div
@@ -119,7 +119,7 @@
       </div>
       {%- if section.settings.enable_filtering -%}
         <div class="{{ sidebar }}">
-          {% render 'shop-filter', results: collection %}
+          {% render 'shop-facets-filter', results: collection %}
         </div>
       {%- endif -%}
     </div>

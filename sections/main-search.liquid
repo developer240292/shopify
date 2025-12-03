@@ -53,7 +53,7 @@
               spellcheck="false"
             {%- endif -%}
           >
-          <label class="field__label visually-hidden" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+          <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
           <input name="options[prefix]" type="hidden" value="last">
 
           {%- if settings.predictive_search_enabled -%}
@@ -117,7 +117,7 @@
               </a>
             {%- endif -%}
             {%- if section.settings.enable_sorting and search.filters != empty -%}
-              {% render 'shop-sort', results: search %}
+              {% render 'shop-facets-sort', results: search %}
             {%- endif -%}
           </div>
           <div class="product-grid-container" id="ProductGridContainer">
@@ -216,7 +216,7 @@
         {%- if search.filters != empty -%}
           {%- if section.settings.enable_filtering -%}
             <div class="{{ sidebar }}">
-              {% render 'shop-filter', results: search %}
+              {% render 'shop-facets-filter', results: search %}
             </div>
           {%- endif -%}
         {%- endif -%}
