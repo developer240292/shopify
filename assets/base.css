@@ -14268,26 +14268,28 @@ td {
     color: rgba(0, 0, 0, .75);
 }
 
-.field__input:focus~.field__label,
-.field__input:not(:placeholder-shown)~.field__label .field__input:-webkit-autofill~.field__label {
+input.field__input:focus~.field__label,
+input.field__input:not(:placeholder-shown)~.field__label,
+input.field__input:-webkit-autofill~.field__label {
     font-size: 12px;
     top: 2px;
     letter-spacing: .04rem;
 }
 
-.field__input {
+input.field__input {
     padding: 8px 15px;
     height: 45px;
     min-width: 120px;
     font-size: calc(var(--font-body-scale) * 13px);
 }
 
-.field__input:focus,
-.field__input:not(:placeholder-shown) .field__input:-webkit-autofill {
+input.field__input:focus,
+input.field__input:not(:placeholder-shown),
+input.field__input:-webkit-autofill {
     padding: 15px 15px 0;
 }
 
-.field__input::placeholder {
+input.field__input::placeholder {
     opacity: 0;
 }
 
