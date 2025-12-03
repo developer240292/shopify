@@ -14248,7 +14248,7 @@ input[type="button"] {
     letter-spacing: .04rem;
 }
 
-.facets__price .field__input {
+.field__input {
     padding: 8px 15px;
     height: 45px;
     min-width: 120px;
@@ -14928,6 +14928,8 @@ predictive-search {
     position: absolute;
     top: 0;
     right: 0;
+    height: 45px;
+    line-height: 45px;
 }
 
 /*MOBILE*/
