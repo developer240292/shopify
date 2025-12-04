@@ -50,56 +50,7 @@
         <div class="header-middle-inner">
           {% render 'header-logo' %}
           <div class="header__search">
-            <div class="search-modal__content">
-              {%- if settings.predictive_search_enabled -%}
-                <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
-              {%- endif -%}
-              <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-                <div class="field">
-                  <input
-                    class="search__input field__input"
-                    type="search"
-                    name="q"
-                    value=""
-                    placeholder="{{ 'general.search.search' | t }}"
-                    {%- if settings.predictive_search_enabled -%}
-                      role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list"
-                      aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list"
-                      autocomplete="off" autocapitalize="off" spellcheck="false"
-                    {%- endif -%}
-                  >
-                  <label class="field__label">{{ 'general.search.search' | t }}</label>
-                  <input type="hidden" name="options[prefix]" value="last">
-                  <button
-                    class="search__button button"
-                    tabindex="0"
-                    aria-label="{{ 'general.search.search' | t }}"
-                  >
-                    {% render 'icon-header-search' %}
-                  </button>
-                </div>
-                {%- if settings.predictive_search_enabled -%}
-                  <div class="predictive-search predictive-search--header" data-predictive-search>
-                    <div class="predictive-search__loading-state">
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="spinner"
-                        viewBox="0 0 66 66"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
-                    </div>
-                  </div>
-                  <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-                {%- endif -%}
-              </form>
-              {%- if settings.predictive_search_enabled -%}
-                </predictive-search>
-              {%- endif -%}
-            </div>
+            {% render 'predictive-search' %}
           </div>
           <div class="header-control">
             <div class="header-meta">

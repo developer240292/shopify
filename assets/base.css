@@ -14907,16 +14907,6 @@ input.field__input::placeholder {
 }
 
 /* SEARCH */
-predictive-search {
-    position: relative;
-    display: block;
-}
-
-.search-modal__form {
-    display: block;
-    position: relative;
-}
-
 .field {
     position: relative;
 }

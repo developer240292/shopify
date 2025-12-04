@@ -1,3 +1,8 @@
+predictive-search {
+    position: relative;
+    display: block;
+}
+
 .predictive-search {
     display: none;
     position: absolute;
@@ -14,10 +19,6 @@
     border: 1px solid rgba(0, 0, 0, 0.08);
     padding: 15px;
     border-radius: 0;
-}
-
-.predictive-search--search-template {
-    z-index: 2
 }
 
 predictive-search[open] .predictive-search,

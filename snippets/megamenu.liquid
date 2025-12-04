@@ -1,3 +1,9 @@
+{% comment %}
+  Renders megamenu
+
+  Usage:
+  {% render 'megamenu' %}
+{% endcomment %}
 <div class="sub-menu megamenu">
   {% for block in blocks %}
     {% assign case_title = block.settings.menuname | downcase %}
