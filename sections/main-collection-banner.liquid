@@ -1,6 +1,6 @@
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
-<div class="vtmain_bnr container">
-    <h1 class="heading text-left"><span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span><span>{{- collection.title | escape -}}</span></h1>
+<div class="collection-hero container">
+    <h1><span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span><span>{{- collection.title | escape -}}</span></h1>
     {%- if collection.image and collection.description -%}
         <div class="row collection-hero">
             {%- if section.settings.show_collection_image and collection.image -%}
@@ -24,7 +24,7 @@
             {%- endif -%}
             <div class="{% if section.settings.show_collection_description and section.settings.show_collection_image %}col-xl-9 col-md-8 col-sm-12 col-12 {% else %}col-12 {% endif %} collection-hero__text-wrapper">
                 {%- if section.settings.show_collection_description -%}
-                    <div class="collection-hero__description rte">{{ collection.description }}</div>
+                    <div class="collection-hero__description">{{ collection.description }}</div>
                 {%- endif -%}
             </div>
         </div>

@@ -26,10 +26,7 @@
 .rte img {
   height: auto;
   max-width: 100%;
-  border: var(--media-border-width) solid rgba(0, 0, 0, var(--media-border-opacity));
   border-radius: 0;
-  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
-  margin-bottom: var(--media-shadow-vertical-offset);
 }
 
 .rte ul {
@@ -45,14 +42,12 @@
 }
 
 .rte a {
-  color: rgba(var(--color-link), var(--alpha-link));
   text-underline-offset: 0.3rem;
   text-decoration-thickness: 0.1rem;
   transition: text-decoration-thickness var(--duration-short) ease;
 }
 
 .rte a:hover {
-  color: rgb(var(--color-link));
   text-decoration-thickness: 0.2rem;
 }
 
