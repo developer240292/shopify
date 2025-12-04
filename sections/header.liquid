@@ -36,7 +36,7 @@
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'megamenu.js' | asset_url }}" defer="defer"></script>
-<div class="header-wrapper {% if section.settings.enable_sticky_header %}header-sticky{% endif %} {% if section.settings.enable_sticky_header_mobile %}header-mobile-sticky{% endif %}">
+<div class="header-wrapper{% if section.settings.enable_sticky_header %} header-sticky{% endif %}{% if section.settings.enable_sticky_header_mobile %} header-mobile-sticky{% endif %}">
   {% if section.settings.show_topheader %}
     <div class="header-top">
       <div class="container">
