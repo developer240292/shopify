@@ -31,12 +31,14 @@
     position: absolute;
     top: 0;
     right: 0;
+    height: 45px;
 }
 
 .footer-block--newsletter .newsletter-form__field-wrapper .button svg {
     fill: currentColor;
     width: 18px;
     height: 18px;
+    margin-left: 5px;
 }
 
 .footer-block--newsletter h3 {

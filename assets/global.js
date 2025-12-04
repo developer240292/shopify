@@ -869,7 +869,7 @@ class VariantSelects extends HTMLElement {
         const card = this.closest('.card');
         const modalContent = card.querySelector('.card__media');
         const productAnchor = modalContent.querySelector('a');
-        const productTitle = card.querySelector('.product-title');
+        const productTitle = card.querySelector('.product-name');
         const productTitleAnchor = productTitle.querySelector('a');
         const productQuickview = card.querySelector('.js-vtquickview-link');
         let productURL = this.updateURLParameter(this.dataset.url, 'variant', this.currentVariant.id);

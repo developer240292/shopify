@@ -142,7 +142,7 @@
     <div class="vtproductdes card__content">
 
         {%- if card_product.featured_media -%}
-            <p class="product-title"><a href="{{ card_product.url | default: '#' }}" >{{ card_product.title | escape }}</a></p>
+            <p class="product-name"><a href="{{ card_product.url | default: '#' }}" >{{ card_product.title | escape }}</a></p>
         {%- endif -%}
       
         <div id="ProductInfo-{{ section.id }}-{{ card_product.id }}" >

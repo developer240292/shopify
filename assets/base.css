@@ -14907,16 +14907,16 @@ input.field__input::placeholder {
 }
 
 /* SEARCH */
-.field {
+form.search .field {
     position: relative;
 }
 
-.search__input.field__input {
+form.search .search__input.field__input {
     padding-right: 60px;
     width: 100%;
 }
 
-.search__button {
+form.search .search__button {
     position: absolute;
     top: 0;
     right: 0;
@@ -15307,15 +15307,16 @@ localization-form {
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
     -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
     box-shadow: 0 0 10px #0000001a;
-    padding: 22px 0 24px;
+    padding: 15px 0;
     text-align: left;
     transform: translateY(-10px);
-    font-size: calc(var(--font-body-scale) * 14px);
+    font-size: calc(var(--font-body-scale) * 13px);
+    line-height: 20px;
 }
 
 .disclosure__list-wrapper .disclosure__item {
     margin: 0 20px;
-    padding: 8px 0 7px;
+    padding: 5px 0;
 }
 
 .disclosure-selector+.disclosure__list-wrapper {

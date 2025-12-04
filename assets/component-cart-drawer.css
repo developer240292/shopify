@@ -52,7 +52,7 @@
   height: auto;
 }
 
-.vtcartupsell .product-title {
+.vtcartupsell .product-name {
   font-size: calc(var(--font-body-scale) * 16px);
   margin-bottom: 5px;
 }

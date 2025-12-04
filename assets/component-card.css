@@ -374,7 +374,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
 .vtimgblock .card__text.h3 {
     font-size: calc(var(--font-body-scale) * 18px);
 }
-.product-title{
+.product-name{
     font-size: calc(var(--font-body-scale) * 18px);
     text-transform: capitalize;
     transition: .3s ease;
@@ -386,7 +386,7 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     font-weight: var(--font-body-weight);
     margin-bottom: 0;
 }
-.product-title:hover, .product-title:hover a{ 
+.product-name:hover, .product-name:hover a{ 
     color: var(--color-vtmaincolors-text);
 }
 .vthprice{
@@ -713,7 +713,7 @@ variant-selects .product-form__input .select{
     .vthprice {
         margin-bottom: 3px;
     }
-    .product-title{
+    .product-name{
         font-size: calc(var(--font-body-scale) * 14px);
         padding: 0 0 6px 0;
     }

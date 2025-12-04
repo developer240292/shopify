@@ -106,7 +106,7 @@
     margin-bottom: 0;
 }
 
-.vtstickyadd_cart .product-title {
+.vtstickyadd_cart .product-name {
     font-size: calc(var(--font-body-scale) * 14px);
 }
 
