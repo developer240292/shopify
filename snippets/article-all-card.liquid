@@ -15,7 +15,7 @@
 <article class="article-card {% if layout == 'collage' %}row{% endif %}">
     {%- if show_image == true and article.image -%}
         <div class="vtblogimg {% if layout == 'collage' %}col-lg-6 col-12{% endif %}">
-            <a href="{{ article.url }}" class="article-content motion-reduce media media media--{{ image_height }} media--hover-effect" {% if image_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
+            <a href="{{ article.url }}" class="article-content media media media--{{ image_height }} media--hover-effect" {% if image_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
                 <img 
                 srcset="{{ article.image.src | image_url }} {{ article.image.src.width }}w"
                 src="{{ article.image.src | image_url: width: 533 }}"
@@ -23,7 +23,7 @@
                 width="{{ article.image.width }}"
                 height="{{ article.image.height }}"
                 loading="lazy"
-                class="motion-reduce img-fluid mx-auto lazyload">
+                class="img-fluid mx-auto lazyload">
             </a>
         </div>
     {%- endif -%}

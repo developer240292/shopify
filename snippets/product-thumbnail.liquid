@@ -20,7 +20,7 @@
 
 <noscript>
   {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
-    <span class="product__media-icon motion-reduce quick-add-hidden">{% render 'icon-play' %}</span>
+    <span class="product__media-icon quick-add-hidden">{% render 'icon-play' %}</span>
     <div class="product__media media gradient global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
       <img class="lazyload" 
          srcset="{% if media.preview_image.width >= 493 %}{{ media.preview_image | image_url: width: 493 }} 493w,{% endif %}
@@ -73,7 +73,7 @@
 </noscript>
 
 <modal-opener class="product__modal-opener product__modal-opener--{{ media.media_type }} no-js-hidden" data-modal="#ProductModal-{{ modal_id }}">
-  <span class="product__media-icon motion-reduce quick-add-hidden" aria-hidden="true">
+  <span class="product__media-icon quick-add-hidden" aria-hidden="true">
     {%- liquid
       case media.media_type
       when 'video' or 'external_video'
@@ -124,7 +124,7 @@
     <deferred-media class="deferred-media media gradient global-media-settings no-js-hidden" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%" data-media-id="{{ media.id }}">
   {%- endif -%}
   <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
-    <span class="deferred-media__poster-button motion-reduce">
+    <span class="deferred-media__poster-button ">
       {%- if media.media_type == 'model' -%}
         <span class="visually-hidden">{{ 'products.product.media.play_model' | t }}</span>
         {%- render 'icon-3d-model' -%}

@@ -1,82 +1,37 @@
-.collection-list-wrapper .card-wrapper .card__content.dummyimg {
-    width: 100%;
-    background: rgba(0, 0, 0,0.1);
-}
-.collection-list__item .card__heading {
-    margin-top: 12px;
-    font-size: calc(var(--font-body-scale) * 18px);
-    margin-bottom: 0;
-    text-transform: capitalize;
-}
-.collection-list__item .card__caption{
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-.collection-list__item{
-    margin-bottom: 20px;
-}
 .collection-list {
-    margin-top: 0;
-    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
-.collection-list-title {
-    margin: 0;
+
+.collection-list .collection-item {
+    width: 33.3333333%;
 }
-/* .collection-list__item:only-child {
-    max-width: 100%;
+
+.collection-inner a {
+    display: block;
+}
+
+.collection-inner .collection-media {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.collection-inner .collection-media::before {
+    content: "";
     width: 100%;
-} */
-.collection-list-view-all {
-    margin-top: 2rem;
-}
-@media screen and (max-width: 767px) {
-    .collection-list:not(.slider) {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .section-collection-list .container {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .section-collection-list .collection-list:not(.slider) {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-    .slider.collection-list--1-items {
-        padding-bottom: 0;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .slider.collection-list--1-items,
-    .slider.collection-list--2-items,
-    .slider.collection-list--3-items,
-    .slider.collection-list--4-items {
-        padding-bottom: 0;
-    }
-    .collection-list__item{
-        width: 33.33%;
-    }
+    height: 0;
+    padding-bottom: var(--ratio-percent);
 }
 
-@media screen and (min-width: 768px) {
-    .collection-list__item a:hover {
-        box-shadow: none;
-    }
+.collection-inner .collection-media img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-@media screen and (max-width: 991px) {
-    .collection-list.slider .collection-list__item {
-        max-width: 100%;
-    }
-    .collection-list__item .card__heading{
-        font-size: calc(var(--font-body-scale) * 14px);
-    }
-    .collection-list__item .card__heading .icon-arrow{
-        width: 16px;
-        height: 16px;
-    }
-    .collection-list__item {
-        margin-bottom: 15px;
-    }
+.collection-inner .collection-title {
+    font-size: 18px;
+    font-weight: 500;
 }
-
