@@ -42,7 +42,7 @@
                 {%- assign media = card_product.selected_or_first_available_variant.featured_media -%}
                     <div class="product__media-item" data-media-id="{{ section.id }}-{{ card_product.id }}-{{ media.id }}">
                         <a href="{{ card_product.url | default: '#' }}" title="{{ card_product.title | escape }}" class="media media--transparent media--{{ media_size }} media--hover-effect" {% if media_size == 'adapt' and card_product.featured_media %} style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"{% endif %}>
-                            <img class="img-fluid mx-auto lazyload"
+                            <img class="mx-auto lazyload"
                             srcset="{%- if media.preview_image.width >= 165 -%}{{ media.preview_image | image_url: width: 165 }} 165w,{%- endif -%}
                           {%- if media.preview_image.width >= 360 -%}{{ media.preview_image | image_url: width: 360 }} 360w,{%- endif -%}
                           {% if media.preview_image.width >= 493 %}{{ media.preview_image | image_url: width: 493 }} 493w,{% endif %}
@@ -75,7 +75,7 @@
                           src="{{ card_product.media[1] | image_url: width: 370 }}"
                           alt="{{ card_product.media[1].alt | escape }}"
                           sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 992px) calc((100vw - 130px) / 4), (min-width: 768px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                          class="img-fluid mx-auto lazyload" 
+                          class="mx-auto lazyload" 
                           loading="lazy"
                           width="{{ card_product.media[1].width }}"
                           height="{{ card_product.media[1].height }}">
@@ -93,7 +93,7 @@
                     {%- if media_to_render contains media.id and media.id != card_product.selected_or_first_available_variant.featured_media.id -%}
                         <div class="product__media-item" data-media-id="{{ section.id }}-{{ card_product.id }}-{{ media.id }}">
                             <a href="{{ card_product.url | default: '#' }}" title="{{ card_product.title | escape }}" class="media media--transparent media--{{ media_size }} media--hover-effect" {% if media_size == 'adapt' and card_product.featured_media %} style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"{% endif %}>
-                                <img class="img-fluid mx-auto lazyload"
+                                <img class="mx-auto lazyload"
                                 srcset="{%- if media.preview_image.width >= 165 -%}{{ media.preview_image | image_url: width: 165 }} 165w,{%- endif -%}
                               {%- if media.preview_image.width >= 360 -%}{{ media.preview_image | image_url: width: 360 }} 360w,{%- endif -%}
                               {% if media.preview_image.width >= 493 %}{{ media.preview_image | image_url: width: 493 }} 493w,{% endif %}
@@ -126,7 +126,7 @@
                                   src="{{ card_product.media[1] | image_url: width: 370 }}"
                                   alt="{{ card_product.media[1].alt | escape }}"
                                   sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 992px) calc((100vw - 130px) / 4), (min-width: 768px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                                  class="img-fluid mx-auto lazyload" 
+                                  class="mx-auto lazyload" 
                                   loading="lazy"
                                   width="{{ card_product.media[1].width }}"
                                   height="{{ card_product.media[1].height }}">

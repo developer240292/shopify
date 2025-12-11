@@ -70,7 +70,7 @@
                     {% if item.image %}
                       {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
                       <a href="{{ item.url }}">
-                      <img class="cart-item__image img-fluid mx-auto lazyload"
+                      <img class="cart-item__image mx-auto lazyload"
                         src="{{ item.image | image_url: width: 300 }}"
                         alt="{{ item.image.alt | escape }}"
                         loading="lazy"

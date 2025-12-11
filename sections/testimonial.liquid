@@ -24,7 +24,7 @@
           <div class="vttestisub text-center">
             <div class="{{ section.settings.image_corners }}">
               {% if block.settings.image != blank %}
-              <img class="img-fluid mx-auto lazyload" src="{{ block.settings.image | image_url: width: 100 }}" alt="{{ block.settings.image.alt | escape }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"/>
+              <img class="mx-auto lazyload" src="{{ block.settings.image | image_url: width: 100 }}" alt="{{ block.settings.image.alt | escape }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"/>
               {% else %}
                 <div class="dummysvg">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
               {% endif %}

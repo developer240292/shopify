@@ -7,64 +7,13 @@
     top: 0;
     left: 0;
 }
-.vthomesbtn button{
-    position: absolute;
-    top: 42%;
-    background: var(--color-base-accent-1);
-    color: rgba(var(--color-base-background-1));
-    transition: 0.3s ease;
-    opacity: 0;
-    text-align: center;
-    border-radius: var(--buttons-radius);
-}
-slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomesbtn button{
-    opacity: 1;
-}
-.vthomesbtn button:hover{
-    background-color:var(--color-base-accent-1);
-    color: rgb(0, 0, 0);
-}
-.vthomesbtn button:hover svg,.vthomesbtn .slider-button[disabled]:hover .icon{
-    color: rgb(0, 0, 0);   
-}
-.vthomesbtn button.slider-button--prev{
-    left: 0;
-}
-.vthomesbtn button.slider-button--next{
-    right: 0;
-}
-.vtcollfea .vthomesbtn button.slider-button--prev{
-    left: -15px;
-}
-.vtcollfea .vthomesbtn button.slider-button--next{
-    right: -15px;
-}
-.allslideprt{
-    flex-wrap: inherit;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    display: flex;
-    text-align: center;
-}
-.vtimgblock .card__content {
-    display: grid;
-    grid-template-rows: minmax(0,1fr) max-content minmax(0,1fr);
-    padding: 1rem;
-    width: 100%;
-}
+/*  */
 .vtproduct-container .vtimgblock{
     transition: 0.3s ease;
 }
 #product-grid .vtproduct-container .vtimgblock{
     transition: none;
 }
-/*.vtproduct-container .vtimgblock .vtsecongimg{
-    opacity: 0;
-}
-.vtproduct-container .vtimgblock:hover .vtsecongimg{
-    opacity: 1;
-}*/
 .card-wrapper .vtimgblock:hover .media.media--hover-effect > img:first-child:not(:only-child) {
     opacity: 0;
 }
@@ -106,25 +55,10 @@ slider-component:hover .vthomesbtn button,slider-component:focus-within .vthomes
     position: relative;
     box-sizing: border-box;
 }
-.card--card:after,
-.card--standard .card__inner:after,
-.vtlookimglazy:after  {
-    content: '';
-    position: absolute;
-    width: calc(var(--card-border-width) * 2 + 100%);
-    height: calc(var(--card-border-width) * 2 + 100%);
-    top: calc(var(--card-border-width) * -1);
-    left: calc(var(--card-border-width) * -1);
-    z-index: -1;
-    border-radius: 0;
-    box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
-}
 
-.card .card__inner .card__media,.vtlookimgin {
+.card .card__inner .card__media {
   overflow: hidden;
-  /* Fix for Safari border bug on hover */
   z-index: 0;
-  border-radius: calc(0 - var(--card-border-width) - var(--card-image-padding));
 }
 .vtlookimgin {
   margin: var(--card-image-padding);  

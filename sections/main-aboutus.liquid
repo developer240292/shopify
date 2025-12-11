@@ -23,7 +23,7 @@
                       {%- if block.settings.banner.width >= 3000 -%}{{ block.settings.banner | image_url: width: 3000 }} 3000w,{%- endif -%}
                       {%- if block.settings.banner.width >= 3840 -%}{{ block.settings.banner | image_url: width: 3840 }} 3840w,{%- endif -%}
                       {{ block.settings.banner | image_url }} {{ block.settings.banner.width }}w"
-                                src="{{ block.settings.banner | image_url }}" alt="{{ block.settings.banner.alt }}" class="img-fluid mx-auto lazyload" width="{{ block.settings.banner.width }}" height="{{ block.settings.banner.height }}"/>
+                                src="{{ block.settings.banner | image_url }}" alt="{{ block.settings.banner.alt }}" class="mx-auto lazyload" width="{{ block.settings.banner.width }}" height="{{ block.settings.banner.height }}"/>
                             {% else %}
                                 <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
                             {% endif %}
@@ -59,7 +59,7 @@
                             <div class="col-sm-6">
                                 <div class="vtabtimglazy">
                                     {% if block.settings.image != blank %}
-                                        <img loading="lazy" src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" class="img-fluid mx-auto lazyload" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"/>
+                                        <img loading="lazy" src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" class="mx-auto lazyload" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"/>
                                     {% else %}
                                         <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
                                     {% endif %}

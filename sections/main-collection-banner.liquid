@@ -6,7 +6,7 @@
             {%- if section.settings.show_collection_image and collection.image -%}
                 <div class="{% if section.settings.show_collection_description and section.settings.show_collection_image %}col-xl-3 col-md-4 col-sm-12 col-12 {% else %}col-12 {% endif %} collection-hero__image-container">
                     <div class="collimglazy">
-                        <img class="img-fluid mx-auto lazyload"
+                        <img class="mx-auto lazyload"
                         srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
                         {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
                         {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}

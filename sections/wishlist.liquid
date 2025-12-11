@@ -16,7 +16,7 @@
                     <div class="vtinnerwish" data-product-id="{{ product.id }}" data-product-handle="{{ product.handle }}">
                         <div class="vtinnerwimg">
                             <a href="{{ product.url }}">
-                                <img class="lazyload img-fluid mx-auto" src="{{  product.featured_image | product_img_url: 'large' }}" data-src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape }}" />
+                                <img class="lazyload mx-auto" src="{{  product.featured_image | product_img_url: 'large' }}" data-src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape }}" />
                             </a>
                             <a class="vtwishremove" onclick="reloadPage();" title="{{ 'vtcustomlabel.vtalltext.removewishlist' | t }}" href="javascript:void(0)" data-product-handle="{{ product.handle }}">
                                 <span class="vtwishirmv"><i class="fa fa-remove"></i></span>

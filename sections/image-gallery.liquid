@@ -17,7 +17,7 @@
                     {%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
                     {%- if block.settings.image.width >= 3840 -%}{{ block.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
                     {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
-                  src="{{ block.settings.image | image_url: width: 1000 }}" alt="{{ block.settings.image.alt }}" class="img-fluid mx-auto lazyload" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"/>
+                  src="{{ block.settings.image | image_url: width: 1000 }}" alt="{{ block.settings.image.alt }}" class="mx-auto lazyload" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}"/>
               {% else %}
                   <div class="dummysvg">{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}</div>
               {% endif %}
