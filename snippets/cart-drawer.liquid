@@ -4,7 +4,6 @@
   Usage:
   {% render 'cart-drawer' %}
 {% endcomment %}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">

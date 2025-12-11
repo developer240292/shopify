@@ -137,18 +137,18 @@
                 class="rating-star"
                 style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
               ></span>
-              <span class="rating-text visually-hidden">
-                {{- card_product.metafields.reviews.rating.value }} /
-                {{ card_product.metafields.reviews.rating.value.scale_max -}}
-              </span>
-              <span class="rating-count">
-                <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
-                <span class="visually-hidden">
-                  {{- card_product.metafields.reviews.rating_count }}
-                  {{ 'accessibility.total_reviews' | t -}}
-                </span>
-              </span>
             </div>
+            <span class="rating-text visually-hidden">
+              {{- card_product.metafields.reviews.rating.value }} /
+              {{ card_product.metafields.reviews.rating.value.scale_max -}}
+            </span>
+            <span class="rating-count">
+              <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
+              <span class="visually-hidden">
+                {{- card_product.metafields.reviews.rating_count }}
+                {{ 'accessibility.total_reviews' | t -}}
+              </span>
+            </span>
           </div>
         {%- else -%}
           <div class="vthrating">
@@ -158,17 +158,15 @@
                 class="rating-star"
                 style="--rating: 0; --rating-max: 5.0;--rating-decimal: 0;"
               ></span>
-              <span class="rating-count"><span aria-hidden="true">(0)</span></span>
             </div>
+            <span class="rating-count"><span aria-hidden="true">(0)</span></span>
           </div>
         {%- endif -%}
       {%- endif -%}
 
-      {%- if card_product.featured_media -%}
-        <h3 class="product-name">
-          <a href="{{ card_product.url | default: '#' }}">{{ card_product.title | escape }}</a>
-        </h3>
-      {%- endif -%}
+      <h3 class="product-name">
+        <a href="{{ card_product.url | default: '#' }}">{{ card_product.title | escape }}</a>
+      </h3>
 
       <div
         class="no-js-hidden vthprice"
