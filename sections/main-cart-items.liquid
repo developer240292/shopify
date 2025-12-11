@@ -4,10 +4,6 @@
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
-{%- if section.settings.enable_quick_add -%}
-  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>

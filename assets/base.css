@@ -15869,11 +15869,6 @@ button.loading .loading-overlay__spinner svg .path {
     stroke: rgb(0, 0, 0);
 }
 
-.quick-add__submit.button.button--primary span,
-.quick-add__submit.button.button--primary:hover span {
-    transform: none;
-}
-
 /* left side tab product */
 .wp_navside .nav,
 .product-tab-item_second .pro-tab {

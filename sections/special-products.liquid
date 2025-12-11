@@ -4,10 +4,6 @@
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
-{%- if section.settings.enable_quick_add -%}
-  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
 {%- style -%}
 .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top }}px;
@@ -44,7 +40,6 @@
                         show_vendor: section.settings.show_vendor,
                         show_rating: section.settings.show_rating,
                         show_colorswatch: section.settings.show_colorswatch,
-                        show_quick_add: section.settings.enable_quick_add,
                         enable_listdesc: section.settings.enable_listdesc,
                         section_id: section.id,
                         display_product_type: section.settings.display_product_type %}

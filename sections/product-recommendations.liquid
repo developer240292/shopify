@@ -23,10 +23,6 @@
     }
 }
 {%- endstyle -%}
-{%- if section.settings.enable_quick_add -%}
-  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <div class="section-{{ section.id }}-padding">
   <div class="vtproreccom">
