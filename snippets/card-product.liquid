@@ -35,7 +35,35 @@
       class="product-card__image"
     >
       {%- if card_product.featured_media -%}
-        <div id="webipro-{{ section.id }}-{{ card_product.id }}" class="card__media">
+        {%- if card_product.selected_or_first_available_variant.featured_media != null -%}
+          {%- assign media = card_product.selected_or_first_available_variant.featured_media -%}
+          <img
+            class="lazyload"
+            srcset="
+              {%- if media.preview_image.width >= 165 -%}{{ media.preview_image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.preview_image.width >= 360 -%}{{ media.preview_image | image_url: width: 360 }} 360w,{%- endif -%}
+              {% if media.preview_image.width >= 493 %}{{ media.preview_image | image_url: width: 493 }} 493w,{% endif %}
+              {% if media.preview_image.width >= 600 %}{{ media.preview_image | image_url: width: 600 }} 600w,{% endif %}
+              {% if media.preview_image.width >= 713 %}{{ media.preview_image | image_url: width: 713 }} 713w,{% endif %}
+              {% if media.preview_image.width >= 823 %}{{ media.preview_image | image_url: width: 823 }} 823w,{% endif %}
+              {% if media.preview_image.width >= 992 %}{{ media.preview_image | image_url: width: 992 }} 992w,{% endif %}
+              {% if media.preview_image.width >= 1100 %}{{ media.preview_image | image_url: width: 1100 }} 1100w,{% endif %}
+              {% if media.preview_image.width >= 1206 %}{{ media.preview_image | image_url: width: 1206 }} 1206w,{% endif %}
+              {% if media.preview_image.width >= 1346 %}{{ media.preview_image | image_url: width: 1346 }} 1346w,{% endif %}
+              {% if media.preview_image.width >= 1426 %}{{ media.preview_image | image_url: width: 1426 }} 1426w,{% endif %}
+              {% if media.preview_image.width >= 1646 %}{{ media.preview_image | image_url: width: 1646 }} 1646w,{% endif %}
+              {% if media.preview_image.width >= 1946 %}{{ media.preview_image | image_url: width: 1946 }} 1946w,{% endif %}
+              {{ media.preview_image | image_url }} {{ media.preview_image.width }}w
+            "
+            src="{{ media.preview_image | image_url: width: 370 }} 370w"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 992px) calc((100vw - 130px) / 4), (min-width: 768px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+            loading="lazy"
+            width="{{ media.preview_image.width }}"
+            height="{{ media.preview_image.height }}"
+            alt="{{ media.preview_image.alt | escape }}"
+          >
+          
+        {%- endif -%}
       {%- else -%}
         {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
       {%- endif -%}
