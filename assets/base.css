@@ -15595,33 +15595,15 @@ slider-component:focus-within .vthomesbtn button {
     border: none;
 }
 
-
 .card__inner {
   content: "";
-  width: 0;
   height: 0;
   padding-bottom: var(--ratio-percent);
 }
 
-.card--card,
-.card--standard .card__inner,
-.vtlookimglazy {
-    position: relative;
-    box-sizing: border-box;
-}
-
-.card .card__inner .card__media,
-.vtlookimgin {
+.card .card__inner .card__media {
     overflow: hidden;
     z-index: 0;
-}
-
-.vtlookimgin {
-    margin: var(--card-image-padding);
-}
-
-.card--standard.card--text {
-    background-color: transparent;
 }
 
 .card-information {
@@ -15630,81 +15612,25 @@ slider-component:focus-within .vthomesbtn button {
 
 .card__media,
 .card .media {
-    bottom: 0;
+    height: 100%;
     position: absolute;
     top: 0;
+    width: 100%;
 }
 
 .card .media {
     width: 100%;
 }
 
-.card__media {
-    margin: var(--card-image-padding);
-    width: calc(100% - 2 * var(--card-image-padding));
-}
-
-.card--standard .card__media {
-    margin: var(--card-image-padding);
-}
-
-.card__inner {
-    width: 100%;
-}
-
-.card--media .card__inner .card__content {
-    padding: 0;
-}
-
-.card__content {
-    padding: 15px;
-}
-
-.card__content--auto-margins {
-    grid-template-rows: minmax(0, auto) max-content minmax(0, auto);
-}
-
-.card__information {
-    grid-row-start: 2;
-}
-
 .card__media .media img {
-    height: 100%;
     object-fit: cover;
     object-position: center center;
     width: 100%;
+    height: 100%;
     display: block;
-    max-width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.card__inner:not(.ratio)>.card__content {
-    height: 100%;
-}
-
-.card__heading {
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: calc(var(--font-body-scale) * 18px);
-    font-weight: var(--font-body-weight);
-}
-
-/*.card__heading:last-child {
-    margin-bottom: 0;
-}*/
-
-.card--card.card--media>.card__content {
-    margin-top: calc(0rem - var(--card-image-padding));
-}
-
-.card--standard.card--text a::after,
-.card--card .card__heading a::after {
-    bottom: calc(var(--card-border-width) * -1);
-    left: calc(var(--card-border-width) * -1);
-    right: calc(var(--card-border-width) * -1);
-    top: calc(var(--card-border-width) * -1);
 }
 
 .card__heading a::after {
@@ -15715,37 +15641,6 @@ slider-component:focus-within .vthomesbtn button {
     right: 0;
     top: 0;
     z-index: 1;
-}
-
-.card__heading a:after {
-    outline-offset: 0.3rem;
-}
-
-.card__heading a:focus:after {
-    box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-    outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-}
-
-.card__heading a:focus-visible:after {
-    box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-    outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-}
-
-.card__heading a:focus:not(:focus-visible):after {
-    box-shadow: none;
-    outline: 0;
-}
-
-.card__heading a:focus {
-    box-shadow: none;
-    outline: 0;
-}
-
-@media screen and (min-width: 992px) {
-    .underline-links-hover:hover a {
-        text-decoration: underline;
-        text-underline-offset: 0.3rem;
-    }
 }
 
 .card--standard.card--media .card__inner .card__information,
@@ -15799,14 +15694,6 @@ slider-component:focus-within .vthomesbtn button {
 
 .card-information {
     width: 100%;
-}
-
-.card-information>* {
-    color: rgb(var(--color-foreground));
-}
-
-.card-information>.price {
-    color: rgb(var(--color-foreground));
 }
 
 .card-information>.rating {
@@ -15873,19 +15760,8 @@ slider-component:focus-within .vthomesbtn button {
     margin-bottom: 0;
 }
 
-.product-title:hover,
-.product-title:hover a {
-    color: var(--color-vtmaincolors-text);
-}
-
 .vthprice {
     margin-bottom: 10px;
-}
-
-.vtnorating.rating-star::before {
-    color: rgba(var(--color-foreground), 0.15);
-    background: transparent;
-    -webkit-text-fill-color: rgba(var(--color-foreground), 0.15);
 }
 
 .vtproduct-container .quantity__input {
