@@ -77,7 +77,12 @@
                         </a>
                     </div>
                 {%- endif -%}
-                
+                {%- liquid
+                assign media_to_render = card_product.featured_media.id
+                for variant in card_product.variants
+                assign media_to_render = media_to_render | append: variant.featured_media.id | append: ' '
+                endfor
+                -%}
                 {%- for media in card_product.media -%}
                     {%- if media_to_render contains media.id and media.id != card_product.selected_or_first_available_variant.featured_media.id -%}
                         <div class="product__media-item" data-media-id="{{ section.id }}-{{ card_product.id }}-{{ media.id }}">
