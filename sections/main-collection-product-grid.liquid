@@ -25,12 +25,12 @@
 <div class="section-{{ section.id }}-padding">
   <div class="container draly-dropdown draly-filter-{{ section.settings.filter_type }}">
     {%- liquid
-      if section.settings.filter_type == 'drawer'
-        assign main_content = 'main-content col-12'
-        assign sidebar = 'sidebar'
-      else
+      if section.settings.enable_filtering and section.settings.filter_type == 'sidebar'
         assign main_content = 'main-content col-12 col-xl-9 col-lg-8'
         assign sidebar = 'sidebar col-xl-3 col-lg-4 col-12'
+      else
+        assign main_content = 'main-content col-12'
+        assign sidebar = 'sidebar'
       endif
     -%}
     <div class="row">

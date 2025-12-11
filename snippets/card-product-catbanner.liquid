@@ -37,7 +37,7 @@
     <div class="card__inner  vtimgblock {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
         {%- if card_product.featured_media -%}
             {% comment %} Villatheme Variants Wise Product Change {% endcomment %}
-            <div id="webipro-{{ section.id }}-{{ card_product.id }}" class="card__media">
+            <div id="villatheme-{{ section.id }}-{{ card_product.id }}" class="card__media">
                 {%- if card_product.selected_or_first_available_variant.featured_media != null -%}
                 {%- assign media = card_product.selected_or_first_available_variant.featured_media -%}
                     <div class="product__media-item" data-media-id="{{ section.id }}-{{ card_product.id }}-{{ media.id }}">

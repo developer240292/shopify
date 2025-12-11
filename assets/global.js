@@ -845,7 +845,7 @@ class VariantSelects extends HTMLElement {
       );  
       if (!newMedia) return;
       const modalContent = card.querySelector('.card__media');
-      //const modalContent = document.querySelector(`#webipro-${this.dataset.section}-${this.dataset.block}-${this.dataset.product}`);
+      //const modalContent = document.querySelector(`#villatheme-${this.dataset.section}-${this.dataset.block}-${this.dataset.product}`);
       const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);
       const parent = newMedia.parentElement;
       if (parent.firstChild == newMedia) return;

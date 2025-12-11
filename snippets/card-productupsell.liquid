@@ -29,7 +29,7 @@
     <div class="card__inner vtimgblock">
         {%- if card_product.featured_media -%}
             {% comment %} Villatheme Variants Wise Product Change {% endcomment %}
-            <div id="webipro-{{ section.id }}-{{ card_product.id }}">
+            <div id="villatheme-{{ section.id }}-{{ card_product.id }}">
                 {%- if card_product.selected_or_first_available_variant.featured_media != null -%}
                 {%- assign media = card_product.selected_or_first_available_variant.featured_media -%}
                     <div class="product__media-item" data-media-id="{{ section.id }}-{{ card_product.id }}-{{ media.id }}">
