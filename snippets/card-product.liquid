@@ -86,10 +86,7 @@
           {%- endif -%}
         {%- endif -%}
       {%- else -%}
-        {% assign placeholders = 'product-1,product-2,product-3,product-4,product-5,product-6' | split: ',' %}
-        {% assign random_index = 'now' | date: '%s' | modulo: placeholders.size %}
-        {% assign random_placeholder = placeholders[random_index] %}
-        {{ random_placeholder }}
+        {{ 'product-1' | placeholder_svg_tag: 'my-custom-class' }}
       {%- endif -%}
     </a>
   </div>
