@@ -1,27 +1,27 @@
-.product-list-grid {
+.grid {
     padding: 0;
     list-style: none;
     margin-left: -15px;
     margin-right: -15px;
 }
 
-.product-list-grid .product-item {
+.grid .grid__item {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 30px;
 }
 
-.product-list-grid .vtlistpdesc {
+.grid .vtlistpdesc {
     margin: 0 0 10px 0;
     font-size: 13px;
 }
 
-.product-list-grid .vtproduct-container .product-form .vtbtngrp {
+.grid .vtproduct-container .product-form .vtbtngrp {
     transition: unset;
 }
 
 /* product-list */
-.product-list-grid.product-list .vtproduct-container .card {
+.grid.product-list .vtproduct-container .card {
     width: 100%;
     flex-direction: row;
     padding: 15px;
@@ -29,25 +29,25 @@
     border: 1px solid rgba(0, 0, 0, .08);
 }
 
-.product-list-grid.product-list .vtimgblock {
+.grid.product-list .vtimgblock {
     float: left;
     width: 30%;
 }
 
-.product-list-grid.product-list .vtproductdes {
+.grid.product-list .vtproductdes {
     float: left;
     width: 70%;
     text-align: left;
     padding: 0;
 }
 
-.product-list-grid.product-list .product-form .cartb,
-.product-list-grid.product-list .product-form .vtquickv,
-.product-list-grid.product-list .product-form .wishlist {
+.grid.product-list .product-form .cartb,
+.grid.product-list .product-form .vtquickv,
+.grid.product-list .product-form .wishlist {
     border: 1px solid rgba(0, 0, 0, .08);
 }
 
-.product-list-grid.product-list .vtproduct-container .product-form .vtbtngrp {
+.grid.product-list .vtproduct-container .product-form .vtbtngrp {
     position: unset;
     opacity: 1;
     text-align: left;
@@ -55,35 +55,35 @@
 }
 
 /* product-grid */
-.product-list-grid.product-grid {
+.grid.product-grid {
     display: flex;
     flex-wrap: wrap;
 }
 
-.product-list-grid.product-grid .vtlistpdesc {
+.grid.product-grid .vtlistpdesc {
     display: none;
 }
 
-.product-list-grid.product-grid .product-item {
+.grid.product-grid .grid__item {
     width: 33.3333333%;
 }
 
-.product-list-grid.product-grid.product-grid-2 .product-item {
+.grid.product-grid.product-grid-2 .grid__item {
     width: 50%;
 }
 
 @media(min-width: 1200px) {
-    .product-list-grid.product-grid.product-grid-4 .product-item {
+    .grid.product-grid.product-grid-4 .grid__item {
         width: 25%;
     }
 
-    .product-list-grid.product-grid.product-grid-5 .product-item {
+    .grid.product-grid.product-grid-5 .grid__item {
         width: 20%;
     }
 }
 
 @media(max-width: 767px) {
-    .product-list-grid.product-grid .product-item {
+    .grid.product-grid .grid__item {
         width: 50%;
     }
 }

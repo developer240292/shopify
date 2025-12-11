@@ -91,7 +91,7 @@
                 >
                   <div class="loading-overlay gradient"></div>
                   <ul
-                    class="product-list-grid product-grid product-grid-{{ section.settings.columns_desktop }}"
+                    class="grid product-grid product-grid-{{ section.settings.columns_desktop }}"
                     role="list"
                   >
                     {%- for item in search.results -%}
@@ -100,7 +100,7 @@
                         {%- assign lazy_load = true -%}
                       {%- endif -%}
 
-                      <li class="product-item">
+                      <li class="grid__item">
                         {%- case item.object_type -%}
                           {%- when 'product' -%}
                             {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}

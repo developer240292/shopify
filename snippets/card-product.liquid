@@ -86,11 +86,11 @@
           {%- endif -%}
         {%- endif -%}
       {%- else -%}
-        {{ 'product-1' | placeholder_svg_tag: 'my-custom-class' }}
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
       {%- endif -%}
     </a>
   </div>
-  <div class="vtproductdes card__content">
+  <div class="product-card__info">
     {% if settings.show_timer %}
       {% assign product_sale_title = settings.timer_text -%}
       {% for product_date in card_product.tags %}

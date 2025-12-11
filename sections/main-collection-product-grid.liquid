@@ -75,7 +75,7 @@
                   id="product-grid"
                   data-id="{{ section.id }}"
                   class="
-                    product-list-grid
+                    grid
                     product-grid
                     product-grid-{{ section.settings.columns_desktop }}
                   "
@@ -85,7 +85,7 @@
                     {%- if forloop.index > 2 -%}
                       {%- assign lazy_load = true -%}
                     {%- endif -%}
-                    <li class="product-item">
+                    <li class="grid__item">
                       {% render 'card-product',
                         card_product: product,
                         media_aspect_ratio: section.settings.image_ratio,
