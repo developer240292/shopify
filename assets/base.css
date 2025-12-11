@@ -15515,27 +15515,14 @@ localization-form {
 .vthomesbtn button {
     position: absolute;
     top: 42%;
-    background: var(--gradient-base-accent-1);
-    color: rgba(var(--color-base-background-1));
     transition: 0.3s ease;
     opacity: 0;
     text-align: center;
-    border-radius: var(--buttons-radius);
 }
 
 slider-component:hover .vthomesbtn button,
 slider-component:focus-within .vthomesbtn button {
     opacity: 1;
-}
-
-.vthomesbtn button:hover {
-    background-color: var(--gradient-base-accent-2);
-    color: rgb(var(--color-foreground));
-}
-
-.vthomesbtn button:hover svg,
-.vthomesbtn .slider-button[disabled]:hover .icon {
-    color: rgb(var(--color-foreground));
 }
 
 .vthomesbtn button.slider-button--prev {
@@ -15578,19 +15565,12 @@ slider-component:focus-within .vthomesbtn button {
     transition: none;
 }
 
-/*.vtproduct-container .vtimgblock .vtsecongimg{
-    opacity: 0;
-}
-.vtproduct-container .vtimgblock:hover .vtsecongimg{
-    opacity: 1;
-}*/
 .card-wrapper .vtimgblock:hover .media.media--hover-effect>img:first-child:not(:only-child) {
     opacity: 0;
 }
 
 .card-wrapper .vtimgblock:hover .media.media--hover-effect>img+img {
     opacity: 1;
-    transition: transform var(--duration-long) ease;
 }
 
 .product_badge.new {
@@ -15607,53 +15587,33 @@ slider-component:focus-within .vthomesbtn button {
 }
 
 .vthomevendor {
-    color: rgba(var(--color-foreground), 0.8);
     margin-bottom: 8px;
 }
 
 .card {
-    text-align: var(--card-text-alignment);
     text-decoration: none;
     border: none;
 }
 
-.card--card {
-    height: 100%;
-}
 
-.card--standard .card__inner {
-    z-index: 0;
+.card__inner {
+  content: "";
+  width: 0;
+  height: 0;
+  padding-bottom: var(--ratio-percent);
 }
 
 .card--card,
 .card--standard .card__inner,
 .vtlookimglazy {
-    border-radius: var(--card-corner-radius);
-    border: var(--card-border-width) solid rgba(var(--color-foreground), var(--card-border-opacity));
     position: relative;
     box-sizing: border-box;
-}
-
-.card--card:after,
-.card--standard .card__inner:after,
-.vtlookimglazy:after {
-    content: '';
-    position: absolute;
-    width: calc(var(--card-border-width) * 2 + 100%);
-    height: calc(var(--card-border-width) * 2 + 100%);
-    top: calc(var(--card-border-width) * -1);
-    left: calc(var(--card-border-width) * -1);
-    z-index: -1;
-    border-radius: var(--card-corner-radius);
-    box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
 }
 
 .card .card__inner .card__media,
 .vtlookimgin {
     overflow: hidden;
-    /* Fix for Safari border bug on hover */
     z-index: 0;
-    border-radius: calc(var(--card-corner-radius) - var(--card-border-width) - var(--card-image-padding));
 }
 
 .vtlookimgin {
