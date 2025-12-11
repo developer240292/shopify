@@ -15612,14 +15612,11 @@ slider-component:focus-within .vthomesbtn button {
 
 .card__media,
 .card .media {
-    height: 100%;
     position: absolute;
+    height: 100%;
     top: 0;
     width: 100%;
-}
-
-.card .media {
-    width: 100%;
+    left: 0;
 }
 
 .card__media .media img {
