@@ -37,7 +37,6 @@
       {%- if card_product.featured_media -%}
         {%- if card_product.selected_or_first_available_variant.featured_media != null -%}
           {%- assign media = card_product.selected_or_first_available_variant.featured_media -%}
-
           <img
             class="lazyload"
             srcset="
@@ -84,6 +83,8 @@
               height="{{ card_product.media[1].height }}"
             >
           {%- endif -%}
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
         {%- endif -%}
       {%- else -%}
         {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
