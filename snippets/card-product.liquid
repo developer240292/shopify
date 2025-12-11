@@ -168,9 +168,20 @@
           {%- endfor -%}
         </div>
       {%- else -%}
-        <div class="product__media-item" data-media-id="{{ section.id }}-{{ card_product.id }}-{{ media.id }}">
-          {% assign r = 'now' | date: '%s' | modulo: 6 | plus: 1 %}
-          {{ 'product-' | append: r | placeholder_svg_tag }}
+        <div id="villatheme-{{ section.id }}-{{ card_product.id }}" class="card__media">
+          <div class="product__media-item" data-media-id="{{ section.id }}-{{ card_product.id }}-{{ media.id }}">
+            <a
+              href="{{ card_product.url | default: '#' }}"
+              title="{{ card_product.title | escape }}"
+              class="media media--transparent media--{{ media_size }} media--hover-effect"
+              {% if media_size == 'adapt' and card_product.featured_media %}
+                style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
+              {% endif %}
+            >
+              {% assign r = 'now' | date: '%s' | modulo: 6 | plus: 1 %}
+              {{ 'product-' | append: r | placeholder_svg_tag: 'placeholder-svg product-img' }}
+            </a>
+          </div>
         </div>
       {%- endif -%}
     </div>
