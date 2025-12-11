@@ -137,25 +137,29 @@
                 class="rating-star"
                 style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
               ></span>
-            </div>
-            <p class="rating-text caption">
-              <span aria-hidden="true">
+              <span class="rating-text visually-hidden">
                 {{- card_product.metafields.reviews.rating.value }} /
                 {{ card_product.metafields.reviews.rating.value.scale_max -}}
               </span>
-            </p>
-            <p class="rating-count caption">
-              <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
-              <span class="visually-hidden">
-                {{- card_product.metafields.reviews.rating_count }}
-                {{ 'accessibility.total_reviews' | t -}}
+              <span class="rating-count">
+                <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
+                <span class="visually-hidden">
+                  {{- card_product.metafields.reviews.rating_count }}
+                  {{ 'accessibility.total_reviews' | t -}}
+                </span>
               </span>
-            </p>
+            </div>
           </div>
         {%- else -%}
           <div class="vthrating">
-            <div class="rating"><span class="rating-star vtnorating"></span></div>
-            <p class="rating-count caption"><span aria-hidden="true">(0)</span></p>
+            <div class="rating">
+              <span
+                aria-hidden="true"
+                class="rating-star"
+                style="--rating: 0; --rating-max: 5.0;--rating-decimal: 0;"
+              ></span>
+              <span class="rating-count"><span aria-hidden="true">(0)</span></span>
+            </div>
           </div>
         {%- endif -%}
       {%- endif -%}

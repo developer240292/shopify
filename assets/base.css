@@ -761,6 +761,11 @@ progress {
     content: "— ";
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
 .img-thumbnail {
     padding: 0.25rem;
     background-color: var(--bs-body-bg);
@@ -14250,11 +14255,9 @@ td {
         padding: 5px;
     }
 }
-
 .field {
     position: relative;
 }
-
 .field__label {
     font-size: calc(var(--font-body-scale) * 14px);
     left: 15px;
