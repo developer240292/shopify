@@ -13,24 +13,7 @@
 }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 6 -%}
 
-  <div class="vtmainblog section-{{ section.id }}-padding container">
-    <h1 class="heading"><span>{{ blog.title | escape }}</span></h1>
-
-    <div class="row blog-articles">
-      {%- for article in blog.articles -%}
-        <div class="blog-articles__article article {% if section.settings.layout == 'collage' %}col-12 {% else %}col-lg-6 col-12 {% endif %}">
-          {% render 'article-all-card', article: article, layout: section.settings.layout, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_cmment: section.settings.show_cmment, show_desc: section.settings.show_desc, show_tags: section.settings.show_tags -%}
-        </div>
-      {%- endfor -%}
-    </div>
-
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
-  </div>
-{%- endpaginate -%}
 
 {% schema %}
   {
