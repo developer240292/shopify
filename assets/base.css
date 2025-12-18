@@ -15438,6 +15438,42 @@ localization-form {
     }
 }
 
+/* pagination */
+.pagination-wrapper {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pagination__item {
+    background: rgba(0, 0, 0, .03);
+    border-radius: 5px;
+    min-width: 40px;
+    min-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: calc(var(--font-body-scale) * 16px);
+    padding-top: 8px;
+    color: #000;
+}
+
+.pagination__item svg {
+    position: relative;
+    top: -2px;
+    fill: currentColor;
+}
+
+.pagination__item.pagination__item--current,
+.pagination__item:hover {
+    background: #000;
+    color: #fff;
+}
+
+.pagination__list>li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
 /* 404 */
 .template-404-wrap {
     padding-top: 70px;
