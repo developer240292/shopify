@@ -24,10 +24,6 @@
           "type": "content",
           "settings": {}
         },
-        "share": {
-          "type": "share",
-          "settings": {}
-        }
       },
       "block_order": [
         "featured_image",
