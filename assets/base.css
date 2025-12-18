@@ -14286,10 +14286,13 @@ input.field__input:-webkit-autofill~.field__label {
 textarea.field__input,
 input.field__input {
     padding: 8px 15px;
-    height: 45px;
     min-width: 120px;
     width: 100%;
     font-size: calc(var(--font-body-scale) * 13px);
+}
+
+input.field__input {
+    height: 45px;
 }
 
 textarea.field__input:focus,
