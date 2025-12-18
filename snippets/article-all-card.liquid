@@ -54,7 +54,7 @@
 
         <div class="allblgdate">
             {%- if show_author -%}
-                <div class="vtblogauth">{% render 'icon-header-user' %}&nbsp;{{ article.author -}}</div>
+                <div class="vtblogauth">{% render 'icon-blog-author' %}&nbsp;{{ article.author -}}</div>
             {%- endif -%}
             {%- if show_date -%}
                 <div class="vtblogdate">{% render 'icon-blog-date' %}&nbsp;{{- article.published_at | time_tag: format: 'date' -}}</div>
@@ -62,7 +62,7 @@
             {%- if show_cmment -%}
             <div class="article-card__footer">
                 {%- if blog.comments_enabled? -%}
-                    {% render 'icon-bcomments' %}<span>&nbsp;{{ article.comments_count }}</span>
+                    {% render 'icon-blog-comment' %}<span>&nbsp;{{ article.comments_count }}</span>
                 {%- endif -%}
             </div>
             {%- endif -%}
