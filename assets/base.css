@@ -15438,6 +15438,38 @@ localization-form {
     }
 }
 
+/* 404 */
+.template-404 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.template-404>p {
+    text-align: center;
+}
+
+.template-404>.title {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.template-404>.button {
+    display: table-block;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+    font-size: calc(var(--font-body-scale) * 14px);
+    font-weight: 600;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: var(--color-base-accent-1);
+}
+
+.template-404>.button~* {
+    margin-top: 20px;
+}
+
 /* .rte */
 .rte:after {
     clear: both;
@@ -15950,7 +15982,7 @@ slider-component:focus-within .vthomesbtn button {
     border-radius: 100%;
     min-width: 18px;
     min-height: 18px;
-    box-shadow: 0 0px 0px 1px #000000, 0.1);
+    box-shadow: 0 0px 0px 1px #000000;
     border: none;
     font-size: 0;
     display: inline-block;
@@ -15982,7 +16014,7 @@ slider-component:focus-within .vthomesbtn button {
 
 .vtproduct-container .product-form__input input:focus-visible+label,
 .vtproduct-container .vtswatchclr input:focus-visible+label {
-    box-shadow: 0 0 0 .2rem #ffffff, 0 0 0 .3rem #000000, .3), 0 0 .3rem .2rem #000000, .1);
+    box-shadow: 0 0 0 .2rem #ffffff, 0 0 0 .3rem #000000, 0 0 .3rem .2rem #000000;
 }
 
 variant-radios,
@@ -16145,7 +16177,7 @@ variant-selects .product-form__input .select {
     .product-form .wishlist {
         min-width: 36px;
         min-height: 36px;
-        border: 1px solid #000000, 0.08);
+        border: 1px solid #000000;
     }
 
     .vtproduct-container .quantity__input,
