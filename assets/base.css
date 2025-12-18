@@ -15439,22 +15439,24 @@ localization-form {
 }
 
 /* 404 */
-.template-404 {
+.template-404-wrap {
     padding-top: 70px;
     padding-bottom: 70px;
 }
 
-.template-404>p {
+.template-404-wrap>p {
     text-align: center;
+    font-size: 80px;
+    line-height: 1;
 }
 
-.template-404>.title {
+.template-404-wrap>.title {
     margin-top: 15px;
     text-align: center;
 }
 
-.template-404>.button {
-    display: table-block;
+.template-404-wrap>.button {
+    display: table;
     height: 40px;
     line-height: 40px;
     border-radius: 10px;
@@ -15464,9 +15466,10 @@ localization-form {
     padding-left: 20px;
     padding-right: 20px;
     background: var(--color-base-accent-1);
+    margin: 0 auto;
 }
 
-.template-404>.button~* {
+.template-404-wrap>.button~* {
     margin-top: 20px;
 }
 
