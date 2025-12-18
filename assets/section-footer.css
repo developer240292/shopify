@@ -139,19 +139,19 @@ button#scroll {
     border: none;
 }
 
-#scroll.scrollhide {
+button#scroll:hover {
+    background-color: #000;
+}
+
+button#scroll.scrollhide {
     bottom: -100px;
     opacity: 0;
     transform: scale(0);
 }
 
-#scroll svg {
-    fill: rgb(0, 0, 0);
+button#scroll svg {
+    fill: #fff;
     width: 20px;
     height: 20px;
     transition: .3s ease;
-}
-
-#scroll:hover svg {
-    fill: var(--color-base-accent-1);
 }
