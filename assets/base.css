@@ -14272,6 +14272,9 @@ td {
     color: rgba(0, 0, 0, .75);
 }
 
+textarea.field__input:focus~.field__label,
+textarea.field__input:not(:placeholder-shown)~.field__label,
+textarea.field__input:-webkit-autofill~.field__label,
 input.field__input:focus~.field__label,
 input.field__input:not(:placeholder-shown)~.field__label,
 input.field__input:-webkit-autofill~.field__label {
@@ -14280,19 +14283,25 @@ input.field__input:-webkit-autofill~.field__label {
     letter-spacing: .04rem;
 }
 
+textarea.field__input,
 input.field__input {
     padding: 8px 15px;
     height: 45px;
     min-width: 120px;
+    width: 100%;
     font-size: calc(var(--font-body-scale) * 13px);
 }
 
+textarea.field__input:focus,
+textarea.field__input:not(:placeholder-shown),
+textarea.field__input:-webkit-autofill,
 input.field__input:focus,
 input.field__input:not(:placeholder-shown),
 input.field__input:-webkit-autofill {
     padding: 15px 15px 0;
 }
 
+textarea.field__input::placeholder,
 input.field__input::placeholder {
     opacity: 0;
 }
