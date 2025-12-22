@@ -18,8 +18,15 @@ if (!customElements.get('media-gallery')) {
     }
 
     onSlideChanged(event) {
-      const thumbnail = this.elements.thumbnails.querySelector(`[data-target="${ event.detail.currentElement.dataset.mediaId }"]`);
-      this.setActiveThumbnail(thumbnail);
+      if (!event.detail) return;
+
+      const index = event.detail.index;
+      const slides = this.elements.thumbnails.querySelectorAll('[data-target]');
+      const thumbnail = slides[index];
+
+      if (thumbnail) {
+        this.setActiveThumbnail(thumbnail);
+      }
     }
 
     setActiveMedia(mediaId, prepend) {
