@@ -32,13 +32,6 @@
             "pdesc_title": "Description"
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "show_colorswatch": true
-          }
-        },
         "7bc1714c-9d6a-4368-b677-08b46b8dee8a": {
           "type": "stock_countdown",
           "settings": {
@@ -53,6 +46,13 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "show_colorswatch": true
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -124,9 +124,9 @@
         "title",
         "price",
         "description",
-        "variant_picker",
         "7bc1714c-9d6a-4368-b677-08b46b8dee8a",
         "quantity_selector",
+        "variant_picker",
         "buy_buttons",
         "3293aa46-ec0c-4c30-b783-8c210ee66f5e",
         "sku_G7qfJm",
