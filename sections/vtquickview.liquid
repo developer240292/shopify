@@ -12,12 +12,6 @@
             padding-top: {{ section.settings.padding_top }}px;
             padding-bottom: {{ section.settings.padding_bottom }}px;
         }
-        @media screen and (max-width: 991px) {
-            .section-{{ section.id }}-padding {
-                padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-                padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
-            }
-        }
       {%- endstyle -%}
       <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
       {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
@@ -39,7 +33,7 @@
         >
       {%- endif -%}
       <div class="section-{{ section.id }}-padding product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-        <div class="grid__item product__media-wrapper vtproleftimg">
+        <div class="grid__item product__media-wrapper">
           <media-gallery
             id="MediaGallery-{{ section.id }}"
             role="region"

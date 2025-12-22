@@ -9,9 +9,6 @@
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
-  {{ 'photoswipe.css' | asset_url | stylesheet_tag }}
-  {{ 'default-skin.css' | asset_url | stylesheet_tag }}
-
   {%- style -%}
     .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top }}px;
@@ -21,8 +18,6 @@
 
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'jquery.js' | asset_url }}" async></script>
-  <script src="{{ 'photoswipe.js' | asset_url }}" async></script>
-  <script src="{{ 'photoswipe-ui-default.js' | asset_url }}" async></script>
 
   {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
   {%- if first_3d_model -%}
@@ -43,9 +38,9 @@
     >
   {%- endif -%}
 
-  <div class="">
-    <div class="row wp_clns section-{{ section.id }}-padding product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-      <div class="grid__item product__media-wrapper vtproleftimg {% if section.settings.mobile_thumbnails == 'show' %} mobileshowthumb{% endif %}">
+  <div class="main-product-wrapper">
+    <div class="row product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+      <div class="col-sm-6 product__media-wrapper">
         <media-gallery
           id="MediaGallery-{{ section.id }}"
           role="region"
@@ -316,34 +311,8 @@
             </div>
           </div>
         </div>
-        <script>
-          // For Zoom
-          'use strict';
-          (function ($) {
-            $('.protopimg-item .product__media').click(function (event) {
-              var container = [];
-              var $link = $(this).find('img'),
-                item = {
-                  src: $link.attr('src'),
-                  w: $link.data('width'),
-                  h: $link.data('height'),
-                  title: $link.data('caption'),
-                };
-              container.push(item);
-              event.preventDefault();
-              var $pswp = $('.pswp')[0],
-                options = {
-                  index: $(this).parent('.protopimg-item .product__media').index(),
-                  bgOpacity: 0.85,
-                  showHideOpacity: true,
-                };
-              var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
-              gallery.init();
-            });
-          })(jQuery);
-        </script>
       </div>
-      <div class="product__info-wrapper grid__item">
+      <div class="col-sm-6 product__info-wrapper">
         <div
           id="ProductInfo-{{ section.id }}"
           class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}"
@@ -900,7 +869,7 @@
     </div>
 
     {%- if section.settings.enable_desctab -%}
-      <div class="vtproducttab spaced-section quick-add-hidden row">
+      <div class="vtproducttab quick-add-hidden row">
         <div class="rating-review col-12">
           <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
         </div>
@@ -1085,19 +1054,19 @@
           "id": "heading_size",
           "options": [
             {
-              "value": "h2",
+              "value": "h3",
               "label": "t:sections.all.heading_size.options__1.label"
             },
             {
-              "value": "h1",
+              "value": "h2",
               "label": "t:sections.all.heading_size.options__2.label"
             },
             {
-              "value": "h0",
+              "value": "h1",
               "label": "t:sections.all.heading_size.options__3.label"
             }
           ],
-          "default": "h0",
+          "default": "h1",
           "label": "t:sections.all.heading_size.label"
         }
       ]

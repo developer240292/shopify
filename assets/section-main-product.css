@@ -784,41 +784,6 @@ a.product__text {
     position: relative;
 }
 
-.vtproleftimg .thumbnail-list {
-    margin: 0;
-}
-
-.vtproleftimg .grid {
-    margin-left: -1rem;
-    column-gap: 0;
-    row-gap: 0;
-}
-
-.vtproleftimg .grid__item {
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-}
-
-.vtproleftimg .product__media-toggle,
-.vtproleftimg .product__media-icon {
-    display: none;
-}
-
-.vtproleftimg .product__media-item--full .product__media-icon {
-    display: flex;
-}
-
-.vtproleftimg .grid__item.is-active,
-.vtproleftimg .grid__item.is-active .product__media img,
-.product--stacked .vtproleftimg .grid__item .product__media img {
-    cursor: zoom-in;
-}
-
-.product--stacked .vtproleftimg .grid__item.product__media-item--full .product__media img,
-.product--stacked .vtproleftimg .grid__item.is-active.product__media-item--full {
-    cursor: pointer;
-}
-
 .product-media-modal__content> :not(.active),
 .product__media-list .deferred-media {
     display: none;
@@ -1437,10 +1402,6 @@ a.product__text {
         font-size: calc(var(--font-body-scale) * 14px);
     }
 
-    .vtproleftimg .product__media-item--full .product__media-toggle {
-        display: flex;
-    }
-
     .product__info-container .product-form__submit {
         margin-bottom: 10px;
     }
@@ -1580,21 +1541,6 @@ a.product__text {
         width: 100%;
     }
 
-    .vtproleftimg .grid {
-        margin-left: 0;
-        margin-right: 0;
-        grid-gap: 1rem;
-    }
-
-    .vtproleftimg .grid__item {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    #vtquickview .vtproleftimg .grid {
-        grid-gap: 0;
-    }
-
     .product__info-container .product__title.h0 {
         font-size: calc(var(--font-body-scale) * 18px);
     }
@@ -1654,14 +1600,6 @@ a.product__text {
 
     .product__info-container .price--on-sale .price-item--regular {
         font-size: calc(var(--font-body-scale) * 14px);
-    }
-
-    .vtproleftimg .grid__item {
-        padding-left: 0;
-    }
-
-    .vtproleftimg .grid {
-        margin-left: 0;
     }
 
     .product__media-list .product__media-item {

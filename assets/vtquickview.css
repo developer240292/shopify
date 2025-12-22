@@ -22,10 +22,7 @@
 .hide-modalquick{
     display: none !important;
 }
-#vtquickview .vtproleftimg .grid__item.is-active, #vtquickview .vtproleftimg .grid__item.is-active .product__media img,
-#vtquickview .product--stacked .vtproleftimg .grid__item .product__media img{
-    cursor: default;
-}
+
 #vtquickview .social-sharing {
     padding: 0;
     writing-mode: unset;
@@ -38,25 +35,11 @@
 #vtquickview .social-sharing li a:hover {
     background: rgba(0, 0, 0,1);
 }
-#vtquickview .vtproleftimg .slider-button[disabled] .icon,#vtquickview .vtproleftimg .slider-button:not([disabled]):hover {
-    color: rgba(0, 0, 0,.3);
-}
-#vtquickview .vtproleftimg .slider-button {
-    color: rgba(0, 0, 0,.75);
-}
+
 #vtquickview .product__info-container .product__title {
     font-size: calc(var(--font-body-scale) * 32px);
 }
-#vtquickview .vtproleftimg .slider-button--next{
-   position: absolute;
-   right: -20px;
-   z-index: 1;
-}
-#vtquickview .vtproleftimg .slider-button--prev{
-    position: absolute;
-    left: -20px;
-    z-index: 1;
-}
+
 @media (max-width: 991px) {
     #vtquickview .product__info-wrapper .vtswatchclr input[type="radio"] + label {
         min-width: 26px;
