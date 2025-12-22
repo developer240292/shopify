@@ -32,7 +32,7 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-
+    <script src="{{ 'slick.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
@@ -77,7 +77,7 @@
     {%- unless settings.type_heading_font.system? -%}
         <link rel="preload" as="font" href="{{ settings.type_heading_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
-
+    {{ 'slick.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'magnific-popup.css' | asset_url | stylesheet_tag }}
     {{ 'vtquickview.css' | asset_url | stylesheet_tag }}
