@@ -18,9 +18,9 @@ if (!customElements.get('media-gallery')) {
     }
 
     onSlideChanged(event) {
-      console.log(this.elements.thumbnails);
-      // const thumbnail = this.elements.thumbnails.querySelector(`[data-target="${ event.detail.currentElement.dataset.mediaId }"]`);
-      // this.setActiveThumbnail(thumbnail);
+      console.log(this.elements.thumbnails.querySelector(`[data-target="${ event.detail.currentElement.dataset.mediaId }"]`));
+      const thumbnail = this.elements.thumbnails.querySelector(`[data-target="${ event.detail.currentElement.dataset.mediaId }"]`);
+      this.setActiveThumbnail(thumbnail);
     }
 
     setActiveMedia(mediaId, prepend) {
