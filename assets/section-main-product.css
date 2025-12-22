@@ -124,11 +124,6 @@ variant-selects {
     margin: 0 auto;
 }
 
-.product__info-wrapper {
-    padding-left: 0;
-    padding-bottom: 0;
-}
-
 /* Dynamic checkout */
 .shopify-payment-button__button {
     border-radius: 0;
