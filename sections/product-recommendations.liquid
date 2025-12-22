@@ -22,11 +22,11 @@
             <span>{{ section.settings.heading | escape }}</span>
           </h2>
           <div
-            class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+            class="grid product-grid product-grid-4"
             role="list"
           >
             {% for recommendation in recommendations.products %}
-              <div class="grid__item cless">
+              <div class="grid__item">
                 {% render 'card-product',
                   card_product: recommendation,
                   media_aspect_ratio: section.settings.image_ratio,
@@ -124,15 +124,6 @@
       "label": "t:sections.product-recommendations.settings.products_to_show.label"
     },
     {
-      "type": "range",
-      "id": "columns_desktop",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "default": 4,
-      "label": "t:sections.product-recommendations.settings.columns_desktop.label"
-    },
-    {
       "type": "header",
       "content": "t:sections.product-recommendations.settings.header__2.content"
     },
@@ -213,26 +204,6 @@
       "default": true,
       "label": "Enable color swatches",
       "info": "Requires type to be set to 'Pills'."
-    },
-    {
-      "type": "header",
-      "content": "t:sections.product-recommendations.settings.header_mobile.content"
-    },
-    {
-      "type": "select",
-      "id": "columns_mobile",
-      "default": "2",
-      "label": "t:sections.product-recommendations.settings.columns_mobile.label",
-      "options": [
-        {
-          "value": "1",
-          "label": "t:sections.product-recommendations.settings.columns_mobile.options__1.label"
-        },
-        {
-          "value": "2",
-          "label": "t:sections.product-recommendations.settings.columns_mobile.options__2.label"
-        }
-      ]
     },
     {
       "type": "header",
