@@ -18,7 +18,7 @@ if (!customElements.get('media-gallery')) {
     }
 
     onSlideChanged(event) {
-      console(this.elements.thumbnails);
+      console.log(this.elements.thumbnails);
       // const thumbnail = this.elements.thumbnails.querySelector(`[data-target="${ event.detail.currentElement.dataset.mediaId }"]`);
       // this.setActiveThumbnail(thumbnail);
     }
