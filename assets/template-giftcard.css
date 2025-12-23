@@ -399,9 +399,3 @@ h6,
     display: none;
   }
 }
-
-.gradient {
-  background: rgb(var(--color-base-background-1));
-  background: var(--gradient-base-background-1);
-  background-attachment: fixed;
-}
