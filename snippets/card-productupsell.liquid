@@ -168,9 +168,9 @@
                         <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
                         <button type="submit" name="add" class="focus-inset cartb product-form__submit" aria-label="{{ 'products.product.add_to_cart' | t }}" {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}>
                             {%- if card_product.selected_or_first_available_variant.available -%}
-                                {% render 'icon-pcart' %}<span>{{ 'products.product.add_to_cart' | t }}</span>
+                                {% render 'icon-card-cart' %}<span>{{ 'products.product.add_to_cart' | t }}</span>
                             {%- else -%}
-                                {% render 'icon-pcart' %}<span>{{ 'products.product.sold_out' | t }}</span>
+                                {% render 'icon-card-cart' %}<span>{{ 'products.product.sold_out' | t }}</span>
                             {%- endif -%}
                             <div class="loading-overlay__spinner hidden">
                                 <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">

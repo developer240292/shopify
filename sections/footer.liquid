@@ -160,13 +160,13 @@
                       <ul>
                         {%- if block.settings.footer_address != blank -%}
                           <li>
-                            {% render 'icon-faddress' %}
+                            {% render 'icon-footer-address' %}
                             <span>{{ block.settings.footer_address }}</span>
                           </li>
                         {%- endif -%}
                         {%- if block.settings.footer_phone != blank -%}
                           <li>
-                            {% render 'icon-fcontact' %}
+                            {% render 'icon-footer-contact' %}
                             <span>
                               <a href="tel:{{ block.settings.footer_phone }}">
                                 {{- block.settings.footer_phone -}}
@@ -176,7 +176,7 @@
                         {%- endif -%}
                         {%- if block.settings.footer_email != blank -%}
                           <li>
-                            {% render 'icon-fmail' %}
+                            {% render 'icon-footer-mail' %}
                             <span>
                               <a href="mailto:{{ block.settings.footer_email }}">
                                 {{- block.settings.footer_email -}}

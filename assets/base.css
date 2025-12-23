@@ -16059,8 +16059,7 @@ slider-component:focus-within .vthomesbtn button {
 .product-form .cartb:hover,
 .product-form .vtquickv:hover,
 .product-form .wishlist:hover {
-    background: var(--gradient-base-accent-1);
-    color: #ffffff;
+    color: var(--color-base-accent-1);
 }
 
 .product-form .cartb:hover svg,

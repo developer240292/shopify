@@ -132,8 +132,27 @@ button.product__xr-button::after {
     box-shadow: none !important;
 }
 
+.shopify-payment-button__button--unbranded {
+    border-radius: 10px;
+    background: var(--color-base-accent-1);
+    color: #fff;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 0;
+    font-size: calc(var(--font-body-scale) * 16px);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.shopify-payment-button__button--unbranded:hover,
+.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+}
+
 .shopify-payment-button__button--hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Product form */
@@ -302,7 +321,9 @@ fieldset.product-form__input .form__label {
 
 /* Product info */
 .product__info-container .product-form__submit {
-    margin-bottom: 1rem;
+    width: 100%;
+    background-color: #000;
+    margin-bottom: 20px;
 }
 
 .product__text {
@@ -455,7 +476,7 @@ a.product__text {
 
 .product__media-icon,
 .thumbnail__badge {
-    background-color: rgb(0, 0, 0);
+    background-color: #fff;
     border-radius: 4px;
     border: 0.1rem solid rgba(0, 0, 0, 0.1);
     color: rgb(0, 0, 0);
@@ -903,7 +924,6 @@ a.product__text {
     font-size: calc(var(--font-body-scale) * 20px);
 }
 
-
 .product__info-container .spr-starrating,
 .mainp-price,
 .product__info-container .product-form__input,
@@ -989,28 +1009,6 @@ a.product__text {
 
 .product__modal-opener {
     border-radius: 0;
-}
-
-.shopify-payment-button__button--unbranded {
-    border-radius: 10px;
-    background: var(--color-base-accent-1);
-    color: #fff;
-    min-height: 45px;
-    padding: 0 0;
-    font-size: calc(var(--font-body-scale) * 16px);
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.shopify-payment-button__button--unbranded:hover,
-.shopify-payment-button__button--unbranded:hover:not([disabled]) {
-    background-color: #000;
-    border-color: #000;
-    color: #fff;
-}
-
-.shopify-payment-button__button--hidden {
-    display: none !important;
 }
 
 .product__info-container .product-popup-modal__button svg {

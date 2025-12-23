@@ -466,10 +466,10 @@
                   {% endif %}
                 >
                   {%- if card_product.selected_or_first_available_variant.available -%}
-                    {% render 'icon-pcart' -%}
+                    {% render 'icon-card-cart' -%}
                     <span>{{ 'products.product.add_to_cart' | t }}</span>
                   {%- else -%}
-                    {% render 'icon-pcart' -%}
+                    {% render 'icon-card-cart' -%}
                     <span>{{ 'products.product.sold_out' | t }}</span>
                   {%- endif -%}
                   <div class="loading-overlay__spinner hidden">
@@ -525,7 +525,7 @@
                 data-id="{{ card_product.id }}"
                 data-url="{{ card_product.url }}"
               >
-                {% render 'icon-pquickview' -%}
+                {% render 'icon-card-quickview' -%}
                 <span>{{ 'vtcustomlabel.vtalltext.quickview' | t }}</span>
               </button>
             </div>
