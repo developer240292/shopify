@@ -15128,10 +15128,14 @@ form.search .search__button {
 .header-mobile-menu .draly-nav .menu-item .caret {
     display: flex;
     width: 52px;
+    height: auto;
+    line-height: 1;
+    padding: 0;
     align-items: center;
     margin-left: auto;
     justify-content: end;
     cursor: pointer;
+    background: none;
 }
 
 .header-mobile-menu .draly-nav .menu-item .caret svg {

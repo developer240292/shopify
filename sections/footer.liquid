@@ -53,7 +53,7 @@
                     id="Subscribe"
                     aria-label="{{ 'newsletter.button_label' | t }}"
                   >
-                    <span>{{ 'newsletter.button_label' | t }}</span>{% render 'icon-send' %}
+                    <span>{{ 'newsletter.button_label' | t }}</span>{% render 'icon-footer-send' %}
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -61,7 +61,7 @@
                     class="newsletter-form__message form__message"
                     id="ContactFooter-error"
                   >
-                    {%- render 'icon-error' -%}
+                    {%- render 'icon-notice-error' -%}
                     {{- form.errors.translated_fields.email | capitalize }}
                     {{ form.errors.messages.email -}}
                   </small>
@@ -74,7 +74,7 @@
                   tabindex="-1"
                   autofocus
                 >
-                  {% render 'icon-success' -%}
+                  {% render 'icon-notice-success' -%}
                   {{- 'newsletter.success' | t }}
                 </h3>
               {%- endif -%}

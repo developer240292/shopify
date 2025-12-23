@@ -44,10 +44,10 @@
                 assign vtratinghalf = block.settings.star_rating | floor | minus: block.settings.star_rating
               -%}
               {%- for i in (1..vttrating) -%}
-                {% render 'icon-star' %}
+                {% render 'icon-testimonial-star' %}
               {%- endfor -%}
               {% if vtratinghalf != 0 %}
-                {% render 'icon-halfstar' %}
+                {% render 'icon-testimonial-halfstar' %}
               {% endif %}
             </div>
           </div>

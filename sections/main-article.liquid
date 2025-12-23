@@ -139,7 +139,7 @@
               <h2>{{ 'blogs.article.comment_form_title' | t }}</h2>
               {%- if form.errors -%}
                 <h3 class="form-status vtformerror" tabindex="-1" autofocus>
-                  {% render 'icon-error' %}
+                  {% render 'icon-notice-error' %}
                   {{ 'templates.contact.form.error_heading' | t }}
                 </h3>
                 <ul>
@@ -160,7 +160,7 @@
                 </ul>
               {%- elsif form.posted_successfully? -%}
                 <h3 class="form-status vtformsuccess" tabindex="-1" autofocus>
-                  {% render 'icon-success' %}
+                  {% render 'icon-notice-success' %}
                   {{ post_message | t }}
                 </h3>
               {%- endif -%}
@@ -194,7 +194,7 @@
                     {%- if form.errors contains 'author' -%}
                       <small id="CommentForm-author-error">
                         <span class="form__message">
-                          {%- render 'icon-error' -%}
+                          {%- render 'icon-notice-error' -%}
                           {{- 'blogs.article.name' | t }}
                           {{ form.errors.messages.author }}.</span
                         >
@@ -226,7 +226,7 @@
                     {%- if form.errors contains 'email' -%}
                       <small id="CommentForm-email-error">
                         <span class="form__message">
-                          {%- render 'icon-error' -%}
+                          {%- render 'icon-notice-error' -%}
                           {{- 'blogs.article.email' | t }}
                           {{ form.errors.messages.email }}.</span
                         >
@@ -256,7 +256,7 @@
                 {%- if form.errors contains 'body' -%}
                   <small id="CommentForm-body-error">
                     <span class="form__message">
-                      {%- render 'icon-error' -%}
+                      {%- render 'icon-notice-error' -%}
                       {{- 'blogs.article.message' | t }}
                       {{ form.errors.messages.body }}.</span
                     >
