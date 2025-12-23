@@ -105,7 +105,7 @@
 </head>
 
 <body class="gradient {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} {% if template == '404' %} error-404 {% else %} {{ template | replace: '.', '-' | handle }} {% endif %}">
-<main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+<main id="MainContent" class="content-for-layout" role="main" tabindex="-1">
     {{ content_for_layout }}
 </main>
 

@@ -317,7 +317,7 @@
           {%- endif -%}
           <ul class="grid slider" id="Slider-{{ section.id }}">
             {%- for product in settings.upsellcollection.products limit: settings.upsell_to_show -%}
-              <li class="cartupciner slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
+              <li class="grid__item slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
                 {% render 'card-productupsell', card_product: product %}
               </li>
             {%- else -%}

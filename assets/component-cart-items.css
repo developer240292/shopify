@@ -4,6 +4,7 @@
   display: block;
   background-color: rgba(0, 0, 0, 0.08);
   overflow: visible;
+  border-radius: 0;
 }
 
 .progress .determinate {
@@ -40,16 +41,10 @@
 
 .cart-items td,
 .cart-items th {
-  padding: 0;
   border: none;
 }
 
-.cart-items td {
-  padding-top: 15px;
-}
-
 .cart-items th {
-  padding-bottom: 10px;
   opacity: .85;
   font-weight: var(--font-body-weight);
 }

@@ -11,7 +11,7 @@
             {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
             <div class="dummysvg">{{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
         </div>
-        <div class="vtproductdes text-center">
+        <div class="vtproductdes">
             <p class="vtprotype">{{ 'products.product.vendor' | t }}</p>
             <h3 class="product-name">{{ 'onboarding.product_title' | t }}</h3>
             {% render 'price' %}
