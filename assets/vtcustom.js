@@ -88,7 +88,7 @@ jQuery(document).ready(function ($) {
             new Swiper(_this[0],_config);
         });
     }
-    console.log('czxc');
+    
     if ($('.draly-carousel').length) {
         $('.draly-carousel').each(function () {
             draly_init_carousel($(this));
