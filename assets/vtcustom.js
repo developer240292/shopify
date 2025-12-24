@@ -89,11 +89,10 @@ jQuery(document).ready(function ($) {
         });
     }
 
-
-    
     if ($('.draly-carousel').length) {
         $('.draly-carousel').each(function () {
             draly_init_carousel($(this));
+            console.log('czxc');
         });
     }
     
