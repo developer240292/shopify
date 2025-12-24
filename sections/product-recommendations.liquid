@@ -19,25 +19,25 @@
           <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">
             <span>{{ section.settings.heading | escape }}</span>
           </h2>
-          <div
-            class="grid product-grid product-grid-4"
-            role="list"
-          >
-            {% for recommendation in recommendations.products %}
-              <div class="grid__item">
-                {% render 'card-product',
-                  card_product: recommendation,
-                  media_aspect_ratio: section.settings.image_ratio,
-                  picker_type: section.settings.picker_type,
-                  show_secondary_image: section.settings.show_secondary_image,
-                  show_vendor: section.settings.show_vendor,
-                  show_rating: section.settings.show_rating,
-                  show_variants: section.settings.show_variants,
-                  show_colorswatch: section.settings.show_colorswatch,
-                  display_product_type: section.settings.display_product_type
-                %}
-              </div>
-            {% endfor %}
+          <div class="draly-carousel swiper">
+            <div class="swiper-wrapper">
+              {% for recommendation in recommendations.products %}
+                <div class="swiper-slide">
+                  {% render 'card-product',
+                    card_product: recommendation,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    picker_type: section.settings.picker_type,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    show_variants: section.settings.show_variants,
+                    show_colorswatch: section.settings.show_colorswatch,
+                    display_product_type: section.settings.display_product_type
+                  %}
+                </div>
+              {% endfor %}
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
         {% endif %}
       </div>

@@ -82,30 +82,17 @@ jQuery(document).ready(function ($) {
     }
 
     function draly_init_carousel($elem) {
-        $elem.not('.slick-initialized').each(function () {
+        $elem.not('.swiper-initialized').each(function () {
             var _this = $(this),
-                _responsive = _this.data('responsive'),
-                _config = [];
-
-            if (_this.hasClass('slick-vertical')) {
-                _config.prevArrow = '<span class="fa fa-angle-up prev"></span>';
-                _config.nextArrow = '<span class="fa fa-angle-down next"></span>';
-            } else {
-                _config.prevArrow = '<span class="prev"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1L1.59055 9.33564C1.25376 9.71452 1.25376 10.2855 1.59055 10.6644L9 19" stroke="currentColor" stroke-linecap="round"/></svg></span>';
-                _config.nextArrow = '<span class="next"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L8.40945 9.33564C8.74624 9.71452 8.74624 10.2855 8.40945 10.6644L1 19" stroke="currentColor" stroke-linecap="round"/></svg></span>';
-            }
-            _config.responsive = _responsive;
-
-            _this.slick(_config);
+                _config = _this.data('swiper');
+            new Swiper(_this[0],_config);
         });
     }
-    setTimeout(function () {
-        if ($('.owl-slick').length) {
-            $('.owl-slick').each(function () {
-                draly_init_carousel($(this));
-            });
-        }
-    }, 10);
+    if ($('.draly-carousel').length) {
+        $('.draly-carousel').each(function () {
+            draly_init_carousel($(this));
+        });
+    }
     
     // Home Page Product Tab
     $(".nav-tabs .nav-item.active").click();

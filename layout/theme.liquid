@@ -78,6 +78,7 @@
     {%- unless settings.type_heading_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_heading_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
+    {{ 'swiper.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'magnific-popup.css' | asset_url | stylesheet_tag }}
     {{ 'vtquickview.css' | asset_url | stylesheet_tag }}
@@ -170,6 +171,7 @@
       Villatheme Code
     {% endcomment %}
     <script src="{{ 'jquery.js' | asset_url }}"></script>
+    <script src="{{ 'swiper.js' | asset_url }}"></script>
     <script src="{{ 'jquery.magnific-popup.js' | asset_url }}"></script>
     <script src="{{ 'vtcustom.js' | asset_url }}"></script>
     <script src="{{ 'vtcountdown.js' | asset_url }}"></script>
