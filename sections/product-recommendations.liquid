@@ -10,7 +10,7 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <div class="section-{{ section.id }}-padding">
   <div class="vtproreccom">
-    <product-recommendations
+    <div
       class="product-recommendations"
       data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
     >
@@ -41,7 +41,7 @@
           </div>
         {% endif %}
       </div>
-    </product-recommendations>
+    </div>
   </div>
 </div>
 
