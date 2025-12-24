@@ -88,6 +88,8 @@ jQuery(document).ready(function ($) {
             new Swiper(_this[0],_config);
         });
     }
+
+
     
     if ($('.draly-carousel').length) {
         $('.draly-carousel').each(function () {
