@@ -19,7 +19,7 @@
           <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">
             <span>{{ section.settings.heading | escape }}</span>
           </h2>
-          <div class="draly-carousel swiper">
+          <div class="draly-carousel swiper" data-swiper='{"grid":{"rows":1,"fill":"row"},"pagination":{"el":".swiper-pagination","clickable":true},"slidesPerView":2,"spaceBetween":10,"breakpoints":{"0":{"slidesPerView":2,"spaceBetween":10},"576":{"slidesPerView":2,"spaceBetween":20},"768":{"slidesPerView":2,"spaceBetween":20},"992":{"slidesPerView":3,"spaceBetween":20},"1200":{"slidesPerView":4,"spaceBetween":30},"1400":{"slidesPerView":4,"spaceBetween":30}}}'>
             <div class="swiper-wrapper">
               {% for recommendation in recommendations.products %}
                 <div class="swiper-slide">
