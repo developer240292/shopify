@@ -90,9 +90,10 @@ jQuery(document).ready(function ($) {
     }
 
     if ($('.draly-carousel').length) {
+        console.log('31241');
         $('.draly-carousel').each(function () {
             draly_init_carousel($(this));
-            console.log('czxc');
+            console.log('zzz');
         });
     }
     
