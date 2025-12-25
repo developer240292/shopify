@@ -185,7 +185,7 @@
       "name": "Product Slide",
       "settings": {
         "title": "Bestseller",
-        "collection": "",
+        "collection": "bestseller",
         "products_to_show": 6,
         "rows": 1,
         "image_ratio": "adapt",
