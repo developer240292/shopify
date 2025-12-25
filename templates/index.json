@@ -319,76 +319,38 @@
         "padding_bottom": 0
       }
     },
-    "featured_product_KTXdKW": {
-      "type": "featured-product",
+    "text_with_icons_YBGbQa": {
+      "type": "text-with-icons",
       "blocks": {
-        "text_L4jnjx": {
-          "type": "text",
+        "image_PRFUcV": {
+          "type": "image",
           "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
+            "icon1": "shipping",
+            "title": "Title",
+            "text": "<p>Content description</p>"
           }
         },
-        "title_hm9Ubj": {
-          "type": "title",
+        "image_krJNNN": {
+          "type": "image",
           "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "text_cAMEHL": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
-        "price_AJbeRL": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_LfGwnw": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "show_colorswatch": true
-          }
-        },
-        "quantity_selector_TF8JN9": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_hXAtTY": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true
-          }
-        },
-        "share_qjjLUQ": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
+            "icon1": "shipping",
+            "title": "Title",
+            "text": "<p>Content description</p>"
           }
         }
       },
       "block_order": [
-        "text_L4jnjx",
-        "title_hm9Ubj",
-        "text_cAMEHL",
-        "price_AJbeRL",
-        "variant_picker_LfGwnw",
-        "quantity_selector_TF8JN9",
-        "buy_buttons_hXAtTY",
-        "share_qjjLUQ"
+        "image_PRFUcV",
+        "image_krJNNN"
       ],
-      "name": "t:sections.featured-product.presets.name",
+      "name": "Text with icons",
       "settings": {
-        "product": "boho-earrings",
-        "color_scheme": "background-1",
-        "secondary_background": false,
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "",
+        "heading_size": "h0",
+        "iconwidth": 65,
+        "column_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     }
   },
@@ -398,6 +360,6 @@
     "389d3b2b-6578-494a-8251-c570c4bb90eb",
     "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
     "bestseller_products_xE4Xt8",
-    "featured_product_KTXdKW"
+    "text_with_icons_YBGbQa"
   ]
 }
