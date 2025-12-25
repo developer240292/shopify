@@ -199,12 +199,12 @@ class SwiperSlider extends HTMLElement {
     }
 
     breakpoints = {
-        0: { slidesPerView: Number(this.dataset.breakpointMobilePortrait), spaceBetween: 10 },
-        576: { slidesPerView: Number(this.dataset.breakpointMobileLandscape), spaceBetween: 10 },
-        768: { slidesPerView: Number(this.dataset.breakpointTabletPortrait), spaceBetween: 20 },
-        992: { slidesPerView: Number(this.dataset.breakpointTabletLandscape), spaceBetween: 20 },
-        1200: { slidesPerView: Number(this.dataset.breakpointLaptop), spaceBetween: 30 },
-        1400: { slidesPerView: Number(this.dataset.breakpointWidescreen), spaceBetween: 30 },
+        0: { slidesPerView: Number(this.dataset.breakpointMobilePortrait) || 1, spaceBetween: 10 },
+        576: { slidesPerView: Number(this.dataset.breakpointMobileLandscape) || 2, spaceBetween: 10 },
+        768: { slidesPerView: Number(this.dataset.breakpointTabletPortrait) || 2, spaceBetween: 20 },
+        992: { slidesPerView: Number(this.dataset.breakpointTabletLandscape) || 2, spaceBetween: 20 },
+        1200: { slidesPerView: Number(this.dataset.breakpointLaptop) || 3, spaceBetween: 30 },
+        1400: { slidesPerView: Number(this.dataset.breakpointWidescreen) || 3, spaceBetween: 30 },
     }
 }
 customElements.define('swiper-slider', SwiperSlider)
