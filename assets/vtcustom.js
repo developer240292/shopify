@@ -182,6 +182,7 @@ class SwiperSlider extends HTMLElement {
 
     pagination = {
         enabled: this.dataset.sliderPagination === 'true',
+        clickable: true,
         el: '.swiper-pagination',
         type: 'bullets',
         dynamicBullets: true,

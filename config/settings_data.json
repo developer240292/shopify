@@ -543,50 +543,6 @@
           "padding_bottom": 0
         }
       },
-      "testimonial": {
-        "type": "testimonial",
-        "blocks": {
-          "57b2ce7d-28a8-47e8-a241-c97c0f50f79b": {
-            "type": "quote",
-            "settings": {
-              "author": "Jesica Wilson",
-              "author_pos": "developer",
-              "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>",
-              "star_rating": 4.5
-            }
-          },
-          "1bf807ce-99ac-422d-b5f3-68c6d504d093": {
-            "type": "quote",
-            "settings": {
-              "author": "Jesica Wilson",
-              "author_pos": "developer",
-              "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>",
-              "star_rating": 3.5
-            }
-          },
-          "0f3dd87a-d553-4ff2-a9e9-5a8e5749e6fc": {
-            "type": "quote",
-            "settings": {
-              "author": "Jesica Wilson",
-              "author_pos": "developer",
-              "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>",
-              "star_rating": 4
-            }
-          }
-        },
-        "block_order": [
-          "57b2ce7d-28a8-47e8-a241-c97c0f50f79b",
-          "1bf807ce-99ac-422d-b5f3-68c6d504d093",
-          "0f3dd87a-d553-4ff2-a9e9-5a8e5749e6fc"
-        ],
-        "settings": {
-          "title": "Testimonials",
-          "image_corners": "original",
-          "star_ratingclr": "#ffbb40",
-          "padding_top": 32,
-          "padding_bottom": 0
-        }
-      },
       "bestseller-products": {
         "type": "bestseller-products",
         "settings": {

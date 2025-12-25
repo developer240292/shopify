@@ -1252,7 +1252,7 @@ a.product__text {
         margin-top: 0;
     }
 
-    .product__media-item:first-child {
+    .product__media-item {
         width: 100%;
     }
 
