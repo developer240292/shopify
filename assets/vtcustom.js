@@ -163,6 +163,7 @@ class SwiperSlider extends HTMLElement {
             autoplay: this.autoplay,
             navigation: this.navigation,
             pagination: this.pagination,
+            grid: this.grid,
             breakpoints: this.breakpoints,
             rewind: true
         })
@@ -191,6 +192,13 @@ class SwiperSlider extends HTMLElement {
             return `<span class="${currentClass}"></span>/<span class="${totalClass}"></span>`
         }
     }
+
+    grid = Number(this.dataset.sliderRows) > 1
+        ? {
+            rows: Number(this.dataset.sliderRows),
+            fill: this.dataset.sliderFill || 'row'
+        }
+        : undefined
 
     breakpoints = {
         0: { slidesPerView: Number(this.dataset.breakpointMobilePortrait), spaceBetween: 10 },
