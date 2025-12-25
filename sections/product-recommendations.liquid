@@ -9,17 +9,28 @@
 {%- endstyle -%}
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <div class="section-{{ section.id }}-padding">
-  <div class="vtproreccom">
-    <product-recommendations
-      class="product-recommendations"
-      data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
-    >
-      <div class="container">
-        {% if recommendations.performed and recommendations.products_count > 0 %}
-          <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">
-            <span>{{ section.settings.heading | escape }}</span>
-          </h2>
-          <div class="draly-carousel swiper" data-swiper='{"grid":{"rows":1,"fill":"row"},"pagination":{"el":".swiper-pagination","clickable":true},"slidesPerView":2,"spaceBetween":10,"breakpoints":{"0":{"slidesPerView":2,"spaceBetween":10},"576":{"slidesPerView":2,"spaceBetween":20},"768":{"slidesPerView":2,"spaceBetween":20},"992":{"slidesPerView":3,"spaceBetween":20},"1200":{"slidesPerView":4,"spaceBetween":30},"1400":{"slidesPerView":4,"spaceBetween":30}}}'>
+  <product-recommendations
+    class="product-recommendations"
+    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
+  >
+    <div class="container">
+      {% if recommendations.performed and recommendations.products_count > 0 %}
+        <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">
+          <span>{{ section.settings.heading | escape }}</span>
+        </h2>
+        <swiper-slider
+          class="swiper-slider"
+          data-section-id="{{ section.id }}"
+          data-slider-speed="300"
+          data-slider-navigation="true"
+          data-slider-pagination="true"
+          data-slider-scrollbar="true"
+          data-slider-autoplay="0"
+          data-breakpoint-mobile="1"
+          data-breakpoint-tablet="2"
+          data-breakpoint-desktop="4"
+        >
+          <div class="swiper">
             <div class="swiper-wrapper">
               {% for recommendation in recommendations.products %}
                 <div class="swiper-slide">
@@ -37,12 +48,21 @@
                 </div>
               {% endfor %}
             </div>
-            
+            <div class="swiper-controls">
+              <div class="swiper-pagination"></div>
+              <div class="swiper-scrollbar"></div>
+              <div class="swiper-button-prev">
+                {% render 'icon-arrow-left' %}
+              </div>
+              <div class="swiper-button-next">
+                {% render 'icon-arrow-left' %}
+              </div>
+            </div>
           </div>
-        {% endif %}
-      </div>
-    </product-recommendations>
-  </div>
+        </swiper-slider>
+      {% endif %}
+    </div>
+  </product-recommendations>
 </div>
 
 {% javascript %}
