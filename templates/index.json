@@ -86,34 +86,6 @@
         "padding_bottom": 0
       }
     },
-    "08f5afdf-f979-4359-87f0-425de57a4708": {
-      "type": "collection-banner",
-      "settings": {
-        "collbg1": "rgba(0,0,0,0)",
-        "collbgborder": "#ffffff",
-        "collbgtxt": "#ffffff",
-        "collbg1hv": "#ffffff",
-        "collbgborderhv": "#ffffff",
-        "collbgtxthv": "#000000",
-        "showimage1": true,
-        "storylable1": "Women Fashoin",
-        "storydesc1": "Accessories",
-        "button_label_1": "Shop Now",
-        "button_link_1": "shopify://collections/baby-boy",
-        "showimage2": true,
-        "storylable2": "Electronic brand",
-        "storydesc2": "SmartPhone",
-        "button_label_2": "Shop Now",
-        "button_link_2": "shopify://collections/baby-girl",
-        "showimage3": true,
-        "storylable3": "Wooden furnitur",
-        "storydesc3": "Home Decor",
-        "button_label_3": "Shop Now",
-        "button_link_3": "shopify://collections/all",
-        "padding_top": 60,
-        "padding_bottom": 0
-      }
-    },
     "ffc51145-e497-455d-bb5e-b7c4421db66c": {
       "type": "top-product",
       "blocks": {

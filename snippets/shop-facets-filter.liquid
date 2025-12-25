@@ -47,7 +47,7 @@
                 <a href="{{ value.url_to_remove }}" class="active-facets__button">
                   <span class="active-facets__button-inner">
                     {{ filter.label }}: {{ value.label | escape }}
-                    {% render 'icon-close-small' %}
+                    {% render 'icon-close' %}
                     <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                   </span>
                 </a>
@@ -69,7 +69,7 @@
                       {%- else -%}
                         {{ filter.range_max | money }}
                       {%- endif -%}
-                      {% render 'icon-close-small' %}
+                      {% render 'icon-close' %}
                       <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                     </span>
                   </a>

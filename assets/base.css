@@ -1533,7 +1533,7 @@ localization-form {
 }
 
 .footer-block--newsletter h3 {
-    font-size: calc(var(--font-body-scale) * 22px);
+    font-size: calc(var(--font-heading-scale) * 22px);
     text-transform: capitalize;
     margin-bottom: 12px;
 }
