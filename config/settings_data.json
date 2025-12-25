@@ -440,8 +440,8 @@
           "padding_bottom": 0
         }
       },
-      "bestseller-products": {
-        "type": "bestseller-products",
+      "product-slide": {
+        "type": "product-slide",
         "settings": {
           "title": "Bestseller",
           "collection": "electronic",

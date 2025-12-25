@@ -302,8 +302,8 @@
         "padding_bottom": 0
       }
     },
-    "bestseller_products_xE4Xt8": {
-      "type": "bestseller-products",
+    "product_slide_xE4Xt8": {
+      "type": "product-slide",
       "name": "Bestseller products",
       "settings": {
         "title": "Bestseller",
