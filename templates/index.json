@@ -54,162 +54,6 @@
         "padding_bottom": 0
       }
     },
-    "ffc51145-e497-455d-bb5e-b7c4421db66c": {
-      "type": "top-product",
-      "blocks": {
-        "collection_aqXX3r": {
-          "type": "collection",
-          "settings": {
-            "cat_name": "Product tab",
-            "collection": "",
-            "products_to_show": 6,
-            "show_view_all": false,
-            "view_all_style": "solid",
-            "show_servise": true,
-            "s_title": true,
-            "icon1": "shipping",
-            "header_gift": "special gift cards",
-            "header_gift1": "",
-            "sa_title": true,
-            "icon2": "service",
-            "header_pay": "secure payment",
-            "header_pay1": "",
-            "sb_title": true,
-            "icon3": "offer",
-            "header_support": "24/7 support",
-            "header_support1": "",
-            "sc_title": true,
-            "icon4": "shipping",
-            "header_shipping": "free shipping",
-            "header_shipping1": "",
-            "sr_space_top": 16
-          }
-        },
-        "7634aab8-7c1e-4d5f-9c2f-ceeeb8726403": {
-          "type": "collection",
-          "settings": {
-            "cat_name": "featured",
-            "collection": "featured",
-            "products_to_show": 6,
-            "show_view_all": false,
-            "view_all_style": "solid",
-            "show_servise": true,
-            "s_title": true,
-            "icon1": "gift",
-            "header_gift": "special gift cards",
-            "header_gift1": "",
-            "sa_title": true,
-            "icon2": "moneyback",
-            "header_pay": "secure payment",
-            "header_pay1": "",
-            "sb_title": true,
-            "icon3": "service",
-            "header_support": "24/7 support",
-            "header_support1": "",
-            "sc_title": true,
-            "icon4": "shipping",
-            "header_shipping": "free shipping",
-            "header_shipping1": "",
-            "sr_space_top": 32
-          }
-        },
-        "c42367a0-f139-4e7b-bb8d-cd0b7b215535": {
-          "type": "collection",
-          "settings": {
-            "cat_name": "latest",
-            "collection": "new-product",
-            "products_to_show": 6,
-            "show_view_all": false,
-            "view_all_style": "solid",
-            "show_servise": true,
-            "s_title": true,
-            "icon1": "gift",
-            "header_gift": "special gift cards",
-            "header_gift1": "",
-            "sa_title": true,
-            "icon2": "moneyback",
-            "header_pay": "secure payment",
-            "header_pay1": "",
-            "sb_title": true,
-            "icon3": "service",
-            "header_support": "24/7 support",
-            "header_support1": "",
-            "sc_title": true,
-            "icon4": "shipping",
-            "header_shipping": "free shipping",
-            "header_shipping1": "",
-            "sr_space_top": 16
-          }
-        },
-        "8b2f99d6-0134-48d3-916e-1c86cce21db9": {
-          "type": "collection",
-          "settings": {
-            "cat_name": "bestseller",
-            "collection": "featured",
-            "products_to_show": 6,
-            "show_view_all": false,
-            "view_all_style": "solid",
-            "show_servise": true,
-            "s_title": true,
-            "icon1": "colorgift",
-            "header_gift": "special gift cards",
-            "header_gift1": "",
-            "sa_title": true,
-            "icon2": "colorpayment",
-            "header_pay": "secure payment",
-            "header_pay1": "",
-            "sb_title": true,
-            "icon3": "coloruser",
-            "header_support": "24/7 support",
-            "header_support1": "",
-            "sc_title": true,
-            "icon4": "colorship",
-            "header_shipping": "free shipping",
-            "header_shipping1": "",
-            "sr_space_top": 16
-          }
-        }
-      },
-      "block_order": [
-        "collection_aqXX3r",
-        "7634aab8-7c1e-4d5f-9c2f-ceeeb8726403",
-        "c42367a0-f139-4e7b-bb8d-cd0b7b215535",
-        "8b2f99d6-0134-48d3-916e-1c86cce21db9"
-      ],
-      "settings": {
-        "title_first": "Special",
-        "heading_size_1": "h2",
-        "collection_1": "special-product",
-        "products_to_show_1": 6,
-        "columns_desktop_1": 1,
-        "enable_desktop_slider_1": true,
-        "image_ratio_1": "adapt",
-        "display_product_type_1": false,
-        "show_secondary_image_1": true,
-        "show_vendor_1": false,
-        "show_rating_1": true,
-        "show_variants_1": true,
-        "picker_type_1": "button",
-        "show_colorswatch_1": true,
-        "swipe_on_mobile_1": true,
-        "m_title": "Tab product",
-        "heading_size": "h2",
-        "color_scheme_1": "background-1",
-        "rows": 1,
-        "columns_desktop": 4,
-        "full_width": false,
-        "image_ratio": "adapt",
-        "display_product_type": false,
-        "show_rating": true,
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_variants": true,
-        "picker_type": "button",
-        "show_colorswatch": true,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "389d3b2b-6578-494a-8251-c570c4bb90eb": {
       "type": "blog-posts",
       "settings": {
@@ -302,23 +146,6 @@
         "padding_bottom": 0
       }
     },
-    "product_slide_xE4Xt8": {
-      "type": "product-slide",
-      "name": "Bestseller products",
-      "settings": {
-        "title": "Bestseller",
-        "collection": "",
-        "products_to_show": 6,
-        "rows": 1,
-        "image_ratio": "adapt",
-        "display_product_type": false,
-        "show_rating": false,
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "text_with_icons_YBGbQa": {
       "type": "text-with-icons",
       "blocks": {
@@ -352,14 +179,30 @@
         "padding_top": 60,
         "padding_bottom": 0
       }
+    },
+    "product_slide_FedGnK": {
+      "type": "product-slide",
+      "name": "Product Slide",
+      "settings": {
+        "title": "Bestseller",
+        "collection": "",
+        "products_to_show": 6,
+        "rows": 1,
+        "image_ratio": "adapt",
+        "display_product_type": false,
+        "show_rating": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "b8f0ea88-dbd6-4b1b-8a13-5bb94c547628",
-    "ffc51145-e497-455d-bb5e-b7c4421db66c",
     "389d3b2b-6578-494a-8251-c570c4bb90eb",
     "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
-    "bestseller_products_xE4Xt8",
-    "text_with_icons_YBGbQa"
+    "text_with_icons_YBGbQa",
+    "product_slide_FedGnK"
   ]
 }

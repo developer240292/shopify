@@ -415,22 +415,6 @@
           "padding_bottom": 0
         }
       },
-      "toprated-products": {
-        "type": "toprated-products",
-        "settings": {
-          "title": "Toprated",
-          "collection": "left-product",
-          "products_to_show": 6,
-          "rows": 3,
-          "image_ratio": "adapt",
-          "display_product_type": false,
-          "show_rating": true,
-          "show_secondary_image": false,
-          "show_vendor": false,
-          "padding_top": 32,
-          "padding_bottom": 0
-        }
-      },
       "left-banner": {
         "type": "left-banner",
         "settings": {
