@@ -193,12 +193,10 @@ class SwiperSlider extends HTMLElement {
         }
     }
 
-    grid = Number(this.dataset.sliderRows) > 1
-        ? {
-            rows: Number(this.dataset.sliderRows),
-            fill: this.dataset.sliderFill || 'row'
-        }
-        : undefined
+    grid = {
+        rows: Number(this.dataset.sliderRows) || 1,
+        fill: this.dataset.sliderFill || 'row'
+    }
 
     breakpoints = {
         0: { slidesPerView: Number(this.dataset.breakpointMobilePortrait), spaceBetween: 10 },
