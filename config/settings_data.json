@@ -281,83 +281,7 @@
           "padding_bottom": 0
         }
       },
-      "collection-list": {
-        "type": "collection-list",
-        "blocks": {
-          "b27efbdd-5504-4fed-b41f-d655baf9dfb4": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "accessories"
-            }
-          },
-          "7ba9b9aa-4107-4c1e-b846-f9c142a7f2dd": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "camera"
-            }
-          },
-          "4645cbbc-5353-4d0c-8b09-bead39ffc460": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "fashion"
-            }
-          },
-          "0155b4d0-4603-47da-8d44-2da0e0bf60e2": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "special-product"
-            }
-          },
-          "6bc1ee64-b6af-4d98-b638-b037f78b5b7b": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "phone"
-            }
-          },
-          "5d12361c-fd18-4841-af70-1882c323cfb7": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "toys"
-            }
-          },
-          "b77de2bf-1b88-4b1c-a4b6-44043ef69e87": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "watch"
-            }
-          },
-          "e426d5f3-4a54-41a6-9735-829c42afb275": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "art"
-            }
-          },
-          "06db3a06-7c4e-4bea-8ad3-51787f153fd9": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "camera"
-            }
-          }
-        },
-        "block_order": [
-          "b27efbdd-5504-4fed-b41f-d655baf9dfb4",
-          "7ba9b9aa-4107-4c1e-b846-f9c142a7f2dd",
-          "4645cbbc-5353-4d0c-8b09-bead39ffc460",
-          "0155b4d0-4603-47da-8d44-2da0e0bf60e2",
-          "6bc1ee64-b6af-4d98-b638-b037f78b5b7b",
-          "5d12361c-fd18-4841-af70-1882c323cfb7",
-          "b77de2bf-1b88-4b1c-a4b6-44043ef69e87",
-          "e426d5f3-4a54-41a6-9735-829c42afb275",
-          "06db3a06-7c4e-4bea-8ad3-51787f153fd9"
-        ],
-        "settings": {
-          "title": "Top categories",
-          "heading_size": "h2",
-          "image_ratio": "adapt",
-          "padding_top": 60,
-          "padding_bottom": 0
-        }
-      },
+      
       "text-with-icons": {
         "type": "text-with-icons",
         "blocks": {
@@ -409,8 +333,8 @@
           "padding_bottom": 0
         }
       },
-      "featured-blog": {
-        "type": "featured-blog",
+      "blog-posts": {
+        "type": "blog-posts",
         "settings": {
           "m_title": "latest blog",
           "heading_size": "h2",

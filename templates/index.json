@@ -242,7 +242,7 @@
       }
     },
     "389d3b2b-6578-494a-8251-c570c4bb90eb": {
-      "type": "featured-blog",
+      "type": "blog-posts",
       "settings": {
         "m_title": "latest blog",
         "heading_size": "h2",
