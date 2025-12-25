@@ -24,11 +24,13 @@
           data-slider-speed="300"
           data-slider-navigation="true"
           data-slider-pagination="true"
-          data-slider-scrollbar="true"
           data-slider-autoplay="0"
-          data-breakpoint-mobile="1"
-          data-breakpoint-tablet="2"
-          data-breakpoint-desktop="4"
+          data-breakpoint-mobile-portrait="2"
+          data-breakpoint-mobile-landscape="2"
+          data-breakpoint-tablet-portrait="2"
+          data-breakpoint-tablet-landscape="3"
+          data-breakpoint-laptop="4"
+          data-breakpoint-widescreen="4"
         >
           <div class="swiper">
             <div class="swiper-wrapper">
@@ -50,12 +52,11 @@
             </div>
             <div class="swiper-controls">
               <div class="swiper-pagination"></div>
-              <div class="swiper-scrollbar"></div>
               <div class="swiper-button-prev">
                 {% render 'icon-arrow-left' %}
               </div>
               <div class="swiper-button-next">
-                {% render 'icon-arrow-left' %}
+                {% render 'icon-arrow-right' %}
               </div>
             </div>
           </div>

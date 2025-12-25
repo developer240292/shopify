@@ -80,7 +80,7 @@ jQuery(document).ready(function ($) {
     if ($('.header-mobile-sticky .header-mobile-wrap').length) {
         draly_header_sticky($('.header-mobile-sticky .header-mobile-wrap'));
     }
-    
+
     // Home Page Product Tab
     $(".nav-tabs .nav-item.active").click();
     $(document).on('click', '.nav-tabs .nav-item', function (e) {
@@ -145,63 +145,59 @@ jQuery(window).on('load', function () {
 
 // Swiper Slider
 class SwiperSlider extends HTMLElement {
-  constructor () {
-    super()
+    constructor() {
+        super()
 
-    this.init()
-
-    document.addEventListener('shopify:section:load', (event) => {
-      if (event.detail.sectionId === this.dataset.sectionId) {
         this.init()
-      }
-    })
-  }
 
-  init () {
-    this.slider = new window.Swiper(this.querySelector('.swiper'), {
-      speed: this.speed,
-      autoplay: this.autoplay,
-      navigation: this.navigation,
-      pagination: this.pagination,
-      scrollbar: this.scrollbar,
-      breakpoints: this.breakpoints,
-      rewind: true
-    })
-  }
-
-  speed = Number(this.dataset.sliderSpeed)
-
-  autoplay = this.dataset.sliderAutoplay === '0'
-    ? undefined
-    : { delay: Number(this.dataset.sliderAutoplay) * 1000 }
-
-  navigation = {
-    enabled: this.dataset.sliderNavigation === 'true',
-    prevEl: '.swiper-button-prev',
-    nextEl: '.swiper-button-next'
-  }
-
-  pagination = {
-    enabled: this.dataset.sliderPagination === 'true',
-    el: '.swiper-pagination',
-    type: 'bullets',
-    dynamicBullets: true,
-    dynamicMainBullets: 2,
-    renderFraction: function (currentClass, totalClass) {
-      return `<span class="${currentClass}"></span>/<span class="${totalClass}"></span>`
+        document.addEventListener('shopify:section:load', (event) => {
+            if (event.detail.sectionId === this.dataset.sectionId) {
+                this.init()
+            }
+        })
     }
-  }
 
-  scrollbar = {
-    enabled: this.dataset.sliderScrollbar === 'true',
-    el: this.querySelector('.swiper-scrollbar'),
-    draggable: true
-  }
+    init() {
+        this.slider = new window.Swiper(this.querySelector('.swiper'), {
+            speed: this.speed,
+            autoplay: this.autoplay,
+            navigation: this.navigation,
+            pagination: this.pagination,
+            breakpoints: this.breakpoints,
+            rewind: true
+        })
+    }
 
-  breakpoints = {
-    0: { slidesPerView: Number(this.dataset.breakpointMobile) },
-    600: { slidesPerView: Number(this.dataset.breakpointTablet) },
-    1200: { slidesPerView: Number(this.dataset.breakpointDesktop) }
-  }
+    speed = Number(this.dataset.sliderSpeed)
+
+    autoplay = this.dataset.sliderAutoplay === '0'
+        ? undefined
+        : { delay: Number(this.dataset.sliderAutoplay) * 1000 }
+
+    navigation = {
+        enabled: this.dataset.sliderNavigation === 'true',
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next'
+    }
+
+    pagination = {
+        enabled: this.dataset.sliderPagination === 'true',
+        el: '.swiper-pagination',
+        type: 'bullets',
+        dynamicBullets: true,
+        dynamicMainBullets: 2,
+        renderFraction: function (currentClass, totalClass) {
+            return `<span class="${currentClass}"></span>/<span class="${totalClass}"></span>`
+        }
+    }
+
+    breakpoints = {
+        0: { slidesPerView: Number(this.dataset.breakpointMobilePortrait), spaceBetween: 10 },
+        576: { slidesPerView: Number(this.dataset.breakpointMobileLandscape), spaceBetween: 10 },
+        768: { slidesPerView: Number(this.dataset.breakpointTabletPortrait), spaceBetween: 20 },
+        992: { slidesPerView: Number(this.dataset.breakpointTabletLandscape), spaceBetween: 20 },
+        1200: { slidesPerView: Number(this.dataset.breakpointLaptop), spaceBetween: 30 },
+        1400: { slidesPerView: Number(this.dataset.breakpointWidescreen), spaceBetween: 30 },
+    }
 }
 customElements.define('swiper-slider', SwiperSlider)
