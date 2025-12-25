@@ -16,51 +16,30 @@
           "type": "slide",
           "settings": {
             "heading": "New collection",
-            "heading_size": "large",
             "subheading": "Best Fashion Thrend",
             "subheadingtext": "<p>Karen tincidunt tempus varius. Integer ante dolor, suscipit non faucibus a, scelerisque vitae sapien.</p>",
             "button_label": "Shop Now",
-            "link": "shopify://collections",
-            "box_align": "middle-left",
-            "show_text_box": false,
-            "text_alignment": "left",
-            "image_overlay_opacity": 20,
-            "color_scheme": "accent-2",
-            "text_alignment_mobile": "center"
+            "link": "shopify://collections"
           }
         },
         "slide_BYhpNq": {
           "type": "slide",
           "settings": {
             "heading": "Banner main heading",
-            "heading_size": "large",
             "subheading": "Banner subheading here",
             "subheadingtext": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "button_label": "Button label",
-            "link": "",
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "accent-1",
-            "text_alignment_mobile": "center"
+            "link": ""
           }
         },
         "template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-0": {
           "type": "slide",
           "settings": {
             "heading": "Wommen chair",
-            "heading_size": "large",
             "subheading": "Wommen chair",
             "subheadingtext": "<p>Karen tincidunt tempus varius. Integer ante dolor non faucibus a, scelerisque vitae sapien.</p>",
             "button_label": "Shop Now",
-            "link": "shopify://collections",
-            "box_align": "middle-right",
-            "show_text_box": false,
-            "text_alignment": "right",
-            "image_overlay_opacity": 0,
-            "color_scheme": "accent-1",
-            "text_alignment_mobile": "right"
+            "link": "shopify://collections"
           }
         }
       },
@@ -70,18 +49,7 @@
         "template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-0"
       ],
       "settings": {
-        "layout": "grid",
         "slide_height": "adapt_image",
-        "slider_visual": "dots",
-        "pagicolor": "#2bbef9",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "vtoverlaycolor": "#ffffff",
-        "vtoverlaybg": "#2bbef9",
-        "vtoverlayoutline": "#2bbef9",
-        "vtoverlayhcolor": "#000000",
-        "vtoverlayhbg": "#edfaff",
-        "vtoverlayhoutline": "#edfaff",
         "padding_top": 20,
         "padding_bottom": 0
       }
@@ -89,6 +57,34 @@
     "ffc51145-e497-455d-bb5e-b7c4421db66c": {
       "type": "top-product",
       "blocks": {
+        "collection_aqXX3r": {
+          "type": "collection",
+          "settings": {
+            "cat_name": "Product tab",
+            "collection": "",
+            "products_to_show": 6,
+            "show_view_all": false,
+            "view_all_style": "solid",
+            "show_servise": true,
+            "s_title": true,
+            "icon1": "shipping",
+            "header_gift": "special gift cards",
+            "header_gift1": "",
+            "sa_title": true,
+            "icon2": "service",
+            "header_pay": "secure payment",
+            "header_pay1": "",
+            "sb_title": true,
+            "icon3": "offer",
+            "header_support": "24/7 support",
+            "header_support1": "",
+            "sc_title": true,
+            "icon4": "shipping",
+            "header_shipping": "free shipping",
+            "header_shipping1": "",
+            "sr_space_top": 16
+          }
+        },
         "7634aab8-7c1e-4d5f-9c2f-ceeeb8726403": {
           "type": "collection",
           "settings": {
@@ -175,6 +171,7 @@
         }
       },
       "block_order": [
+        "collection_aqXX3r",
         "7634aab8-7c1e-4d5f-9c2f-ceeeb8726403",
         "c42367a0-f139-4e7b-bb8d-cd0b7b215535",
         "8b2f99d6-0134-48d3-916e-1c86cce21db9"
@@ -217,7 +214,6 @@
       "type": "blog-posts",
       "settings": {
         "m_title": "latest blog",
-        "heading_size": "h2",
         "blog": "news",
         "show_image": true,
         "image_height": "adapt",
@@ -306,74 +302,64 @@
         "padding_bottom": 0
       }
     },
-    "multicolumn_P6HrVM": {
-      "type": "multicolumn",
+    "bestseller_products_xE4Xt8": {
+      "type": "bestseller-products",
+      "name": "Bestseller products",
+      "settings": {
+        "title": "Bestseller",
+        "collection": "",
+        "products_to_show": 6,
+        "rows": 1,
+        "image_ratio": "adapt",
+        "display_product_type": false,
+        "show_rating": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "text_with_icons_YBGbQa": {
+      "type": "text-with-icons",
       "blocks": {
-        "column_Uy9hXC": {
-          "type": "column",
+        "image_PRFUcV": {
+          "type": "image",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "icon1": "shipping",
+            "title": "Title",
+            "text": "<p>Content description</p>"
           }
         },
-        "column_LzeWgk": {
-          "type": "column",
+        "image_krJNNN": {
+          "type": "image",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_KNA63Q": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_9k7tc7": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "icon1": "shipping",
+            "title": "Title",
+            "text": "<p>Content description</p>"
           }
         }
       },
       "block_order": [
-        "column_Uy9hXC",
-        "column_LzeWgk",
-        "column_KNA63Q",
-        "column_9k7tc7"
+        "image_PRFUcV",
+        "image_krJNNN"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "Text with icons",
       "settings": {
-        "title": "Multicolumn",
-        "image_width": "full",
-        "image_ratio": "adapt",
+        "title": "",
+        "heading_size": "h0",
+        "iconwidth": 65,
         "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "b8f0ea88-dbd6-4b1b-8a13-5bb94c547628",
-    "08f5afdf-f979-4359-87f0-425de57a4708",
     "ffc51145-e497-455d-bb5e-b7c4421db66c",
     "389d3b2b-6578-494a-8251-c570c4bb90eb",
     "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
-    "multicolumn_P6HrVM"
+    "bestseller_products_xE4Xt8",
+    "text_with_icons_YBGbQa"
   ]
 }

@@ -228,17 +228,10 @@
             "settings": {
               "image": "shopify://shop_images/Slider_1.jpg",
               "heading": "New collection 2022",
-              "heading_size": "large",
               "subheading": "New fashion",
               "subheadingtext": "<p>Suspendisse venenatis massa sed rhoncus ornare. Donec molestie bibendum felis sed commodo. Donec risus magna, sollicitudin lobortis tellus sit amet vivamus dapibus odio lectus ornare quis. Morbi congue massa eu magna.</p>",
               "button_label": "Shop now",
-              "link": "shopify://collections",
-              "box_align": "middle-right",
-              "show_text_box": false,
-              "text_alignment": "right",
-              "image_overlay_opacity": 0,
-              "color_scheme": "accent-1",
-              "text_alignment_mobile": "left"
+              "link": "shopify://collections"
             }
           },
           "f1d7d385-be74-41e3-87d4-32a5cfeb3698": {
@@ -246,17 +239,10 @@
             "settings": {
               "image": "shopify://shop_images/Slider_1.jpg",
               "heading": "New collection 2022",
-              "heading_size": "large",
               "subheading": "New fashion",
               "subheadingtext": "<p>Suspendisse venenatis massa sed rhoncus ornare. Donec molestie bibendum felis sed commodo. Donec risus magna, sollicitudin lobortis tellus sit amet vivamus dapibus odio lectus ornare quis. Morbi congue massa eu magna.</p>",
               "button_label": "Shop now",
-              "link": "shopify://collections",
-              "box_align": "middle-left",
-              "show_text_box": false,
-              "text_alignment": "left",
-              "image_overlay_opacity": 0,
-              "color_scheme": "accent-1",
-              "text_alignment_mobile": "left"
+              "link": "shopify://collections"
             }
           }
         },
@@ -265,23 +251,11 @@
           "f1d7d385-be74-41e3-87d4-32a5cfeb3698"
         ],
         "settings": {
-          "layout": "full_bleed",
           "slide_height": "adapt_image",
-          "slider_visual": "dots",
-          "pagicolor": "#121212",
-          "auto_rotate": false,
-          "change_slides_speed": 5,
-          "vtoverlaycolor": "#ffffff",
-          "vtoverlaybg": "#2bbef9",
-          "vtoverlayoutline": "#2bbef9",
-          "vtoverlayhcolor": "#000000",
-          "vtoverlayhbg": "#edfaff",
-          "vtoverlayhoutline": "#edfaff",
           "padding_top": 20,
           "padding_bottom": 0
         }
       },
-      
       "text-with-icons": {
         "type": "text-with-icons",
         "blocks": {
@@ -337,7 +311,6 @@
         "type": "blog-posts",
         "settings": {
           "m_title": "latest blog",
-          "heading_size": "h2",
           "blog": "news",
           "show_image": true,
           "image_height": "adapt",
