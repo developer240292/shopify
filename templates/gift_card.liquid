@@ -2,7 +2,7 @@
 
 <!doctype html>
 <html lang="{{ request.locale.iso_code }}">
-<head>
+  <head>
     <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,11 +13,11 @@
     <meta name="theme-color" content="{{ settings.colors_text }}">
 
     {%- if settings.favicon != blank -%}
-        <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
     {%- unless settings.type_heading_font.system? -%}
-        <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
     {%- assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros | strip_html -%}
@@ -29,138 +29,151 @@
     {{ content_for_header }}
 
     {% style %}
-        {{ settings.type_body_font | font_face: font_display: 'swap' }}
-        {{ settings.type_heading_font | font_face: font_display: 'swap' }}
+      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      {{ settings.type_heading_font | font_face: font_display: 'swap' }}
 
-        :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
-        --font-body-style: {{ settings.type_body_font.style }};
-        --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
-        --font-body-weight: {{ settings.type_body_font.weight }};
+      :root {
+      --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+      --font-body-style: {{ settings.type_body_font.style }};
+      --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
+      --font-body-weight: {{ settings.type_body_font.weight }};
 
-        --font-heading-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
-        --font-heading-style: {{ settings.type_heading_font.style }};
-        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.heading_scale }};
-        --font-heading-weight: {{ settings.type_heading_font.weight }};
+      --font-heading-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+      --font-heading-style: {{ settings.type_heading_font.style }};
+      --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.heading_scale }};
+      --font-heading-weight: {{ settings.type_heading_font.weight }};
 
-        --color-base-text: rgb({{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }});
-        --color-base-heading: rgb({{ settings.colors_heading.red }}, {{ settings.colors_heading.green }}, {{ settings.colors_heading.blue }});
-        --color-base-accent-1: rgb({{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }});
-        --color-base-accent-2: rgb({{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }});
+      --color-base-text: rgb({{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }});
+      --color-base-heading: rgb({{ settings.colors_heading.red }}, {{ settings.colors_heading.green }}, {{ settings.colors_heading.blue }});
+      --color-base-accent-1: rgb({{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }});
+      --color-base-accent-2: rgb({{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }});
 
-        --page-width: {{ settings.page_width }}px;
+      --page-width: {{ settings.page_width }}px;
 
-        --buttons-radius: {{ settings.buttons_radius }}px;
+      --buttons-radius: {{ settings.buttons_radius }}px;
 
-        --inputs-radius: {{ settings.inputs_radius }}px;
+      --inputs-radius: {{ settings.inputs_radius }}px;
 
-        --variant-pills-radius: {{ settings.variant_pills_radius }}px;
+      --variant-pills-radius: {{ settings.variant_pills_radius }}px;
 
-        --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}px;
-        --color-sale-badge: rgb({{ settings.color_sale_badge.red }}, {{ settings.color_sale_badge.green }}, {{ settings.color_sale_badge.blue }});
-        --color-sold-out-badge: rgb({{ settings.color_sold_out_badge.red }}, {{ settings.color_sold_out_badge.green }}, {{ settings.color_sold_out_badge.blue }});
+      --popup-corner-radius: {{ settings.popup_corner_radius }}px;
+      --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
+      --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
+      --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
+      --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
 
-        --popup-corner-radius: {{ settings.popup_corner_radius }}px;
-        --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
-        --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
-        --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
-        --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
+      --drawer-overlay-opacity: {{ settings.drawer_overlay_opacity | divided_by: 100.0 }};
 
-        --drawer-shadow-opacity: {{ settings.drawer_shadow_opacity | divided_by: 100.0 }};
-        --drawer-shadow-horizontal-offset: {{ settings.drawer_shadow_horizontal_offset }}px;
-        --drawer-shadow-vertical-offset: {{ settings.drawer_shadow_vertical_offset }}px;
-        --drawer-shadow-blur-radius: {{ settings.drawer_shadow_blur }}px;
-        }
+      --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}px;
+      --color-sale-badge: rgb({{ settings.color_sale_badge.red }}, {{ settings.color_sale_badge.green }}, {{ settings.color_sale_badge.blue }});
+      --color-sold-out-badge: rgb({{ settings.color_sold_out_badge.red }}, {{ settings.color_sold_out_badge.green }}, {{ settings.color_sold_out_badge.blue }});
+      }
     {% endstyle %}
 
     {%- unless settings.type_body_font.system? -%}
-        <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
     {%- unless settings.type_heading_font.system? -%}
-        <link rel="preload" as="font" href="{{ settings.type_heading_font | font_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ settings.type_heading_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
 
     {{ 'template-giftcard.css' | asset_url | stylesheet_tag }}
-</head>
+  </head>
 
-<body class="gradient">
-<header class="gift-card__title">
-    <span class="h2">{{ shop.name }}</span>
-    <h1 class="gift-card__heading">{{ 'gift_cards.issued.subtext' | t }}</h1>
-    <div class="gift-card__price">
+  <body class="gradient">
+    <header class="gift-card__title">
+      <span class="h2">{{ shop.name }}</span>
+      <h1 class="gift-card__heading">{{ 'gift_cards.issued.subtext' | t }}</h1>
+      <div class="gift-card__price">
         <p>
-            {% if settings.currency_code_enabled %}
-                {{ gift_card.initial_value | money_with_currency }}
-            {% else %}
-                {{ gift_card.initial_value | money }}
-            {% endif %}
+          {% if settings.currency_code_enabled %}
+            {{ gift_card.initial_value | money_with_currency }}
+          {% else %}
+            {{ gift_card.initial_value | money }}
+          {% endif %}
         </p>
         {%- if gift_card.enabled == false or gift_card.expired -%}
-            <p class="gift-card__label badge badge--{{ settings.sold_out_badge_color_scheme }}">{{ 'gift_cards.issued.expired' | t }}</p>
+          <p class="gift-card__label badge badge--{{ settings.sold_out_badge_color_scheme }}">
+            {{ 'gift_cards.issued.expired' | t }}
+          </p>
         {%- endif -%}
-    </div>
+      </div>
 
-    {% if settings.currency_code_enabled %}
+      {% if settings.currency_code_enabled %}
         {%- assign gift_card_balance = gift_card.balance | money_with_currency -%}
-    {% else %}
+      {% else %}
         {%- assign gift_card_balance = gift_card.balance | money -%}
-    {% endif %}
-    {%- if gift_card.balance != gift_card.initial_value -%}
-        <p class="gift-card__label caption-large">{{ 'gift_cards.issued.remaining_html' | t: balance: gift_card_balance }}</p>
-    {%- endif -%}
-</header>
+      {% endif %}
+      {%- if gift_card.balance != gift_card.initial_value -%}
+        <p class="gift-card__label caption-large">
+          {{ 'gift_cards.issued.remaining_html' | t: balance: gift_card_balance }}
+        </p>
+      {%- endif -%}
+    </header>
 
-<main class="gift-card">
-    <div class="gift-card__image-wrapper">
-        <img src="{{ 'gift-card/card.svg' | shopify_asset_url }}" alt="" class="gift-card__image"
-             height="{{ 570 | divided_by: 1.5 }}" width="570" loading="lazy">
-    </div>
-    <div class="gift-card__qr-code" data-identifier="{{ gift_card.qr_identifier }}"></div>
-    <div class="gift-card__information">
+    <main class="gift-card">
+      <div class="gift-card__image-wrapper">
+        <img
+          src="{{ 'gift-card/card.svg' | shopify_asset_url }}"
+          alt=""
+          class="gift-card__image"
+          height="{{ 570 | divided_by: 1.5 }}"
+          width="570"
+          loading="lazy"
+        >
+      </div>
+      <div class="gift-card__qr-code" data-identifier="{{ gift_card.qr_identifier }}"></div>
+      <div class="gift-card__information">
         <input
-                type="text"
-                class="gift-card__number"
-                value="{{ gift_card.code | format_code }}"
-                aria-label="{{ 'gift_cards.issued.gift_card_code' | t }}"
-                readonly
+          type="text"
+          class="gift-card__number"
+          value="{{ gift_card.code | format_code }}"
+          aria-label="{{ 'gift_cards.issued.gift_card_code' | t }}"
+          readonly
         >
         <div class="gift-card__copy-code">
-            <button class="link gift-card__copy-link">{{ 'gift_cards.issued.copy_code' | t }}</button>
-            <span class="gift-card__copy-success form__message" role="status"></span>
-            <template>
-                {%- render 'icon-notice-success' -%}{{ 'gift_cards.issued.copy_code_success' | t }}
-            </template>
+          <button class="link gift-card__copy-link">{{ 'gift_cards.issued.copy_code' | t }}</button>
+          <span class="gift-card__copy-success form__message" role="status"></span>
+          <template>
+            {%- render 'icon-notice-success' -%}
+            {{ 'gift_cards.issued.copy_code_success' | t }}
+          </template>
         </div>
         {%- if gift_card.pass_url -%}
-            <a href="{{ gift_card.pass_url }}" class="gift_card__apple-wallet">
-                <img src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}" width="120" height="40"
-                     alt="{{ 'gift_cards.issued.add_to_apple_wallet' | t }}" loading="lazy">
-            </a>
+          <a href="{{ gift_card.pass_url }}" class="gift_card__apple-wallet">
+            <img
+              src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}"
+              width="120"
+              height="40"
+              alt="{{ 'gift_cards.issued.add_to_apple_wallet' | t }}"
+              loading="lazy"
+            >
+          </a>
         {%- endif -%}
         <div class="gift-card__buttons no-print">
-            <a
-                    href="{{ shop.url }}"
-                    class="button"
-                    target="_blank"
-                    rel="noopener"
-                    aria-describedby="a11y-new-window-message"
-            >
-                {{ 'gift_cards.issued.shop_link' | t }}
-            </a>
-            <button
-                    class="button button--secondary"
-                    onclick="window.print();"
-            >
-                {{ 'gift_cards.issued.print_gift_card' | t }}
-            </button>
+          <a
+            href="{{ shop.url }}"
+            class="button"
+            target="_blank"
+            rel="noopener"
+            aria-describedby="a11y-new-window-message"
+          >
+            {{ 'gift_cards.issued.shop_link' | t }}
+          </a>
+          <button
+            class="button button--secondary"
+            onclick="window.print();"
+          >
+            {{ 'gift_cards.issued.print_gift_card' | t }}
+          </button>
         </div>
-    </div>
-</main>
+      </div>
+    </main>
 
-<div hidden>
-    <span id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</span>
-</div>
-</body>
+    <div hidden>
+      <span id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</span>
+    </div>
+  </body>
 </html>
 
 <script>

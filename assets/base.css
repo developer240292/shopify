@@ -293,7 +293,7 @@ select {
     padding: 0 25px;
     max-width: 100%;
     font-size: calc(var(--font-body-scale) * 14px);
-    border-radius: 6px;
+    border-radius: var(--inputs-radius);
     color: #848484;
     height: 40px;
     line-height: 40px;
@@ -314,7 +314,7 @@ input[type="button"] {
     display: inline-block;
     height: 40px;
     line-height: 40px;
-    border-radius: 10px;
+    border-radius: var(--buttons-radius);
     font-size: calc(var(--font-body-scale) * 14px);
     font-weight: 600;
     color: #ffffff;
@@ -583,13 +583,13 @@ input.field__input::placeholder {
     opacity: 0;
     visibility: hidden;
     margin-top: 20px;
-    border-radius: 10px;
+    padding: 15px 0;
     -webkit-transition: margin-top 0.4s ease 0s;
     -moz-transition: margin-top 0.4s ease 0s;
     -o-transition: margin-top 0.4s ease 0s;
     transition: margin-top 0.4s ease 0s;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
+    border-radius: var(--popup-corner-radius);
+    box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(0, 0, 0, var(--popup-shadow-opacity));
     font-size: calc(var(--font-body-scale) * 14px);
 }
 
@@ -695,9 +695,9 @@ input.field__input::placeholder {
     -moz-transition: all .4s;
     -o-transition: all .4s;
     transition: all .4s;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: var(--popup-corner-radius);
+    box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(0, 0, 0, var(--popup-shadow-opacity));
     z-index: 999;
-    border-radius: 10px;
 }
 
 .box-header-nav .main-menu .menu-item .sub-menu .menu-item a {
@@ -977,9 +977,9 @@ input.field__input::placeholder {
     -moz-transition: all .4s;
     -o-transition: all .4s;
     transition: all .4s;
-    box-shadow: 0 0 10px #0000001a;
+    border-radius: var(--popup-corner-radius);
+    box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(0, 0, 0, var(--popup-shadow-opacity));
     z-index: 999;
-    border-radius: 10px;
     padding: 20px 0;
     list-style: none;
 }
@@ -1436,10 +1436,8 @@ localization-form {
     background-color: #fff;
     opacity: 0;
     margin-top: 20px;
-    border-radius: 10px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
-    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
-    box-shadow: 0 0 10px #0000001a;
+    border-radius: var(--popup-corner-radius);
+    box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(0, 0, 0, var(--popup-shadow-opacity));
     padding: 15px 0;
     text-align: left;
     transform: translateY(-10px);
@@ -2282,14 +2280,13 @@ button#scroll svg {
     font-size: 14px;
     line-height: 1;
     text-align: center;
-    transition: border var(--duration-short) ease;
+    transition: border 0.25s ease;
     cursor: pointer;
     border: 1px solid #000000;
     background-color: #ffffff;
     color: #000000;
     border-radius: var(--variant-pills-radius);
     margin: 0 3px 3px 0;
-    box-shadow: none;
     min-width: 32px;
     min-height: 32px;
 }
@@ -2298,7 +2295,6 @@ button#scroll svg {
     background-color: #000000;
     border-color: #000000;
     color: #ffffff;
-    box-shadow: none;
 }
 
 .vtproduct-container .product-form__input input+label:before,
@@ -2335,9 +2331,6 @@ button#scroll svg {
     border: 1px solid #000000;
 }
 
-/*.vtproduct-container .vtswatchclr input + label.active{
-    box-shadow: 0 0px 0px 1px #000000,1);
-}*/
 .vtproduct-container .vtswatchclr input+label.active::after {
     content: "";
     box-shadow: 0 0px 0px 1px #000000;

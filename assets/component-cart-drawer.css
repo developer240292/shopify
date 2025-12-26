@@ -251,7 +251,7 @@ cart-drawer-items .cart-item__name~.product-option {
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, var(--drawer-overlay-opacity));
   opacity: 0;
   visibility: hidden;
   z-index: -1;
@@ -269,7 +269,6 @@ cart-drawer-items .cart-item__name~.product-option {
   width: 400px;
   max-width: calc(100vw - 15px);
   padding: 0 15px;
-  border: 0.1rem solid rgba(0, 0, 0, 0.2);
   border-right: 0;
   background-color: #fff;
   overflow: hidden;
@@ -338,7 +337,6 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   padding: 0;
   min-width: 44px;
   min-height: 44px;
-  box-shadow: 0 0 0 0.2remrgba(var(--color-button), 0);
   position: absolute;
   right: -5px;
   color: rgb(0, 0, 0);

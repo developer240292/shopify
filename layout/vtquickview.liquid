@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,22 +10,22 @@
     <meta name="theme-color" content="{{ settings.colors_text }}">
 
     {%- if settings.favicon != blank -%}
-        <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
     {%- unless settings.type_heading_font.system? and settings.type_body_font.system? -%}
-        <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
     <title>
-        {{ page_title }}
-        {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-        {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-        {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
-        <meta name="description" content="{{ page_description | escape }}">
+      <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
     {% render 'meta-tags' %}
@@ -35,48 +35,45 @@
     {{ content_for_header }}
 
     {% style %}
-        {{ settings.type_body_font | font_face: font_display: 'swap' }}
-        {{ settings.type_heading_font | font_face: font_display: 'swap' }}
+      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      {{ settings.type_heading_font | font_face: font_display: 'swap' }}
 
-        :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
-        --font-body-style: {{ settings.type_body_font.style }};
-        --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
-        --font-body-weight: {{ settings.type_body_font.weight }};
+      :root {
+      --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+      --font-body-style: {{ settings.type_body_font.style }};
+      --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
+      --font-body-weight: {{ settings.type_body_font.weight }};
 
-        --font-heading-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
-        --font-heading-style: {{ settings.type_heading_font.style }};
-        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.heading_scale }};
-        --font-heading-weight: {{ settings.type_heading_font.weight }};
+      --font-heading-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+      --font-heading-style: {{ settings.type_heading_font.style }};
+      --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.heading_scale }};
+      --font-heading-weight: {{ settings.type_heading_font.weight }};
 
-        --color-base-text: rgb({{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }});
-        --color-base-heading: rgb({{ settings.colors_heading.red }}, {{ settings.colors_heading.green }}, {{ settings.colors_heading.blue }});
-        --color-base-accent-1: rgb({{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }});
-        --color-base-accent-2: rgb({{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }});
+      --color-base-text: rgb({{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }});
+      --color-base-heading: rgb({{ settings.colors_heading.red }}, {{ settings.colors_heading.green }}, {{ settings.colors_heading.blue }});
+      --color-base-accent-1: rgb({{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }});
+      --color-base-accent-2: rgb({{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }});
 
-        --page-width: {{ settings.page_width }}px;
+      --page-width: {{ settings.page_width }}px;
 
-        --buttons-radius: {{ settings.buttons_radius }}px;
+      --buttons-radius: {{ settings.buttons_radius }}px;
 
-        --inputs-radius: {{ settings.inputs_radius }}px;
+      --inputs-radius: {{ settings.inputs_radius }}px;
 
-        --variant-pills-radius: {{ settings.variant_pills_radius }}px;
+      --variant-pills-radius: {{ settings.variant_pills_radius }}px;
 
-        --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}px;
-        --color-sale-badge: rgb({{ settings.color_sale_badge.red }}, {{ settings.color_sale_badge.green }}, {{ settings.color_sale_badge.blue }});
-        --color-sold-out-badge: rgb({{ settings.color_sold_out_badge.red }}, {{ settings.color_sold_out_badge.green }}, {{ settings.color_sold_out_badge.blue }});
+      --popup-corner-radius: {{ settings.popup_corner_radius }}px;
+      --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
+      --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
+      --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
+      --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
 
-        --popup-corner-radius: {{ settings.popup_corner_radius }}px;
-        --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
-        --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
-        --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
-        --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
+      --drawer-overlay-opacity: {{ settings.drawer_overlay_opacity | divided_by: 100.0 }};
 
-        --drawer-shadow-opacity: {{ settings.drawer_shadow_opacity | divided_by: 100.0 }};
-        --drawer-shadow-horizontal-offset: {{ settings.drawer_shadow_horizontal_offset }}px;
-        --drawer-shadow-vertical-offset: {{ settings.drawer_shadow_vertical_offset }}px;
-        --drawer-shadow-blur-radius: {{ settings.drawer_shadow_blur }}px;
-        }
+      --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}px;
+      --color-sale-badge: rgb({{ settings.color_sale_badge.red }}, {{ settings.color_sale_badge.green }}, {{ settings.color_sale_badge.blue }});
+      --color-sold-out-badge: rgb({{ settings.color_sold_out_badge.red }}, {{ settings.color_sold_out_badge.green }}, {{ settings.color_sold_out_badge.blue }});
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
@@ -84,73 +81,73 @@
     {{ 'vtquickview.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
-        <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
     {%- unless settings.type_heading_font.system? -%}
-        <link rel="preload" as="font" href="{{ settings.type_heading_font | font_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ settings.type_heading_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
 
     {%- if settings.predictive_search_enabled -%}
-        <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print"
-              onload="this.media='all'">
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
     {%- endif -%}
 
-    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-    if (Shopify.designMode) {
-      document.documentElement.classList.add('shopify-design-mode');
-    }
-
-
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
     </script>
-</head>
+  </head>
 
-<body class="gradient {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} {% if template == '404' %} error-404 {% else %} {{ template | replace: '.', '-' | handle }} {% endif %}">
-<main id="MainContent" class="content-for-layout" role="main" tabindex="-1">
-    {{ content_for_layout }}
-</main>
+  <body class="gradient {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} {% if template == '404' %} error-404 {% else %} {{ template | replace: '.', '-' | handle }} {% endif %}">
+    <main id="MainContent" class="content-for-layout" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
 
-<script>
+    <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
         cart_change_url: '{{ routes.cart_change_url }}',
         cart_update_url: '{{ routes.cart_update_url }}',
         cart_url: '{{ routes.cart_url }}',
-        predictive_search_url: '{{ routes.predictive_search_url }}'
+        predictive_search_url: '{{ routes.predictive_search_url }}',
       };
 
       window.cartStrings = {
         error: `{{ 'sections.cart.cart_error' | t }}`,
-        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`
-      }
+        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
+      };
 
       window.variantStrings = {
         addToCart: `{{ 'products.product.add_to_cart' | t }}`,
         soldOut: `{{ 'products.product.sold_out' | t }}`,
         unavailable: `{{ 'products.product.unavailable' | t }}`,
-      }
+      };
 
       window.accessibilityStrings = {
         imageAvailable: `{{ 'products.product.media.image_available' | t: index: '[index]' }}`,
         shareSuccess: `{{ 'general.share.success_message' | t }}`,
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
-      }
+      };
+    </script>
 
+    {%- if settings.predictive_search_enabled -%}
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
 
-</script>
-
-{%- if settings.predictive_search_enabled -%}
-    <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
-
-{% comment %} Villatheme Code {% endcomment %}
-<script src="{{ 'jquery.js' | asset_url }}"></script>
-{% if template == 'index' %}
-    <script src="{{ 'product-form.js' | asset_url }}" defer></script>
-{%- endif -%}
-<script src="{{ 'jquery.magnific-popup.js' | asset_url }}"></script>
-<script src="{{ 'vtquickview.js' | asset_url }}" defer></script>
-
-</body>
+    {% comment %} Villatheme Code {% endcomment %}
+    <script src="{{ 'jquery.js' | asset_url }}"></script>
+    {% if template == 'index' %}
+      <script src="{{ 'product-form.js' | asset_url }}" defer></script>
+    {%- endif -%}
+    <script src="{{ 'jquery.magnific-popup.js' | asset_url }}"></script>
+    <script src="{{ 'vtquickview.js' | asset_url }}" defer></script>
+  </body>
 </html>

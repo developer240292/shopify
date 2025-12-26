@@ -66,6 +66,14 @@
 
       --variant-pills-radius: {{ settings.variant_pills_radius }}px;
 
+      --popup-corner-radius: {{ settings.popup_corner_radius }}px;
+      --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
+      --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
+      --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
+      --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
+
+      --drawer-overlay-opacity: {{ settings.drawer_overlay_opacity | divided_by: 100.0 }};
+
       --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}px;
       --color-sale-badge: rgb({{ settings.color_sale_badge.red }}, {{ settings.color_sale_badge.green }}, {{ settings.color_sale_badge.blue }});
       --color-sold-out-badge: rgb({{ settings.color_sold_out_badge.red }}, {{ settings.color_sold_out_badge.green }}, {{ settings.color_sold_out_badge.blue }});
