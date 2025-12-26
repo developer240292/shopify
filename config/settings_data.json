@@ -23,7 +23,7 @@
     "popup_corner_radius": 6,
     "popup_shadow_opacity": 0,
     "popup_shadow_horizontal_offset": 0,
-    "popup_shadow_vertical_offset": 0,
+    "popup_shadow_vertical_offset": 16,
     "popup_shadow_blur": 0,
     "drawer_overlay_opacity": 80,
     "badge_corner_radius": 0,
