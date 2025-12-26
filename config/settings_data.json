@@ -20,7 +20,7 @@
     "buttons_radius": 0,
     "variant_pills_radius": 4,
     "card_style": "standard",
-    "popup_corner_radius": 10,
+    "popup_corner_radius": 14,
     "popup_shadow_opacity": 15,
     "popup_shadow_horizontal_offset": 0,
     "popup_shadow_vertical_offset": 6,
