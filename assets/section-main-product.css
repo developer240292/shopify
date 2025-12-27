@@ -23,10 +23,13 @@
 .trust_content .product__payment,
 .trust_content .psecure {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .trust_content h3 {
-    font-size: calc(var(--font-body-scale) * 20px);
+    font-size: calc(var(--font-heading-scale) * 20px);
     margin-bottom: 20px;
 }
 
@@ -36,24 +39,8 @@
 }
 
 .trust_content h4 {
-    font-size: calc(var(--font-body-scale) * 16px);
+    font-size: calc(var(--font-heading-scale) * 16px);
     margin-bottom: 15px;
-}
-
-.trust_content .list-payment {
-    padding: 0 0 10px;
-}
-
-.trust_content .list-payment__item {
-    list-style: none;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.trust_content .list-payment__item svg {
-    width: 42px;
-    height: 26px;
-    margin: 0 1px;
 }
 
 /* Product meta */
@@ -133,7 +120,7 @@ button.product__xr-button::after {
 }
 
 .shopify-payment-button__button--unbranded {
-    border-radius: 10px;
+    border-radius: var(--buttons-radius);
     background: var(--color-base-accent-1);
     color: #fff;
     height: 40px;
@@ -206,11 +193,11 @@ fieldset.product-form__input .form__label {
     position: relative;
     border: 1px solid transparent;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background-size: 30px;
     background-position: 50%;
-    background-size: 42px;
-    border-radius: 100%;
     border: 1px solid rgba(0, 0, 0, 1);
 }
 
@@ -224,8 +211,8 @@ fieldset.product-form__input .form__label {
 }
 
 .product__info-wrapper .vtswatchclr input[type="radio"]+label {
-    min-width: 40px;
-    min-height: 40px;
+    min-width: 30px;
+    min-height: 30px;
     border-radius: 0;
     margin: 0 3px 3px 0;
 }
@@ -235,18 +222,18 @@ fieldset.product-form__input .form__label {
     display: inline-block;
     cursor: pointer;
     position: relative;
-    padding: 10px 6px;
+    padding: 0 10px;
     font-size: calc(var(--font-body-scale) * 16px);
-    line-height: 1;
     text-align: center;
-    transition: border var(--duration-short) ease;
+    transition: border 0.25s ease;
     cursor: pointer;
     margin: 0 3px 3px 0;
     box-shadow: none;
-    min-width: 50px;
-    min-height: 38px;
+    min-width: 30px;
+    min-height: 30px;
+    line-height: 30px;
     border: 1px solid rgba(0, 0, 0, 1);
-    background-color: rgb(0, 0, 0);
+    background-color: #fff;
     color: rgba(0, 0, 0);
     border-radius: 50%;
 }
@@ -330,26 +317,8 @@ fieldset.product-form__input .form__label {
     margin-bottom: 0;
 }
 
-a.product__text {
-    display: block;
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.75);
-}
-
-.product__text.caption-with-letter-spacing {
-    text-transform: uppercase;
-}
-
 .product__title {
     word-break: break-word;
-}
-
-.product__title+.product__text.caption-with-letter-spacing {
-    margin-top: -1.5rem;
-}
-
-.product__text.caption-with-letter-spacing+.product__title {
-    margin-top: 0;
 }
 
 .product__accordion .accordion__content {
@@ -686,7 +655,7 @@ a.product__text {
     height: 4.4rem;
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 0.1rem;
-    transition: text-decoration-thickness var(--duration-short) ease;
+    transition: text-decoration-thickness 0.25s ease;
 }
 
 .product-popup-modal__button:hover {
@@ -870,7 +839,7 @@ a.product__text {
     padding: 0;
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 0.1rem;
-    transition: text-decoration-thickness var(--duration-short) ease;
+    transition: text-decoration-thickness 0.25s ease;
     font-size: calc(var(--font-body-scale) * 16px);
     letter-spacing: 0.5px;
     color: var(--color-vtmaincolors-text);
@@ -910,18 +879,7 @@ a.product__text {
 .product__info-container .product__title {
     margin-bottom: 15px;
     text-transform: capitalize;
-}
-
-.product__info-container .product__title.h0 {
     font-size: calc(var(--font-body-scale) * 28px);
-}
-
-.product__info-container .product__title.h1 {
-    font-size: calc(var(--font-body-scale) * 24px);
-}
-
-.product__info-container .product__title.h2 {
-    font-size: calc(var(--font-body-scale) * 20px);
 }
 
 .product__info-container .spr-starrating,
@@ -1051,10 +1009,6 @@ a.product__text {
     background-color: #000;
     height: 2px;
     width: 40px;
-}
-
-.vtproducttab #myTabContent {
-    padding: 15px;
 }
 
 .vtproducttab #shopify-product-reviews {
@@ -1370,28 +1324,10 @@ a.product__text {
         border-radius: 0;
     }
 
-    .social-sharing li a {
-        padding: 4px 6px;
-    }
-
-    #vtquickview .product__description,
-    #vtquickview .product__description p {
-        font-size: calc(var(--font-body-scale) * 13px);
-    }
-
-    .shopify-payment-button__button--unbranded,
-    .product__info-container .product-form__buttons .btn-primary {
-        font-size: calc(var(--font-body-scale) * 14px);
-    }
-
     .vtproleftimg .product__media-item--full .product__media-toggle {
         display: flex;
     }
 
-    /*.product--stacked .is-active .deferred-media{
-        display: block;
-        width: 100%;
-    }*/
     .product__info-container .product-form__submit {
         margin-bottom: 10px;
     }
@@ -1474,23 +1410,6 @@ a.product__text {
         max-height: 100%;
     }
 
-    .vtpropbtmdsc h2 {
-        font-size: calc(var(--font-body-scale) * 18px);
-        margin-top: 15px;
-    }
-
-    .vtpropbtmdsc .row {
-        margin-bottom: 15px;
-    }
-
-    .vtpropbtmdsc .row:last-child {
-        margin-bottom: 0;
-    }
-
-    /*.vtproleftimg .product__media-item {
-        display: flex;
-        align-items: center;
-    }*/
     .vtxs3dmain {
         display: none !important;
     }
@@ -1535,45 +1454,6 @@ a.product__text {
         width: 100%;
     }
 
-    .vtproleftimg .grid {
-        margin-left: 0;
-        margin-right: 0;
-        grid-gap: 1rem;
-    }
-
-    .vtproleftimg .grid__item {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    #vtquickview .vtproleftimg .grid {
-        grid-gap: 0;
-    }
-
-    .product__info-container .product__title.h0 {
-        font-size: calc(var(--font-body-scale) * 18px);
-    }
-
-    .product__info-container .product__title.h1 {
-        font-size: calc(var(--font-body-scale) * 16px);
-    }
-
-    .product__info-container .product__title.h2 {
-        font-size: calc(var(--font-body-scale) * 14px);
-    }
-
-    .product__info-container .price--on-sale .price-item--regular,
-    .product__info-container .price--large {
-        font-size: calc(var(--font-body-scale) * 12px);
-    }
-
-    .product__info-container .price .price-item {
-        font-size: calc(var(--font-body-scale) * 18px);
-    }
-
-    .product__info-container .price--on-sale .price-item--regular {
-        font-size: calc(var(--font-body-scale) * 14px);
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1586,69 +1466,11 @@ a.product__text {
         padding-left: 0;
     }
 
-    .product__info-container .product__title.h0 {
-        font-size: calc(var(--font-body-scale) * 20px);
-    }
-
-    .product__info-container .product__title.h1 {
-        font-size: calc(var(--font-body-scale) * 18px);
-    }
-
-    .product__info-container .product__title.h2 {
-        font-size: calc(var(--font-body-scale) * 16px);
-    }
-
-    .product__info-container .price--on-sale .price-item--regular,
-    .product__info-container .price--large {
-        font-size: calc(var(--font-body-scale) * 14px);
-    }
-
-    .product__info-container .price .price-item {
-        font-size: calc(var(--font-body-scale) * 18px);
-    }
-
-    .product__info-container .price--on-sale .price-item--regular {
-        font-size: calc(var(--font-body-scale) * 14px);
-    }
-
-    .vtproleftimg .grid__item {
-        padding-left: 0;
-    }
-
-    .vtproleftimg .grid {
-        margin-left: 0;
-    }
-
     .product__media-list .product__media-item {
         padding: 0 0 0.5rem;
         width: 100%;
     }
 }
-
-@media (max-width: 991px) {
-    variant-selects .select__select {
-        height: 38px;
-    }
-
-    .product__info-wrapper .vtswatchclr input[type="radio"]+label {
-        min-width: 35px;
-        min-height: 35px;
-    }
-
-    .product__info-wrapper .vtswatchclr input[type="radio"]+label.color-swatchimg {
-        width: 35px;
-        height: 35px;
-    }
-
-    .product .price .badge {
-        margin-top: 0;
-    }
-
-    .vtproducttab {
-        margin-top: 30px;
-    }
-}
-
 
 /* PRODUCT RELATED */
 product-recommendations {
@@ -1657,5 +1479,5 @@ product-recommendations {
 
 product-recommendations .product-recommendations__heading {
     margin: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 40px;
 }

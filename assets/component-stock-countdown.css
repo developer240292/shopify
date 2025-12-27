@@ -2,7 +2,7 @@
     position: relative;
     display: block;
     margin-top: 10px;
-    height: 3px;
+    height: 8px;
     border-radius: 4px;
     background: rgba(0, 0, 0,0.08);
     overflow: hidden;
@@ -13,16 +13,6 @@
     font-size: calc(var(--font-body-scale) * 14px);
     font-weight: 500;
 }
-/*.vtstockinfo:before {
-    content: "";
-    border-radius: 100%;
-    background: currentColor;
-    display: inline-block;
-    vertical-align: middle;
-    width: 6px;
-    height: 6px;
-    margin-right: 8px;
-}*/
 .vtstockinfo_high {
     color: var(--product-in-stock-color);
 }
