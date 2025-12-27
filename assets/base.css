@@ -1556,9 +1556,11 @@ localization-form {
 
 /* Footer Payment */
 .list-payment {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px
+    gap: 10px;
 }
 
 .footer .list-payment {

@@ -22,7 +22,6 @@
 
 .trust_content .product__payment,
 .trust_content .psecure {
-    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -40,6 +39,7 @@
 
 .trust_content h4 {
     font-size: calc(var(--font-heading-scale) * 16px);
+    margin-top: 0;
     margin-bottom: 15px;
 }
 
