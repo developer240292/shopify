@@ -1561,6 +1561,7 @@ localization-form {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    font-size: 0;
 }
 
 .footer .list-payment {

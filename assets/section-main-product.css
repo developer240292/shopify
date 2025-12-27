@@ -29,6 +29,7 @@
 
 .trust_content h3 {
     font-size: calc(var(--font-heading-scale) * 20px);
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
@@ -195,7 +196,7 @@ fieldset.product-form__input .form__label {
     cursor: pointer;
     width: 30px;
     height: 30px;
-    border-radius: 6px;
+    border-radius: 50%;
     background-size: 30px;
     background-position: 50%;
     border: 1px solid rgba(0, 0, 0, 1);
@@ -213,7 +214,7 @@ fieldset.product-form__input .form__label {
 .product__info-wrapper .vtswatchclr input[type="radio"]+label {
     min-width: 30px;
     min-height: 30px;
-    border-radius: 0;
+    border-radius: 50%;
     margin: 0 3px 3px 0;
 }
 
@@ -276,7 +277,7 @@ fieldset.product-form__input .form__label {
     right: -4px;
     top: -4px;
     bottom: -4px;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 /* Fallback */
