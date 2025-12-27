@@ -1232,7 +1232,7 @@ form.search .search__button {
     padding: 20px;
 }
 
-.header-mobile-menu .draly-nav .menu-item.show-sub-menu .caret.active .arrowrightw {
+.header-mobile-menu .draly-nav .menu-item.show-sub-menu .caret.active svg {
     transform: rotate(0);
 }
 
@@ -1449,12 +1449,11 @@ localization-form {
 }
 
 /* FOOTER */
-
+/* Newsletter */
 .footer-top {
     background-color: #f3f3f3;
 }
 
-/* Newsletter */
 .newsletter-wrap {
     display: flex;
     justify-content: space-between;
@@ -1504,7 +1503,7 @@ localization-form {
     font-size: calc(var(--font-body-scale) * 14px);
 }
 
-/*  */
+/* .footer-midle */
 .footer-midle .footer-logo {
     display: inline-block;
     vertical-align: top;
@@ -1538,23 +1537,6 @@ localization-form {
 }
 
 /* footer-bottom */
-.footer-bottom .vtftpaym {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
-    border-top: 1px solid #ebebeb;
-}
-
-/* Footer Copyright */
-.footer__copyright a {
-    color: inherit;
-}
-
-.footer__copyright a:hover {
-    color: var(--color-base-accent-1);
-}
-
-/* Footer Payment */
 .list-payment {
     list-style: none;
     padding: 0;
@@ -1564,12 +1546,31 @@ localization-form {
     font-size: 0;
 }
 
-.footer .list-payment {
-    justify-content: flex-end;
+.list-payment svg {
+    width: auto;
+    height: 20px;
 }
 
-@media screen and (max-width: 767px) {
-    .footer .list-payment {
+.footer-bottom .vtftpaym {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid #ebebeb;
+    gap: 10px;
+}
+
+.footer__copyright a {
+    color: inherit;
+}
+
+.footer__copyright a:hover {
+    color: var(--color-base-accent-1);
+}
+
+@media(max-width: 767px) {
+    .footer-bottom .vtftpaym {
+        flex-direction: column;
+        text-align: center;
         justify-content: center;
     }
 }
@@ -1619,16 +1620,6 @@ button#scroll svg {
     border: none;
     margin: 0;
     text-transform: capitalize;
-}
-
-.breadcrumb .arrowrightw,
-.breadcrumb .arrowleftw {
-    width: 14px;
-    height: 14px;
-}
-
-.arrowrightw {
-    transform: rotate(180deg);
 }
 
 /*social-link*/
