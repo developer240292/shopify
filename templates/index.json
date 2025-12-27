@@ -10,7 +10,7 @@
 {
   "sections": {
     "b8f0ea88-dbd6-4b1b-8a13-5bb94c547628": {
-      "type": "slideshow",
+      "type": "hero-slider",
       "blocks": {
         "template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-1": {
           "type": "slide",
@@ -55,7 +55,7 @@
       }
     },
     "389d3b2b-6578-494a-8251-c570c4bb90eb": {
-      "type": "blog-posts",
+      "type": "blog-slider",
       "settings": {
         "m_title": "latest blog",
         "blog": "news",

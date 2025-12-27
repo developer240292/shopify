@@ -435,8 +435,8 @@
         "name": "Custom Liquid"
       }
     },
-    "blog-posts": {
-      "name": "Blog posts",
+    "blog_slider": {
+      "name": "Blog slider",
       "settings": {
         "heading": {
           "label": "Heading"
@@ -445,7 +445,7 @@
           "label": "Blog"
         },
         "post_limit": {
-          "label": "Blog posts"
+          "label": "Limit"
         },
         "show_view_all": {
           "label": "Enable \"View all\" button if blog includes more blog posts than shown"
@@ -462,7 +462,7 @@
         }
       },
       "presets": {
-        "name": "Blog posts"
+        "name": "Blog slider"
       }
     },
     "featured-collection": {
@@ -2424,8 +2424,8 @@
         "name": "Video"
       }
     },
-    "slideshow": {
-      "name": "Slideshow",
+    "hero_slider": {
+      "name": "Hero slider",
       "settings": {
         "layout": {
           "label": "Layout",
@@ -2477,8 +2477,8 @@
         },
         "accessibility": {
           "content": "Accessibility",
-          "label": "Slideshow description",
-          "info": "Describe the slideshow for customers using screen readers."
+          "label": "Hero slider description",
+          "info": "Describe the hero slider for customers using screen readers."
         }
       },
       "blocks": {
@@ -2600,7 +2600,7 @@
         }
       },
       "presets": {
-        "name": "Slideshow"
+        "name": "Hero slider"
       }
     },
     "collapsible_content": {

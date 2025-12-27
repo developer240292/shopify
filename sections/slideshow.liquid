@@ -1,4 +1,4 @@
-<div class="dralys-slideshow section-{{ section.id }}-padding">
+<div class="hero-slider section-{{ section.id }}-padding">
   <swiper-slider
     class="swiper-slider"
     data-section-id="{{ section.id }}"
@@ -17,8 +17,8 @@
       <div class="swiper-wrapper">
         {%- for block in section.blocks -%}
           <div class="swiper-slide">
-            <div class="slideshow-item">
-              <div class="slideshow__media">
+            <div class="hero-slider-item">
+              <div class="hero-slider__media">
                 {%- if block.settings.image -%}
                   <img
                     class="lazyload"
@@ -45,8 +45,8 @@
                   {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- endif -%}
               </div>
-              <div class="slideshow__text-wrapper container">
-                <div class="slideshow__text">
+              <div class="hero-slider__text-wrapper container">
+                <div class="hero-slider__text">
                   {%- if block.settings.heading != blank -%}
                     <h1 class="banner__heading">{{ block.settings.heading | escape }}</h1>
                   {%- endif -%}
@@ -90,9 +90,9 @@
 </div>
 {% schema %}
 {
-  "name": "t:sections.slideshow.name",
+  "name": "t:sections.hero-slider.name",
   "tag": "section",
-  "class": "vtslideshow",
+  "class": "vthero-slider",
   "settings": [
     {
       "type": "select",
@@ -100,23 +100,23 @@
       "options": [
         {
           "value": "adapt_image",
-          "label": "t:sections.slideshow.settings.slide_height.options__1.label"
+          "label": "t:sections.hero-slider.settings.slide_height.options__1.label"
         },
         {
           "value": "small",
-          "label": "t:sections.slideshow.settings.slide_height.options__2.label"
+          "label": "t:sections.hero-slider.settings.slide_height.options__2.label"
         },
         {
           "value": "medium",
-          "label": "t:sections.slideshow.settings.slide_height.options__3.label"
+          "label": "t:sections.hero-slider.settings.slide_height.options__3.label"
         },
         {
           "value": "large",
-          "label": "t:sections.slideshow.settings.slide_height.options__4.label"
+          "label": "t:sections.hero-slider.settings.slide_height.options__4.label"
         }
       ],
       "default": "adapt_image",
-      "label": "t:sections.slideshow.settings.slide_height.label"
+      "label": "t:sections.hero-slider.settings.slide_height.label"
     },
     {
       "type": "range",
@@ -143,30 +143,30 @@
     {
       "type": "slide",
       "limit": 5,
-      "name": "t:sections.slideshow.blocks.slide.name",
+      "name": "t:sections.hero-slider.blocks.slide.name",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+          "label": "t:sections.hero-slider.blocks.slide.settings.image.label"
         },
         {
           "type": "image_picker",
           "id": "mobile_image",
           "label": "Mobile image",
-          "info": "Optional. The slideshow will use the main slide image on mobile by default."
+          "info": "Optional. The hero-slider will use the main slide image on mobile by default."
         },
         {
           "type": "text",
           "id": "heading",
           "default": "Banner main heading",
-          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+          "label": "t:sections.hero-slider.blocks.slide.settings.heading.label"
         },
         {
           "type": "text",
           "id": "subheading",
           "default": "Banner subheading here",
-          "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
+          "label": "t:sections.hero-slider.blocks.slide.settings.subheading.label"
         },
         {
           "type": "richtext",
@@ -178,20 +178,20 @@
           "type": "text",
           "id": "button_label",
           "default": "Button label",
-          "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
-          "info": "t:sections.slideshow.blocks.slide.settings.button_label.info"
+          "label": "t:sections.hero-slider.blocks.slide.settings.button_label.label",
+          "info": "t:sections.hero-slider.blocks.slide.settings.button_label.info"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "t:sections.slideshow.blocks.slide.settings.link.label"
+          "label": "t:sections.hero-slider.blocks.slide.settings.link.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.slideshow.presets.name",
+      "name": "t:sections.hero-slider.presets.name",
       "blocks": [
         {
           "type": "slide"

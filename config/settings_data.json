@@ -217,8 +217,8 @@
         "type": "main-password-footer",
         "settings": {}
       },
-      "slideshow": {
-        "type": "slideshow",
+      "hero-slider": {
+        "type": "hero-slider",
         "blocks": {
           "2b986134-85fe-4ab3-b36a-42f81dc94671": {
             "type": "slide",
@@ -304,8 +304,8 @@
           "padding_bottom": 0
         }
       },
-      "blog-posts": {
-        "type": "blog-posts",
+      "blog-slider": {
+        "type": "blog-slider",
         "settings": {
           "m_title": "latest blog",
           "blog": "news",

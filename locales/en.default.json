@@ -281,12 +281,12 @@
     "video": {
       "load_video": "Load video: {{ description }}"
     },
-    "slideshow": {
+    "hero_slider": {
       "load_slide": "Load slide",
-      "previous_slideshow": "Previous slide",
-      "next_slideshow": "Next slide",
-      "pause_slideshow": "Pause slideshow",
-      "play_slideshow": "Play slideshow",
+      "previous_hero_slider": "Previous slide",
+      "next_hero_slider": "Next slide",
+      "pause_hero_slider": "Pause hero_slider",
+      "play_hero_slider": "Play hero_slider",
       "carousel": "Carousel",
       "slide": "Slide"
     }
