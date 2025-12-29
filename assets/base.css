@@ -440,6 +440,7 @@ input.field__input::placeholder {
     display: block;
     height: 0;
     position: relative;
+    padding-bottom: var(--ratio-percent);
 }
 
 .media-size img {
@@ -1652,8 +1653,8 @@ button#scroll svg {
     padding-left: calc(var(--bs-gutter-x) * .5);
 }
 
-.blog-grid .post-info {
-    margin-top: 10px;
+.blog-grid .post-thumb {
+    margin-bottom: 15px;
 }
 
 .blog-grid .post-title {

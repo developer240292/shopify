@@ -116,15 +116,17 @@
                               enable_listdesc: section.settings.enable_listdesc
                             %}
                           {%- when 'article' -%}
-                            {% render 'card-article-blog',
+                            {%- render 'card-article',
                               article: item,
-                              show_image: true,
-                              show_date: section.settings.article_show_date,
-                              show_author: section.settings.article_show_author,
-                              show_badge: true,
-                              media_aspect_ratio: 1,
-                              lazy_load: lazy_load
-                            %}
+                              layout: section.settings.layout,
+                              image_height: section.settings.image_height,
+                              show_image: section.settings.show_image,
+                              show_date: section.settings.show_date,
+                              show_author: section.settings.show_author,
+                              show_cmment: section.settings.show_cmment,
+                              show_desc: section.settings.show_desc,
+                              show_tags: section.settings.show_tags
+                            -%}
                           {%- when 'page' -%}
                             <div class="card-wrapper">
                               <div
