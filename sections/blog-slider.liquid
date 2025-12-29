@@ -35,7 +35,7 @@
           {%- unless section.settings.blog.empty? or section.settings.blog.articles.size == 0 -%}
             {%- for article in section.settings.blog.articles -%}
               <div class="swiper-slide">
-                {% render 'card-article',
+                {% render 'article-card',
                   blog: section.settings.blog,
                   image_height: section.settings.image_height,
                   article: article,
@@ -50,7 +50,7 @@
           {%- else -%}
             {% for i in (1..5) %}
               <div class="swiper-slide">
-                <article class="card-article">
+                <article class="article-card">
                   <div class="post-thumb">
                     {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
                   </div>

@@ -87,7 +87,7 @@
     margin: 0;
 }
 
-.template-search .vtsearchpages .card-article-info {
+.template-search .vtsearchpages .article-card-info {
     font-size: calc(var(--font-body-scale) * 14px);
 }
 

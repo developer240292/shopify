@@ -10,9 +10,9 @@
   - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
 
   Usage:
-  {% render 'card-article' blog: blog, article: article, show_image: section.settings.show_image %}
+  {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
 {% endcomment %}
-<article class="card-article">
+<article class="article-card">
   {%- if show_image == true and article.image -%}
     {%- liquid
       assign ratio = 1
