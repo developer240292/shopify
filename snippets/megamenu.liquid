@@ -67,7 +67,7 @@
               {% capture gallerylink %}vt{{ i }}_link{% endcapture %}
               {% capture gallerytext %}vt{{ i }}_text{% endcapture %}
               {% if galleryimg or block.settings[gallerylink].size > 0 %}
-                <div class="col-12 col-md-3 text-center">
+                <div class="col-12 col-md-3">
                   {% if block.settings[gallerylink] -%}
                     <a
                       href="{{ block.settings[gallerylink] }}"

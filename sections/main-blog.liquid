@@ -1,7 +1,7 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
 
@@ -10,9 +10,9 @@
     <h1 class="heading">
       <span>{{ blog.title | escape }}</span>
     </h1>
-    <div class="row {% if section.settings.layout == 'collage' %}blog-list{% else %}blog-grid{% endif %}">
+    <div class="row">
       {%- for article in blog.articles -%}
-        <div class="post-item">
+        <div class="post-item {% if section.settings.layout == 'collage' %}col-12{% else %}col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4{% endif %}">
           {%- render 'article-card',
             article: article,
             layout: section.settings.layout,

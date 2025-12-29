@@ -1642,17 +1642,7 @@ button#scroll svg {
     gap: 10px;
 }
 
-/* .blog-grid */
-.blog-grid {
-    gap: 30px 0;
-}
-
-.blog-grid .post-item {
-    width: 33.3333333%;
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
-}
-
+/* .post-grid */
 .post-grid .post-thumb {
     margin-bottom: 15px;
 }
@@ -1662,16 +1652,23 @@ button#scroll svg {
     margin-bottom: 15px;
 }
 
-@media (max-width: 991px) {
-    .blog-grid .post-item {
-        width: 50%;
-    }
+.post-grid .post-meta {
+    margin-bottom: 10px;
 }
 
-@media (max-width: 575px) {
-    .blog-grid .post-item {
-        width: 100%;
-    }
+/* .post-list */
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.post-list .post-thumb {
+    width: 50%;
+}
+
+.post-list .post-info {
+    width: 50%;
 }
 
 /* Breadcrumb */
