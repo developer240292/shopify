@@ -1643,6 +1643,10 @@ button#scroll svg {
 }
 
 /* .post-grid */
+.post-grid {
+    margin-bottom: 30px;
+}
+
 .post-grid .post-thumb {
     margin-bottom: 15px;
 }
@@ -1661,6 +1665,7 @@ button#scroll svg {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .post-list .post-thumb {
