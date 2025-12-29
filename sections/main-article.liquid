@@ -8,7 +8,7 @@
 
           {%- when 'title' -%}
             <h1 class="article-template__title text-center" itemprop="headline">{{ article.title | escape }}</h1>
-            <div class="text-center vtblogdate">
+            <div class="text-center date">
               {%- if block.settings.blog_show_date -%}
                 <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
                   {{- article.published_at | time_tag: format: 'date' -}}
@@ -64,7 +64,7 @@
             </div>
 
           {%- when 'blogtag' -%}
-            <div class="tag-section">
+            <div class="tags">
               {% if article.tags.size > 0 %}
                 <label>{{ 'vtcustomlabel.vtalltext.tag' | t }}</label>
                 {% for tag in article.tags %}

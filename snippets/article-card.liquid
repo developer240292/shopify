@@ -10,12 +10,12 @@
     - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
 
     Usage:
-    {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
+    {% render 'card-article' blog: blog, article: article, show_image: section.settings.show_image %}
 {% endcomment %}
 
-<article class="article-card">
+<article class="card-article">
     {%- if show_image == true and article.image -%}
-        <div class="vtblogimg">
+        <div class="post-thumb">
             <a href="{{ article.url }}" class="article-content media media media--{{ image_height }} media--hover-effect" {% if image_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
                 <img
                 srcset="{{ article.image.src | image_url }} {{ article.image.src.width }}w"
@@ -29,14 +29,14 @@
         </div>
     {%- endif -%}
 
-    <div class="vtblogimgdesc text-left">
+    <div class="post-info text-left">
         {%- if show_date -%}
-            <div class="vtblogdate">{{- article.published_at | date: "%b %d, %Y" -}}</div>
+            <div class="date">{{- article.published_at | date: "%b %d, %Y" -}}</div>
         {%- endif -%}
         <h3><a href="{{ article.url }}">{{ article.title | escape }}</a></h3>
         {%- if show_desc -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-                <p class="vtblogtxt">
+                <p class="post-content">
                     {%- if article.excerpt.size > 0 -%}
                         {{ article.excerpt | strip_html | truncatewords: 13 }}
                     {%- else -%}
@@ -47,10 +47,10 @@
         {%- endif -%}
         <div class="vtuserdate">
             {%- if show_author -%}
-                <div class="vtblogauth">{% render 'icon-blog-author' %}&nbsp;{{ article.author -}}</div>
+                <div class="post-author">{% render 'icon-blog-author' %}&nbsp;{{ article.author -}}</div>
             {%- endif -%}
             {%- if show_cmment -%}
-                <div class="article-card__footer">
+                <div class="card-article__footer">
                     {%- if blog.comments_enabled? -%}
                         <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
                     {%- endif -%}

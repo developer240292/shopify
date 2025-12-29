@@ -436,6 +436,20 @@ input.field__input::placeholder {
     }
 }
 
+.media-size {
+    display: block;
+    height: 0;
+    position: relative;
+}
+
+.media-size img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /*HEADER*/
 .header-top {
     padding: 15px 0;
@@ -1612,6 +1626,63 @@ button#scroll svg {
     transition: .3s ease;
 }
 
+/* BLOG */
+.post-title {
+    margin-top: 0;
+}
+
+.post-title a:not(:hover) {
+    color: inherit !important;
+}
+
+/* .blog-grid */
+.blog-grid {
+    gap: 30px 0;
+}
+
+.blog-grid .post-item {
+    width: 33.3333333%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+.blog-grid .post-info {
+    margin-top: 10px;
+}
+
+.blog-grid .post-title {
+    font-size: calc(var(--font-body-scale) * 24px);
+    margin-bottom: 15px;
+}
+
+.vtmainblog .tags {
+    margin-bottom: 10px;
+}
+
+.vtmainblog .tags a {
+    color: var(--color-vtmaincolors-text);
+    text-transform: uppercase;
+    margin: 0 5px;
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 991px) {
+    .blog-grid .post-item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 575px) {
+    .blog-grid .post-item {
+        width: 100%;
+    }
+}
+
 /* Breadcrumb */
 .breadcrumb {
     background-color: #F6F6F6;
@@ -1950,7 +2021,7 @@ button#scroll svg {
 .card--standard.card--media .card__inner .card__information,
 .card--standard.card--text>.card__content .card__heading,
 .card--standard>.card__content .card__badge,
-.card--standard.card--text.article-card>.card__content .card__information,
+.card--standard.card--text.card-article>.card__content .card__information,
 .card--standard>.card__content .card__caption {
     display: none;
 }
@@ -2466,7 +2537,7 @@ variant-selects .product-form__input .select {
         margin-bottom: 8px;
     }
 
-    .template-search .article-card__info {
+    .template-search .card-article__info {
         font-size: calc(var(--font-body-scale) * 12px);
     }
 
