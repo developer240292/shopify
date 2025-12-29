@@ -1,39 +1,40 @@
-<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post-single" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="container">
     <div class="vtsingleblog">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when '@app' -%}
             {% render block %}
-
           {%- when 'title' -%}
-            <h1 class="article-template__title text-center" itemprop="headline">{{ article.title | escape }}</h1>
-            <div class="text-center date">
-              {%- if block.settings.blog_show_date -%}
-                <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
-                  {{- article.published_at | time_tag: format: 'date' -}}
-                </span>
-              {%- endif -%}
+            <h1 class="post-title" itemprop="headline">{{ article.title | escape }}</h1>
+            <div class="post-meta">
               {%- if block.settings.blog_show_author -%}
-                <span
+                <div
+                  class="post-author"
                   class="caption-with-letter-spacing"
                   itemprop="author"
                   itemscope
                   itemtype="http://schema.org/Person"
                 >
+                  {% render 'icon-blog-author' -%}
                   <span itemprop="name">{{ article.author }}</span>
-                </span>
+                </div>
+              {%- endif -%}
+              {%- if block.settings.blog_show_date -%}
+                <div class="date" itemprop="dateCreated pubdate datePublished">
+                  {% render 'icon-blog-date' -%}
+                  {{- article.published_at | time_tag: format: 'date' -}}
+                </div>
               {%- endif -%}
             </div>
-
           {%- when 'featured_image' -%}
             {%- if article.image -%}
-              <div class="article-template__hero-container" {{ block.shopify_attributes }}>
+              <div class="post-thumb" {{ block.shopify_attributes }}>
                 <div
-                  class="article-template__hero-{{ block.settings.image_height }} media"
+                  class="media-size media--{{ block.settings.image_height }}"
                   itemprop="image"
                   {% if block.settings.image_height == 'adapt' and article.image %}
-                    style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
+                    style="--ratio-percent: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
                   {% endif %}
                 >
                   <img
@@ -59,7 +60,7 @@
             {%- endif -%}
 
           {%- when 'content' -%}
-            <div class="article-template__content rte" itemprop="articleBody" {{ block.shopify_attributes }}>
+            <div class="post-content" itemprop="articleBody" {{ block.shopify_attributes }}>
               {{ article.content }}
             </div>
 
@@ -68,7 +69,7 @@
               {% if article.tags.size > 0 %}
                 <label>{{ 'vtcustomlabel.vtalltext.tag' | t }}</label>
                 {% for tag in article.tags %}
-                  <a class="blog-tags" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
                   {%- unless forloop.last %}
                     <span class="meta-sep">,</span>
                   {% endunless %}
@@ -85,12 +86,11 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      <div class="vtbackblog center">
+      <div class="backtoblog">
         <a
           href="{{ blog.url }}"
-          class="article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}"
         >
-          <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+          <span class="icon-wrap">{% render 'icon-arrow-left' %}</span>
           {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
         </a>
       </div>

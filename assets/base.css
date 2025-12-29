@@ -1677,6 +1677,22 @@ button#scroll svg {
     width: calc(100% - 360px);
 }
 
+.post-list .post-meta {
+    margin-bottom: 10px;
+}
+
+/* post-single */
+.post-single .post-title {
+    font-size: 32px;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.post-single .post-meta {
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
 @media (max-width: 767px) {
     .post-list .post-thumb {
         max-width: 100%;
