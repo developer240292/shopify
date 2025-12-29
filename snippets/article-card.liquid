@@ -64,7 +64,8 @@
         {%- if blog.comments_enabled? -%}
           <div class="post-comment">
             {% render 'icon-blog-comment' -%}
-            <span>&nbsp;{{ article.comments_count }}</span>
+            &nbsp;
+            <span>{{ article.comments_count }}</span>
           </div>
         {%- endif -%}
       {%- endif -%}

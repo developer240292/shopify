@@ -1682,6 +1682,14 @@ button#scroll svg {
 }
 
 /* post-single */
+.post-single {
+    padding-top: 60px;
+}
+
+.post-single .post-thumb {
+    margin-bottom: 30px;
+}
+
 .post-single .post-title {
     font-size: 32px;
     margin: 0 0 15px 0;
