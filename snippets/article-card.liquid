@@ -2,17 +2,20 @@
   Renders an article card for a given blog with settings to either show the image or not.
 
   Accepts:
-  - blog: {Object} Blog object
   - article: {Object} Article object
+  - layout: {String} The setting layout
   - image_height: {String} The setting changes the height of the article image, if shown
   - show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
-  - show_date: {String} The setting either show the article date or not. If it's not included it will not show the image by default
   - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
+  - show_date: {String} The setting either show the article date or not. If it's not included it will not show the image by default
+  - show_cmment: {String} The setting either show the article comment or not. If it's not included it will not show the comment by default
+  - show_tags: {String} The setting either show the article tags or not. If it's not included it will not show the tags by default
+  - show_desc: {String} The setting either show the article description or not. If it's not included it will not show the description by default
 
   Usage:
-  {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
+  {% render 'article-card' article: article, layout: section.settings.layout, image_height: section.settings.image_height, show_image: section.settings.show_image, show_author: section.settings.show_author, show_date: section.settings.show_date, show_cmment: section.settings.show_cmment, show_tags: section.settings.show_tags, show_desc: section.settings.show_desc %}
 {% endcomment %}
-<article class="article-card">
+<article class="article-card {% if layout == 'collage' %}post-list{% else %}post-grid{% endif %}">
   {%- if show_image == true and article.image -%}
     {%- liquid
       assign ratio = 1

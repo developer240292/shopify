@@ -67,7 +67,7 @@
               {% capture gallerylink %}vt{{ i }}_link{% endcapture %}
               {% capture gallerytext %}vt{{ i }}_text{% endcapture %}
               {% if galleryimg or block.settings[gallerylink].size > 0 %}
-                <div class="col-12 col-md-3 cless text-center">
+                <div class="col-12 col-md-3 text-center">
                   {% if block.settings[gallerylink] -%}
                     <a
                       href="{{ block.settings[gallerylink] }}"
@@ -96,62 +96,24 @@
           {% when 'megamenu-blog' %}
             {%- if block.settings.blog != blank -%}
               {% for article in blogs[block.settings.blog].articles limit: block.settings.blog_to_show %}
-                <div class="vthblog">
-                  <div class="blog_img">
-                    <a href="{{ article.url }}" title="{{ article.title }}">
-                      <img
-                        loading="lazy"
-                        class="lazyload img-fluid"
-                        srcset="
-                          {%- if article.image.src.width >= 375 -%}{{ article.image.src | image_url: width: 375 }} 375w,{%- endif -%}
-                          {%- if article.image.src.width >= 550 -%}{{ article.image.src | image_url: width: 550 }} 550w,{%- endif -%}
-                          {%- if article.image.src.width >= 750 -%}{{ article.image.src | image_url: width: 750 }} 750w,{%- endif -%}
-                          {%- if article.image.src.width >= 1100 -%}{{ article.image.src | image_url: width: 1100 }} 1100w,{%- endif -%}
-                          {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
-                          {%- if article.image.src.width >= 1780 -%}{{ article.image.src | image_url: width: 1780 }} 1780w,{%- endif -%}
-                          {%- if article.image.src.width >= 2000 -%}{{ article.image.src | image_url: width: 2000 }} 2000w,{%- endif -%}
-                          {%- if article.image.src.width >= 3000 -%}{{ article.image.src | image_url: width: 3000 }} 3000w,{%- endif -%}
-                          {%- if article.image.src.width >= 3840 -%}{{ article.image.src | image_url: width: 3840 }} 3840w,{%- endif -%}
-                          {{ article.image.src | image_url }} {{ article.image.src.width }}w
-                        "
-                        src="{{ article.image.src | image_url: width: 1000, crop: 'center' }}"
-                        alt="{{ article.image.alt }}"
-                        width="{{ article.image.src.width }}"
-                        height="{{ article.image.src.height }}"
-                      >
-                    </a>
-                  </div>
-                  <div class="blog_info">
-                    <div class="blog_title">
-                      <a href="{{ article.url }}">{{ article.title | truncate: 60 }}</a>
-                    </div>
-                    <p class="blog_date">
-                      <span class="article_day">
-                        {%- render 'icon-blog-date' %}
-                        {{ article.published_at | date: '%d %b %y' -}}
-                      </span>
-                    </p>
-                  </div>
-                </div>
+                {%- render 'article-card', article: article, show_date: true -%}
               {% endfor %}
             {%- else -%}
               {% for i in (1..5) %}
-                <div class="vthblog">
-                  <div class="blog_img">
-                    <div class="dummysvg">{{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+                <article class="article-card post-grid">
+                  <div class="post-thumb">
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
                   </div>
-                  <div class="blog_info">
-                    <div class="blog_title">
-                      <a href="#">Example blog post {{ i }}</a>
-                    </div>
-                    <p class="blog_date">
-                      <span class="article_day">
+                  <div class="post-info">
+                    <div class="post-meta">
+                      <span class="date">
                         {%- render 'icon-blog-date' %}
                         {{ 'now' | date: '%b %d, %Y' -}}
                       </span>
-                    </p>
+                    </div>
+                    <div class="post-title">Example blog post {{ i }}</div>
                   </div>
-                </div>
+                </article>
               {% endfor %}
             {%- endif -%}
         {% endcase %}

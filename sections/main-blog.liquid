@@ -13,7 +13,7 @@
     <div class="row {% if section.settings.layout == 'collage' %}blog-list{% else %}blog-grid{% endif %}">
       {%- for article in blog.articles -%}
         <div class="post-item">
-          {%- render 'article-all-card',
+          {%- render 'article-card',
             article: article,
             layout: section.settings.layout,
             image_height: section.settings.image_height,
