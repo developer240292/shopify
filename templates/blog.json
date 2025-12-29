@@ -13,7 +13,7 @@
       "type": "main-blog",
       "settings": {
         "layout": "grid",
-        "image_height": "adapt",
+        "image_height": "portrait",
         "show_image": true,
         "show_date": true,
         "show_author": true,

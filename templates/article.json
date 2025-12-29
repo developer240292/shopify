@@ -12,14 +12,6 @@
     "main": {
       "type": "main-article",
       "blocks": {
-        "share_button_HrDJRR": {
-          "type": "share_button",
-          "settings": {
-            "share_facebook": true,
-            "share_twitter": true,
-            "share_pinterest": true
-          }
-        },
         "featured_image": {
           "type": "featured_image",
           "settings": {
@@ -36,13 +28,21 @@
         "content": {
           "type": "content",
           "settings": {}
+        },
+        "share_button_HrDJRR": {
+          "type": "share_button",
+          "settings": {
+            "share_facebook": true,
+            "share_twitter": true,
+            "share_pinterest": true
+          }
         }
       },
       "block_order": [
-        "share_button_HrDJRR",
         "featured_image",
         "title",
-        "content"
+        "content",
+        "share_button_HrDJRR"
       ],
       "settings": {}
     }
