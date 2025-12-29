@@ -12,7 +12,7 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "layout": "grid",
+        "layout": "collage",
         "image_height": "portrait",
         "show_image": true,
         "show_date": true,
