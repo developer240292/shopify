@@ -1635,6 +1635,12 @@ button#scroll svg {
     color: inherit !important;
 }
 
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 /* .blog-grid */
 .blog-grid {
     gap: 30px 0;
@@ -1653,22 +1659,6 @@ button#scroll svg {
 .blog-grid .post-title {
     font-size: calc(var(--font-body-scale) * 24px);
     margin-bottom: 15px;
-}
-
-.vtmainblog .tags {
-    margin-bottom: 10px;
-}
-
-.vtmainblog .tags a {
-    color: var(--color-vtmaincolors-text);
-    text-transform: uppercase;
-    margin: 0 5px;
-}
-
-.post-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
 }
 
 @media (max-width: 991px) {
