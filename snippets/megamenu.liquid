@@ -96,7 +96,7 @@
           {% when 'megamenu-blog' %}
             {%- if block.settings.blog != blank -%}
               {% for article in blogs[block.settings.blog].articles limit: block.settings.blog_to_show %}
-                {%- render 'article-card', article: article, show_date: true -%}
+                {%- render 'article-card', article: article, show_image: true, show_date: true -%}
               {% endfor %}
             {%- else -%}
               {% for i in (1..5) %}
