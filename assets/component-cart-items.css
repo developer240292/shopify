@@ -171,7 +171,8 @@ dl .product-option {
   padding: 0;
 }
 
-.cart-item__quantity-wrapper .quantity__input::-webkit-inner-spin-button {
+.cart-item__quantity-wrapper .quantity__input::-webkit-inner-spin-button,
+.cart-item__quantity-wrapper .quantity__input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
