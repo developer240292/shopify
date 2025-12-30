@@ -10,7 +10,7 @@
 {
   "sections": {
     "b8f0ea88-dbd6-4b1b-8a13-5bb94c547628": {
-      "type": "hero-slider",
+      "type": "slideshow",
       "blocks": {
         "template--15186873319468__b8f0ea88-dbd6-4b1b-8a13-5bb94c547628-16704086890b3148b7-1": {
           "type": "slide",
@@ -51,22 +51,6 @@
       "settings": {
         "slide_height": "adapt_image",
         "padding_top": 20,
-        "padding_bottom": 0
-      }
-    },
-    "389d3b2b-6578-494a-8251-c570c4bb90eb": {
-      "type": "blog-slider",
-      "settings": {
-        "m_title": "latest blog",
-        "blog": "news",
-        "show_image": true,
-        "image_height": "adapt",
-        "show_date": true,
-        "show_author": false,
-        "show_desc": false,
-        "show_cmment": false,
-        "show_view_all": false,
-        "padding_top": 60,
         "padding_bottom": 0
       }
     },
@@ -140,7 +124,7 @@
         "1821875b-316f-4fb5-8696-63c75df44f99"
       ],
       "settings": {
-        "title": "Logo brand",
+        "title": "Draly's Partners",
         "padding_top": 60,
         "padding_bottom": 0
       }
@@ -195,13 +179,30 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "blog_slider_fYgmPp": {
+      "type": "blog-slider",
+      "name": "t:sections.blog_slider.presets.name",
+      "settings": {
+        "m_title": "latest blog",
+        "blog": "news",
+        "show_image": true,
+        "image_height": "adapt",
+        "show_date": true,
+        "show_author": false,
+        "show_desc": false,
+        "show_cmment": false,
+        "show_view_all": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "b8f0ea88-dbd6-4b1b-8a13-5bb94c547628",
-    "389d3b2b-6578-494a-8251-c570c4bb90eb",
     "42f1a624-a92a-4d3b-8bbd-540ccef9e51d",
     "text_with_icons_YBGbQa",
-    "product_slide_FedGnK"
+    "product_slide_FedGnK",
+    "blog_slider_fYgmPp"
   ]
 }
