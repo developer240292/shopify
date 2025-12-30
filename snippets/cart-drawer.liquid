@@ -311,46 +311,45 @@
       </cart-drawer-items>
       {% comment %}Cart upsell product{% endcomment %}
       {%- if settings.upsellp -%}
-        <slider-component class="vtcartupsell {% if cart == empty %} is-empty{% endif %} {% if settings.upsellpempty %} is-emptyrmv{% endif %}">
+        <div class="vtcartupsell {% if cart == empty %} is-empty{% endif %} {% if settings.upsellpempty %} is-emptyrmv{% endif %}">
           {%- if settings.vtuphead -%}
             <p class="upshead">{{ settings.vtuphead }}</p>
           {%- endif -%}
-          <ul class="grid slider" id="Slider-{{ section.id }}">
-            {%- for product in settings.upsellcollection.products limit: settings.upsell_to_show -%}
-              <li class="grid__item slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
-                {% render 'card-productupsell', card_product: product %}
-              </li>
-            {%- else -%}
-              {%- for i in (1..4) -%}
-                <div class="cartupselldummy cartupciner slider__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
-                  {% render 'product-card-placeholder' %}
-                </div>
-              {%- endfor -%}
-            {%- endfor -%}
-          </ul>
-          <div class="vthomesbtn no-js-hidden">
-            <button
-              type="button"
-              class="slider-button slider-button--prev focus-inset"
-              name="previous"
-              aria-label="{{ 'general.slider.previous_slide' | t }}"
-              aria-controls="Slider-{{ section.id }}"
-              data-step="1"
-            >
-              {% render 'icon-caret' %}
-            </button>
-            <button
-              type="button"
-              class="slider-button slider-button--next focus-inset"
-              name="next"
-              aria-label="{{ 'general.slider.next_slide' | t }}"
-              aria-controls="Slider-{{ section.id }}"
-              data-step="1"
-            >
-              {% render 'icon-caret' %}
-            </button>
-          </div>
-        </slider-component>
+          <swiper-slider
+            class="swiper-slider"
+            data-section-id="{{ section.id }}"
+            data-slider-speed="300"
+            data-slider-navigation="true"
+            data-slider-pagination="false"
+            data-slider-autoplay="0"
+            data-breakpoint-mobile-portrait="1"
+            data-breakpoint-mobile-landscape="1"
+            data-breakpoint-tablet-portrait="1"
+            data-breakpoint-tablet-landscape="1"
+            data-breakpoint-laptop="1"
+            data-breakpoint-widescreen="1"
+          >
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                {%- for product in settings.upsellcollection.products limit: settings.upsell_to_show -%}
+                  <div class="swiper-slide">
+                    {% render 'card-productupsell', card_product: product %}
+                  </div>
+                {%- else -%}
+                  {%- for i in (1..4) -%}
+                    <div class="swiper-slide">
+                      {% render 'product-card-placeholder' %}
+                    </div>
+                  {%- endfor -%}
+                {%- endfor -%}
+              </div>
+              <div class="swiper-controls">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </swiper-slider>
+        </div>
       {%- endif -%}
       {% comment %} Cart upsell product over {% endcomment %}
       <div class="drawer__footer">
