@@ -136,7 +136,7 @@
             <h2>{{ 'blogs.article.comment_form_title' | t }}</h2>
             {%- if form.errors -%}
               <h3 class="form-status vtformerror" tabindex="-1" autofocus>
-                {% render 'icon-notice-error' %}
+                {%- render 'icon-notice-error' -%}
                 {{ 'templates.contact.form.error_heading' | t }}
               </h3>
               <ul>
