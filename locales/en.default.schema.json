@@ -447,18 +447,24 @@
         "post_limit": {
           "label": "Limit"
         },
-        "show_view_all": {
-          "label": "Enable \"View all\" button if blog includes more blog posts than shown"
-        },
         "show_image": {
           "label": "Show featured image",
           "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https:\/\/help.shopify.com\/en\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
         },
+         "show_author": {
+          "label": "Show author"
+        },
         "show_date": {
           "label": "Show date"
         },
-        "show_author": {
-          "label": "Show author"
+        "show_cmment": {
+          "label": "Show comments"
+        },
+        "show_desc": {
+          "label": "Show description"
+        },
+        "show_view_all": {
+          "label": "Show view all button"
         }
       },
       "presets": {

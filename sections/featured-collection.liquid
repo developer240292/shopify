@@ -26,7 +26,7 @@
     assign show_desktop_slider = true
   endif
 -%}
-<div class="color-{{ section.settings.color_scheme }} isolate gradient vtcollfea">
+<div class="color-{{ section.settings.color_scheme }} vtcollfea">
   <div class="collection section-{{ section.id }}-padding">
     <div class="collection__title container{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
