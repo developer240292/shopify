@@ -55,10 +55,11 @@
                     {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
                   </div>
                   <div class="post-info">
-                    <h3 class="post-title">
-                      Example blog post {{ i }}
-                    </h3>
-                    <div class="date">Oct 22, 2022</div>
+                    <h3 class="post-title">Example blog post {{ i }}</h3>
+                    <div class="date">
+                      {%- render 'icon-blog-date' %}
+                      {{ 'now' | date: '%b %d, %Y' -}}
+                    </div>
                   </div>
                 </article>
               </div>
