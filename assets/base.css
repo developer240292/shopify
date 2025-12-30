@@ -1748,6 +1748,10 @@ button#scroll svg {
     color: #9da7b2;
 }
 
+.comments-area .comment-content p:last-child {
+    margin-bottom: 0;
+}
+
 .comments-area .commentlist~.comment-form {
     border-top: 1px solid #dfdfdf;
     padding-top: 45px;
