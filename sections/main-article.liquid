@@ -106,35 +106,15 @@
               <div class="commentlist">
                 {%- if comment.status == 'pending' and comment.content -%}
                   <article id="{{ comment.id }}" class="comment">
-                    <div class="comment-avatar">
-                      <img
-                        class="review-avatar"
-                        data-email="{{ comment.email }}"
-                        width="40"
-                        height="40"
-                      >
-                    </div>
-                    <div class="comment-text">
-                      <strong class="comment-author">{{ comment.author }}</strong>
-                      <div class="comment-content">{{ comment.content }}</div>
-                    </div>
+                    <strong class="comment-author">{{ comment.author }}</strong>
+                    <div class="comment-content">{{ comment.content }}</div>
                   </article>
                 {%- endif -%}
                 {%- for comment in article.comments -%}
                   <article id="{{ comment.id }}" class="comment">
-                    <div class="comment-avatar">
-                      <img
-                        class="review-avatar"
-                        data-email="{{ comment.email }}"
-                        width="40"
-                        height="40"
-                      >
-                    </div>
-                    <div class="comment-text">
-                      <strong class="comment-author">{{ comment.author }}</strong>
-                      <div class="comment-date">{{ comment.created_at | time_tag: format: 'date' }}</div>
-                      <div class="comment-content">{{ comment.content }}</div>
-                    </div>
+                    <strong class="comment-author">{{ comment.author }}</strong>
+                    <div class="comment-date">{{ comment.created_at | time_tag: format: 'date' }}</div>
+                    <div class="comment-content">{{ comment.content }}</div>
                   </article>
                 {%- endfor -%}
                 {% render 'pagination', paginate: paginate, anchor: anchorId %}
