@@ -1718,6 +1718,12 @@ button#scroll svg {
     margin: 30px 0 25px;
 }
 
+#comments .comment:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
 #comments .comment-author {
     display: block;
     font-size: 13px;
@@ -1736,6 +1742,12 @@ button#scroll svg {
     line-height: 26px;
     margin-bottom: 9px;
     color: #9da7b2;
+}
+
+#comments .commentlist~.comment-form {
+    border-top: 1px solid #dfdfdf;
+    padding-top: 45px;
+    margin-top: 50px;
 }
 
 /* Breadcrumb */
