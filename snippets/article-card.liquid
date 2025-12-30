@@ -52,11 +52,14 @@
     </h2>
     <div class="post-meta">
       {%- if show_author -%}
-        <div class="post-author">{% render 'icon-blog-author' %}&nbsp;{{ article.author -}}</div>
+        <div class="post-author">
+          {% render 'icon-blog-author' -%}
+          {{- article.author -}}
+        </div>
       {%- endif -%}
       {%- if show_date -%}
         <div class="date">
-          {% render 'icon-blog-date' %}&nbsp;
+          {% render 'icon-blog-date' %}
           {{- article.published_at | time_tag: format: 'date' -}}
         </div>
       {%- endif -%}
@@ -64,7 +67,6 @@
         {%- if article.comments_enabled? -%}
           <div class="post-comment">
             {% render 'icon-blog-comment' -%}
-            &nbsp;
             <span>{{ article.comments_count }}</span>
           </div>
         {%- endif -%}

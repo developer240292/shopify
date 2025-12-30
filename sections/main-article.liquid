@@ -15,13 +15,13 @@
                 itemscope
                 itemtype="http://schema.org/Person"
               >
-                {% render 'icon-blog-author' -%}&nbsp;
+                {% render 'icon-blog-author' -%}
                 <span itemprop="name">{{ article.author }}</span>
               </div>
             {%- endif -%}
             {%- if block.settings.blog_show_date -%}
               <div class="date" itemprop="dateCreated pubdate datePublished">
-                {% render 'icon-blog-date' -%}&nbsp;
+                {% render 'icon-blog-date' -%}
                 {{- article.published_at | time_tag: format: 'date' -}}
               </div>
             {%- endif -%}

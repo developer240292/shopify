@@ -99,7 +99,7 @@
                       ({{ filter.active_values.size }})</span
                     >
                   </span>
-                  {% render 'icon-caret' %}
+                  {%- render 'icon-caret' -%}
                 </summary>
                 <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="parent-display facets__display">
                   <fieldset class="facets-wrap parent-wrap">
@@ -217,7 +217,7 @@
                 open
               >
                 <summary class="facets__summary">
-                  <span>{{ filter.label | escape }}</span>{% render 'icon-caret' %}
+                  <span>{{ filter.label | escape }}</span>{%- render 'icon-caret' -%}
                 </summary>
                 <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="facets__display">
                   <div class="facets__header">
