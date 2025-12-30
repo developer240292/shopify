@@ -168,7 +168,7 @@
               {% endif %}
             >
               <div class="article-template__comment-fields">
-                <div class="field field--with-error">
+                <p class="field field--with-error">
                   <input
                     type="text"
                     name="comment[author]"
@@ -197,8 +197,8 @@
                       >
                     </small>
                   {%- endif -%}
-                </div>
-                <div class="field field--with-error">
+                </p>
+                <p class="field field--with-error">
                   <input
                     type="email"
                     name="comment[email]"
@@ -229,9 +229,9 @@
                       >
                     </small>
                   {%- endif -%}
-                </div>
+                </p>
               </div>
-              <div class="field field--with-error">
+              <p class="field field--with-error">
                 <textarea
                   rows="5"
                   name="comment[body]"
@@ -249,7 +249,7 @@
                   {{- 'blogs.article.message' | t }}
                   <span aria-hidden="true">*</span></label
                 >
-              </div>
+                </p>
               {%- if form.errors contains 'body' -%}
                 <small id="CommentForm-body-error">
                   <span class="form__message">
@@ -261,9 +261,9 @@
               {%- endif -%}
             </div>
             {%- if blog.moderated? -%}
-              <p class="article-template__comment-warning caption">{{ 'blogs.article.moderated' | t }}</p>
+              <p class="article-template__comment-warning">{{ 'blogs.article.moderated' | t }}</p>
             {%- endif -%}
-            <input type="submit" class="button button--primary" value="{{ 'blogs.article.post' | t }}">
+            <input type="submit" class="button" value="{{ 'blogs.article.post' | t }}">
           {% endform %}
         </div>
       </div>

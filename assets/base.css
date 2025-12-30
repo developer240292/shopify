@@ -1711,7 +1711,14 @@ button#scroll svg {
         padding: 20px 0 0 0;
     }
 }
+/* comment */
+#comments h2 {
+    text-align: center;
+    margin: 30px 0 25px;
+}
+.article-template__comments .article-template__comments-comment {
 
+}
 /* Breadcrumb */
 .breadcrumb {
     background-color: #F6F6F6;
