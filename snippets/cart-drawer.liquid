@@ -311,15 +311,15 @@
       </cart-drawer-items>
       {% comment %}Cart upsell product{% endcomment %}
       {%- if settings.upsellp -%}
-        <div class="vtcartupsell {% if cart == empty %} is-empty{% endif %} {% if settings.upsellpempty %} is-emptyrmv{% endif %}">
+        <div class="cartupsell {% if cart == empty %} is-empty{% endif %} {% if settings.upsellpempty %} is-emptyrmv{% endif %}">
           {%- if settings.vtuphead -%}
-            <p class="upshead">{{ settings.vtuphead }}</p>
+            <h5 class="upshead">{{ settings.vtuphead }}</h5>
           {%- endif -%}
           <swiper-slider
             class="swiper-slider"
             data-section-id="cartupsell"
             data-slider-speed="300"
-            data-slider-navigation="true"
+            data-slider-navigation="false"
             data-slider-pagination="false"
             data-slider-autoplay="0"
             data-breakpoint-mobile-portrait="1"
@@ -342,10 +342,6 @@
                     </div>
                   {%- endfor -%}
                 {%- endfor -%}
-              </div>
-              <div class="swiper-controls">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
               </div>
             </div>
           </swiper-slider>

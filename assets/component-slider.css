@@ -238,24 +238,21 @@ slider-component.slider-component-full-width {
 
 @media screen and (min-width: 992px) {
 
-  .slider:not(.slider--everywhere):not(.slider--desktop)+.slider-buttons,
-  .vtcollfea .slider:not(.slider--everywhere):not(.slider--desktop)+.vthomesbtn {
+  .slider:not(.slider--everywhere):not(.slider--desktop)+.slider-buttons {
     display: none;
   }
 }
 
 @media screen and (max-width: 991px) {
 
-  .slider--desktop:not(.slider--tablet)+.slider-buttons,
-  .vtcollfea .slider--desktop:not(.slider--tablet)+.vthomesbtn {
+  .slider--desktop:not(.slider--tablet)+.slider-buttons {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
 
-  .slider--mobile+.slider-buttons,
-  .vtcollfea .slider--mobile+.vthomesbtn {
+  .slider--mobile+.slider-buttons {
     display: none;
   }
 }

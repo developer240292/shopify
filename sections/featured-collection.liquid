@@ -8,18 +8,6 @@
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
-  .section-{{ section.id }}-spacing {
-    padding-top: {{ section.settings.spacing_top }}%;
-  }
-  @media screen and (max-width: 991px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
-    }
-    .section-{{ section.id }}-spacing {
-      padding-top: {{ section.settings.spacing_top | times: 0 | round: 0 }}%;
-    }
-  }
 {%- endstyle -%}
 
 {%- liquid
@@ -78,30 +66,6 @@
           {%- endfor -%}
         {%- endfor -%}
       </ul>
-      {%- if show_mobile_slider or show_desktop_slider -%}
-        <div class="vthomesbtn no-js-hidden">
-          <button
-            type="button"
-            class="slider-button slider-button--prev focus-inset"
-            name="previous"
-            aria-label="{{ 'general.slider.previous_slide' | t }}"
-            aria-controls="Slider-{{ section.id }}"
-            data-step="1"
-          >
-            {% render 'icon-caret' %}
-          </button>
-          <button
-            type="button"
-            class="slider-button slider-button--next focus-inset"
-            name="next"
-            aria-label="{{ 'general.slider.next_slide' | t }}"
-            aria-controls="Slider-{{ section.id }}"
-            data-step="1"
-          >
-            {% render 'icon-caret' %}
-          </button>
-        </div>
-      {%- endif -%}
     </slider-component>
     {%- if section.settings.show_view_all and more_in_collection -%}
       <div class="center collection__view-all">
@@ -344,16 +308,6 @@
       "id": "swipe_on_mobile",
       "default": false,
       "label": "t:sections.featured-collection.settings.swipe_on_mobile.label"
-    },
-    {
-      "type": "range",
-      "id": "spacing_top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "Card button top spacing",
-      "default": 60
     },
     {
       "type": "header",

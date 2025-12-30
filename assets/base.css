@@ -2460,24 +2460,7 @@ variant-selects .product-form__input .select {
         margin-bottom: 8px;
     }
 
-    .vthomesbtn {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .vthomesbtn .slider-button .icon {
-        height: auto;
-    }
-
-    .vthomesbtn button {
-        position: unset;
-        opacity: 1;
-        display: inline-block;
-        vertical-align: middle;
-        width: 34px;
-        height: 34px;
-    }
-
+   
     .vtproduct-container .vtswatchclr input+label {
         min-width: 14px;
         min-height: 14px;

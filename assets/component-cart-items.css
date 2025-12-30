@@ -169,6 +169,8 @@ dl .product-option {
   border: none;
   background-color: transparent;
   padding: 0;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .cart-item__quantity-wrapper .quantity__input::-webkit-inner-spin-button,
