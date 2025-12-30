@@ -1730,7 +1730,7 @@ button#scroll svg {
     margin-bottom: 2px;
 }
 
-.comment-date {
+#comments .comment-date {
     display: inline-block;
     font-size: 14px;
     line-height: 26px;
