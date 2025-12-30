@@ -61,7 +61,7 @@
         </div>
       {%- endif -%}
       {%- if show_cmment -%}
-        {%- if blog.comments_enabled? -%}
+        {%- if article.comments_enabled? -%}
           <div class="post-comment">
             {% render 'icon-blog-comment' -%}
             &nbsp;
