@@ -195,7 +195,7 @@
           {% endif %}
         {% endfor %}
         {% if product_sale_tile %}
-          {% render 'vtcountdown', title: {{product_sale_title}}, end_date: {{pro_date}} %}
+          {% render 'vtcountdown', title: product_sale_title, end_date: pro_date %}
         {% endif %}
       {% endif %}
       {%- if show_vendor -%}
@@ -616,3 +616,14 @@
     </div>
   </div>
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'vtcountdown', title: {{product_sale_title}}, end_date: {{pro_date}}
+    %}"
+  to: "{% render 'vtcountdown', title: product_sale_title, end_date: pro_date %}"
+  position: 13654..13727
+{% endcomment %}
